@@ -69,6 +69,19 @@ def build():
         {'url': a['bg-storage'], 'title': '香料儲藏間'},
         {'url': a['bg-bedroom'], 'title': '臥室梳妝台'}
     ]
+    # UI 主題風格搭配：暗夜暖橙酒吧風
+    p['settings']['menuUi'] = {
+        'preset': 'night',
+        'accent': '#ff7b39',
+        'title': '晚霞是舌尖最後的刺痛',
+        'eyebrow': '調酒師的記憶收納',
+        'buttons': ['bag', 'save', 'load', 'title']
+    }
+    p['settings']['battleUi'] = {
+        'preset': 'night',
+        'panel': '#1e1b18',
+        'accent': '#ff7b39'
+    }
 
     N = board['nodes'].append
     L = lambda x, y: cards.link(board, x, y)

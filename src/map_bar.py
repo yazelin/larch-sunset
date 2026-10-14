@@ -1,4 +1,4 @@
-"""吧檯空間地圖（m-bar）：起點、調酒台、連接儲藏間與臥室。"""
+"""吧檯空間地圖（m-bar）：純分層遮擋、吧檯調酒台、連接儲藏間與臥室。"""
 from mapkit import *
 
 W, H = 16, 10
@@ -25,33 +25,50 @@ def walls():
 
 def build_bar(art):
     events = [
-        # 主角 沈淮
+        # 主角 沈淮（調酒師，可在吧檯內外穿梭）
         ev('hero', 7, 6, actor='player', direction='up', sprite=walker(art['walk-shen']), actorId='shen'),
 
-        # 1. 便條紙與空高腳杯
-        ev('note', 7, 4, name='便條紙', trigger='action',
+        # ── 純分層遮擋物：吧檯桌面（Y-sorting 自動實現人站在吧檯後方時下半身被遮擋）──
+        ev('obj_counter', 0, 1, name='吧檯桌面遮擋',
+           free={'url': art['obj-bar-counter'], 'x': 2.0, 'y': 3.3, 'w': 12.0, 'h': 2.0}),
+
+        # 1. 便條紙與空高腳杯（在吧檯桌面上清晰可見）
+        ev('note', 7, 4, name='便條紙與空高腳杯', trigger='action',
            conditions=[cond('note_read', False)],
-           marker={'label': '便條紙', 'kind': 'quest'},
+           marker={'label': '便條紙與高腳杯', 'kind': 'quest'},
            actions=[
-               card('card_bar_start'),
+               say('午夜兩點十七分。吧檯頂上的黃銅吊燈泛著暖黃微光，橡木桌面上映著一圈朦朧的寂靜。\n空氣裡沒有了往常那股清甜的柑橘與微苦草本香氣——那是安雅平時站在這裡時，身上總會帶著的溫度。', speaker='沈淮'),
+               say('一只空的高腳杯倒扣在吧檯中央，底座壓著一張折得工整的淡黃色便條。字跡纖細、末筆微微下沉，那是她的字。', speaker='沈淮'),
                card('card_anya_note'),
                setv('note_read', True),
                setv('phase', 'spoon'),
                balloon('idea', target='player'),
+               say('『初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。』', speaker='沈淮'),
+           ],
+           pages=[
+               page('note_read_page', [cond('note_read', True)], [
+                   say('杯底留著安雅的便條紙：『如果你還記得我們初遇的滋味，就替我把它完成吧。』', speaker='沈淮')
+               ])
            ]),
 
-        # 2. 吧檯角落的調酒匙
+        # 2. 吧檯角落的黃銅調酒匙（桌面上可見實物）
         ev('spoon', 12, 4, name='黃銅調酒匙', trigger='action',
+           free={'url': art['prop-spoon'], 'x': 11.7, 'y': 3.6, 'w': 0.8, 'h': 0.8},
            conditions=[cond('spoon_taken', False)],
            marker={'label': '黃銅調酒匙', 'kind': 'quest'},
            actions=[
-               say('在吧檯角落的杯架旁，靜靜放著一把常用的黃銅調酒匙。匙柄帶有精細的螺紋，質地堅硬，平時她總是用這把匙輕巧地攪拌酒液。', speaker='沈淮'),
+               say('杯架角落靜靜躺著這把常用的黃銅調酒匙。螺紋細密精緻，柄端被反覆握持得溫潤光滑。\n她總是用這把匙輕巧地貼著杯壁旋轉，讓酒液如晚霞般層層舒展。', speaker='沈淮'),
                item('spoon', '黃銅調酒匙'),
                sound('item'),
                setv('spoon_taken', True),
                setv('phase', 'storage'),
                balloon('heart', target='player'),
-               say('有了這把調酒匙，或許能撬開儲藏間卡死的百葉窗暗格。', speaker='沈淮'),
+               say('調酒匙末端微扁而堅硬。或許……可以用它撬開儲藏間那扇卡死多年的百葉窗木暗格。', speaker='沈淮'),
+           ],
+           pages=[
+               page('spoon_taken_page', [cond('spoon_taken', True)], [
+                   say('杯架角落已經空了，黃銅調酒匙已收入隨身背包中。', speaker='沈淮')
+               ])
            ]),
 
         # 3. 儲藏間大門
@@ -70,24 +87,24 @@ def build_bar(art):
                jump('m-bedroom', arrive={'x': 3, 'y': 7, 'direction': 'up'}),
            ]),
 
-        # 5. 調酒台（搜齊材料後可調酒）
-        ev('shaker', 8, 4, name='調酒台', trigger='action',
+        # 5. 調酒工作台（材料齊全後啟動調酒儀式）
+        ev('shaker', 8, 4, name='調酒工作台', trigger='action',
            conditions=[cond('box_unlocked', True), cond('cocktail_mixed', False)],
            marker={'label': '調製『晚霞』', 'kind': 'quest'},
            actions=[
-               say('材料已經齊全了：黃銅調酒匙、番紅花糖漿、粉紅胡椒研磨罐……還有這只高腳杯。', speaker='沈淮'),
-               flash('#ffb347', strength=0.6, duration=400),
+               say('所有被她刻意藏匿的材料，終於在深夜的吧檯前聚齊：\n一瓶金黃濃稠的【番紅花糖漿】、一柄質地堅硬的【黃銅調酒匙】、一罐散發觸電般麻刺感的【粉紅胡椒研磨罐】……以及那張揭示了殘酷真相的病歷單。', speaker='沈淮'),
+               flash('#ffb347', strength=0.6, duration=450),
                sound('heal'),
-               say('【注入番紅花糖漿】濃稠燦爛的金黃色液體注入杯底，宛如地平線初升的朝陽，散發溫潤甘甜的草本清香。', speaker='沈淮'),
-               wait(400),
+               say('【第一步：注入番紅花糖漿】\n深金黃色的厚重糖漿順著杯壁緩緩流淌入高腳杯底。宛如初升朝陽的第一抹熔金，溫潤甘甜的草本清香瞬間充盈了空氣。', speaker='沈淮'),
+               wait(450),
                sound('slash'),
-               say('【黃銅匙攪拌】拿起黃銅調酒匙貼著杯壁輕輕攪拌——金黃色液體旋轉著融為一體，純淨透亮，折射出璀璨的琥珀光澤。', speaker='沈淮'),
-               wait(400),
-               flash('#ff69b4', strength=0.7, duration=500),
+               say('【第二步：黃銅匙勻速攪拌】\n手握調酒匙貼緊杯壁，以優雅而穩定的節奏旋轉。金黃的酒液如旋渦般融為一體，純淨透亮，折射出璀璨溫暖的琥珀光芒。', speaker='沈淮'),
+               wait(450),
+               flash('#ff69b4', strength=0.75, duration=500),
                sound('burst'),
-               say('【研磨粉紅胡椒】旋轉研磨罐，磨入細碎顆粒，表面浮起一層曖昧的淡粉色油脂與碎粒。金黃與粉紅交織，如落日晚霞。', speaker='沈淮'),
+               say('【第三步：研磨粉紅胡椒】\n轉動研磨罐，細碎微紅的胡椒顆粒如落櫻般散落在金黃酒面上。油脂在燈下悄然暈染，一股極具誘惑又帶有刺痛微辣的奇妙辛香撲鼻而來！金黃與粉紅交織融合，宛如深秋黃昏最後的落日晚霞。', speaker='沈淮'),
                sound('door'),
-               say('杯架下方的機關「喀噠」一聲下沉，吧檯暗格彈開，裡面是一封完整的遺書。', speaker='沈淮'),
+               say('機關「喀噠」一聲沉悶作響，杯架下方的暗格悄然滑出，裡面躺著一封完整的白色遺書。', speaker='沈淮'),
                setv('cocktail_mixed', True),
                setv('phase', 'confession'),
                jump('card_confession'),
@@ -99,10 +116,10 @@ def build_bar(art):
     ]
 
     guidance = [
-        {'text': '閱讀吧檯上的便條紙', 'eventId': 'note', 'conditions': [cond('note_read', False)]},
-        {'text': '拿取吧檯角落的調酒匙', 'eventId': 'spoon', 'conditions': [cond('spoon_taken', False)]},
-        {'text': '前往香料儲藏間調查', 'eventId': 'door_storage', 'conditions': [cond('storage_pried', False)]},
-        {'text': '前往臥室梳妝台開鎖', 'eventId': 'door_bedroom', 'conditions': [cond('box_unlocked', False)]},
+        {'text': '閱讀吧檯上的便條紙與空高腳杯', 'eventId': 'note', 'conditions': [cond('note_read', False)]},
+        {'text': '拿取吧檯角落的黃銅調酒匙', 'eventId': 'spoon', 'conditions': [cond('spoon_taken', False)]},
+        {'text': '前往香料儲藏間調查百葉窗暗格', 'eventId': 'door_storage', 'conditions': [cond('storage_pried', False)]},
+        {'text': '前往臥室梳妝台使用心型鑰匙開盒', 'eventId': 'door_bedroom', 'conditions': [cond('box_unlocked', False)]},
         {'text': '在吧檯調製『晚霞』', 'eventId': 'shaker', 'conditions': [cond('cocktail_mixed', False)]},
         {'text': '做出終局抉擇', 'eventId': 'shaker', 'conditions': []},
     ]
@@ -120,7 +137,7 @@ def build_bar(art):
         ],
         'ambience': {
             'particles': 'embers',
-            'density': 0.4,
+            'density': 0.45,
             'rays': 0.5,
             'vignette': 0.35,
             'tint': '#ff7733',

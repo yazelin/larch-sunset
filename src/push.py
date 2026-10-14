@@ -44,7 +44,7 @@ def merge_settings(online, built):
     rpg = plugins.setdefault('larch-rpg-system', {'enabled': True, 'settings': {}})
     rpg['enabled'] = True
     rpg.setdefault('settings', {})['database'] = built['settings']['plugins']['larch-rpg-system']['settings']['database']
-    for k in ('titleCoverImage', 'projectThumbnail', 'cgGallerySource', 'cgGalleryItems'):
+    for k in ('titleCoverImage', 'projectThumbnail', 'cgGallerySource', 'cgGalleryItems', 'menuUi', 'battleUi'):
         if k in built.get('settings', {}):
             m[k] = built['settings'][k]
     if (built.get('settings', {}).get('titleScreen') or {}).get('bgm'):

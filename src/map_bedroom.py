@@ -1,4 +1,4 @@
-"""臥室梳妝台地圖（m-bedroom）：使用心型鑰匙打開木盒，發現粉紅胡椒與病歷單真相。"""
+"""臥室梳妝台地圖（m-bedroom）：純分層大床與梳妝台遮擋、使用心型鑰匙解鎖木盒與病歷真相。"""
 from mapkit import *
 
 W, H = 12, 9
@@ -28,21 +28,28 @@ def build_bedroom(art):
         # 主角 沈淮入場點
         ev('hero', 3, 7, actor='player', direction='up', sprite=walker(art['walk-shen']), actorId='shen'),
 
+        # ── 純分層遮擋物：左側大床與右側梳妝台 ──
+        ev('obj_bed', 0, 1, name='臥室大床遮擋',
+           free={'url': art['obj-bedroom-bed'], 'x': 0.0, 'y': 2.0, 'w': 4.0, 'h': 5.0}),
+        ev('obj_vanity', 11, 1, name='梳妝台鏡台遮擋',
+           free={'url': art['obj-bedroom-vanity'], 'x': 7.5, 'y': 1.5, 'w': 4.0, 'h': 4.0}),
+
         # 梳妝台雕花木盒
         ev('vanity_box', 8, 2, name='雕花木盒', trigger='action',
            marker={'label': '雕花木盒', 'kind': 'quest'},
            actions=[
                branch([cond('box_unlocked', True)],
-                      [say('木盒已經打開了，病歷單的碎頁已被握在手中，空氣裡殘留著淡淡的粉紅胡椒香氣。', speaker='沈淮')],
+                      [say('雕花木盒已經開啟，幾張泛黃染血的病歷單碎頁已被握在手心。空氣中依然殘留著那股微弱而刺痛的粉紅胡椒香氣。', speaker='沈淮')],
                       [branch([cond('storage_pried', True)],
                               [
-                                  say('心型鑰匙插入鎖孔，順時針輕轉——「喀啦」，鎖扣彈開！', speaker='沈淮'),
+                                  say('推開臥室的門，屋裡安靜得能聽見自己逐漸紊亂的心跳聲。\n梳妝台上散落著乾枯的花瓣，中央擺著那只刻滿心型藤蔓的小胡桃木盒。交往的這三年裡，她從不曾讓我碰它。', speaker='沈淮'),
+                                  say('我將胸前那串心型鑰匙對準鎖孔輕輕旋入——順時針輕轉，簧片發出極微小而沉重的回響。', speaker='沈淮'),
                                   sound('door'),
                                   flash('#ffb6c1', strength=0.6, duration=350),
-                                  say('裡面放著一罐【粉紅胡椒研磨罐】，以及幾張染血的病歷單碎頁。', speaker='沈淮'),
+                                  say('「喀啦！」木盒彈開！\n裡面赫然放著一罐精巧的【粉紅胡椒研磨罐】，以及幾張折疊多次、染有暗紅斑漬的醫院病歷單碎頁。', speaker='沈淮'),
                                   item('pepper', '粉紅胡椒研磨罐'),
                                   sound('item'),
-                                  # 播放回憶卡（安雅配音）與真相卡（沈淮震驚配音）
+                                  # 播放回憶卡（安雅輕柔女孩語音）與真相卡（沈淮震驚語音）
                                   card('card_bedroom_memory'),
                                   card('card_bedroom_shock'),
                                   setv('box_unlocked', True),
@@ -51,11 +58,16 @@ def build_bedroom(art):
                                   balloon('exclamation', target='player'),
                               ],
                               [
-                                  say('木盒上的小銅鎖雕刻著心型藤蔓，鎖孔極其纖巧。強行撬開只會損壞盒子，需要對應的心型小鑰匙。', speaker='沈淮'),
+                                  say('木盒上的小銅鎖雕刻著心型藤蔓，鎖孔極其纖巧緊密。強行撬開只會損壞盒子，需要對應的那串心型小鑰匙。', speaker='沈淮'),
                                   balloon('sweat', target='player'),
                               ])
                       ])
            ]),
+
+        # 解鎖後在梳妝台上顯現的粉紅胡椒研磨罐道具
+        ev('prop_pepper_item', 0, 2, name='粉紅胡椒道具',
+           free={'url': art['prop-pepper'], 'x': 8.5, 'y': 1.6, 'w': 0.8, 'h': 0.8},
+           conditions=[cond('box_unlocked', True)]),
 
         # 返回吧檯的大門
         ev('door_bar', 3, 8, name='返回吧檯', trigger='touch',
@@ -67,8 +79,8 @@ def build_bedroom(art):
     ]
 
     guidance = [
-        {'text': '使用心型鑰匙打開木盒', 'eventId': 'vanity_box', 'conditions': [cond('box_unlocked', False)]},
-        {'text': '帶著粉紅胡椒返回吧檯調酒', 'eventId': 'door_bar', 'conditions': []},
+        {'text': '使用心型吊墜鑰匙打開梳妝台木盒', 'eventId': 'vanity_box', 'conditions': [cond('box_unlocked', False)]},
+        {'text': '帶著粉紅胡椒與病歷單返回吧檯調酒', 'eventId': 'door_bar', 'conditions': []},
     ]
 
     env = {
