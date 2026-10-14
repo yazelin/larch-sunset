@@ -1,0 +1,2070 @@
+{
+  "id": "project-8cb1ab7e-891c-46b4-bd38-df29060e5717",
+  "name": "晚霞是舌尖最後的刺痛",
+  "edges": [
+    {
+      "id": "prologue--m-bar",
+      "source": "prologue",
+      "target": "m-bar",
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "card_confession--card_choice",
+      "source": "card_confession",
+      "target": "card_choice",
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "ending_burn_1--ending_burn_2",
+      "source": "ending_burn_1",
+      "target": "ending_burn_2",
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "ending_burn_2--ending_burn_3",
+      "source": "ending_burn_2",
+      "target": "ending_burn_3",
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "ending_cold_1--ending_cold_2",
+      "source": "ending_cold_1",
+      "target": "ending_cold_2",
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    }
+  ],
+  "media": [
+    {
+      "id": "agent-voice-a593c6bd-1f19-4ef3-9557-09f0c8bfc984",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572160891_46526436.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"手在發抖，但我還是把杯子翻轉，倒進了水槽。\\n\\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-4704f613-586c-48a7-85da-306482b13987",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572040059_1b8a90a9.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\\n\\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-ca93838f-0ffc-4f64-a57d-3a1255805698",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571740808_a90337d8.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\n\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"屋子裡重新歸於死寂。\\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\\n\\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-b7028ff7-f5b3-4bae-9a8d-4ae6aa07dd45",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571654884_7769d525.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅，這一次，妳不必一個人走。\n\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"眼前的光線逐漸暈散成一片金黃與淡粉。\\n安雅，這一次，妳不必一個人走。\\n\\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-b6d788b5-95b0-4156-aace-d239636ca5f4",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571598095_2304150e.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"我沒有聽妳的話。\\n\\n我端起酒杯，一口飲盡。\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-0bcb9468-8ea6-4d90-91a0-b2c81ce937da",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "calm",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。只有安雅壓在杯底的一張便條。\\n\\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"calm\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-713ff296-ddea-4771-8c2f-1b2f03961e5d",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571391989_3c87a9c4.mp3",
+      "name": "安雅（獨白）・1・輕柔女孩.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Soft_Girl",
+      "category": "voice",
+      "voiceText": "『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\n沈淮，這是我為自己選的終點。\n不要嚐它，替我倒掉。』",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\\n沈淮，這是我為自己選的終點。\\n不要嚐它，替我倒掉。』\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Soft_Girl\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-32e91a24-79ae-411d-83b0-c9086201e0a0",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571305626_f5a21c4f.mp3",
+      "name": "安雅（回憶）・1・輕柔女孩.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "calm",
+      "voiceId": "Chinese (Mandarin)_Soft_Girl",
+      "category": "voice",
+      "voiceText": "『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Soft_Girl\",\"model\":\"\",\"emotion\":\"calm\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "ai-cover-8474703f-8499-4065-9f66-4add1815f8b2",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/muse-link/yaze.lin.j303@gmail.com/1789569966068_d510d4a9.png",
+      "name": "AI 封面 · 晚霞是舌尖最後的刺痛",
+      "type": "image",
+      "remote": true,
+      "source": "Akarion AI",
+      "license": "AI generated",
+      "variant": "一張視覺小說《晚霞是舌尖最後的刺痛》的封面主視覺。開場的氛圍：吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。只有安雅壓在杯底的一張便條。 初遇的滋味……金黃",
+      "category": "scene"
+    },
+    {
+      "id": "bf87729e-6be4-43d2-a5d1-11c1717f3b10",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+      "name": "anya_spirit_codex",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "4f79bfb2-b829-4907-ac61-decb41817bc1",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+      "name": "anya_sprite_codex",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "c0f4e597-9226-4a2f-b848-5de60302b16d",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568906846_prop_pepper_chroma",
+      "name": "prop_pepper_chroma",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "prop"
+    },
+    {
+      "id": "ffefd8a9-f5c0-47a7-a31a-292f47d2e4e0",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568842314_prop_saffron_chroma",
+      "name": "prop_saffron_chroma",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "prop"
+    },
+    {
+      "id": "a94fac78-7065-41a9-90db-b5337e537d96",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568785759_prop_key_chroma",
+      "name": "prop_key_chroma",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "prop"
+    },
+    {
+      "id": "fe49a735-eea3-4202-86b6-b6741b9bedf1",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568571752_prop_spoon_chroma",
+      "name": "prop_spoon_chroma",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "prop"
+    },
+    {
+      "id": "b0d7ee8b-e476-4e13-b679-ec8d49b2a79a",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565753666_prop_spoon.webp",
+      "name": "prop_spoon.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "item"
+    },
+    {
+      "id": "c4a63d3b-7746-4869-9fed-522244eaf6c7",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565753701_prop_pepper.webp",
+      "name": "prop_pepper.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "item"
+    },
+    {
+      "id": "e428f390-aa48-464b-9800-d66f770433f6",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp",
+      "name": "bg_storage.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "765173d5-9e5a-4a38-b6b2-d66c7e9882be",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565676624_anya_spirit.webp",
+      "name": "anya_spirit.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "93650840-5a65-48b8-aa11-c7590708c214",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565676666_prop_key.webp",
+      "name": "prop_key.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "item"
+    },
+    {
+      "id": "9642b32d-00e0-4cb7-acee-f00fdc626002",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565676622_prop_saffron.webp",
+      "name": "prop_saffron.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "item"
+    },
+    {
+      "id": "33e3d74b-059b-4b0d-8bab-b996e822b937",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+      "name": "bg_bar.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "9159ac2b-1bab-4c87-ab2a-82cba949704c",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+      "name": "bg_bedroom.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "91d830b9-dd95-4af0-ab33-5e64c9588387",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+      "name": "cg_cocktail.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "df95b271-bfb4-45de-a29e-c65b27188f0b",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565580712_bg_bedroom.webp",
+      "name": "bg_bedroom.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "08af6368-9f4a-4053-a48c-8396a3bc3a15",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565546132_bg_bedroom.webp",
+      "name": "bg_bedroom.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "cae2a1db-5953-4837-a004-5f973af63be3",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565501794_bg_storage.webp",
+      "name": "bg_storage.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "7cb60fc9-7b3a-43d0-86ff-e3df698f1b79",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565471506_bg_storage.webp",
+      "name": "bg_storage.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "95633c61-d10c-4c01-be87-f6f1e93dbf7e",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565455439_bg_storage.webp",
+      "name": "bg_storage.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "ed42b127-fb68-4295-8091-881c2b74357f",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565423347_bg_bar.webp",
+      "name": "bg_bar.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "6969bf06-ee70-4560-a3d5-5f75b15a9f59",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565385721_bg_bar.webp",
+      "name": "bg_bar.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "672f98e7-753f-47bd-baa4-033d499fea08",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565353581_bg_bar.webp",
+      "name": "bg_bar.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "460f87f6-8ab4-40e4-a145-4e529d33b8d4",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565329598_anya_spirit.webp",
+      "name": "anya_spirit.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "0cc82426-78b0-4360-9c3a-e5197ca741c4",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565290553_anya_spirit.webp",
+      "name": "anya_spirit.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "19e703b5-8c30-4481-8d75-96950a726267",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565266925_anya_spirit.webp",
+      "name": "anya_spirit.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "7494d5fb-a21b-41fc-abaa-88c280396a7e",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565198939_bg_bar",
+      "name": "bg_bar",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "backgrounds"
+    },
+    {
+      "id": "e151011b-0976-4414-bb3e-6160dacbd78b",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565138719_anya_spirit",
+      "name": "anya_spirit",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "characters"
+    },
+    {
+      "id": "c31b07e6-0e60-4720-b21e-36c8da6443b6",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565071893_anya_sprite",
+      "name": "anya_sprite",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "characters"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "prologue",
+      "type": "story",
+      "position": {
+        "x": 360,
+        "y": 0
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "序幕：安雅的便條",
+        "speaker": "沈淮",
+        "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+        "dialogueLines": [
+          {
+            "id": "prologue-l0",
+            "speaker": "沈淮",
+            "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-沈淮",
+              "name": "沈淮",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+              "slot": "left",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "start": true,
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3",
+        "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+        "bgmVolume": 0.5,
+        "bgmLoop": true
+      }
+    },
+    {
+      "id": "m-bar",
+      "type": "story",
+      "position": {
+        "x": 720,
+        "y": 0
+      },
+      "data": {
+        "type": "plugin",
+        "title": "深夜吧檯",
+        "text": "",
+        "pluginId": "larch-rpg-system",
+        "pluginCardId": "map",
+        "pluginVersion": "0.4.0",
+        "pluginName": "RPG 系統",
+        "pluginCardName": "RPG 地圖",
+        "pluginIcon": "map",
+        "pluginColor": "#4a7358",
+        "pluginPresentation": "fullscreen",
+        "pluginFrame": {
+          "showTitle": false,
+          "showButton": false
+        },
+        "pluginSkippable": false,
+        "pluginReadVars": [
+          "phase",
+          "note_read",
+          "spoon_taken",
+          "storage_pried",
+          "box_unlocked",
+          "truth_known",
+          "cocktail_mixed",
+          "ending_choice",
+          "rpgHp",
+          "inventory",
+          "rpgEquipment",
+          "rpgState",
+          "inventoryLastUsed",
+          "inventoryCount"
+        ],
+        "pluginWriteVars": [
+          "phase",
+          "note_read",
+          "spoon_taken",
+          "storage_pried",
+          "box_unlocked",
+          "truth_known",
+          "cocktail_mixed",
+          "ending_choice",
+          "rpgHp",
+          "inventory",
+          "rpgEquipment",
+          "rpgState",
+          "inventoryLastUsed",
+          "inventoryCount"
+        ],
+        "pluginAssets": [],
+        "platforms": [
+          "web"
+        ],
+        "pluginValues": {
+          "map": "{\"version\": 1, \"name\": \"深夜吧檯\", \"width\": 16, \"height\": 10, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/kenney-rpg/tilesets/1790278984532_tiny-dungeon.png\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 7, \"y\": 6, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955874176_walk-shen.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}, \"actorId\": \"shen\"}, {\"id\": \"note\", \"name\": \"便條紙\", \"x\": 7, \"y\": 4, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a1\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_bar_start\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a2\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_anya_note\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a3\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"note_read\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a4\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"spoon\", \"amount\": 1}, {\"id\": \"a5\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"idea\", \"target\": \"player\", \"durationMs\": 1600}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"便條紙\", \"kind\": \"quest\"}}, {\"id\": \"spoon\", \"name\": \"黃銅調酒匙\", \"x\": 12, \"y\": 4, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a6\", \"kind\": \"dialogue\", \"text\": \"在吧檯角落的杯架旁，靜靜放著一把常用的黃銅調酒匙。匙柄帶有精細的螺紋，質地堅硬，平時她總是用這把匙輕巧地攪拌酒液。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a7\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"spoon\", \"itemName\": \"黃銅調酒匙\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a8\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a9\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"spoon_taken\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a10\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"storage\", \"amount\": 1}, {\"id\": \"a11\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"heart\", \"target\": \"player\", \"durationMs\": 1600}}, {\"id\": \"a12\", \"kind\": \"dialogue\", \"text\": \"有了這把調酒匙，或許能撬開儲藏間卡死的百葉窗暗格。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"黃銅調酒匙\", \"kind\": \"quest\"}}, {\"id\": \"door_storage\", \"name\": \"通往香料儲藏間\", \"x\": 2, \"y\": 9, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a13\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a14\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-storage\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 6, \"y\": 7, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"香料儲藏間\", \"kind\": \"exit\"}}, {\"id\": \"door_bedroom\", \"name\": \"通往臥室梳妝台\", \"x\": 13, \"y\": 9, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a15\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a16\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bedroom\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 3, \"y\": 7, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"臥室梳妝台\", \"kind\": \"exit\"}}, {\"id\": \"shaker\", \"name\": \"調酒台\", \"x\": 8, \"y\": 4, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"box_unlocked\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}, {\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a17\", \"kind\": \"dialogue\", \"text\": \"材料已經齊全了：黃銅調酒匙、番紅花糖漿、粉紅胡椒研磨罐……還有這只高腳杯。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a18\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 400, \"color\": \"#ffb347\"}}, {\"id\": \"a19\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a20\", \"kind\": \"dialogue\", \"text\": \"【注入番紅花糖漿】濃稠燦爛的金黃色液體注入杯底，宛如地平線初升的朝陽，散發溫潤甘甜的草本清香。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a21\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 400}, {\"id\": \"a22\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}, {\"id\": \"a23\", \"kind\": \"dialogue\", \"text\": \"【黃銅匙攪拌】拿起黃銅調酒匙貼著杯壁輕輕攪拌——金黃色液體旋轉著融為一體，純淨透亮，折射出璀璨的琥珀光澤。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a24\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 400}, {\"id\": \"a25\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.7, \"durationMs\": 500, \"color\": \"#ff69b4\"}}, {\"id\": \"a26\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a27\", \"kind\": \"dialogue\", \"text\": \"【研磨粉紅胡椒】旋轉研磨罐，磨入細碎顆粒，表面浮起一層曖昧的淡粉色油脂與碎粒。金黃與粉紅交織，如落日晚霞。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a28\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a29\", \"kind\": \"dialogue\", \"text\": \"杯架下方的機關「喀噠」一聲下沉，吧檯暗格彈開，裡面是一封完整的遺書。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a30\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"cocktail_mixed\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a31\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"confession\", \"amount\": 1}, {\"id\": \"a32\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_confession\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"調製『晚霞』\", \"kind\": \"quest\"}}, {\"id\": \"anya_ghost\", \"name\": \"anya_ghost\", \"x\": 8, \"y\": 3, \"actor\": \"npc\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": true, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955856695_walk-anya-spirit.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp\"}, \"guidance\": [{\"text\": \"閱讀吧檯上的便條紙\", \"eventId\": \"note\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"拿取吧檯角落的調酒匙\", \"eventId\": \"spoon\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"前往香料儲藏間調查\", \"eventId\": \"door_storage\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"storage_pried\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"前往臥室梳妝台開鎖\", \"eventId\": \"door_bedroom\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"box_unlocked\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"在吧檯調製『晚霞』\", \"eventId\": \"shaker\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"做出終局抉擇\", \"eventId\": \"shaker\", \"conditions\": []}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.35, \"shake\": 0, \"fog\": {\"density\": 0.15, \"color\": \"#ffa07a\"}, \"lights\": [{\"id\": \"bar-light\", \"x\": 7.5, \"y\": 3.5, \"radius\": 4.5, \"color\": \"#ffb347\", \"flicker\": true}, {\"id\": \"shelf-light\", \"x\": 11.5, \"y\": 2, \"radius\": 3.5, \"color\": \"#ffa07a\", \"flicker\": false}, {\"id\": \"door-light\", \"x\": 2, \"y\": 8, \"radius\": 2.5, \"color\": \"#ffd180\", \"flicker\": false}], \"ambience\": {\"particles\": \"embers\", \"density\": 0.4, \"rays\": 0.5, \"vignette\": 0.35, \"tint\": \"#ff7733\", \"tintStrength\": 0.15}}}"
+        },
+        "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+        "bgmVolume": 0.4,
+        "bgmLoop": true
+      }
+    },
+    {
+      "id": "m-storage",
+      "type": "story",
+      "position": {
+        "x": 1080,
+        "y": 0
+      },
+      "data": {
+        "type": "plugin",
+        "title": "香料儲藏間",
+        "text": "",
+        "pluginId": "larch-rpg-system",
+        "pluginCardId": "map",
+        "pluginVersion": "0.4.0",
+        "pluginName": "RPG 系統",
+        "pluginCardName": "RPG 地圖",
+        "pluginIcon": "map",
+        "pluginColor": "#4a7358",
+        "pluginPresentation": "fullscreen",
+        "pluginFrame": {
+          "showTitle": false,
+          "showButton": false
+        },
+        "pluginSkippable": false,
+        "pluginReadVars": [
+          "phase",
+          "note_read",
+          "spoon_taken",
+          "storage_pried",
+          "box_unlocked",
+          "truth_known",
+          "cocktail_mixed",
+          "ending_choice",
+          "rpgHp",
+          "inventory",
+          "rpgEquipment",
+          "rpgState",
+          "inventoryLastUsed",
+          "inventoryCount"
+        ],
+        "pluginWriteVars": [
+          "phase",
+          "note_read",
+          "spoon_taken",
+          "storage_pried",
+          "box_unlocked",
+          "truth_known",
+          "cocktail_mixed",
+          "ending_choice",
+          "rpgHp",
+          "inventory",
+          "rpgEquipment",
+          "rpgState",
+          "inventoryLastUsed",
+          "inventoryCount"
+        ],
+        "pluginAssets": [],
+        "platforms": [
+          "web"
+        ],
+        "pluginValues": {
+          "map": "{\"version\": 1, \"name\": \"香料儲藏間\", \"width\": 12, \"height\": 9, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/kenney-rpg/tilesets/1790278984532_tiny-dungeon.png\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 6, \"y\": 7, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955874176_walk-shen.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}, \"actorId\": \"shen\"}, {\"id\": \"window_grate\", \"name\": \"百葉窗暗格\", \"x\": 6, \"y\": 1, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a50\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"storage_pried\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a33\", \"kind\": \"dialogue\", \"text\": \"暗格已經被撬開了，裡面的番紅花糖漿與心型鑰匙已被取出。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}], \"else\": [{\"id\": \"a49\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a34\", \"kind\": \"dialogue\", \"text\": \"我將黃銅調酒匙插進木窗縫隙稍稍使力——『喀噠！』卡榫應聲彈開，窗台下的暗格滑出！\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a35\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"hit\", \"volume\": 0.7}}, {\"id\": \"a36\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 350, \"color\": \"#ffd700\"}}, {\"id\": \"a37\", \"kind\": \"dialogue\", \"text\": \"裡面放著一瓶深金黃色的【番紅花糖漿】。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a38\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"saffron\", \"itemName\": \"番紅花糖漿\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a39\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a40\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a41\", \"kind\": \"dialogue\", \"text\": \"等等……糖漿後方還躺著一串金屬鑰匙！這串【心型吊墜鑰匙】……安雅平時總戴在胸口，從不離身。它一定能打開她鎖在臥室裡的東西。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a42\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"key\", \"itemName\": \"心型吊墜鑰匙\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a43\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a44\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"idea\", \"target\": \"player\", \"durationMs\": 1600}}, {\"id\": \"a45\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"storage_pried\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a46\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"bedroom\", \"amount\": 1}], \"else\": [{\"id\": \"a47\", \"kind\": \"dialogue\", \"text\": \"鐵木卡榫咬得太死，徒手完全拉不開。必須找到細長又堅硬的金屬工具才能撬開。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a48\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"sweat\", \"target\": \"player\", \"durationMs\": 1600}}]}}]}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"百葉窗暗格\", \"kind\": \"quest\"}}, {\"id\": \"door_bar\", \"name\": \"返回吧檯\", \"x\": 6, \"y\": 8, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a51\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a52\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bar\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 2, \"y\": 8, \"direction\": \"right\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"返回吧檯\", \"kind\": \"exit\"}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp\"}, \"guidance\": [{\"text\": \"使用調酒匙撬開百葉窗暗格\", \"eventId\": \"window_grate\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"storage_pried\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"帶著心型鑰匙返回吧檯\", \"eventId\": \"door_bar\", \"conditions\": []}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.45, \"shake\": 0, \"fog\": {\"density\": 0.2, \"color\": \"#edd8b0\"}, \"lights\": [{\"id\": \"window-sun\", \"x\": 6, \"y\": 1, \"radius\": 5, \"color\": \"#ffb347\", \"flicker\": false}, {\"id\": \"door-glow\", \"x\": 6, \"y\": 7.5, \"radius\": 2.5, \"color\": \"#ffa07a\", \"flicker\": false}], \"ambience\": {\"particles\": \"motes\", \"density\": 0.5, \"rays\": 0.7, \"vignette\": 0.35, \"tint\": \"#e6a860\", \"tintStrength\": 0.2}}}"
+        },
+        "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+        "bgmVolume": 0.4,
+        "bgmLoop": true
+      }
+    },
+    {
+      "id": "m-bedroom",
+      "type": "story",
+      "position": {
+        "x": 1440,
+        "y": 0
+      },
+      "data": {
+        "type": "plugin",
+        "title": "臥室梳妝台",
+        "text": "",
+        "pluginId": "larch-rpg-system",
+        "pluginCardId": "map",
+        "pluginVersion": "0.4.0",
+        "pluginName": "RPG 系統",
+        "pluginCardName": "RPG 地圖",
+        "pluginIcon": "map",
+        "pluginColor": "#4a7358",
+        "pluginPresentation": "fullscreen",
+        "pluginFrame": {
+          "showTitle": false,
+          "showButton": false
+        },
+        "pluginSkippable": false,
+        "pluginReadVars": [
+          "phase",
+          "note_read",
+          "spoon_taken",
+          "storage_pried",
+          "box_unlocked",
+          "truth_known",
+          "cocktail_mixed",
+          "ending_choice",
+          "rpgHp",
+          "inventory",
+          "rpgEquipment",
+          "rpgState",
+          "inventoryLastUsed",
+          "inventoryCount"
+        ],
+        "pluginWriteVars": [
+          "phase",
+          "note_read",
+          "spoon_taken",
+          "storage_pried",
+          "box_unlocked",
+          "truth_known",
+          "cocktail_mixed",
+          "ending_choice",
+          "rpgHp",
+          "inventory",
+          "rpgEquipment",
+          "rpgState",
+          "inventoryLastUsed",
+          "inventoryCount"
+        ],
+        "pluginAssets": [],
+        "platforms": [
+          "web"
+        ],
+        "pluginValues": {
+          "map": "{\"version\": 1, \"name\": \"臥室梳妝台\", \"width\": 12, \"height\": 9, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/kenney-rpg/tilesets/1790278984532_tiny-dungeon.png\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 3, \"y\": 7, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955874176_walk-shen.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}, \"actorId\": \"shen\"}, {\"id\": \"vanity_box\", \"name\": \"雕花木盒\", \"x\": 8, \"y\": 2, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a69\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"box_unlocked\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a53\", \"kind\": \"dialogue\", \"text\": \"木盒已經打開了，病歷單的碎頁已被握在手中，空氣裡殘留著淡淡的粉紅胡椒香氣。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}], \"else\": [{\"id\": \"a68\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"storage_pried\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a54\", \"kind\": \"dialogue\", \"text\": \"心型鑰匙插入鎖孔，順時針輕轉——「喀啦」，鎖扣彈開！\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a55\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a56\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 350, \"color\": \"#ffb6c1\"}}, {\"id\": \"a57\", \"kind\": \"dialogue\", \"text\": \"裡面放著一罐【粉紅胡椒研磨罐】，以及幾張染血的病歷單碎頁。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a58\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"pepper\", \"itemName\": \"粉紅胡椒研磨罐\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a59\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a60\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_bedroom_memory\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a61\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_bedroom_shock\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a62\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"box_unlocked\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a63\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"truth_known\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a64\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"mix\", \"amount\": 1}, {\"id\": \"a65\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"exclamation\", \"target\": \"player\", \"durationMs\": 1600}}], \"else\": [{\"id\": \"a66\", \"kind\": \"dialogue\", \"text\": \"木盒上的小銅鎖雕刻著心型藤蔓，鎖孔極其纖巧。強行撬開只會損壞盒子，需要對應的心型小鑰匙。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a67\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"sweat\", \"target\": \"player\", \"durationMs\": 1600}}]}}]}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"雕花木盒\", \"kind\": \"quest\"}}, {\"id\": \"door_bar\", \"name\": \"返回吧檯\", \"x\": 3, \"y\": 8, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a70\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a71\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bar\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 13, \"y\": 8, \"direction\": \"left\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"返回吧檯\", \"kind\": \"exit\"}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp\"}, \"guidance\": [{\"text\": \"使用心型鑰匙打開木盒\", \"eventId\": \"vanity_box\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"box_unlocked\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"帶著粉紅胡椒返回吧檯調酒\", \"eventId\": \"door_bar\", \"conditions\": []}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.4, \"shake\": 0, \"fog\": {\"density\": 0.15, \"color\": \"#fcd5ce\"}, \"lights\": [{\"id\": \"vanity-light\", \"x\": 8.5, \"y\": 2.5, \"radius\": 4.5, \"color\": \"#ffccd5\", \"flicker\": true}, {\"id\": \"bed-lamp\", \"x\": 2, \"y\": 2, \"radius\": 3.5, \"color\": \"#ffe5d9\", \"flicker\": false}], \"ambience\": {\"particles\": \"petals\", \"density\": 0.4, \"rays\": 0.4, \"vignette\": 0.4, \"tint\": \"#e8a598\", \"tintStrength\": 0.15}}}"
+        },
+        "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+        "bgmVolume": 0.4,
+        "bgmLoop": true
+      }
+    },
+    {
+      "id": "card_bar_start",
+      "type": "story",
+      "position": {
+        "x": 1800,
+        "y": 0
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "節點 1：吧檯【起點】",
+        "speaker": "沈淮",
+        "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+        "dialogueLines": [
+          {
+            "id": "card_bar_start-l0",
+            "speaker": "沈淮",
+            "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-沈淮",
+              "name": "沈淮",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+              "slot": "left",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3"
+      }
+    },
+    {
+      "id": "card_anya_note",
+      "type": "story",
+      "position": {
+        "x": 2160,
+        "y": 0
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "安雅的便條",
+        "speaker": "安雅",
+        "text": "『如果你還記得我們初遇的滋味，就替我把它完成吧。』",
+        "dialogueLines": [
+          {
+            "id": "card_anya_note-l0",
+            "speaker": "安雅",
+            "text": "『如果你還記得我們初遇的滋味，就替我把它完成吧。』",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571195856_7014bad6.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-安雅",
+              "name": "安雅",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+              "slot": "center",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571195856_7014bad6.mp3"
+      }
+    },
+    {
+      "id": "card_bedroom_memory",
+      "type": "story",
+      "position": {
+        "x": 2520,
+        "y": 0
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "安雅的回憶",
+        "speaker": "安雅（回憶）",
+        "text": "『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』",
+        "dialogueLines": [
+          {
+            "id": "card_bedroom_memory-l0",
+            "speaker": "安雅（回憶）",
+            "text": "『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571305626_f5a21c4f.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-安雅（回憶）",
+              "name": "安雅（回憶）",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+              "slot": "center",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571305626_f5a21c4f.mp3"
+      }
+    },
+    {
+      "id": "card_bedroom_shock",
+      "type": "story",
+      "position": {
+        "x": 0,
+        "y": 260
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "病歷單的真相",
+        "speaker": "沈淮",
+        "text": "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。",
+        "dialogueLines": [
+          {
+            "id": "card_bedroom_shock-l0",
+            "speaker": "沈淮",
+            "text": "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-沈淮",
+              "name": "沈淮",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+              "slot": "left",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp"
+      }
+    },
+    {
+      "id": "card_confession",
+      "type": "story",
+      "position": {
+        "x": 360,
+        "y": 260
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "安雅的遺書獨白",
+        "speaker": "安雅（獨白）",
+        "text": "『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\n沈淮，這是我為自己選的終點。\n不要嚐它，替我倒掉。』",
+        "dialogueLines": [
+          {
+            "id": "card_confession-l0",
+            "speaker": "安雅（獨白）",
+            "text": "『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\n沈淮，這是我為自己選的終點。\n不要嚐它，替我倒掉。』",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571391989_3c87a9c4.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-安雅（獨白）",
+              "name": "安雅（獨白）",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+              "slot": "center",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571391989_3c87a9c4.mp3",
+        "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132345785_10-crystal-wings-at-dawn.mp3",
+        "bgmVolume": 0.5,
+        "bgmLoop": true
+      }
+    },
+    {
+      "id": "card_choice",
+      "type": "story",
+      "position": {
+        "x": 720,
+        "y": 260
+      },
+      "data": {
+        "type": "choice",
+        "title": "節點 5：終局抉擇",
+        "speaker": "沈淮",
+        "text": "你要如何抉擇？",
+        "choices": [
+          {
+            "id": "opt_burn",
+            "text": "【共赴的辣度】端起酒杯，一口飲盡",
+            "target": "ending_burn_1"
+          },
+          {
+            "id": "opt_cold",
+            "text": "【冷卻的餘溫】遵從遺願，倒進水槽",
+            "target": "ending_cold_1"
+          }
+        ],
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp"
+      }
+    },
+    {
+      "id": "ending_burn_1",
+      "type": "story",
+      "position": {
+        "x": 1080,
+        "y": 260
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "節點 6-A：共赴的辣度",
+        "speaker": "沈淮",
+        "text": "我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。",
+        "dialogueLines": [
+          {
+            "id": "ending_burn_1-l0",
+            "speaker": "沈淮",
+            "text": "我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571598095_2304150e.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-沈淮",
+              "name": "沈淮",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+              "slot": "left",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571598095_2304150e.mp3"
+      }
+    },
+    {
+      "id": "ending_burn_2",
+      "type": "story",
+      "position": {
+        "x": 1440,
+        "y": 260
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "心跳的刺痛",
+        "speaker": "沈淮",
+        "text": "入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。",
+        "dialogueLines": [
+          {
+            "id": "ending_burn_2-l0",
+            "speaker": "沈淮",
+            "text": "入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572040059_1b8a90a9.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-安雅",
+              "name": "安雅",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+              "slot": "right",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            },
+            {
+              "id": "actor-沈淮",
+              "name": "沈淮",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+              "slot": "left",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572040059_1b8a90a9.mp3"
+      }
+    },
+    {
+      "id": "ending_burn_3",
+      "type": "story",
+      "position": {
+        "x": 1800,
+        "y": 260
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "真結局：共赴晚霞",
+        "speaker": "沈淮",
+        "text": "眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅，這一次，妳不必一個人走。\n\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**",
+        "dialogueLines": [
+          {
+            "id": "ending_burn_3-l0",
+            "speaker": "沈淮",
+            "text": "眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅，這一次，妳不必一個人走。\n\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571654884_7769d525.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-安雅",
+              "name": "安雅",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+              "slot": "center",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571654884_7769d525.mp3"
+      }
+    },
+    {
+      "id": "ending_cold_1",
+      "type": "story",
+      "position": {
+        "x": 2160,
+        "y": 260
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "節點 7-B：冷卻的餘溫",
+        "speaker": "沈淮",
+        "text": "手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。",
+        "dialogueLines": [
+          {
+            "id": "ending_cold_1-l0",
+            "speaker": "沈淮",
+            "text": "手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572160891_46526436.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-沈淮",
+              "name": "沈淮",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+              "slot": "left",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572160891_46526436.mp3"
+      }
+    },
+    {
+      "id": "ending_cold_2",
+      "type": "story",
+      "position": {
+        "x": 2520,
+        "y": 260
+      },
+      "data": {
+        "type": "dialogue",
+        "title": "壞結局：冷卻的餘溫",
+        "speaker": "沈淮",
+        "text": "屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\n\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**",
+        "dialogueLines": [
+          {
+            "id": "ending_cold_2-l0",
+            "speaker": "沈淮",
+            "text": "屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\n\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571740808_a90337d8.mp3"
+          }
+        ],
+        "stage": {
+          "actors": [
+            {
+              "id": "actor-沈淮",
+              "name": "沈淮",
+              "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+              "slot": "left",
+              "offsetX": 0,
+              "offsetY": 0,
+              "scale": 1
+            }
+          ]
+        },
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571740808_a90337d8.mp3"
+      }
+    }
+  ],
+  "boards": [
+    {
+      "id": "board-project-8cb1ab7e-891c-46b4-bd38-df29060e5717-main",
+      "kind": "story",
+      "mode": "story",
+      "name": "晚霞是舌尖最後的刺痛",
+      "edges": [
+        {
+          "id": "prologue--m-bar",
+          "source": "prologue",
+          "target": "m-bar",
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "card_confession--card_choice",
+          "source": "card_confession",
+          "target": "card_choice",
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "ending_burn_1--ending_burn_2",
+          "source": "ending_burn_1",
+          "target": "ending_burn_2",
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "ending_burn_2--ending_burn_3",
+          "source": "ending_burn_2",
+          "target": "ending_burn_3",
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "ending_cold_1--ending_cold_2",
+          "source": "ending_cold_1",
+          "target": "ending_cold_2",
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "prologue",
+          "type": "story",
+          "position": {
+            "x": 360,
+            "y": 0
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "序幕：安雅的便條",
+            "speaker": "沈淮",
+            "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+            "dialogueLines": [
+              {
+                "id": "prologue-l0",
+                "speaker": "沈淮",
+                "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-沈淮",
+                  "name": "沈淮",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+                  "slot": "left",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "start": true,
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3",
+            "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+            "bgmVolume": 0.5,
+            "bgmLoop": true
+          }
+        },
+        {
+          "id": "m-bar",
+          "type": "story",
+          "position": {
+            "x": 720,
+            "y": 0
+          },
+          "data": {
+            "type": "plugin",
+            "title": "深夜吧檯",
+            "text": "",
+            "pluginId": "larch-rpg-system",
+            "pluginCardId": "map",
+            "pluginVersion": "0.4.0",
+            "pluginName": "RPG 系統",
+            "pluginCardName": "RPG 地圖",
+            "pluginIcon": "map",
+            "pluginColor": "#4a7358",
+            "pluginPresentation": "fullscreen",
+            "pluginFrame": {
+              "showTitle": false,
+              "showButton": false
+            },
+            "pluginSkippable": false,
+            "pluginReadVars": [
+              "phase",
+              "note_read",
+              "spoon_taken",
+              "storage_pried",
+              "box_unlocked",
+              "truth_known",
+              "cocktail_mixed",
+              "ending_choice",
+              "rpgHp",
+              "inventory",
+              "rpgEquipment",
+              "rpgState",
+              "inventoryLastUsed",
+              "inventoryCount"
+            ],
+            "pluginWriteVars": [
+              "phase",
+              "note_read",
+              "spoon_taken",
+              "storage_pried",
+              "box_unlocked",
+              "truth_known",
+              "cocktail_mixed",
+              "ending_choice",
+              "rpgHp",
+              "inventory",
+              "rpgEquipment",
+              "rpgState",
+              "inventoryLastUsed",
+              "inventoryCount"
+            ],
+            "pluginAssets": [],
+            "platforms": [
+              "web"
+            ],
+            "pluginValues": {
+              "map": "{\"version\": 1, \"name\": \"深夜吧檯\", \"width\": 16, \"height\": 10, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/kenney-rpg/tilesets/1790278984532_tiny-dungeon.png\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 7, \"y\": 6, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955874176_walk-shen.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}, \"actorId\": \"shen\"}, {\"id\": \"note\", \"name\": \"便條紙\", \"x\": 7, \"y\": 4, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a1\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_bar_start\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a2\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_anya_note\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a3\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"note_read\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a4\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"spoon\", \"amount\": 1}, {\"id\": \"a5\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"idea\", \"target\": \"player\", \"durationMs\": 1600}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"便條紙\", \"kind\": \"quest\"}}, {\"id\": \"spoon\", \"name\": \"黃銅調酒匙\", \"x\": 12, \"y\": 4, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a6\", \"kind\": \"dialogue\", \"text\": \"在吧檯角落的杯架旁，靜靜放著一把常用的黃銅調酒匙。匙柄帶有精細的螺紋，質地堅硬，平時她總是用這把匙輕巧地攪拌酒液。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a7\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"spoon\", \"itemName\": \"黃銅調酒匙\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a8\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a9\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"spoon_taken\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a10\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"storage\", \"amount\": 1}, {\"id\": \"a11\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"heart\", \"target\": \"player\", \"durationMs\": 1600}}, {\"id\": \"a12\", \"kind\": \"dialogue\", \"text\": \"有了這把調酒匙，或許能撬開儲藏間卡死的百葉窗暗格。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"黃銅調酒匙\", \"kind\": \"quest\"}}, {\"id\": \"door_storage\", \"name\": \"通往香料儲藏間\", \"x\": 2, \"y\": 9, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a13\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a14\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-storage\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 6, \"y\": 7, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"香料儲藏間\", \"kind\": \"exit\"}}, {\"id\": \"door_bedroom\", \"name\": \"通往臥室梳妝台\", \"x\": 13, \"y\": 9, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a15\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a16\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bedroom\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 3, \"y\": 7, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"臥室梳妝台\", \"kind\": \"exit\"}}, {\"id\": \"shaker\", \"name\": \"調酒台\", \"x\": 8, \"y\": 4, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"box_unlocked\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}, {\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a17\", \"kind\": \"dialogue\", \"text\": \"材料已經齊全了：黃銅調酒匙、番紅花糖漿、粉紅胡椒研磨罐……還有這只高腳杯。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a18\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 400, \"color\": \"#ffb347\"}}, {\"id\": \"a19\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a20\", \"kind\": \"dialogue\", \"text\": \"【注入番紅花糖漿】濃稠燦爛的金黃色液體注入杯底，宛如地平線初升的朝陽，散發溫潤甘甜的草本清香。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a21\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 400}, {\"id\": \"a22\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}, {\"id\": \"a23\", \"kind\": \"dialogue\", \"text\": \"【黃銅匙攪拌】拿起黃銅調酒匙貼著杯壁輕輕攪拌——金黃色液體旋轉著融為一體，純淨透亮，折射出璀璨的琥珀光澤。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a24\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 400}, {\"id\": \"a25\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.7, \"durationMs\": 500, \"color\": \"#ff69b4\"}}, {\"id\": \"a26\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a27\", \"kind\": \"dialogue\", \"text\": \"【研磨粉紅胡椒】旋轉研磨罐，磨入細碎顆粒，表面浮起一層曖昧的淡粉色油脂與碎粒。金黃與粉紅交織，如落日晚霞。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a28\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a29\", \"kind\": \"dialogue\", \"text\": \"杯架下方的機關「喀噠」一聲下沉，吧檯暗格彈開，裡面是一封完整的遺書。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a30\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"cocktail_mixed\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a31\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"confession\", \"amount\": 1}, {\"id\": \"a32\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_confession\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"調製『晚霞』\", \"kind\": \"quest\"}}, {\"id\": \"anya_ghost\", \"name\": \"anya_ghost\", \"x\": 8, \"y\": 3, \"actor\": \"npc\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": true, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955856695_walk-anya-spirit.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp\"}, \"guidance\": [{\"text\": \"閱讀吧檯上的便條紙\", \"eventId\": \"note\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"拿取吧檯角落的調酒匙\", \"eventId\": \"spoon\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"前往香料儲藏間調查\", \"eventId\": \"door_storage\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"storage_pried\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"前往臥室梳妝台開鎖\", \"eventId\": \"door_bedroom\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"box_unlocked\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"在吧檯調製『晚霞』\", \"eventId\": \"shaker\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"做出終局抉擇\", \"eventId\": \"shaker\", \"conditions\": []}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.35, \"shake\": 0, \"fog\": {\"density\": 0.15, \"color\": \"#ffa07a\"}, \"lights\": [{\"id\": \"bar-light\", \"x\": 7.5, \"y\": 3.5, \"radius\": 4.5, \"color\": \"#ffb347\", \"flicker\": true}, {\"id\": \"shelf-light\", \"x\": 11.5, \"y\": 2, \"radius\": 3.5, \"color\": \"#ffa07a\", \"flicker\": false}, {\"id\": \"door-light\", \"x\": 2, \"y\": 8, \"radius\": 2.5, \"color\": \"#ffd180\", \"flicker\": false}], \"ambience\": {\"particles\": \"embers\", \"density\": 0.4, \"rays\": 0.5, \"vignette\": 0.35, \"tint\": \"#ff7733\", \"tintStrength\": 0.15}}}"
+            },
+            "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+            "bgmVolume": 0.4,
+            "bgmLoop": true
+          }
+        },
+        {
+          "id": "m-storage",
+          "type": "story",
+          "position": {
+            "x": 1080,
+            "y": 0
+          },
+          "data": {
+            "type": "plugin",
+            "title": "香料儲藏間",
+            "text": "",
+            "pluginId": "larch-rpg-system",
+            "pluginCardId": "map",
+            "pluginVersion": "0.4.0",
+            "pluginName": "RPG 系統",
+            "pluginCardName": "RPG 地圖",
+            "pluginIcon": "map",
+            "pluginColor": "#4a7358",
+            "pluginPresentation": "fullscreen",
+            "pluginFrame": {
+              "showTitle": false,
+              "showButton": false
+            },
+            "pluginSkippable": false,
+            "pluginReadVars": [
+              "phase",
+              "note_read",
+              "spoon_taken",
+              "storage_pried",
+              "box_unlocked",
+              "truth_known",
+              "cocktail_mixed",
+              "ending_choice",
+              "rpgHp",
+              "inventory",
+              "rpgEquipment",
+              "rpgState",
+              "inventoryLastUsed",
+              "inventoryCount"
+            ],
+            "pluginWriteVars": [
+              "phase",
+              "note_read",
+              "spoon_taken",
+              "storage_pried",
+              "box_unlocked",
+              "truth_known",
+              "cocktail_mixed",
+              "ending_choice",
+              "rpgHp",
+              "inventory",
+              "rpgEquipment",
+              "rpgState",
+              "inventoryLastUsed",
+              "inventoryCount"
+            ],
+            "pluginAssets": [],
+            "platforms": [
+              "web"
+            ],
+            "pluginValues": {
+              "map": "{\"version\": 1, \"name\": \"香料儲藏間\", \"width\": 12, \"height\": 9, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/kenney-rpg/tilesets/1790278984532_tiny-dungeon.png\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 6, \"y\": 7, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955874176_walk-shen.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}, \"actorId\": \"shen\"}, {\"id\": \"window_grate\", \"name\": \"百葉窗暗格\", \"x\": 6, \"y\": 1, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a50\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"storage_pried\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a33\", \"kind\": \"dialogue\", \"text\": \"暗格已經被撬開了，裡面的番紅花糖漿與心型鑰匙已被取出。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}], \"else\": [{\"id\": \"a49\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a34\", \"kind\": \"dialogue\", \"text\": \"我將黃銅調酒匙插進木窗縫隙稍稍使力——『喀噠！』卡榫應聲彈開，窗台下的暗格滑出！\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a35\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"hit\", \"volume\": 0.7}}, {\"id\": \"a36\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 350, \"color\": \"#ffd700\"}}, {\"id\": \"a37\", \"kind\": \"dialogue\", \"text\": \"裡面放著一瓶深金黃色的【番紅花糖漿】。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a38\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"saffron\", \"itemName\": \"番紅花糖漿\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a39\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a40\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a41\", \"kind\": \"dialogue\", \"text\": \"等等……糖漿後方還躺著一串金屬鑰匙！這串【心型吊墜鑰匙】……安雅平時總戴在胸口，從不離身。它一定能打開她鎖在臥室裡的東西。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a42\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"key\", \"itemName\": \"心型吊墜鑰匙\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a43\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a44\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"idea\", \"target\": \"player\", \"durationMs\": 1600}}, {\"id\": \"a45\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"storage_pried\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a46\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"bedroom\", \"amount\": 1}], \"else\": [{\"id\": \"a47\", \"kind\": \"dialogue\", \"text\": \"鐵木卡榫咬得太死，徒手完全拉不開。必須找到細長又堅硬的金屬工具才能撬開。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a48\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"sweat\", \"target\": \"player\", \"durationMs\": 1600}}]}}]}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"百葉窗暗格\", \"kind\": \"quest\"}}, {\"id\": \"door_bar\", \"name\": \"返回吧檯\", \"x\": 6, \"y\": 8, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a51\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a52\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bar\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 2, \"y\": 8, \"direction\": \"right\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"返回吧檯\", \"kind\": \"exit\"}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp\"}, \"guidance\": [{\"text\": \"使用調酒匙撬開百葉窗暗格\", \"eventId\": \"window_grate\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"storage_pried\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"帶著心型鑰匙返回吧檯\", \"eventId\": \"door_bar\", \"conditions\": []}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.45, \"shake\": 0, \"fog\": {\"density\": 0.2, \"color\": \"#edd8b0\"}, \"lights\": [{\"id\": \"window-sun\", \"x\": 6, \"y\": 1, \"radius\": 5, \"color\": \"#ffb347\", \"flicker\": false}, {\"id\": \"door-glow\", \"x\": 6, \"y\": 7.5, \"radius\": 2.5, \"color\": \"#ffa07a\", \"flicker\": false}], \"ambience\": {\"particles\": \"motes\", \"density\": 0.5, \"rays\": 0.7, \"vignette\": 0.35, \"tint\": \"#e6a860\", \"tintStrength\": 0.2}}}"
+            },
+            "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+            "bgmVolume": 0.4,
+            "bgmLoop": true
+          }
+        },
+        {
+          "id": "m-bedroom",
+          "type": "story",
+          "position": {
+            "x": 1440,
+            "y": 0
+          },
+          "data": {
+            "type": "plugin",
+            "title": "臥室梳妝台",
+            "text": "",
+            "pluginId": "larch-rpg-system",
+            "pluginCardId": "map",
+            "pluginVersion": "0.4.0",
+            "pluginName": "RPG 系統",
+            "pluginCardName": "RPG 地圖",
+            "pluginIcon": "map",
+            "pluginColor": "#4a7358",
+            "pluginPresentation": "fullscreen",
+            "pluginFrame": {
+              "showTitle": false,
+              "showButton": false
+            },
+            "pluginSkippable": false,
+            "pluginReadVars": [
+              "phase",
+              "note_read",
+              "spoon_taken",
+              "storage_pried",
+              "box_unlocked",
+              "truth_known",
+              "cocktail_mixed",
+              "ending_choice",
+              "rpgHp",
+              "inventory",
+              "rpgEquipment",
+              "rpgState",
+              "inventoryLastUsed",
+              "inventoryCount"
+            ],
+            "pluginWriteVars": [
+              "phase",
+              "note_read",
+              "spoon_taken",
+              "storage_pried",
+              "box_unlocked",
+              "truth_known",
+              "cocktail_mixed",
+              "ending_choice",
+              "rpgHp",
+              "inventory",
+              "rpgEquipment",
+              "rpgState",
+              "inventoryLastUsed",
+              "inventoryCount"
+            ],
+            "pluginAssets": [],
+            "platforms": [
+              "web"
+            ],
+            "pluginValues": {
+              "map": "{\"version\": 1, \"name\": \"臥室梳妝台\", \"width\": 12, \"height\": 9, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/kenney-rpg/tilesets/1790278984532_tiny-dungeon.png\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 3, \"y\": 7, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955874176_walk-shen.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}, \"actorId\": \"shen\"}, {\"id\": \"vanity_box\", \"name\": \"雕花木盒\", \"x\": 8, \"y\": 2, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a69\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"box_unlocked\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a53\", \"kind\": \"dialogue\", \"text\": \"木盒已經打開了，病歷單的碎頁已被握在手中，空氣裡殘留著淡淡的粉紅胡椒香氣。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}], \"else\": [{\"id\": \"a68\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"storage_pried\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a54\", \"kind\": \"dialogue\", \"text\": \"心型鑰匙插入鎖孔，順時針輕轉——「喀啦」，鎖扣彈開！\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a55\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a56\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 350, \"color\": \"#ffb6c1\"}}, {\"id\": \"a57\", \"kind\": \"dialogue\", \"text\": \"裡面放著一罐【粉紅胡椒研磨罐】，以及幾張染血的病歷單碎頁。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a58\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"pepper\", \"itemName\": \"粉紅胡椒研磨罐\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a59\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a60\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_bedroom_memory\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a61\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_bedroom_shock\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a62\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"box_unlocked\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a63\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"truth_known\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a64\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"mix\", \"amount\": 1}, {\"id\": \"a65\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"exclamation\", \"target\": \"player\", \"durationMs\": 1600}}], \"else\": [{\"id\": \"a66\", \"kind\": \"dialogue\", \"text\": \"木盒上的小銅鎖雕刻著心型藤蔓，鎖孔極其纖巧。強行撬開只會損壞盒子，需要對應的心型小鑰匙。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"沈淮\"}, {\"id\": \"a67\", \"kind\": \"balloon\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"balloon\": {\"icon\": \"sweat\", \"target\": \"player\", \"durationMs\": 1600}}]}}]}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"雕花木盒\", \"kind\": \"quest\"}}, {\"id\": \"door_bar\", \"name\": \"返回吧檯\", \"x\": 3, \"y\": 8, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a70\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a71\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bar\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 13, \"y\": 8, \"direction\": \"left\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"marker\": {\"label\": \"返回吧檯\", \"kind\": \"exit\"}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp\"}, \"guidance\": [{\"text\": \"使用心型鑰匙打開木盒\", \"eventId\": \"vanity_box\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"box_unlocked\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"帶著粉紅胡椒返回吧檯調酒\", \"eventId\": \"door_bar\", \"conditions\": []}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.4, \"shake\": 0, \"fog\": {\"density\": 0.15, \"color\": \"#fcd5ce\"}, \"lights\": [{\"id\": \"vanity-light\", \"x\": 8.5, \"y\": 2.5, \"radius\": 4.5, \"color\": \"#ffccd5\", \"flicker\": true}, {\"id\": \"bed-lamp\", \"x\": 2, \"y\": 2, \"radius\": 3.5, \"color\": \"#ffe5d9\", \"flicker\": false}], \"ambience\": {\"particles\": \"petals\", \"density\": 0.4, \"rays\": 0.4, \"vignette\": 0.4, \"tint\": \"#e8a598\", \"tintStrength\": 0.15}}}"
+            },
+            "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+            "bgmVolume": 0.4,
+            "bgmLoop": true
+          }
+        },
+        {
+          "id": "card_bar_start",
+          "type": "story",
+          "position": {
+            "x": 1800,
+            "y": 0
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "節點 1：吧檯【起點】",
+            "speaker": "沈淮",
+            "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+            "dialogueLines": [
+              {
+                "id": "card_bar_start-l0",
+                "speaker": "沈淮",
+                "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-沈淮",
+                  "name": "沈淮",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+                  "slot": "left",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3"
+          }
+        },
+        {
+          "id": "card_anya_note",
+          "type": "story",
+          "position": {
+            "x": 2160,
+            "y": 0
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "安雅的便條",
+            "speaker": "安雅",
+            "text": "『如果你還記得我們初遇的滋味，就替我把它完成吧。』",
+            "dialogueLines": [
+              {
+                "id": "card_anya_note-l0",
+                "speaker": "安雅",
+                "text": "『如果你還記得我們初遇的滋味，就替我把它完成吧。』",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571195856_7014bad6.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-安雅",
+                  "name": "安雅",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+                  "slot": "center",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571195856_7014bad6.mp3"
+          }
+        },
+        {
+          "id": "card_bedroom_memory",
+          "type": "story",
+          "position": {
+            "x": 2520,
+            "y": 0
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "安雅的回憶",
+            "speaker": "安雅（回憶）",
+            "text": "『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』",
+            "dialogueLines": [
+              {
+                "id": "card_bedroom_memory-l0",
+                "speaker": "安雅（回憶）",
+                "text": "『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571305626_f5a21c4f.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-安雅（回憶）",
+                  "name": "安雅（回憶）",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+                  "slot": "center",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571305626_f5a21c4f.mp3"
+          }
+        },
+        {
+          "id": "card_bedroom_shock",
+          "type": "story",
+          "position": {
+            "x": 0,
+            "y": 260
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "病歷單的真相",
+            "speaker": "沈淮",
+            "text": "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。",
+            "dialogueLines": [
+              {
+                "id": "card_bedroom_shock-l0",
+                "speaker": "沈淮",
+                "text": "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-沈淮",
+                  "name": "沈淮",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+                  "slot": "left",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp"
+          }
+        },
+        {
+          "id": "card_confession",
+          "type": "story",
+          "position": {
+            "x": 360,
+            "y": 260
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "安雅的遺書獨白",
+            "speaker": "安雅（獨白）",
+            "text": "『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\n沈淮，這是我為自己選的終點。\n不要嚐它，替我倒掉。』",
+            "dialogueLines": [
+              {
+                "id": "card_confession-l0",
+                "speaker": "安雅（獨白）",
+                "text": "『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\n沈淮，這是我為自己選的終點。\n不要嚐它，替我倒掉。』",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571391989_3c87a9c4.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-安雅（獨白）",
+                  "name": "安雅（獨白）",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+                  "slot": "center",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571391989_3c87a9c4.mp3",
+            "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132345785_10-crystal-wings-at-dawn.mp3",
+            "bgmVolume": 0.5,
+            "bgmLoop": true
+          }
+        },
+        {
+          "id": "card_choice",
+          "type": "story",
+          "position": {
+            "x": 720,
+            "y": 260
+          },
+          "data": {
+            "type": "choice",
+            "title": "節點 5：終局抉擇",
+            "speaker": "沈淮",
+            "text": "你要如何抉擇？",
+            "choices": [
+              {
+                "id": "opt_burn",
+                "text": "【共赴的辣度】端起酒杯，一口飲盡",
+                "target": "ending_burn_1"
+              },
+              {
+                "id": "opt_cold",
+                "text": "【冷卻的餘溫】遵從遺願，倒進水槽",
+                "target": "ending_cold_1"
+              }
+            ],
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp"
+          }
+        },
+        {
+          "id": "ending_burn_1",
+          "type": "story",
+          "position": {
+            "x": 1080,
+            "y": 260
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "節點 6-A：共赴的辣度",
+            "speaker": "沈淮",
+            "text": "我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。",
+            "dialogueLines": [
+              {
+                "id": "ending_burn_1-l0",
+                "speaker": "沈淮",
+                "text": "我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571598095_2304150e.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-沈淮",
+                  "name": "沈淮",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+                  "slot": "left",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571598095_2304150e.mp3"
+          }
+        },
+        {
+          "id": "ending_burn_2",
+          "type": "story",
+          "position": {
+            "x": 1440,
+            "y": 260
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "心跳的刺痛",
+            "speaker": "沈淮",
+            "text": "入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。",
+            "dialogueLines": [
+              {
+                "id": "ending_burn_2-l0",
+                "speaker": "沈淮",
+                "text": "入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572040059_1b8a90a9.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-安雅",
+                  "name": "安雅",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+                  "slot": "right",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                },
+                {
+                  "id": "actor-沈淮",
+                  "name": "沈淮",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+                  "slot": "left",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572040059_1b8a90a9.mp3"
+          }
+        },
+        {
+          "id": "ending_burn_3",
+          "type": "story",
+          "position": {
+            "x": 1800,
+            "y": 260
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "真結局：共赴晚霞",
+            "speaker": "沈淮",
+            "text": "眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅，這一次，妳不必一個人走。\n\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**",
+            "dialogueLines": [
+              {
+                "id": "ending_burn_3-l0",
+                "speaker": "沈淮",
+                "text": "眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅，這一次，妳不必一個人走。\n\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571654884_7769d525.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-安雅",
+                  "name": "安雅",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+                  "slot": "center",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571654884_7769d525.mp3"
+          }
+        },
+        {
+          "id": "ending_cold_1",
+          "type": "story",
+          "position": {
+            "x": 2160,
+            "y": 260
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "節點 7-B：冷卻的餘溫",
+            "speaker": "沈淮",
+            "text": "手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。",
+            "dialogueLines": [
+              {
+                "id": "ending_cold_1-l0",
+                "speaker": "沈淮",
+                "text": "手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572160891_46526436.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-沈淮",
+                  "name": "沈淮",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+                  "slot": "left",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572160891_46526436.mp3"
+          }
+        },
+        {
+          "id": "ending_cold_2",
+          "type": "story",
+          "position": {
+            "x": 2520,
+            "y": 260
+          },
+          "data": {
+            "type": "dialogue",
+            "title": "壞結局：冷卻的餘溫",
+            "speaker": "沈淮",
+            "text": "屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\n\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**",
+            "dialogueLines": [
+              {
+                "id": "ending_cold_2-l0",
+                "speaker": "沈淮",
+                "text": "屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\n\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**",
+                "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571740808_a90337d8.mp3"
+              }
+            ],
+            "stage": {
+              "actors": [
+                {
+                  "id": "actor-沈淮",
+                  "name": "沈淮",
+                  "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp",
+                  "slot": "left",
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "scale": 1
+                }
+              ]
+            },
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571740808_a90337d8.mp3"
+          }
+        }
+      ],
+      "updatedAt": "2026-09-16T15:54:51.948Z",
+      "description": "完整劇本與分鏡：吧檯、香料儲藏間、臥室梳妝台探索解謎，背包調酒合成與終局雙分歧結局"
+    }
+  ],
+  "locale": "zh-Hant",
+  "ownerId": "c29cd393-779b-4d47-b71a-9f2596bfaa8b",
+  "settings": {
+    "aiMode": "authored",
+    "plugins": {
+      "larch-inventory": {
+        "enabled": true,
+        "settings": {
+          "bagVar": "inventory",
+          "radius": 22,
+          "buttonX": 89.3,
+          "buttonY": 10.4,
+          "itemColor": "#f3f6f2",
+          "slotCount": 12,
+          "textColor": "#27322b",
+          "buttonSize": 48,
+          "hudEnabled": true,
+          "accentColor": "#78a67d",
+          "buttonImage": "",
+          "buttonLabel": "",
+          "buttonPivot": "top-left",
+          "buttonStyle": "icon",
+          "hudPosition": "right",
+          "motionStyle": "gentle",
+          "shadowStyle": "soft",
+          "surfaceColor": "#ffffff",
+          "surfaceOpacity": 0.94,
+          "buttonShowCount": true,
+          "buttonPositionMode": "custom"
+        }
+      },
+      "larch-rpg-system": {
+        "enabled": true,
+        "settings": {
+          "database": "{\"version\": 1, \"heroId\": \"shen\", \"leadSwitch\": false, \"actors\": [{\"id\": \"shen\", \"name\": \"沈淮\", \"title\": \"\", \"profile\": \"\", \"role\": \"party\", \"walk\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955874176_walk-shen.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}, \"portrait\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp\", \"join\": \"stay\", \"kit\": \"none\", \"rig\": \"\", \"joinVariable\": \"\"}, {\"id\": \"anya\", \"name\": \"安雅\", \"title\": \"\", \"profile\": \"\", \"role\": \"party\", \"walk\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955876207_walk-anya.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}, \"portrait\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex\", \"join\": \"later\", \"kit\": \"none\", \"rig\": \"\", \"joinVariable\": \"\"}, {\"id\": \"anya-spirit\", \"name\": \"安雅（靈魂）\", \"title\": \"\", \"profile\": \"\", \"role\": \"party\", \"walk\": {\"url\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955856695_walk-anya-spirit.png\", \"width\": 48, \"height\": 64, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1}, \"portrait\": \"https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex\", \"join\": \"later\", \"kit\": \"none\", \"rig\": \"\", \"joinVariable\": \"\"}]}"
+        }
+      }
+    },
+    "textSpeed": 32,
+    "cardBanner": "none",
+    "cursorMode": "system",
+    "cursorSize": 34,
+    "dialogueUi": {
+      "preset": "cinematic",
+      "fontSize": 25,
+      "textColor": "#f6f2e8",
+      "fontFamily": "serif",
+      "panelColor": "#05070a",
+      "panelWidth": 100,
+      "accentColor": "#b68a3d",
+      "borderColor": "#caa85f",
+      "panelOffset": 0,
+      "backdropBlur": 0,
+      "borderRadius": 0,
+      "nameFontSize": 18,
+      "panelOpacity": 0.84,
+      "panelPadding": 30,
+      "presentation": "gradient",
+      "speakerColor": "#e2c17c",
+      "textOverflow": "grow"
+    },
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "showRpgHud": false,
+    "organization": {
+      "tags": [
+        "LINE社群分享",
+        "gemini"
+      ],
+      "stage": "",
+      "genres": []
+    },
+    "typingEffect": true,
+    "cursorHotspotX": 50,
+    "cursorHotspotY": 50,
+    "cursorRotation": 342,
+    "defaultAiModel": "google/gemini-3.5-flash",
+    "liveApiEnabled": true,
+    "aiDirectorModel": "google/gemini-3.5-flash-lite",
+    "titleCoverShade": 0.58,
+    "aiDirectorUseBgm": true,
+    "autoAdvanceDelay": 1800,
+    "cgGalleryEnabled": true,
+    "projectThumbnail": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/muse-link/yaze.lin.j303@gmail.com/1789569966068_d510d4a9.png",
+    "showVersionBadge": true,
+    "liveApiConfigured": false,
+    "returnToTitleOnEnd": true,
+    "titleScreenEnabled": true,
+    "titleCoverPositionX": 50,
+    "titleCoverPositionY": 50,
+    "aiDirectorMediaScope": "board-only",
+    "aiDirectorAllowPlayerInput": true,
+    "aiDirectorAllowImprovisation": true,
+    "titleCoverImage": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/muse-link/yaze.lin.j303@gmail.com/1789569966068_d510d4a9.png",
+    "titleScreen": {
+      "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3"
+    },
+    "cgGallerySource": "picked",
+    "cgGalleryItems": [
+      {
+        "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/muse-link/yaze.lin.j303@gmail.com/1789569966068_d510d4a9.png",
+        "title": "晚霞是舌尖最後的刺痛"
+      },
+      {
+        "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+        "title": "初遇與終點的晚霞"
+      },
+      {
+        "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "title": "深夜吧檯"
+      },
+      {
+        "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp",
+        "title": "香料儲藏間"
+      },
+      {
+        "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+        "title": "臥室梳妝台"
+      }
+    ]
+  },
+  "createdAt": "2026-09-16T12:35:15.273Z",
+  "languages": [
+    {
+      "code": "zh-Hant",
+      "label": "繁體中文"
+    },
+    {
+      "code": "en",
+      "label": "English"
+    },
+    {
+      "code": "ja",
+      "label": "日本語"
+    }
+  ],
+  "updatedAt": "2026-10-14T04:32:41.586Z",
+  "variables": [
+    {
+      "id": "phase",
+      "name": "phase",
+      "label": "進度階段",
+      "type": "string",
+      "defaultValue": "start"
+    },
+    {
+      "id": "note_read",
+      "name": "note_read",
+      "label": "已讀便條",
+      "type": "boolean",
+      "defaultValue": false
+    },
+    {
+      "id": "spoon_taken",
+      "name": "spoon_taken",
+      "label": "已取得調酒匙",
+      "type": "boolean",
+      "defaultValue": false
+    },
+    {
+      "id": "storage_pried",
+      "name": "storage_pried",
+      "label": "已撬開儲藏室百葉窗",
+      "type": "boolean",
+      "defaultValue": false
+    },
+    {
+      "id": "box_unlocked",
+      "name": "box_unlocked",
+      "label": "已解鎖臥室木盒",
+      "type": "boolean",
+      "defaultValue": false
+    },
+    {
+      "id": "truth_known",
+      "name": "truth_known",
+      "label": "已得知病歷單真相",
+      "type": "boolean",
+      "defaultValue": false
+    },
+    {
+      "id": "cocktail_mixed",
+      "name": "cocktail_mixed",
+      "label": "已調製晚霞",
+      "type": "boolean",
+      "defaultValue": false
+    },
+    {
+      "id": "ending_choice",
+      "name": "ending_choice",
+      "label": "終局抉擇",
+      "type": "string",
+      "defaultValue": ""
+    },
+    {
+      "id": "hp",
+      "name": "rpgHp",
+      "label": "rpgHp",
+      "type": "number",
+      "defaultValue": 100
+    },
+    {
+      "id": "bag",
+      "name": "inventory",
+      "label": "inventory",
+      "type": "string",
+      "defaultValue": "[]"
+    },
+    {
+      "id": "equipment",
+      "name": "rpgEquipment",
+      "label": "rpgEquipment",
+      "type": "string",
+      "defaultValue": "{}"
+    },
+    {
+      "id": "state",
+      "name": "rpgState",
+      "label": "rpgState",
+      "type": "string",
+      "defaultValue": ""
+    },
+    {
+      "id": "used",
+      "name": "inventoryLastUsed",
+      "label": "inventoryLastUsed",
+      "type": "string",
+      "defaultValue": ""
+    },
+    {
+      "id": "count",
+      "name": "inventoryCount",
+      "label": "inventoryCount",
+      "type": "number",
+      "defaultValue": 0
+    }
+  ],
+  "characters": [
+    {
+      "id": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+      "name": "安雅",
+      "role": "女主角，沈淮的摯愛與調酒師",
+      "slug": "安雅",
+      "secrets": "味覺中樞已全面壞死，世界的味道正在徹底消逝；胸前常掛著心型吊墜鑰匙，鎖著珍貴回憶與病歷單碎頁。",
+      "backstory": "患有無法逆轉的味覺中樞神經病變，歷時三年研發出外觀宛如晚霞般美麗、實為神經止痛毒劑的調酒配方。",
+      "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+      "expressions": [
+        {
+          "id": "expression-6ea37c5d-3e7d-4999-b045-d34380b7d823",
+          "kind": "expression",
+          "name": "微笑",
+          "emotion": "smile",
+          "imageUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex"
+        },
+        {
+          "id": "expression-56bd4e18-9e8d-4e0d-83fd-909c4388ffbc",
+          "kind": "expression",
+          "name": "靈魂虛影",
+          "emotion": "spirit",
+          "imageUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex"
+        },
+        {
+          "id": "expression-445dbf5f-8120-4ff4-b917-ed4d53700a54",
+          "kind": "expression",
+          "name": "悲傷含淚",
+          "emotion": "sad",
+          "imageUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex"
+        }
+      ],
+      "personality": "溫柔沉靜、心思細膩，患有無法逆轉的神經病變卻對主角隱瞞至深。",
+      "portraitUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+      "speakingStyle": "溫柔、輕柔氣音、語速偏慢、帶有淡淡鼻音與疲憊感。",
+      "voiceProvider": "minimax"
+    }
+  ],
+  "description": "【第二屆創作者挑戰賽參賽作品】《晚霞是舌尖最後的刺痛》\n\n「如果世界的味道正在消逝，你會想記住什麼？」\n\n【故事大綱】\n沈淮的摯愛安雅是一位才華洋溢的調酒師。然而，一場無法逆轉的神經病變，正在悄悄剝奪她的味覺中樞。\n世界的味道對她而言正在一片一片熄滅。為了不讓沈淮擔心，安雅隱瞞了所有病歷，並在調酒檯前歷時三年，研發出一款外觀宛如落日晚霞般絢麗、入口帶著細微刺痛感，卻實為最後神經止痛的告別配方——「晚霞」。",
+  "activeBoardId": "board-project-8cb1ab7e-891c-46b4-bd38-df29060e5717-main",
+  "schemaVersion": 1
+}

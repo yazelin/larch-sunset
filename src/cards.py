@@ -1,0 +1,65 @@
+"""白板卡片節點產生器：對話卡、選擇卡、變數卡與連線。"""
+_x = [0]
+
+
+def _pos():
+    _x[0] += 1
+    return {'x': (_x[0] % 8) * 360, 'y': (_x[0] // 8) * 260}
+
+
+def dialogue(id, title, lines, bg='', start=False, speaker='', actors=None, voiceUrl=None, bgm=None):
+    """lines：字串（旁白/預設講者）或 (講者, 文字)。"""
+    dl = []
+    if isinstance(lines, str):
+        lines = [lines]
+    for i, l in enumerate(lines):
+        sp, tx = (l if isinstance(l, tuple) else (speaker, l))
+        line_dict = {'id': f'{id}-l{i}', 'speaker': sp, 'text': tx}
+        if i == 0 and voiceUrl:
+            line_dict['voiceUrl'] = voiceUrl
+        dl.append(line_dict)
+    
+    first_speaker = dl[0]['speaker'] if dl else speaker
+    first_text = dl[0]['text'] if dl else ''
+    data = {
+        'type': 'dialogue',
+        'title': title,
+        'speaker': first_speaker,
+        'text': first_text,
+        'dialogueLines': dl,
+        'stage': {'actors': actors or []}
+    }
+    if bg: data['background'] = bg
+    if start: data['start'] = True
+    if voiceUrl: data['voiceUrl'] = voiceUrl
+    if bgm: data.update(bgm=bgm, bgmVolume=0.5, bgmLoop=True)
+    return {'id': id, 'type': 'story', 'position': _pos(), 'data': data}
+
+
+def choice(id, title, text, choices, speaker='沈淮', bg=''):
+    """choices: [{'text': '選項', 'target': 'target_id'}]"""
+    data = {
+        'type': 'choice',
+        'title': title,
+        'speaker': speaker,
+        'text': text,
+        'choices': choices
+    }
+    if bg: data['background'] = bg
+    return {'id': id, 'type': 'story', 'position': _pos(), 'data': data}
+
+
+def link(board, a, b):
+    board['edges'].append({'id': f'{a}--{b}', 'source': a, 'target': b, 'sourceHandle': 'right', 'targetHandle': 'left'})
+
+
+def setvar(id, title, ops):
+    """設定變數卡：ops = [(變數, 值), ...]"""
+    return {'id': id, 'type': 'story', 'position': _pos(), 'data': {
+        'type': 'setVariable', 'title': title, 'text': '',
+        'variableOps': [{'id': f'{id}-{i}', 'variable': k, 'kind': 'set',
+                         'value': str(v).lower() if isinstance(v, bool) else str(v)} for i, (k, v) in enumerate(ops)]}}
+
+
+def actor(name, url, slot='center'):
+    return {'id': f'actor-{name}', 'name': name, 'url': url, 'slot': slot, 'offsetX': 0, 'offsetY': 0, 'scale': 1}

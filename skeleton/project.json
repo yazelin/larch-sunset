@@ -1,0 +1,3096 @@
+{
+  "id": "project-8cb1ab7e-891c-46b4-bd38-df29060e5717",
+  "name": "晚霞是舌尖最後的刺痛",
+  "edges": [
+    {
+      "id": "e_start_note",
+      "source": "node_bar_start",
+      "target": "node_bar_note_voice",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_note_observe",
+      "source": "node_bar_note_voice",
+      "target": "node_bar_observe",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_observe_hub",
+      "source": "node_bar_observe",
+      "target": "node_bar_hub",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_hub_corner",
+      "label": "搜尋角落",
+      "source": "node_bar_hub",
+      "target": "node_bar_corner",
+      "animated": true,
+      "sourceHandle": "choice-0",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_hub_to_storage",
+      "label": "前往儲藏間",
+      "source": "node_bar_hub",
+      "target": "node_storage_observe",
+      "animated": true,
+      "sourceHandle": "choice-1",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_hub_to_bed",
+      "label": "前往臥室",
+      "source": "node_bar_hub",
+      "target": "node_bedroom_observe",
+      "animated": true,
+      "sourceHandle": "choice-2",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_hub_mix",
+      "label": "嘗試調酒",
+      "source": "node_bar_hub",
+      "target": "node_bar_mix_check",
+      "animated": true,
+      "sourceHandle": "choice-3",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_corner_grant",
+      "source": "node_bar_corner",
+      "target": "plugin_grant_spoon",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_grant_spoon_back",
+      "source": "plugin_grant_spoon",
+      "target": "node_bar_hub",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "top"
+    },
+    {
+      "id": "e_storage_obs_hub",
+      "source": "node_storage_observe",
+      "target": "node_storage_hub",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_storage_pry",
+      "label": "用調酒匙撬開",
+      "source": "node_storage_hub",
+      "target": "node_storage_pry",
+      "animated": true,
+      "sourceHandle": "choice-0",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_storage_bare",
+      "label": "徒手拉開",
+      "source": "node_storage_hub",
+      "target": "node_storage_bare",
+      "animated": true,
+      "sourceHandle": "choice-1",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_storage_to_bed",
+      "label": "前往臥室",
+      "source": "node_storage_hub",
+      "target": "node_bedroom_observe",
+      "animated": true,
+      "sourceHandle": "choice-2",
+      "targetHandle": "top"
+    },
+    {
+      "id": "e_storage_back_bar",
+      "label": "返回吧檯",
+      "source": "node_storage_hub",
+      "target": "node_bar_hub",
+      "animated": true,
+      "sourceHandle": "choice-3",
+      "targetHandle": "right"
+    },
+    {
+      "id": "e_bare_back_storage",
+      "source": "node_storage_bare",
+      "target": "node_storage_hub",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "top"
+    },
+    {
+      "id": "e_pry_grant_saffron",
+      "source": "node_storage_pry",
+      "target": "plugin_grant_saffron",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_saffron_find_key",
+      "source": "plugin_grant_saffron",
+      "target": "node_storage_find_key",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_find_key_grant",
+      "source": "node_storage_find_key",
+      "target": "plugin_grant_key",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_key_back_storage",
+      "source": "plugin_grant_key",
+      "target": "node_storage_hub",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "bottom"
+    },
+    {
+      "id": "e_bed_obs_hub",
+      "source": "node_bedroom_observe",
+      "target": "node_bedroom_hub",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_bed_unlock",
+      "label": "用鑰匙打開木盒",
+      "source": "node_bedroom_hub",
+      "target": "node_bedroom_unlock",
+      "animated": true,
+      "sourceHandle": "choice-0",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_bed_examine",
+      "label": "端詳鎖孔",
+      "source": "node_bedroom_hub",
+      "target": "node_bedroom_examine",
+      "animated": true,
+      "sourceHandle": "choice-1",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_bed_to_storage",
+      "label": "前往儲藏間",
+      "source": "node_bedroom_hub",
+      "target": "node_storage_observe",
+      "animated": true,
+      "sourceHandle": "choice-2",
+      "targetHandle": "bottom"
+    },
+    {
+      "id": "e_bed_back_bar",
+      "label": "返回吧檯",
+      "source": "node_bedroom_hub",
+      "target": "node_bar_hub",
+      "animated": true,
+      "sourceHandle": "choice-3",
+      "targetHandle": "bottom"
+    },
+    {
+      "id": "e_examine_back_bed",
+      "source": "node_bedroom_examine",
+      "target": "node_bedroom_hub",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "top"
+    },
+    {
+      "id": "e_unlock_grant_pepper",
+      "source": "node_bedroom_unlock",
+      "target": "plugin_grant_pepper",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_pepper_memory",
+      "source": "plugin_grant_pepper",
+      "target": "node_bedroom_memory",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_memory_shock",
+      "source": "node_bedroom_memory",
+      "target": "node_bedroom_shock",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_shock_back_bed",
+      "source": "node_bedroom_shock",
+      "target": "node_bedroom_hub",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "bottom"
+    },
+    {
+      "id": "e_mix_ok",
+      "label": "開始調製",
+      "source": "node_bar_mix_check",
+      "target": "node_mix_step1",
+      "animated": true,
+      "sourceHandle": "choice-0",
+      "targetHandle": "top"
+    },
+    {
+      "id": "e_mix_cancel",
+      "label": "材料不足返回",
+      "source": "node_bar_mix_check",
+      "target": "node_bar_hub",
+      "animated": true,
+      "sourceHandle": "choice-1",
+      "targetHandle": "bottom"
+    },
+    {
+      "id": "e_step1_step2",
+      "source": "node_mix_step1",
+      "target": "node_mix_step2",
+      "animated": true,
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "e_step2_step3",
+      "source": "node_mix_step2",
+      "target": "node_mix_step3",
+      "animated": true,
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "e_step3_reveal",
+      "source": "node_mix_step3",
+      "target": "node_mix_reveal",
+      "animated": true,
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "e_reveal_confession",
+      "source": "node_mix_reveal",
+      "target": "node_mix_anya_confession",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_confession_choice",
+      "source": "node_mix_anya_confession",
+      "target": "node_final_choice",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_final_burn",
+      "label": "共赴的辣度",
+      "source": "node_final_choice",
+      "target": "node_ending_burn_1",
+      "animated": true,
+      "sourceHandle": "choice-0",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_final_cold",
+      "label": "冷卻的餘溫",
+      "source": "node_final_choice",
+      "target": "node_ending_cold_1",
+      "animated": true,
+      "sourceHandle": "choice-1",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_burn1_burn2",
+      "source": "node_ending_burn_1",
+      "target": "node_ending_burn_2",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_burn2_burn3",
+      "source": "node_ending_burn_2",
+      "target": "node_ending_burn_3",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    },
+    {
+      "id": "e_cold1_cold2",
+      "source": "node_ending_cold_1",
+      "target": "node_ending_cold_2",
+      "animated": true,
+      "sourceHandle": "right",
+      "targetHandle": "left"
+    }
+  ],
+  "media": [
+    {
+      "id": "agent-voice-a593c6bd-1f19-4ef3-9557-09f0c8bfc984",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572160891_46526436.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"手在發抖，但我還是把杯子翻轉，倒進了水槽。\\n\\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-4704f613-586c-48a7-85da-306482b13987",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572040059_1b8a90a9.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\\n\\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-ca93838f-0ffc-4f64-a57d-3a1255805698",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571740808_a90337d8.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\n\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"屋子裡重新歸於死寂。\\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\\n\\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-b7028ff7-f5b3-4bae-9a8d-4ae6aa07dd45",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571654884_7769d525.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅，這一次，妳不必一個人走。\n\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"眼前的光線逐漸暈散成一片金黃與淡粉。\\n安雅，這一次，妳不必一個人走。\\n\\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-b6d788b5-95b0-4156-aace-d239636ca5f4",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571598095_2304150e.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"我沒有聽妳的話。\\n\\n我端起酒杯，一口飲盡。\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-0bcb9468-8ea6-4d90-91a0-b2c81ce937da",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3",
+      "name": "沈淮・1・溫柔青年.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "calm",
+      "voiceId": "Chinese (Mandarin)_Gentle_Youth",
+      "category": "voice",
+      "voiceText": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。只有安雅壓在杯底的一張便條。\\n\\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Gentle_Youth\",\"model\":\"\",\"emotion\":\"calm\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-713ff296-ddea-4771-8c2f-1b2f03961e5d",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571391989_3c87a9c4.mp3",
+      "name": "安雅（獨白）・1・輕柔女孩.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "sad",
+      "voiceId": "Chinese (Mandarin)_Soft_Girl",
+      "category": "voice",
+      "voiceText": "『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\n沈淮，這是我為自己選的終點。\n不要嚐它，替我倒掉。』",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\\n沈淮，這是我為自己選的終點。\\n不要嚐它，替我倒掉。』\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Soft_Girl\",\"model\":\"\",\"emotion\":\"sad\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "agent-voice-32e91a24-79ae-411d-83b0-c9086201e0a0",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571305626_f5a21c4f.mp3",
+      "name": "安雅（回憶）・1・輕柔女孩.mp3",
+      "type": "audio",
+      "remote": true,
+      "source": "Larch Agent AI voice",
+      "emotion": "calm",
+      "voiceId": "Chinese (Mandarin)_Soft_Girl",
+      "category": "voice",
+      "voiceText": "『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』",
+      "disclosure": "AI-generated voice / AI 合成語音",
+      "voiceModel": "speech-2.8-hd",
+      "voiceCacheKey": "{\"version\":1,\"text\":\"『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』\",\"provider\":\"minimax\",\"voice\":\"Chinese (Mandarin)_Soft_Girl\",\"model\":\"\",\"emotion\":\"calm\",\"instructions\":\"\"}"
+    },
+    {
+      "id": "ai-cover-8474703f-8499-4065-9f66-4add1815f8b2",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/muse-link/yaze.lin.j303@gmail.com/1789569966068_d510d4a9.png",
+      "name": "AI 封面 · 晚霞是舌尖最後的刺痛",
+      "type": "image",
+      "remote": true,
+      "source": "Akarion AI",
+      "license": "AI generated",
+      "variant": "一張視覺小說《晚霞是舌尖最後的刺痛》的封面主視覺。開場的氛圍：吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。只有安雅壓在杯底的一張便條。 初遇的滋味……金黃",
+      "category": "scene"
+    },
+    {
+      "id": "bf87729e-6be4-43d2-a5d1-11c1717f3b10",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+      "name": "anya_spirit_codex",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "4f79bfb2-b829-4907-ac61-decb41817bc1",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+      "name": "anya_sprite_codex",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "c0f4e597-9226-4a2f-b848-5de60302b16d",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568906846_prop_pepper_chroma",
+      "name": "prop_pepper_chroma",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "prop"
+    },
+    {
+      "id": "ffefd8a9-f5c0-47a7-a31a-292f47d2e4e0",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568842314_prop_saffron_chroma",
+      "name": "prop_saffron_chroma",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "prop"
+    },
+    {
+      "id": "a94fac78-7065-41a9-90db-b5337e537d96",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568785759_prop_key_chroma",
+      "name": "prop_key_chroma",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "prop"
+    },
+    {
+      "id": "fe49a735-eea3-4202-86b6-b6741b9bedf1",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568571752_prop_spoon_chroma",
+      "name": "prop_spoon_chroma",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "prop"
+    },
+    {
+      "id": "b0d7ee8b-e476-4e13-b679-ec8d49b2a79a",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565753666_prop_spoon.webp",
+      "name": "prop_spoon.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "item"
+    },
+    {
+      "id": "c4a63d3b-7746-4869-9fed-522244eaf6c7",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565753701_prop_pepper.webp",
+      "name": "prop_pepper.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "item"
+    },
+    {
+      "id": "e428f390-aa48-464b-9800-d66f770433f6",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp",
+      "name": "bg_storage.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "765173d5-9e5a-4a38-b6b2-d66c7e9882be",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565676624_anya_spirit.webp",
+      "name": "anya_spirit.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "93650840-5a65-48b8-aa11-c7590708c214",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565676666_prop_key.webp",
+      "name": "prop_key.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "item"
+    },
+    {
+      "id": "9642b32d-00e0-4cb7-acee-f00fdc626002",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565676622_prop_saffron.webp",
+      "name": "prop_saffron.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "item"
+    },
+    {
+      "id": "33e3d74b-059b-4b0d-8bab-b996e822b937",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+      "name": "bg_bar.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "9159ac2b-1bab-4c87-ab2a-82cba949704c",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+      "name": "bg_bedroom.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "91d830b9-dd95-4af0-ab33-5e64c9588387",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+      "name": "cg_cocktail.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "df95b271-bfb4-45de-a29e-c65b27188f0b",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565580712_bg_bedroom.webp",
+      "name": "bg_bedroom.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "08af6368-9f4a-4053-a48c-8396a3bc3a15",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565546132_bg_bedroom.webp",
+      "name": "bg_bedroom.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "cae2a1db-5953-4837-a004-5f973af63be3",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565501794_bg_storage.webp",
+      "name": "bg_storage.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "7cb60fc9-7b3a-43d0-86ff-e3df698f1b79",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565471506_bg_storage.webp",
+      "name": "bg_storage.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "95633c61-d10c-4c01-be87-f6f1e93dbf7e",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565455439_bg_storage.webp",
+      "name": "bg_storage.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "ed42b127-fb68-4295-8091-881c2b74357f",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565423347_bg_bar.webp",
+      "name": "bg_bar.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "6969bf06-ee70-4560-a3d5-5f75b15a9f59",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565385721_bg_bar.webp",
+      "name": "bg_bar.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "672f98e7-753f-47bd-baa4-033d499fea08",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565353581_bg_bar.webp",
+      "name": "bg_bar.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "background"
+    },
+    {
+      "id": "460f87f6-8ab4-40e4-a145-4e529d33b8d4",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565329598_anya_spirit.webp",
+      "name": "anya_spirit.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "0cc82426-78b0-4360-9c3a-e5197ca741c4",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565290553_anya_spirit.webp",
+      "name": "anya_spirit.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "19e703b5-8c30-4481-8d75-96950a726267",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565266925_anya_spirit.webp",
+      "name": "anya_spirit.webp",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "character"
+    },
+    {
+      "id": "7494d5fb-a21b-41fc-abaa-88c280396a7e",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565198939_bg_bar",
+      "name": "bg_bar",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "backgrounds"
+    },
+    {
+      "id": "e151011b-0976-4414-bb3e-6160dacbd78b",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565138719_anya_spirit",
+      "name": "anya_spirit",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "characters"
+    },
+    {
+      "id": "c31b07e6-0e60-4720-b21e-36c8da6443b6",
+      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565071893_anya_sprite",
+      "name": "anya_sprite",
+      "type": "image",
+      "remote": true,
+      "source": "AI Agent upload",
+      "category": "characters"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node_bar_start",
+      "data": {
+        "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+        "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+        "type": "dialogue",
+        "start": true,
+        "title": "節點 1：吧檯【起點】",
+        "bgmLoop": true,
+        "speaker": "沈淮",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3",
+        "bgmVolume": 0.35,
+        "voiceMode": "ai",
+        "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "transition": "fadeBlack",
+        "voiceModel": "speech-2.8-hd",
+        "voiceEmotion": "calm",
+        "voiceProvider": "minimax",
+        "voiceDisclosure": true
+      },
+      "type": "story",
+      "position": {
+        "x": 100,
+        "y": 300
+      }
+    },
+    {
+      "id": "node_bar_note_voice",
+      "data": {
+        "text": "『如果你還記得我們初遇的滋味，就替我把它完成吧。』",
+        "type": "dialogue",
+        "title": "安雅的便條",
+        "speaker": "安雅",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571195856_7014bad6.mp3",
+        "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+        "characterLayers": [
+          {
+            "x": 0,
+            "y": 0,
+            "id": "layer_anya_note",
+            "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+            "scale": 1,
+            "position": "center"
+          }
+        ],
+        "characterEmotion": "smile",
+        "characterPosition": "center"
+      },
+      "type": "story",
+      "position": {
+        "x": 480,
+        "y": 300
+      }
+    },
+    {
+      "id": "node_bar_hub",
+      "data": {
+        "text": "現在該做什麼？",
+        "type": "choice",
+        "title": "吧檯・行動抉擇",
+        "choices": [
+          "【調查】搜尋吧檯角落",
+          "【移動】前往【香料儲藏間】",
+          "【移動】前往【臥室梳妝台】",
+          "【調酒】開始嘗試調製那杯酒"
+        ],
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "choiceMode": "branch",
+        "choicePlacement": "center"
+      },
+      "type": "story",
+      "position": {
+        "x": 1240,
+        "y": 300
+      }
+    },
+    {
+      "id": "node_bar_corner",
+      "data": {
+        "text": "在吧檯角落的杯架旁，靜靜放著一把常用的黃銅調酒匙。匙柄帶有精細的螺紋，末端微扁，平時她總是用這把匙輕巧地攪拌酒液。",
+        "type": "dialogue",
+        "title": "發現調酒匙",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 1620,
+        "y": 100
+      }
+    },
+    {
+      "id": "plugin_grant_spoon",
+      "data": {
+        "type": "plugin",
+        "title": "拾取：黃銅調酒匙",
+        "pluginId": "larch-inventory",
+        "platforms": [
+          "web"
+        ],
+        "pluginHtml": "<!doctype html>\n<html lang=\"zh-Hant\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>取得道具</title>\n<style>\n  *{box-sizing:border-box;margin:0;padding:0}\n  html,body{height:100%}\n  body{font-family:-apple-system,\"Segoe UI\",\"Noto Sans TC\",system-ui,sans-serif;color:#27322b;background:transparent;\n    display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden;-webkit-tap-highlight-color:transparent}\n  .wrap{width:100%;max-width:760px;display:flex;flex-direction:column;gap:11px;padding:16px;border:1px solid #e4eae3;\n    border-radius:22px;background:#fff;box-shadow:0 18px 48px rgba(39,50,43,.12);animation:arrive .55s cubic-bezier(.18,1.35,.36,1)}\n  h1{font-size:15px;letter-spacing:.01em;font-weight:780;display:flex;align-items:center;gap:8px}\n  h1 small{font-weight:700;color:#78a67d;font-size:9px;letter-spacing:.14em}\n  svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}\n  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}\n  .cta,.ghost{min-height:38px;padding:8px 16px;border-radius:13px;font-size:12px;font-weight:760;\n    transition:transform .38s cubic-bezier(.18,1.35,.36,1),background .18s ease,border-color .18s ease,box-shadow .18s ease}\n  .cta{background:#78a67d;color:#fff;box-shadow:0 8px 18px rgba(82,123,88,.2)}\n  .ghost{border:1px solid #dfe7de;background:#f7f9f6;color:#5c685f}\n  .cta:hover,.ghost:hover{transform:translateY(-3px) scale(1.025)}\n  .cta:active,.ghost:active{transform:scale(.96)}\n  .cta[disabled]{opacity:.35;cursor:default;transform:none;box-shadow:none}\n  .row{display:flex;align-items:center;gap:8px;justify-content:flex-end}\n  .soft-card{border:1px solid #e3eae2;border-radius:17px;background:#f6f8f5}\n  .item-mark{width:58px;height:58px;flex:none;display:grid;place-items:center;border-radius:17px;background:#e8f1e8;color:#628d68}\n  .item-mark svg{width:27px;height:27px}\n  @keyframes arrive{0%{opacity:0;transform:translateY(12px) scale(.94)}65%{transform:translateY(-2px) scale(1.012)}100%{opacity:1;transform:none}}\n  @media(max-width:520px){body{padding:8px}.wrap{padding:13px;border-radius:18px}}\n</style></head>\n<body><div class=\"wrap\">\n  <style>\n    body{padding:0;background:transparent}\n    .wrap{width:100%;max-width:none;height:100%;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;animation:none}\n    .pickup{position:relative;width:clamp(156px,40vmin,350px);height:clamp(156px,40vmin,350px);display:grid;place-items:center;border-radius:50%;outline:0;\n      transition:transform .5s cubic-bezier(.18,1.35,.36,1);animation:pickup-arrive .72s cubic-bezier(.16,1.28,.3,1) both}\n    .pickup::before{position:absolute;inset:7%;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:radial-gradient(circle at 42% 35%,rgba(255,255,255,.35),rgba(238,247,239,.16) 52%,rgba(168,197,172,.09));\n      box-shadow:inset 0 0 42px rgba(255,255,255,.22),0 24px 70px rgba(17,31,21,.22);content:''}\n    .pickup::after{position:absolute;inset:-2%;border:1px solid rgba(220,241,224,.24);border-radius:50%;content:'';animation:pickup-halo 2.4s ease-out infinite}\n    .pickup-media{position:relative;z-index:1;width:76%;height:76%;display:grid;place-items:center;color:rgba(238,247,239,.92)}\n    .pickup,.pickup-media{-webkit-user-select:none;user-select:none}\n    .pickup-media img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;display:none;width:100%;height:100%;object-fit:contain;animation:pickup-float 3s ease-in-out infinite}\n    .pickup-media svg{width:42%;height:42%}\n    .pickup:hover{transform:scale(1.06)}\n    .pickup:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.82),0 0 0 8px rgba(112,160,119,.55)}\n    .pickup:active{transform:scale(.94)}\n    .pickup.collected{pointer-events:none;animation:pickup-collect .36s cubic-bezier(.4,0,.2,1) forwards}\n    .pickup.confirmed{pointer-events:none;animation:pickup-confirm .36s cubic-bezier(.18,1.35,.36,1) both}\n    @keyframes pickup-arrive{0%{opacity:0;transform:translateY(24px) scale(.58) rotate(-4deg)}70%{opacity:1;transform:translateY(-5px) scale(1.06) rotate(1deg)}100%{transform:none}}\n    @keyframes pickup-float{0%,100%{transform:translateY(3px) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}\n    @keyframes pickup-halo{0%{opacity:.7;transform:scale(.82)}75%,100%{opacity:0;transform:scale(1.16)}}\n    @keyframes pickup-collect{45%{opacity:1;transform:scale(1.13)}100%{opacity:0;transform:scale(.72) translateY(-12px)}}\n    @keyframes pickup-confirm{50%{transform:scale(1.12)}100%{transform:scale(1)}}\n    @media(prefers-reduced-motion:reduce){.pickup,.pickup-media img,.pickup::after{animation:none}.pickup{transition:opacity .18s ease}.pickup.collected{opacity:0}}\n  </style>\n  <button type=\"button\" class=\"pickup\" id=\"go\" aria-label=\"收進背包\">\n    <span class=\"pickup-media\" id=\"item-mark\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z\"/><path d=\"m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9\"/></svg><img id=\"item-image\" alt=\"\" draggable=\"false\"/></span>\n  </button>\n</div>\n<script>\nvar values={},vars={},assets=[],characters=[],locale='zh-Hant',done=false;\nfunction setVar(name,value){ if(name) parent.postMessage({type:'larch:set',name:name,value:value},'*'); }\nfunction finish(result,payload){ if(done)return; done=true; parent.postMessage({type:'larch:complete',result:result,payload:payload},'*'); }\nfunction num(value,fallback){ var parsed=Number(value); return isNaN(parsed)?fallback:parsed; }\nfunction str(value,fallback){ return (value===undefined||value===null||value==='')?fallback:String(value); }\nparent.postMessage({type:'larch:ready'},'*');\nwindow.addEventListener('message',function(event){\n  var data=event.data;\n  if(!data||data.type!=='larch:init')return;\n  values=data.values||{};vars=data.variables||{};assets=data.assets||[];characters=data.characters||[];locale=data.locale||'zh-Hant';\n  try{ start(); }catch(error){ finish('error'); }\n});\n\nfunction readBag(name){\n  var raw=vars[name];\n  if(!raw)return [];\n  if(typeof raw!=='string'){ return []; }\n  try{ var parsed=JSON.parse(raw); return Array.isArray(parsed)?parsed:[]; }\n  catch(error){\n    // 作者也可能自己在專案設定裡填了「繩索,火把」這種預設值 —— 照樣讀得懂。\n    return raw.split(/[,、]/).map(function(item){return item.trim();}).filter(Boolean).map(function(item){return {n:item,i:''};});\n  }\n}\nfunction writeBag(name,items){ setVar(name,JSON.stringify(items)); }\n\nfunction start(){\n  if(done)return;\n  var name=str(values.itemName,'神秘道具');\n  var note=str(values.itemNote,'');\n  var bagVar=str(values.bagVar,'');\n  var count=Math.max(1,num(values.itemCount,1));\n  var hideAfterCollect=values.hideAfterCollect!==false;\n  var button=document.getElementById('go');\n  button.setAttribute('aria-label','收進背包：'+name+(count>1?'，數量 '+count:''));\n  button.title=name;\n  var itemImage=str(values.itemImage,'');\n  if(itemImage){\n    var image=document.getElementById('item-image');\n    image.src=itemImage;image.alt=name;image.style.display='block';\n    image.onerror=function(){image.style.display='none';document.querySelector('#item-mark svg').style.display='block';};\n    document.querySelector('#item-mark svg').style.display='none';\n  }\n  var collected=false;\n  button.onclick=function(){\n    if(collected)return;\n    collected=true;button.disabled=true;button.classList.add(hideAfterCollect?'collected':'confirmed');\n    var bag=readBag(bagVar);\n    var itemId=(str(values.itemId,'').trim()||name.trim()).toLowerCase().replace(/\\s+/g,'-');\n    var existing=bag.find(function(item){return String(item.id||item.n)===itemId;});\n    var item={id:itemId,n:name,i:itemImage,d:note,q:count,c:values.consumable!==false,e:str(values.effectKind,'none'),v:str(values.effectVar,''),x:values.effectValue,t:str(values.storyNodeId,''),useConditionVariable:str(values.useConditionVariable,'').trim(),useConditionValue:values.useConditionValue,useConditionMessage:str(values.useConditionMessage,'')};\n    if(existing){\n      existing.q=Math.max(1,num(existing.q,1))+count;\n      existing.n=name;existing.i=itemImage;existing.d=note;existing.c=item.c;existing.e=item.e;existing.v=item.v;existing.x=item.x;existing.t=item.t;\n      existing.useConditionVariable=item.useConditionVariable;existing.useConditionValue=item.useConditionValue;existing.useConditionMessage=item.useConditionMessage;\n    }else bag.push(item);\n    if(bagVar)writeBag(bagVar,bag);\n    if(values.countVar)setVar(str(values.countVar,''),bag.reduce(function(total,entry){return total+Math.max(1,num(entry.q,1));},0));\n    if(values.autoCollect===true)finish('granted',{item:name,count:count});\n    else setTimeout(function(){finish('granted',{item:name,count:count});},280);\n  };\n  if(values.autoCollect===true){button.style.display='none';button.onclick();}\n}\n</script></body></html>",
+        "pluginIcon": "box",
+        "pluginName": "背包系統",
+        "pluginColor": "#78a67d",
+        "pluginCardId": "grant-item",
+        "pluginValues": {
+          "bagVar": "inventory",
+          "itemId": "brass_spoon",
+          "countVar": "inventoryCount",
+          "itemName": "黃銅調酒匙",
+          "itemNote": "細長堅硬的黃銅調酒匙，末端微扁，可用於攪拌或撬開儲藏間窗台暗格。",
+          "effectVar": "",
+          "itemCount": 1,
+          "itemImage": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568571752_prop_spoon_chroma",
+          "consumable": false,
+          "effectKind": "none",
+          "autoCollect": false,
+          "effectValue": "",
+          "storyNodeId": "node_storage_pry",
+          "hideAfterCollect": true,
+          "useConditionValue": "",
+          "useConditionMessage": "",
+          "useConditionVariable": ""
+        },
+        "pluginVersion": "1.9.0",
+        "pluginCardName": "取得道具",
+        "pluginReadVars": [
+          "inventory"
+        ],
+        "pluginSkippable": false,
+        "pluginWriteVars": [
+          "inventory",
+          "inventoryCount"
+        ],
+        "pluginPresentation": "fullscreen"
+      },
+      "type": "story",
+      "position": {
+        "x": 2000,
+        "y": 100
+      }
+    },
+    {
+      "id": "node_storage_hub",
+      "data": {
+        "text": "儲藏間的行動：",
+        "type": "choice",
+        "title": "儲藏間・調查行動",
+        "choices": [
+          "【工具】使用【黃銅調酒匙】撬開卡死的百葉窗",
+          "【調查】徒手嘗試拉開通風窗",
+          "【移動】前往【臥室梳妝台】",
+          "【返回】回到【吧檯】"
+        ],
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp",
+        "choiceMode": "branch",
+        "choicePlacement": "center",
+        "choiceConditions": [
+          {
+            "op": "hasItem",
+            "kind": "variable",
+            "match": "all",
+            "value": "brass_spoon",
+            "variable": "inventory",
+            "conditions": [
+              {
+                "op": "hasItem",
+                "value": "brass_spoon",
+                "variable": "inventory",
+                "valueSource": "value"
+              }
+            ],
+            "valueSource": "value"
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "type": "story",
+      "position": {
+        "x": 2000,
+        "y": 450
+      }
+    },
+    {
+      "id": "node_storage_bare",
+      "data": {
+        "text": "鐵木卡榫咬得太死，徒手完全拉不開。必須找到細長又堅硬的金屬工具才能撬開。",
+        "type": "dialogue",
+        "title": "百葉窗卡死",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 2380,
+        "y": 380
+      }
+    },
+    {
+      "id": "node_storage_pry",
+      "data": {
+        "text": "我將黃銅調酒匙插進木窗縫隙稍稍使力——『喀噠！』卡榫應聲彈開，窗台下的暗格滑出！\n裡面放著一瓶深金黃色的【番紅花糖漿】。",
+        "type": "dialogue",
+        "title": "撬開暗格",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 2380,
+        "y": 620
+      }
+    },
+    {
+      "id": "plugin_grant_saffron",
+      "data": {
+        "type": "plugin",
+        "title": "拾取：番紅花糖漿",
+        "pluginId": "larch-inventory",
+        "platforms": [
+          "web"
+        ],
+        "pluginHtml": "<!doctype html>\n<html lang=\"zh-Hant\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>取得道具</title>\n<style>\n  *{box-sizing:border-box;margin:0;padding:0}\n  html,body{height:100%}\n  body{font-family:-apple-system,\"Segoe UI\",\"Noto Sans TC\",system-ui,sans-serif;color:#27322b;background:transparent;\n    display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden;-webkit-tap-highlight-color:transparent}\n  .wrap{width:100%;max-width:760px;display:flex;flex-direction:column;gap:11px;padding:16px;border:1px solid #e4eae3;\n    border-radius:22px;background:#fff;box-shadow:0 18px 48px rgba(39,50,43,.12);animation:arrive .55s cubic-bezier(.18,1.35,.36,1)}\n  h1{font-size:15px;letter-spacing:.01em;font-weight:780;display:flex;align-items:center;gap:8px}\n  h1 small{font-weight:700;color:#78a67d;font-size:9px;letter-spacing:.14em}\n  svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}\n  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}\n  .cta,.ghost{min-height:38px;padding:8px 16px;border-radius:13px;font-size:12px;font-weight:760;\n    transition:transform .38s cubic-bezier(.18,1.35,.36,1),background .18s ease,border-color .18s ease,box-shadow .18s ease}\n  .cta{background:#78a67d;color:#fff;box-shadow:0 8px 18px rgba(82,123,88,.2)}\n  .ghost{border:1px solid #dfe7de;background:#f7f9f6;color:#5c685f}\n  .cta:hover,.ghost:hover{transform:translateY(-3px) scale(1.025)}\n  .cta:active,.ghost:active{transform:scale(.96)}\n  .cta[disabled]{opacity:.35;cursor:default;transform:none;box-shadow:none}\n  .row{display:flex;align-items:center;gap:8px;justify-content:flex-end}\n  .soft-card{border:1px solid #e3eae2;border-radius:17px;background:#f6f8f5}\n  .item-mark{width:58px;height:58px;flex:none;display:grid;place-items:center;border-radius:17px;background:#e8f1e8;color:#628d68}\n  .item-mark svg{width:27px;height:27px}\n  @keyframes arrive{0%{opacity:0;transform:translateY(12px) scale(.94)}65%{transform:translateY(-2px) scale(1.012)}100%{opacity:1;transform:none}}\n  @media(max-width:520px){body{padding:8px}.wrap{padding:13px;border-radius:18px}}\n</style></head>\n<body><div class=\"wrap\">\n  <style>\n    body{padding:0;background:transparent}\n    .wrap{width:100%;max-width:none;height:100%;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;animation:none}\n    .pickup{position:relative;width:clamp(156px,40vmin,350px);height:clamp(156px,40vmin,350px);display:grid;place-items:center;border-radius:50%;outline:0;\n      transition:transform .5s cubic-bezier(.18,1.35,.36,1);animation:pickup-arrive .72s cubic-bezier(.16,1.28,.3,1) both}\n    .pickup::before{position:absolute;inset:7%;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:radial-gradient(circle at 42% 35%,rgba(255,255,255,.35),rgba(238,247,239,.16) 52%,rgba(168,197,172,.09));\n      box-shadow:inset 0 0 42px rgba(255,255,255,.22),0 24px 70px rgba(17,31,21,.22);content:''}\n    .pickup::after{position:absolute;inset:-2%;border:1px solid rgba(220,241,224,.24);border-radius:50%;content:'';animation:pickup-halo 2.4s ease-out infinite}\n    .pickup-media{position:relative;z-index:1;width:76%;height:76%;display:grid;place-items:center;color:rgba(238,247,239,.92)}\n    .pickup,.pickup-media{-webkit-user-select:none;user-select:none}\n    .pickup-media img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;display:none;width:100%;height:100%;object-fit:contain;animation:pickup-float 3s ease-in-out infinite}\n    .pickup-media svg{width:42%;height:42%}\n    .pickup:hover{transform:scale(1.06)}\n    .pickup:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.82),0 0 0 8px rgba(112,160,119,.55)}\n    .pickup:active{transform:scale(.94)}\n    .pickup.collected{pointer-events:none;animation:pickup-collect .36s cubic-bezier(.4,0,.2,1) forwards}\n    .pickup.confirmed{pointer-events:none;animation:pickup-confirm .36s cubic-bezier(.18,1.35,.36,1) both}\n    @keyframes pickup-arrive{0%{opacity:0;transform:translateY(24px) scale(.58) rotate(-4deg)}70%{opacity:1;transform:translateY(-5px) scale(1.06) rotate(1deg)}100%{transform:none}}\n    @keyframes pickup-float{0%,100%{transform:translateY(3px) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}\n    @keyframes pickup-halo{0%{opacity:.7;transform:scale(.82)}75%,100%{opacity:0;transform:scale(1.16)}}\n    @keyframes pickup-collect{45%{opacity:1;transform:scale(1.13)}100%{opacity:0;transform:scale(.72) translateY(-12px)}}\n    @keyframes pickup-confirm{50%{transform:scale(1.12)}100%{transform:scale(1)}}\n    @media(prefers-reduced-motion:reduce){.pickup,.pickup-media img,.pickup::after{animation:none}.pickup{transition:opacity .18s ease}.pickup.collected{opacity:0}}\n  </style>\n  <button type=\"button\" class=\"pickup\" id=\"go\" aria-label=\"收進背包\">\n    <span class=\"pickup-media\" id=\"item-mark\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z\"/><path d=\"m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9\"/></svg><img id=\"item-image\" alt=\"\" draggable=\"false\"/></span>\n  </button>\n</div>\n<script>\nvar values={},vars={},assets=[],characters=[],locale='zh-Hant',done=false;\nfunction setVar(name,value){ if(name) parent.postMessage({type:'larch:set',name:name,value:value},'*'); }\nfunction finish(result,payload){ if(done)return; done=true; parent.postMessage({type:'larch:complete',result:result,payload:payload},'*'); }\nfunction num(value,fallback){ var parsed=Number(value); return isNaN(parsed)?fallback:parsed; }\nfunction str(value,fallback){ return (value===undefined||value===null||value==='')?fallback:String(value); }\nparent.postMessage({type:'larch:ready'},'*');\nwindow.addEventListener('message',function(event){\n  var data=event.data;\n  if(!data||data.type!=='larch:init')return;\n  values=data.values||{};vars=data.variables||{};assets=data.assets||[];characters=data.characters||[];locale=data.locale||'zh-Hant';\n  try{ start(); }catch(error){ finish('error'); }\n});\n\nfunction readBag(name){\n  var raw=vars[name];\n  if(!raw)return [];\n  if(typeof raw!=='string'){ return []; }\n  try{ var parsed=JSON.parse(raw); return Array.isArray(parsed)?parsed:[]; }\n  catch(error){\n    // 作者也可能自己在專案設定裡填了「繩索,火把」這種預設值 —— 照樣讀得懂。\n    return raw.split(/[,、]/).map(function(item){return item.trim();}).filter(Boolean).map(function(item){return {n:item,i:''};});\n  }\n}\nfunction writeBag(name,items){ setVar(name,JSON.stringify(items)); }\n\nfunction start(){\n  if(done)return;\n  var name=str(values.itemName,'神秘道具');\n  var note=str(values.itemNote,'');\n  var bagVar=str(values.bagVar,'');\n  var count=Math.max(1,num(values.itemCount,1));\n  var hideAfterCollect=values.hideAfterCollect!==false;\n  var button=document.getElementById('go');\n  button.setAttribute('aria-label','收進背包：'+name+(count>1?'，數量 '+count:''));\n  button.title=name;\n  var itemImage=str(values.itemImage,'');\n  if(itemImage){\n    var image=document.getElementById('item-image');\n    image.src=itemImage;image.alt=name;image.style.display='block';\n    image.onerror=function(){image.style.display='none';document.querySelector('#item-mark svg').style.display='block';};\n    document.querySelector('#item-mark svg').style.display='none';\n  }\n  var collected=false;\n  button.onclick=function(){\n    if(collected)return;\n    collected=true;button.disabled=true;button.classList.add(hideAfterCollect?'collected':'confirmed');\n    var bag=readBag(bagVar);\n    var itemId=(str(values.itemId,'').trim()||name.trim()).toLowerCase().replace(/\\s+/g,'-');\n    var existing=bag.find(function(item){return String(item.id||item.n)===itemId;});\n    var item={id:itemId,n:name,i:itemImage,d:note,q:count,c:values.consumable!==false,e:str(values.effectKind,'none'),v:str(values.effectVar,''),x:values.effectValue,t:str(values.storyNodeId,''),useConditionVariable:str(values.useConditionVariable,'').trim(),useConditionValue:values.useConditionValue,useConditionMessage:str(values.useConditionMessage,'')};\n    if(existing){\n      existing.q=Math.max(1,num(existing.q,1))+count;\n      existing.n=name;existing.i=itemImage;existing.d=note;existing.c=item.c;existing.e=item.e;existing.v=item.v;existing.x=item.x;existing.t=item.t;\n      existing.useConditionVariable=item.useConditionVariable;existing.useConditionValue=item.useConditionValue;existing.useConditionMessage=item.useConditionMessage;\n    }else bag.push(item);\n    if(bagVar)writeBag(bagVar,bag);\n    if(values.countVar)setVar(str(values.countVar,''),bag.reduce(function(total,entry){return total+Math.max(1,num(entry.q,1));},0));\n    if(values.autoCollect===true)finish('granted',{item:name,count:count});\n    else setTimeout(function(){finish('granted',{item:name,count:count});},280);\n  };\n  if(values.autoCollect===true){button.style.display='none';button.onclick();}\n}\n</script></body></html>",
+        "pluginIcon": "box",
+        "pluginName": "背包系統",
+        "pluginColor": "#78a67d",
+        "pluginCardId": "grant-item",
+        "pluginValues": {
+          "bagVar": "inventory",
+          "itemId": "saffron_syrup",
+          "countVar": "inventoryCount",
+          "itemName": "番紅花糖漿",
+          "itemNote": "深邃金黃色的濃郁糖漿，沈淮與安雅初遇時甜白酒的核心風味。",
+          "effectVar": "",
+          "itemCount": 1,
+          "itemImage": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568842314_prop_saffron_chroma",
+          "consumable": false,
+          "effectKind": "none",
+          "autoCollect": false,
+          "effectValue": "",
+          "storyNodeId": "node_mix_step1",
+          "hideAfterCollect": true,
+          "useConditionValue": "",
+          "useConditionMessage": "",
+          "useConditionVariable": ""
+        },
+        "pluginVersion": "1.9.0",
+        "pluginCardName": "取得道具",
+        "pluginReadVars": [
+          "inventory"
+        ],
+        "pluginSkippable": false,
+        "pluginWriteVars": [
+          "inventory",
+          "inventoryCount"
+        ],
+        "pluginPresentation": "fullscreen"
+      },
+      "type": "story",
+      "position": {
+        "x": 2760,
+        "y": 550
+      }
+    },
+    {
+      "id": "plugin_grant_key",
+      "data": {
+        "type": "plugin",
+        "title": "拾取：心型吊墜鑰匙",
+        "pluginId": "larch-inventory",
+        "platforms": [
+          "web"
+        ],
+        "pluginHtml": "<!doctype html>\n<html lang=\"zh-Hant\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>取得道具</title>\n<style>\n  *{box-sizing:border-box;margin:0;padding:0}\n  html,body{height:100%}\n  body{font-family:-apple-system,\"Segoe UI\",\"Noto Sans TC\",system-ui,sans-serif;color:#27322b;background:transparent;\n    display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden;-webkit-tap-highlight-color:transparent}\n  .wrap{width:100%;max-width:760px;display:flex;flex-direction:column;gap:11px;padding:16px;border:1px solid #e4eae3;\n    border-radius:22px;background:#fff;box-shadow:0 18px 48px rgba(39,50,43,.12);animation:arrive .55s cubic-bezier(.18,1.35,.36,1)}\n  h1{font-size:15px;letter-spacing:.01em;font-weight:780;display:flex;align-items:center;gap:8px}\n  h1 small{font-weight:700;color:#78a67d;font-size:9px;letter-spacing:.14em}\n  svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}\n  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}\n  .cta,.ghost{min-height:38px;padding:8px 16px;border-radius:13px;font-size:12px;font-weight:760;\n    transition:transform .38s cubic-bezier(.18,1.35,.36,1),background .18s ease,border-color .18s ease,box-shadow .18s ease}\n  .cta{background:#78a67d;color:#fff;box-shadow:0 8px 18px rgba(82,123,88,.2)}\n  .ghost{border:1px solid #dfe7de;background:#f7f9f6;color:#5c685f}\n  .cta:hover,.ghost:hover{transform:translateY(-3px) scale(1.025)}\n  .cta:active,.ghost:active{transform:scale(.96)}\n  .cta[disabled]{opacity:.35;cursor:default;transform:none;box-shadow:none}\n  .row{display:flex;align-items:center;gap:8px;justify-content:flex-end}\n  .soft-card{border:1px solid #e3eae2;border-radius:17px;background:#f6f8f5}\n  .item-mark{width:58px;height:58px;flex:none;display:grid;place-items:center;border-radius:17px;background:#e8f1e8;color:#628d68}\n  .item-mark svg{width:27px;height:27px}\n  @keyframes arrive{0%{opacity:0;transform:translateY(12px) scale(.94)}65%{transform:translateY(-2px) scale(1.012)}100%{opacity:1;transform:none}}\n  @media(max-width:520px){body{padding:8px}.wrap{padding:13px;border-radius:18px}}\n</style></head>\n<body><div class=\"wrap\">\n  <style>\n    body{padding:0;background:transparent}\n    .wrap{width:100%;max-width:none;height:100%;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;animation:none}\n    .pickup{position:relative;width:clamp(156px,40vmin,350px);height:clamp(156px,40vmin,350px);display:grid;place-items:center;border-radius:50%;outline:0;\n      transition:transform .5s cubic-bezier(.18,1.35,.36,1);animation:pickup-arrive .72s cubic-bezier(.16,1.28,.3,1) both}\n    .pickup::before{position:absolute;inset:7%;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:radial-gradient(circle at 42% 35%,rgba(255,255,255,.35),rgba(238,247,239,.16) 52%,rgba(168,197,172,.09));\n      box-shadow:inset 0 0 42px rgba(255,255,255,.22),0 24px 70px rgba(17,31,21,.22);content:''}\n    .pickup::after{position:absolute;inset:-2%;border:1px solid rgba(220,241,224,.24);border-radius:50%;content:'';animation:pickup-halo 2.4s ease-out infinite}\n    .pickup-media{position:relative;z-index:1;width:76%;height:76%;display:grid;place-items:center;color:rgba(238,247,239,.92)}\n    .pickup,.pickup-media{-webkit-user-select:none;user-select:none}\n    .pickup-media img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;display:none;width:100%;height:100%;object-fit:contain;animation:pickup-float 3s ease-in-out infinite}\n    .pickup-media svg{width:42%;height:42%}\n    .pickup:hover{transform:scale(1.06)}\n    .pickup:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.82),0 0 0 8px rgba(112,160,119,.55)}\n    .pickup:active{transform:scale(.94)}\n    .pickup.collected{pointer-events:none;animation:pickup-collect .36s cubic-bezier(.4,0,.2,1) forwards}\n    .pickup.confirmed{pointer-events:none;animation:pickup-confirm .36s cubic-bezier(.18,1.35,.36,1) both}\n    @keyframes pickup-arrive{0%{opacity:0;transform:translateY(24px) scale(.58) rotate(-4deg)}70%{opacity:1;transform:translateY(-5px) scale(1.06) rotate(1deg)}100%{transform:none}}\n    @keyframes pickup-float{0%,100%{transform:translateY(3px) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}\n    @keyframes pickup-halo{0%{opacity:.7;transform:scale(.82)}75%,100%{opacity:0;transform:scale(1.16)}}\n    @keyframes pickup-collect{45%{opacity:1;transform:scale(1.13)}100%{opacity:0;transform:scale(.72) translateY(-12px)}}\n    @keyframes pickup-confirm{50%{transform:scale(1.12)}100%{transform:scale(1)}}\n    @media(prefers-reduced-motion:reduce){.pickup,.pickup-media img,.pickup::after{animation:none}.pickup{transition:opacity .18s ease}.pickup.collected{opacity:0}}\n  </style>\n  <button type=\"button\" class=\"pickup\" id=\"go\" aria-label=\"收進背包\">\n    <span class=\"pickup-media\" id=\"item-mark\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z\"/><path d=\"m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9\"/></svg><img id=\"item-image\" alt=\"\" draggable=\"false\"/></span>\n  </button>\n</div>\n<script>\nvar values={},vars={},assets=[],characters=[],locale='zh-Hant',done=false;\nfunction setVar(name,value){ if(name) parent.postMessage({type:'larch:set',name:name,value:value},'*'); }\nfunction finish(result,payload){ if(done)return; done=true; parent.postMessage({type:'larch:complete',result:result,payload:payload},'*'); }\nfunction num(value,fallback){ var parsed=Number(value); return isNaN(parsed)?fallback:parsed; }\nfunction str(value,fallback){ return (value===undefined||value===null||value==='')?fallback:String(value); }\nparent.postMessage({type:'larch:ready'},'*');\nwindow.addEventListener('message',function(event){\n  var data=event.data;\n  if(!data||data.type!=='larch:init')return;\n  values=data.values||{};vars=data.variables||{};assets=data.assets||[];characters=data.characters||[];locale=data.locale||'zh-Hant';\n  try{ start(); }catch(error){ finish('error'); }\n});\n\nfunction readBag(name){\n  var raw=vars[name];\n  if(!raw)return [];\n  if(typeof raw!=='string'){ return []; }\n  try{ var parsed=JSON.parse(raw); return Array.isArray(parsed)?parsed:[]; }\n  catch(error){\n    // 作者也可能自己在專案設定裡填了「繩索,火把」這種預設值 —— 照樣讀得懂。\n    return raw.split(/[,、]/).map(function(item){return item.trim();}).filter(Boolean).map(function(item){return {n:item,i:''};});\n  }\n}\nfunction writeBag(name,items){ setVar(name,JSON.stringify(items)); }\n\nfunction start(){\n  if(done)return;\n  var name=str(values.itemName,'神秘道具');\n  var note=str(values.itemNote,'');\n  var bagVar=str(values.bagVar,'');\n  var count=Math.max(1,num(values.itemCount,1));\n  var hideAfterCollect=values.hideAfterCollect!==false;\n  var button=document.getElementById('go');\n  button.setAttribute('aria-label','收進背包：'+name+(count>1?'，數量 '+count:''));\n  button.title=name;\n  var itemImage=str(values.itemImage,'');\n  if(itemImage){\n    var image=document.getElementById('item-image');\n    image.src=itemImage;image.alt=name;image.style.display='block';\n    image.onerror=function(){image.style.display='none';document.querySelector('#item-mark svg').style.display='block';};\n    document.querySelector('#item-mark svg').style.display='none';\n  }\n  var collected=false;\n  button.onclick=function(){\n    if(collected)return;\n    collected=true;button.disabled=true;button.classList.add(hideAfterCollect?'collected':'confirmed');\n    var bag=readBag(bagVar);\n    var itemId=(str(values.itemId,'').trim()||name.trim()).toLowerCase().replace(/\\s+/g,'-');\n    var existing=bag.find(function(item){return String(item.id||item.n)===itemId;});\n    var item={id:itemId,n:name,i:itemImage,d:note,q:count,c:values.consumable!==false,e:str(values.effectKind,'none'),v:str(values.effectVar,''),x:values.effectValue,t:str(values.storyNodeId,''),useConditionVariable:str(values.useConditionVariable,'').trim(),useConditionValue:values.useConditionValue,useConditionMessage:str(values.useConditionMessage,'')};\n    if(existing){\n      existing.q=Math.max(1,num(existing.q,1))+count;\n      existing.n=name;existing.i=itemImage;existing.d=note;existing.c=item.c;existing.e=item.e;existing.v=item.v;existing.x=item.x;existing.t=item.t;\n      existing.useConditionVariable=item.useConditionVariable;existing.useConditionValue=item.useConditionValue;existing.useConditionMessage=item.useConditionMessage;\n    }else bag.push(item);\n    if(bagVar)writeBag(bagVar,bag);\n    if(values.countVar)setVar(str(values.countVar,''),bag.reduce(function(total,entry){return total+Math.max(1,num(entry.q,1));},0));\n    if(values.autoCollect===true)finish('granted',{item:name,count:count});\n    else setTimeout(function(){finish('granted',{item:name,count:count});},280);\n  };\n  if(values.autoCollect===true){button.style.display='none';button.onclick();}\n}\n</script></body></html>",
+        "pluginIcon": "box",
+        "pluginName": "背包系統",
+        "pluginColor": "#78a67d",
+        "pluginCardId": "grant-item",
+        "pluginValues": {
+          "bagVar": "inventory",
+          "itemId": "heart_key",
+          "countVar": "inventoryCount",
+          "itemName": "心型吊墜鑰匙",
+          "itemNote": "安雅貼身佩戴的心型鑰匙，能開啟臥室梳妝台上上了鎖的雕花木盒。",
+          "effectVar": "",
+          "itemCount": 1,
+          "itemImage": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568785759_prop_key_chroma",
+          "consumable": false,
+          "effectKind": "none",
+          "autoCollect": false,
+          "effectValue": "",
+          "storyNodeId": "node_bedroom_unlock",
+          "hideAfterCollect": true,
+          "useConditionValue": "",
+          "useConditionMessage": "",
+          "useConditionVariable": ""
+        },
+        "pluginVersion": "1.9.0",
+        "pluginCardName": "取得道具",
+        "pluginReadVars": [
+          "inventory"
+        ],
+        "pluginSkippable": false,
+        "pluginWriteVars": [
+          "inventory",
+          "inventoryCount"
+        ],
+        "pluginPresentation": "fullscreen"
+      },
+      "type": "story",
+      "position": {
+        "x": 3500,
+        "y": 550
+      }
+    },
+    {
+      "id": "node_bedroom_hub",
+      "data": {
+        "text": "臥室的行動：",
+        "type": "choice",
+        "title": "梳妝台・行動抉擇",
+        "choices": [
+          "【解鎖】使用【心型吊墜鑰匙】打開木盒",
+          "【調查】端詳木盒上的鎖孔",
+          "【移動】前往【香料儲藏間】",
+          "【返回】回到【吧檯】"
+        ],
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+        "choiceMode": "branch",
+        "choicePlacement": "center",
+        "choiceConditions": [
+          {
+            "op": "hasItem",
+            "kind": "variable",
+            "match": "all",
+            "value": "heart_key",
+            "variable": "inventory",
+            "conditions": [
+              {
+                "op": "hasItem",
+                "value": "heart_key",
+                "variable": "inventory",
+                "valueSource": "value"
+              }
+            ],
+            "valueSource": "value"
+          },
+          null,
+          null,
+          null
+        ]
+      },
+      "type": "story",
+      "position": {
+        "x": 2000,
+        "y": 850
+      }
+    },
+    {
+      "id": "node_bedroom_examine",
+      "data": {
+        "text": "木盒上的小銅鎖雕刻著心型藤蔓，鎖孔極其纖巧。強行撬開只會損壞盒子，需要對應的心型小鑰匙。",
+        "type": "dialogue",
+        "title": "雕花木盒",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 2380,
+        "y": 800
+      }
+    },
+    {
+      "id": "node_bedroom_unlock",
+      "data": {
+        "text": "心型鑰匙插入鎖孔，順時針輕轉——「喀啦」，鎖扣彈開！\n裡面放著一罐【粉紅胡椒研磨罐】，以及幾張染血的病歷單碎頁。",
+        "type": "dialogue",
+        "title": "木盒開啟",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 2380,
+        "y": 1050
+      }
+    },
+    {
+      "id": "plugin_grant_pepper",
+      "data": {
+        "type": "plugin",
+        "title": "拾取：粉紅胡椒研磨罐",
+        "pluginId": "larch-inventory",
+        "platforms": [
+          "web"
+        ],
+        "pluginHtml": "<!doctype html>\n<html lang=\"zh-Hant\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>取得道具</title>\n<style>\n  *{box-sizing:border-box;margin:0;padding:0}\n  html,body{height:100%}\n  body{font-family:-apple-system,\"Segoe UI\",\"Noto Sans TC\",system-ui,sans-serif;color:#27322b;background:transparent;\n    display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden;-webkit-tap-highlight-color:transparent}\n  .wrap{width:100%;max-width:760px;display:flex;flex-direction:column;gap:11px;padding:16px;border:1px solid #e4eae3;\n    border-radius:22px;background:#fff;box-shadow:0 18px 48px rgba(39,50,43,.12);animation:arrive .55s cubic-bezier(.18,1.35,.36,1)}\n  h1{font-size:15px;letter-spacing:.01em;font-weight:780;display:flex;align-items:center;gap:8px}\n  h1 small{font-weight:700;color:#78a67d;font-size:9px;letter-spacing:.14em}\n  svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}\n  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}\n  .cta,.ghost{min-height:38px;padding:8px 16px;border-radius:13px;font-size:12px;font-weight:760;\n    transition:transform .38s cubic-bezier(.18,1.35,.36,1),background .18s ease,border-color .18s ease,box-shadow .18s ease}\n  .cta{background:#78a67d;color:#fff;box-shadow:0 8px 18px rgba(82,123,88,.2)}\n  .ghost{border:1px solid #dfe7de;background:#f7f9f6;color:#5c685f}\n  .cta:hover,.ghost:hover{transform:translateY(-3px) scale(1.025)}\n  .cta:active,.ghost:active{transform:scale(.96)}\n  .cta[disabled]{opacity:.35;cursor:default;transform:none;box-shadow:none}\n  .row{display:flex;align-items:center;gap:8px;justify-content:flex-end}\n  .soft-card{border:1px solid #e3eae2;border-radius:17px;background:#f6f8f5}\n  .item-mark{width:58px;height:58px;flex:none;display:grid;place-items:center;border-radius:17px;background:#e8f1e8;color:#628d68}\n  .item-mark svg{width:27px;height:27px}\n  @keyframes arrive{0%{opacity:0;transform:translateY(12px) scale(.94)}65%{transform:translateY(-2px) scale(1.012)}100%{opacity:1;transform:none}}\n  @media(max-width:520px){body{padding:8px}.wrap{padding:13px;border-radius:18px}}\n</style></head>\n<body><div class=\"wrap\">\n  <style>\n    body{padding:0;background:transparent}\n    .wrap{width:100%;max-width:none;height:100%;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;animation:none}\n    .pickup{position:relative;width:clamp(156px,40vmin,350px);height:clamp(156px,40vmin,350px);display:grid;place-items:center;border-radius:50%;outline:0;\n      transition:transform .5s cubic-bezier(.18,1.35,.36,1);animation:pickup-arrive .72s cubic-bezier(.16,1.28,.3,1) both}\n    .pickup::before{position:absolute;inset:7%;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:radial-gradient(circle at 42% 35%,rgba(255,255,255,.35),rgba(238,247,239,.16) 52%,rgba(168,197,172,.09));\n      box-shadow:inset 0 0 42px rgba(255,255,255,.22),0 24px 70px rgba(17,31,21,.22);content:''}\n    .pickup::after{position:absolute;inset:-2%;border:1px solid rgba(220,241,224,.24);border-radius:50%;content:'';animation:pickup-halo 2.4s ease-out infinite}\n    .pickup-media{position:relative;z-index:1;width:76%;height:76%;display:grid;place-items:center;color:rgba(238,247,239,.92)}\n    .pickup,.pickup-media{-webkit-user-select:none;user-select:none}\n    .pickup-media img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;display:none;width:100%;height:100%;object-fit:contain;animation:pickup-float 3s ease-in-out infinite}\n    .pickup-media svg{width:42%;height:42%}\n    .pickup:hover{transform:scale(1.06)}\n    .pickup:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.82),0 0 0 8px rgba(112,160,119,.55)}\n    .pickup:active{transform:scale(.94)}\n    .pickup.collected{pointer-events:none;animation:pickup-collect .36s cubic-bezier(.4,0,.2,1) forwards}\n    .pickup.confirmed{pointer-events:none;animation:pickup-confirm .36s cubic-bezier(.18,1.35,.36,1) both}\n    @keyframes pickup-arrive{0%{opacity:0;transform:translateY(24px) scale(.58) rotate(-4deg)}70%{opacity:1;transform:translateY(-5px) scale(1.06) rotate(1deg)}100%{transform:none}}\n    @keyframes pickup-float{0%,100%{transform:translateY(3px) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}\n    @keyframes pickup-halo{0%{opacity:.7;transform:scale(.82)}75%,100%{opacity:0;transform:scale(1.16)}}\n    @keyframes pickup-collect{45%{opacity:1;transform:scale(1.13)}100%{opacity:0;transform:scale(.72) translateY(-12px)}}\n    @keyframes pickup-confirm{50%{transform:scale(1.12)}100%{transform:scale(1)}}\n    @media(prefers-reduced-motion:reduce){.pickup,.pickup-media img,.pickup::after{animation:none}.pickup{transition:opacity .18s ease}.pickup.collected{opacity:0}}\n  </style>\n  <button type=\"button\" class=\"pickup\" id=\"go\" aria-label=\"收進背包\">\n    <span class=\"pickup-media\" id=\"item-mark\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z\"/><path d=\"m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9\"/></svg><img id=\"item-image\" alt=\"\" draggable=\"false\"/></span>\n  </button>\n</div>\n<script>\nvar values={},vars={},assets=[],characters=[],locale='zh-Hant',done=false;\nfunction setVar(name,value){ if(name) parent.postMessage({type:'larch:set',name:name,value:value},'*'); }\nfunction finish(result,payload){ if(done)return; done=true; parent.postMessage({type:'larch:complete',result:result,payload:payload},'*'); }\nfunction num(value,fallback){ var parsed=Number(value); return isNaN(parsed)?fallback:parsed; }\nfunction str(value,fallback){ return (value===undefined||value===null||value==='')?fallback:String(value); }\nparent.postMessage({type:'larch:ready'},'*');\nwindow.addEventListener('message',function(event){\n  var data=event.data;\n  if(!data||data.type!=='larch:init')return;\n  values=data.values||{};vars=data.variables||{};assets=data.assets||[];characters=data.characters||[];locale=data.locale||'zh-Hant';\n  try{ start(); }catch(error){ finish('error'); }\n});\n\nfunction readBag(name){\n  var raw=vars[name];\n  if(!raw)return [];\n  if(typeof raw!=='string'){ return []; }\n  try{ var parsed=JSON.parse(raw); return Array.isArray(parsed)?parsed:[]; }\n  catch(error){\n    // 作者也可能自己在專案設定裡填了「繩索,火把」這種預設值 —— 照樣讀得懂。\n    return raw.split(/[,、]/).map(function(item){return item.trim();}).filter(Boolean).map(function(item){return {n:item,i:''};});\n  }\n}\nfunction writeBag(name,items){ setVar(name,JSON.stringify(items)); }\n\nfunction start(){\n  if(done)return;\n  var name=str(values.itemName,'神秘道具');\n  var note=str(values.itemNote,'');\n  var bagVar=str(values.bagVar,'');\n  var count=Math.max(1,num(values.itemCount,1));\n  var hideAfterCollect=values.hideAfterCollect!==false;\n  var button=document.getElementById('go');\n  button.setAttribute('aria-label','收進背包：'+name+(count>1?'，數量 '+count:''));\n  button.title=name;\n  var itemImage=str(values.itemImage,'');\n  if(itemImage){\n    var image=document.getElementById('item-image');\n    image.src=itemImage;image.alt=name;image.style.display='block';\n    image.onerror=function(){image.style.display='none';document.querySelector('#item-mark svg').style.display='block';};\n    document.querySelector('#item-mark svg').style.display='none';\n  }\n  var collected=false;\n  button.onclick=function(){\n    if(collected)return;\n    collected=true;button.disabled=true;button.classList.add(hideAfterCollect?'collected':'confirmed');\n    var bag=readBag(bagVar);\n    var itemId=(str(values.itemId,'').trim()||name.trim()).toLowerCase().replace(/\\s+/g,'-');\n    var existing=bag.find(function(item){return String(item.id||item.n)===itemId;});\n    var item={id:itemId,n:name,i:itemImage,d:note,q:count,c:values.consumable!==false,e:str(values.effectKind,'none'),v:str(values.effectVar,''),x:values.effectValue,t:str(values.storyNodeId,''),useConditionVariable:str(values.useConditionVariable,'').trim(),useConditionValue:values.useConditionValue,useConditionMessage:str(values.useConditionMessage,'')};\n    if(existing){\n      existing.q=Math.max(1,num(existing.q,1))+count;\n      existing.n=name;existing.i=itemImage;existing.d=note;existing.c=item.c;existing.e=item.e;existing.v=item.v;existing.x=item.x;existing.t=item.t;\n      existing.useConditionVariable=item.useConditionVariable;existing.useConditionValue=item.useConditionValue;existing.useConditionMessage=item.useConditionMessage;\n    }else bag.push(item);\n    if(bagVar)writeBag(bagVar,bag);\n    if(values.countVar)setVar(str(values.countVar,''),bag.reduce(function(total,entry){return total+Math.max(1,num(entry.q,1));},0));\n    if(values.autoCollect===true)finish('granted',{item:name,count:count});\n    else setTimeout(function(){finish('granted',{item:name,count:count});},280);\n  };\n  if(values.autoCollect===true){button.style.display='none';button.onclick();}\n}\n</script></body></html>",
+        "pluginIcon": "box",
+        "pluginName": "背包系統",
+        "pluginColor": "#78a67d",
+        "pluginCardId": "grant-item",
+        "pluginValues": {
+          "bagVar": "inventory",
+          "itemId": "pink_pepper",
+          "countVar": "inventoryCount",
+          "itemName": "粉紅胡椒研磨罐",
+          "itemNote": "裝滿艷粉色乾燥胡椒粒，咬碎時能帶來觸電般的微辣麻感。",
+          "effectVar": "",
+          "itemCount": 1,
+          "itemImage": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568906846_prop_pepper_chroma",
+          "consumable": false,
+          "effectKind": "none",
+          "autoCollect": false,
+          "effectValue": "",
+          "storyNodeId": "node_mix_step1",
+          "hideAfterCollect": true,
+          "useConditionValue": "",
+          "useConditionMessage": "",
+          "useConditionVariable": ""
+        },
+        "pluginVersion": "1.9.0",
+        "pluginCardName": "取得道具",
+        "pluginReadVars": [
+          "inventory"
+        ],
+        "pluginSkippable": false,
+        "pluginWriteVars": [
+          "inventory",
+          "inventoryCount"
+        ],
+        "pluginPresentation": "fullscreen"
+      },
+      "type": "story",
+      "position": {
+        "x": 2760,
+        "y": 1050
+      }
+    },
+    {
+      "id": "node_bedroom_memory",
+      "data": {
+        "text": "『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』",
+        "type": "dialogue",
+        "title": "安雅的回憶語音",
+        "speaker": "安雅（回憶）",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571305626_f5a21c4f.mp3",
+        "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+        "voiceMode": "ai",
+        "voiceName": "Chinese (Mandarin)_Soft_Girl",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+        "voiceModel": "speech-2.8-hd",
+        "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+        "voiceEmotion": "calm",
+        "voiceProvider": "minimax",
+        "characterLayers": [
+          {
+            "x": 0,
+            "y": 0,
+            "id": "layer_anya_memory",
+            "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+            "scale": 1,
+            "position": "center"
+          }
+        ],
+        "voiceDisclosure": true,
+        "characterEmotion": "smile",
+        "characterPosition": "center"
+      },
+      "type": "story",
+      "position": {
+        "x": 3120,
+        "y": 1050
+      }
+    },
+    {
+      "id": "node_bedroom_shock",
+      "data": {
+        "text": "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。",
+        "type": "dialogue",
+        "stage": {
+          "actors": []
+        },
+        "title": "病歷單的真相",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+        "dialogueLines": [
+          {
+            "id": "legacy",
+            "text": "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。",
+            "speaker": "沈淮"
+          }
+        ],
+        "characterLayers": []
+      },
+      "type": "story",
+      "position": {
+        "x": 3500,
+        "y": 1050
+      }
+    },
+    {
+      "id": "node_bar_mix_check",
+      "data": {
+        "text": "調製「初遇滋味」的準備：",
+        "type": "choice",
+        "title": "節點 4：吧檯【謎底拼湊】",
+        "choices": [
+          "【開始調製】注入糖漿、攪拌並磨入胡椒",
+          "【材料不足】返回繼續搜查"
+        ],
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "choiceMode": "branch",
+        "choicePlacement": "center",
+        "choiceConditions": [
+          {
+            "op": "hasItem",
+            "kind": "variable",
+            "match": "all",
+            "value": "saffron_syrup",
+            "variable": "inventory",
+            "conditions": [
+              {
+                "op": "hasItem",
+                "value": "saffron_syrup",
+                "variable": "inventory",
+                "valueSource": "value"
+              },
+              {
+                "op": "hasItem",
+                "value": "pink_pepper",
+                "variable": "inventory",
+                "valueSource": "value"
+              },
+              {
+                "op": "hasItem",
+                "value": "brass_spoon",
+                "variable": "inventory",
+                "valueSource": "value"
+              }
+            ],
+            "valueSource": "value"
+          },
+          null
+        ]
+      },
+      "type": "story",
+      "position": {
+        "x": 1240,
+        "y": 650
+      }
+    },
+    {
+      "id": "node_mix_step1",
+      "data": {
+        "text": "對高腳杯使用【番紅花糖漿】——\n濃稠燦爛的金黃色液體注入杯底，宛如地平線初升的朝陽，散發溫潤甘甜的草本清香。",
+        "type": "dialogue",
+        "title": "調酒：注入糖漿",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 1240,
+        "y": 960
+      }
+    },
+    {
+      "id": "node_mix_step2",
+      "data": {
+        "text": "拿起【黃銅調酒匙】貼著杯壁輕輕攪拌——\n金黃色液體旋轉著融為一體，純淨透亮，折射出璀璨的琥珀光澤。",
+        "type": "dialogue",
+        "title": "調酒：黃銅匙攪拌",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 1240,
+        "y": 1240
+      }
+    },
+    {
+      "id": "node_mix_step3",
+      "data": {
+        "text": "拿起【粉紅胡椒研磨罐】在杯口旋轉——\n磨入細碎顆粒，表面浮起一層曖昧的淡粉色油脂與碎粒，空氣中瀰漫出一股誘人又微刺的辛香。金黃與粉紅交織，如落日晚霞。",
+        "type": "dialogue",
+        "title": "調酒：研磨粉紅胡椒",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 1240,
+        "y": 1520
+      }
+    },
+    {
+      "id": "node_mix_reveal",
+      "data": {
+        "text": "杯架下方的機關「喀噠」一聲下沉，吧檯暗格彈開，裡面是一封完整的遺書。",
+        "type": "dialogue",
+        "title": "機關下沉：最後的遺書",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 1240,
+        "y": 1800
+      }
+    },
+    {
+      "id": "node_mix_anya_confession",
+      "data": {
+        "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132345785_10-crystal-wings-at-dawn.mp3",
+        "text": "『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\n沈淮，這是我為自己選的終點。\n不要嚐它，替我倒掉。』",
+        "type": "dialogue",
+        "title": "安雅的遺書獨白",
+        "bgmLoop": true,
+        "speaker": "安雅（獨白）",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571391989_3c87a9c4.mp3",
+        "bgmVolume": 0.4,
+        "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+        "voiceMode": "ai",
+        "voiceName": "Chinese (Mandarin)_Soft_Girl",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+        "voiceModel": "speech-2.8-hd",
+        "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+        "voiceEmotion": "sad",
+        "voiceProvider": "minimax",
+        "characterLayers": [
+          {
+            "x": 0,
+            "y": 0,
+            "id": "layer_anya_spirit_confess",
+            "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+            "scale": 1,
+            "position": "center"
+          }
+        ],
+        "voiceDisclosure": true,
+        "characterEmotion": "spirit",
+        "characterPosition": "center"
+      },
+      "type": "story",
+      "position": {
+        "x": 1620,
+        "y": 1800
+      }
+    },
+    {
+      "id": "node_final_choice",
+      "data": {
+        "text": "你要如何抉擇？",
+        "type": "choice",
+        "title": "節點 5：終局抉擇",
+        "choices": [
+          "【共赴的辣度】端起酒杯，一口飲盡",
+          "【冷卻的餘溫】遵從遺願，倒進水槽"
+        ],
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+        "choiceMode": "branch",
+        "choicePlacement": "center"
+      },
+      "type": "story",
+      "position": {
+        "x": 2000,
+        "y": 1800
+      }
+    },
+    {
+      "id": "node_ending_burn_1",
+      "data": {
+        "text": "我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。",
+        "type": "dialogue",
+        "title": "節點 6-A：共赴的辣度",
+        "speaker": "沈淮",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571598095_2304150e.mp3",
+        "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+        "voiceMode": "ai",
+        "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "voiceModel": "speech-2.8-hd",
+        "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+        "voiceEmotion": "sad",
+        "voiceProvider": "minimax",
+        "characterLayers": [
+          {
+            "x": 0,
+            "y": 0,
+            "id": "layer_anya_burn1",
+            "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+            "scale": 1,
+            "position": "center"
+          }
+        ],
+        "voiceDisclosure": true,
+        "characterEmotion": "sad",
+        "characterPosition": "center"
+      },
+      "type": "story",
+      "position": {
+        "x": 2380,
+        "y": 1650
+      }
+    },
+    {
+      "id": "node_ending_burn_2",
+      "data": {
+        "text": "入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。",
+        "type": "dialogue",
+        "title": "心跳的刺痛",
+        "speaker": "沈淮",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572040059_1b8a90a9.mp3",
+        "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+        "voiceMode": "ai",
+        "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "voiceModel": "speech-2.8-hd",
+        "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+        "voiceEmotion": "sad",
+        "voiceProvider": "minimax",
+        "characterLayers": [
+          {
+            "x": 0,
+            "y": 0,
+            "id": "layer_anya_burn2",
+            "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+            "scale": 1,
+            "position": "center"
+          }
+        ],
+        "voiceDisclosure": true,
+        "characterEmotion": "sad",
+        "characterPosition": "center"
+      },
+      "type": "story",
+      "position": {
+        "x": 2760,
+        "y": 1650
+      }
+    },
+    {
+      "id": "node_ending_burn_3",
+      "data": {
+        "text": "眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅，這一次，妳不必一個人走。\n\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**",
+        "type": "dialogue",
+        "title": "真結局：共赴晚霞",
+        "speaker": "沈淮",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571654884_7769d525.mp3",
+        "voiceMode": "ai",
+        "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "transition": "fadeBlack",
+        "voiceModel": "speech-2.8-hd",
+        "voiceEmotion": "sad",
+        "voiceProvider": "minimax",
+        "voiceDisclosure": true
+      },
+      "type": "story",
+      "position": {
+        "x": 3140,
+        "y": 1650
+      }
+    },
+    {
+      "id": "node_ending_cold_1",
+      "data": {
+        "text": "手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。",
+        "type": "dialogue",
+        "title": "節點 7-B：冷卻的餘溫",
+        "speaker": "沈淮",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572160891_46526436.mp3",
+        "bgmAction": "fadeOut",
+        "voiceMode": "ai",
+        "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "voiceModel": "speech-2.8-hd",
+        "bgmFadeOutMs": 2000,
+        "voiceEmotion": "sad",
+        "voiceProvider": "minimax",
+        "voiceDisclosure": true
+      },
+      "type": "story",
+      "position": {
+        "x": 2380,
+        "y": 1950
+      }
+    },
+    {
+      "id": "node_ending_cold_2",
+      "data": {
+        "text": "屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\n\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**",
+        "type": "dialogue",
+        "title": "壞結局：冷卻的餘溫",
+        "speaker": "沈淮",
+        "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571740808_a90337d8.mp3",
+        "voiceMode": "ai",
+        "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "transition": "fadeWhite",
+        "voiceModel": "speech-2.8-hd",
+        "voiceEmotion": "sad",
+        "voiceProvider": "minimax",
+        "voiceDisclosure": true
+      },
+      "type": "story",
+      "position": {
+        "x": 2760,
+        "y": 1950
+      }
+    },
+    {
+      "id": "node_bar_observe",
+      "data": {
+        "text": "擦拭乾淨的木質吧檯上，放著一只空的高腳杯，底座嵌著電子秤凹槽。要調出那杯酒，我需要收集齊材料。",
+        "type": "dialogue",
+        "stage": {
+          "actors": []
+        },
+        "title": "吧檯巡視",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+        "dialogueLines": [
+          {
+            "id": "legacy",
+            "text": "擦拭乾淨的木質吧檯上，放著一只空的高腳杯，底座嵌著電子秤凹槽。要調出那杯酒，我需要收集齊材料。",
+            "speaker": "沈淮"
+          }
+        ],
+        "characterLayers": []
+      },
+      "type": "story",
+      "position": {
+        "x": 860,
+        "y": 300
+      }
+    },
+    {
+      "id": "node_storage_observe",
+      "data": {
+        "text": "儲藏間裡飄散著乾枯的草本香氣。夕陽透過百葉窗照在排列整齊的玻璃罐上。\n右側卡死的鐵木百葉窗縫隙裡，似乎反光透出一抹深邃的金黃。",
+        "type": "dialogue",
+        "title": "節點 2：香料儲藏間",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 1620,
+        "y": 450
+      }
+    },
+    {
+      "id": "node_bedroom_observe",
+      "data": {
+        "text": "臥室裡安靜得只有時鐘滴答聲。梳妝台上散落著乾枯的花瓣，中央擺著那個雕花上了鎖的木盒。\n平時，她總是不讓我看這個盒子。",
+        "type": "dialogue",
+        "title": "節點 3：臥室梳妝台",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 1620,
+        "y": 850
+      }
+    },
+    {
+      "id": "node_storage_find_key",
+      "data": {
+        "text": "等等……糖漿後方還躺著一串金屬鑰匙！\n這串【心型吊墜鑰匙】……安雅平時總戴在胸口，從不離身。它一定能打開她鎖在臥室裡的東西。",
+        "type": "dialogue",
+        "title": "發現心型鑰匙",
+        "speaker": "沈淮",
+        "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp"
+      },
+      "type": "story",
+      "position": {
+        "x": 3120,
+        "y": 550
+      }
+    }
+  ],
+  "boards": [
+    {
+      "id": "board-project-8cb1ab7e-891c-46b4-bd38-df29060e5717-main",
+      "kind": "story",
+      "mode": "story",
+      "name": "晚霞是舌尖最後的刺痛",
+      "edges": [
+        {
+          "id": "e_start_note",
+          "source": "node_bar_start",
+          "target": "node_bar_note_voice",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_note_observe",
+          "source": "node_bar_note_voice",
+          "target": "node_bar_observe",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_observe_hub",
+          "source": "node_bar_observe",
+          "target": "node_bar_hub",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_hub_corner",
+          "label": "搜尋角落",
+          "source": "node_bar_hub",
+          "target": "node_bar_corner",
+          "animated": true,
+          "sourceHandle": "choice-0",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_hub_to_storage",
+          "label": "前往儲藏間",
+          "source": "node_bar_hub",
+          "target": "node_storage_observe",
+          "animated": true,
+          "sourceHandle": "choice-1",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_hub_to_bed",
+          "label": "前往臥室",
+          "source": "node_bar_hub",
+          "target": "node_bedroom_observe",
+          "animated": true,
+          "sourceHandle": "choice-2",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_hub_mix",
+          "label": "嘗試調酒",
+          "source": "node_bar_hub",
+          "target": "node_bar_mix_check",
+          "animated": true,
+          "sourceHandle": "choice-3",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_corner_grant",
+          "source": "node_bar_corner",
+          "target": "plugin_grant_spoon",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_grant_spoon_back",
+          "source": "plugin_grant_spoon",
+          "target": "node_bar_hub",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "top"
+        },
+        {
+          "id": "e_storage_obs_hub",
+          "source": "node_storage_observe",
+          "target": "node_storage_hub",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_storage_pry",
+          "label": "用調酒匙撬開",
+          "source": "node_storage_hub",
+          "target": "node_storage_pry",
+          "animated": true,
+          "sourceHandle": "choice-0",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_storage_bare",
+          "label": "徒手拉開",
+          "source": "node_storage_hub",
+          "target": "node_storage_bare",
+          "animated": true,
+          "sourceHandle": "choice-1",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_storage_to_bed",
+          "label": "前往臥室",
+          "source": "node_storage_hub",
+          "target": "node_bedroom_observe",
+          "animated": true,
+          "sourceHandle": "choice-2",
+          "targetHandle": "top"
+        },
+        {
+          "id": "e_storage_back_bar",
+          "label": "返回吧檯",
+          "source": "node_storage_hub",
+          "target": "node_bar_hub",
+          "animated": true,
+          "sourceHandle": "choice-3",
+          "targetHandle": "right"
+        },
+        {
+          "id": "e_bare_back_storage",
+          "source": "node_storage_bare",
+          "target": "node_storage_hub",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "top"
+        },
+        {
+          "id": "e_pry_grant_saffron",
+          "source": "node_storage_pry",
+          "target": "plugin_grant_saffron",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_saffron_find_key",
+          "source": "plugin_grant_saffron",
+          "target": "node_storage_find_key",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_find_key_grant",
+          "source": "node_storage_find_key",
+          "target": "plugin_grant_key",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_key_back_storage",
+          "source": "plugin_grant_key",
+          "target": "node_storage_hub",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "bottom"
+        },
+        {
+          "id": "e_bed_obs_hub",
+          "source": "node_bedroom_observe",
+          "target": "node_bedroom_hub",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_bed_unlock",
+          "label": "用鑰匙打開木盒",
+          "source": "node_bedroom_hub",
+          "target": "node_bedroom_unlock",
+          "animated": true,
+          "sourceHandle": "choice-0",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_bed_examine",
+          "label": "端詳鎖孔",
+          "source": "node_bedroom_hub",
+          "target": "node_bedroom_examine",
+          "animated": true,
+          "sourceHandle": "choice-1",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_bed_to_storage",
+          "label": "前往儲藏間",
+          "source": "node_bedroom_hub",
+          "target": "node_storage_observe",
+          "animated": true,
+          "sourceHandle": "choice-2",
+          "targetHandle": "bottom"
+        },
+        {
+          "id": "e_bed_back_bar",
+          "label": "返回吧檯",
+          "source": "node_bedroom_hub",
+          "target": "node_bar_hub",
+          "animated": true,
+          "sourceHandle": "choice-3",
+          "targetHandle": "bottom"
+        },
+        {
+          "id": "e_examine_back_bed",
+          "source": "node_bedroom_examine",
+          "target": "node_bedroom_hub",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "top"
+        },
+        {
+          "id": "e_unlock_grant_pepper",
+          "source": "node_bedroom_unlock",
+          "target": "plugin_grant_pepper",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_pepper_memory",
+          "source": "plugin_grant_pepper",
+          "target": "node_bedroom_memory",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_memory_shock",
+          "source": "node_bedroom_memory",
+          "target": "node_bedroom_shock",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_shock_back_bed",
+          "source": "node_bedroom_shock",
+          "target": "node_bedroom_hub",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "bottom"
+        },
+        {
+          "id": "e_mix_ok",
+          "label": "開始調製",
+          "source": "node_bar_mix_check",
+          "target": "node_mix_step1",
+          "animated": true,
+          "sourceHandle": "choice-0",
+          "targetHandle": "top"
+        },
+        {
+          "id": "e_mix_cancel",
+          "label": "材料不足返回",
+          "source": "node_bar_mix_check",
+          "target": "node_bar_hub",
+          "animated": true,
+          "sourceHandle": "choice-1",
+          "targetHandle": "bottom"
+        },
+        {
+          "id": "e_step1_step2",
+          "source": "node_mix_step1",
+          "target": "node_mix_step2",
+          "animated": true,
+          "sourceHandle": "bottom",
+          "targetHandle": "top"
+        },
+        {
+          "id": "e_step2_step3",
+          "source": "node_mix_step2",
+          "target": "node_mix_step3",
+          "animated": true,
+          "sourceHandle": "bottom",
+          "targetHandle": "top"
+        },
+        {
+          "id": "e_step3_reveal",
+          "source": "node_mix_step3",
+          "target": "node_mix_reveal",
+          "animated": true,
+          "sourceHandle": "bottom",
+          "targetHandle": "top"
+        },
+        {
+          "id": "e_reveal_confession",
+          "source": "node_mix_reveal",
+          "target": "node_mix_anya_confession",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_confession_choice",
+          "source": "node_mix_anya_confession",
+          "target": "node_final_choice",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_final_burn",
+          "label": "共赴的辣度",
+          "source": "node_final_choice",
+          "target": "node_ending_burn_1",
+          "animated": true,
+          "sourceHandle": "choice-0",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_final_cold",
+          "label": "冷卻的餘溫",
+          "source": "node_final_choice",
+          "target": "node_ending_cold_1",
+          "animated": true,
+          "sourceHandle": "choice-1",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_burn1_burn2",
+          "source": "node_ending_burn_1",
+          "target": "node_ending_burn_2",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_burn2_burn3",
+          "source": "node_ending_burn_2",
+          "target": "node_ending_burn_3",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        },
+        {
+          "id": "e_cold1_cold2",
+          "source": "node_ending_cold_1",
+          "target": "node_ending_cold_2",
+          "animated": true,
+          "sourceHandle": "right",
+          "targetHandle": "left"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "node_bar_start",
+          "data": {
+            "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3",
+            "text": "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。",
+            "type": "dialogue",
+            "start": true,
+            "title": "節點 1：吧檯【起點】",
+            "bgmLoop": true,
+            "speaker": "沈淮",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3",
+            "bgmVolume": 0.35,
+            "voiceMode": "ai",
+            "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "transition": "fadeBlack",
+            "voiceModel": "speech-2.8-hd",
+            "voiceEmotion": "calm",
+            "voiceProvider": "minimax",
+            "voiceDisclosure": true
+          },
+          "type": "story",
+          "position": {
+            "x": 100,
+            "y": 300
+          }
+        },
+        {
+          "id": "node_bar_note_voice",
+          "data": {
+            "text": "『如果你還記得我們初遇的滋味，就替我把它完成吧。』",
+            "type": "dialogue",
+            "title": "安雅的便條",
+            "speaker": "安雅",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571195856_7014bad6.mp3",
+            "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+            "characterLayers": [
+              {
+                "x": 0,
+                "y": 0,
+                "id": "layer_anya_note",
+                "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+                "scale": 1,
+                "position": "center"
+              }
+            ],
+            "characterEmotion": "smile",
+            "characterPosition": "center"
+          },
+          "type": "story",
+          "position": {
+            "x": 480,
+            "y": 300
+          }
+        },
+        {
+          "id": "node_bar_hub",
+          "data": {
+            "text": "現在該做什麼？",
+            "type": "choice",
+            "title": "吧檯・行動抉擇",
+            "choices": [
+              "【調查】搜尋吧檯角落",
+              "【移動】前往【香料儲藏間】",
+              "【移動】前往【臥室梳妝台】",
+              "【調酒】開始嘗試調製那杯酒"
+            ],
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "choiceMode": "branch",
+            "choicePlacement": "center"
+          },
+          "type": "story",
+          "position": {
+            "x": 1240,
+            "y": 300
+          }
+        },
+        {
+          "id": "node_bar_corner",
+          "data": {
+            "text": "在吧檯角落的杯架旁，靜靜放著一把常用的黃銅調酒匙。匙柄帶有精細的螺紋，末端微扁，平時她總是用這把匙輕巧地攪拌酒液。",
+            "type": "dialogue",
+            "title": "發現調酒匙",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 1620,
+            "y": 100
+          }
+        },
+        {
+          "id": "plugin_grant_spoon",
+          "data": {
+            "type": "plugin",
+            "title": "拾取：黃銅調酒匙",
+            "pluginId": "larch-inventory",
+            "platforms": [
+              "web"
+            ],
+            "pluginHtml": "<!doctype html>\n<html lang=\"zh-Hant\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>取得道具</title>\n<style>\n  *{box-sizing:border-box;margin:0;padding:0}\n  html,body{height:100%}\n  body{font-family:-apple-system,\"Segoe UI\",\"Noto Sans TC\",system-ui,sans-serif;color:#27322b;background:transparent;\n    display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden;-webkit-tap-highlight-color:transparent}\n  .wrap{width:100%;max-width:760px;display:flex;flex-direction:column;gap:11px;padding:16px;border:1px solid #e4eae3;\n    border-radius:22px;background:#fff;box-shadow:0 18px 48px rgba(39,50,43,.12);animation:arrive .55s cubic-bezier(.18,1.35,.36,1)}\n  h1{font-size:15px;letter-spacing:.01em;font-weight:780;display:flex;align-items:center;gap:8px}\n  h1 small{font-weight:700;color:#78a67d;font-size:9px;letter-spacing:.14em}\n  svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}\n  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}\n  .cta,.ghost{min-height:38px;padding:8px 16px;border-radius:13px;font-size:12px;font-weight:760;\n    transition:transform .38s cubic-bezier(.18,1.35,.36,1),background .18s ease,border-color .18s ease,box-shadow .18s ease}\n  .cta{background:#78a67d;color:#fff;box-shadow:0 8px 18px rgba(82,123,88,.2)}\n  .ghost{border:1px solid #dfe7de;background:#f7f9f6;color:#5c685f}\n  .cta:hover,.ghost:hover{transform:translateY(-3px) scale(1.025)}\n  .cta:active,.ghost:active{transform:scale(.96)}\n  .cta[disabled]{opacity:.35;cursor:default;transform:none;box-shadow:none}\n  .row{display:flex;align-items:center;gap:8px;justify-content:flex-end}\n  .soft-card{border:1px solid #e3eae2;border-radius:17px;background:#f6f8f5}\n  .item-mark{width:58px;height:58px;flex:none;display:grid;place-items:center;border-radius:17px;background:#e8f1e8;color:#628d68}\n  .item-mark svg{width:27px;height:27px}\n  @keyframes arrive{0%{opacity:0;transform:translateY(12px) scale(.94)}65%{transform:translateY(-2px) scale(1.012)}100%{opacity:1;transform:none}}\n  @media(max-width:520px){body{padding:8px}.wrap{padding:13px;border-radius:18px}}\n</style></head>\n<body><div class=\"wrap\">\n  <style>\n    body{padding:0;background:transparent}\n    .wrap{width:100%;max-width:none;height:100%;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;animation:none}\n    .pickup{position:relative;width:clamp(156px,40vmin,350px);height:clamp(156px,40vmin,350px);display:grid;place-items:center;border-radius:50%;outline:0;\n      transition:transform .5s cubic-bezier(.18,1.35,.36,1);animation:pickup-arrive .72s cubic-bezier(.16,1.28,.3,1) both}\n    .pickup::before{position:absolute;inset:7%;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:radial-gradient(circle at 42% 35%,rgba(255,255,255,.35),rgba(238,247,239,.16) 52%,rgba(168,197,172,.09));\n      box-shadow:inset 0 0 42px rgba(255,255,255,.22),0 24px 70px rgba(17,31,21,.22);content:''}\n    .pickup::after{position:absolute;inset:-2%;border:1px solid rgba(220,241,224,.24);border-radius:50%;content:'';animation:pickup-halo 2.4s ease-out infinite}\n    .pickup-media{position:relative;z-index:1;width:76%;height:76%;display:grid;place-items:center;color:rgba(238,247,239,.92)}\n    .pickup,.pickup-media{-webkit-user-select:none;user-select:none}\n    .pickup-media img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;display:none;width:100%;height:100%;object-fit:contain;animation:pickup-float 3s ease-in-out infinite}\n    .pickup-media svg{width:42%;height:42%}\n    .pickup:hover{transform:scale(1.06)}\n    .pickup:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.82),0 0 0 8px rgba(112,160,119,.55)}\n    .pickup:active{transform:scale(.94)}\n    .pickup.collected{pointer-events:none;animation:pickup-collect .36s cubic-bezier(.4,0,.2,1) forwards}\n    .pickup.confirmed{pointer-events:none;animation:pickup-confirm .36s cubic-bezier(.18,1.35,.36,1) both}\n    @keyframes pickup-arrive{0%{opacity:0;transform:translateY(24px) scale(.58) rotate(-4deg)}70%{opacity:1;transform:translateY(-5px) scale(1.06) rotate(1deg)}100%{transform:none}}\n    @keyframes pickup-float{0%,100%{transform:translateY(3px) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}\n    @keyframes pickup-halo{0%{opacity:.7;transform:scale(.82)}75%,100%{opacity:0;transform:scale(1.16)}}\n    @keyframes pickup-collect{45%{opacity:1;transform:scale(1.13)}100%{opacity:0;transform:scale(.72) translateY(-12px)}}\n    @keyframes pickup-confirm{50%{transform:scale(1.12)}100%{transform:scale(1)}}\n    @media(prefers-reduced-motion:reduce){.pickup,.pickup-media img,.pickup::after{animation:none}.pickup{transition:opacity .18s ease}.pickup.collected{opacity:0}}\n  </style>\n  <button type=\"button\" class=\"pickup\" id=\"go\" aria-label=\"收進背包\">\n    <span class=\"pickup-media\" id=\"item-mark\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z\"/><path d=\"m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9\"/></svg><img id=\"item-image\" alt=\"\" draggable=\"false\"/></span>\n  </button>\n</div>\n<script>\nvar values={},vars={},assets=[],characters=[],locale='zh-Hant',done=false;\nfunction setVar(name,value){ if(name) parent.postMessage({type:'larch:set',name:name,value:value},'*'); }\nfunction finish(result,payload){ if(done)return; done=true; parent.postMessage({type:'larch:complete',result:result,payload:payload},'*'); }\nfunction num(value,fallback){ var parsed=Number(value); return isNaN(parsed)?fallback:parsed; }\nfunction str(value,fallback){ return (value===undefined||value===null||value==='')?fallback:String(value); }\nparent.postMessage({type:'larch:ready'},'*');\nwindow.addEventListener('message',function(event){\n  var data=event.data;\n  if(!data||data.type!=='larch:init')return;\n  values=data.values||{};vars=data.variables||{};assets=data.assets||[];characters=data.characters||[];locale=data.locale||'zh-Hant';\n  try{ start(); }catch(error){ finish('error'); }\n});\n\nfunction readBag(name){\n  var raw=vars[name];\n  if(!raw)return [];\n  if(typeof raw!=='string'){ return []; }\n  try{ var parsed=JSON.parse(raw); return Array.isArray(parsed)?parsed:[]; }\n  catch(error){\n    // 作者也可能自己在專案設定裡填了「繩索,火把」這種預設值 —— 照樣讀得懂。\n    return raw.split(/[,、]/).map(function(item){return item.trim();}).filter(Boolean).map(function(item){return {n:item,i:''};});\n  }\n}\nfunction writeBag(name,items){ setVar(name,JSON.stringify(items)); }\n\nfunction start(){\n  if(done)return;\n  var name=str(values.itemName,'神秘道具');\n  var note=str(values.itemNote,'');\n  var bagVar=str(values.bagVar,'');\n  var count=Math.max(1,num(values.itemCount,1));\n  var hideAfterCollect=values.hideAfterCollect!==false;\n  var button=document.getElementById('go');\n  button.setAttribute('aria-label','收進背包：'+name+(count>1?'，數量 '+count:''));\n  button.title=name;\n  var itemImage=str(values.itemImage,'');\n  if(itemImage){\n    var image=document.getElementById('item-image');\n    image.src=itemImage;image.alt=name;image.style.display='block';\n    image.onerror=function(){image.style.display='none';document.querySelector('#item-mark svg').style.display='block';};\n    document.querySelector('#item-mark svg').style.display='none';\n  }\n  var collected=false;\n  button.onclick=function(){\n    if(collected)return;\n    collected=true;button.disabled=true;button.classList.add(hideAfterCollect?'collected':'confirmed');\n    var bag=readBag(bagVar);\n    var itemId=(str(values.itemId,'').trim()||name.trim()).toLowerCase().replace(/\\s+/g,'-');\n    var existing=bag.find(function(item){return String(item.id||item.n)===itemId;});\n    var item={id:itemId,n:name,i:itemImage,d:note,q:count,c:values.consumable!==false,e:str(values.effectKind,'none'),v:str(values.effectVar,''),x:values.effectValue,t:str(values.storyNodeId,''),useConditionVariable:str(values.useConditionVariable,'').trim(),useConditionValue:values.useConditionValue,useConditionMessage:str(values.useConditionMessage,'')};\n    if(existing){\n      existing.q=Math.max(1,num(existing.q,1))+count;\n      existing.n=name;existing.i=itemImage;existing.d=note;existing.c=item.c;existing.e=item.e;existing.v=item.v;existing.x=item.x;existing.t=item.t;\n      existing.useConditionVariable=item.useConditionVariable;existing.useConditionValue=item.useConditionValue;existing.useConditionMessage=item.useConditionMessage;\n    }else bag.push(item);\n    if(bagVar)writeBag(bagVar,bag);\n    if(values.countVar)setVar(str(values.countVar,''),bag.reduce(function(total,entry){return total+Math.max(1,num(entry.q,1));},0));\n    if(values.autoCollect===true)finish('granted',{item:name,count:count});\n    else setTimeout(function(){finish('granted',{item:name,count:count});},280);\n  };\n  if(values.autoCollect===true){button.style.display='none';button.onclick();}\n}\n</script></body></html>",
+            "pluginIcon": "box",
+            "pluginName": "背包系統",
+            "pluginColor": "#78a67d",
+            "pluginCardId": "grant-item",
+            "pluginValues": {
+              "bagVar": "inventory",
+              "itemId": "brass_spoon",
+              "countVar": "inventoryCount",
+              "itemName": "黃銅調酒匙",
+              "itemNote": "細長堅硬的黃銅調酒匙，末端微扁，可用於攪拌或撬開儲藏間窗台暗格。",
+              "effectVar": "",
+              "itemCount": 1,
+              "itemImage": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568571752_prop_spoon_chroma",
+              "consumable": false,
+              "effectKind": "none",
+              "autoCollect": false,
+              "effectValue": "",
+              "storyNodeId": "node_storage_pry",
+              "hideAfterCollect": true,
+              "useConditionValue": "",
+              "useConditionMessage": "",
+              "useConditionVariable": ""
+            },
+            "pluginVersion": "1.9.0",
+            "pluginCardName": "取得道具",
+            "pluginReadVars": [
+              "inventory"
+            ],
+            "pluginSkippable": false,
+            "pluginWriteVars": [
+              "inventory",
+              "inventoryCount"
+            ],
+            "pluginPresentation": "fullscreen"
+          },
+          "type": "story",
+          "position": {
+            "x": 2000,
+            "y": 100
+          }
+        },
+        {
+          "id": "node_storage_hub",
+          "data": {
+            "text": "儲藏間的行動：",
+            "type": "choice",
+            "title": "儲藏間・調查行動",
+            "choices": [
+              "【工具】使用【黃銅調酒匙】撬開卡死的百葉窗",
+              "【調查】徒手嘗試拉開通風窗",
+              "【移動】前往【臥室梳妝台】",
+              "【返回】回到【吧檯】"
+            ],
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp",
+            "choiceMode": "branch",
+            "choicePlacement": "center",
+            "choiceConditions": [
+              {
+                "op": "hasItem",
+                "kind": "variable",
+                "match": "all",
+                "value": "brass_spoon",
+                "variable": "inventory",
+                "conditions": [
+                  {
+                    "op": "hasItem",
+                    "value": "brass_spoon",
+                    "variable": "inventory",
+                    "valueSource": "value"
+                  }
+                ],
+                "valueSource": "value"
+              },
+              null,
+              null,
+              null
+            ]
+          },
+          "type": "story",
+          "position": {
+            "x": 2000,
+            "y": 450
+          }
+        },
+        {
+          "id": "node_storage_bare",
+          "data": {
+            "text": "鐵木卡榫咬得太死，徒手完全拉不開。必須找到細長又堅硬的金屬工具才能撬開。",
+            "type": "dialogue",
+            "title": "百葉窗卡死",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 2380,
+            "y": 380
+          }
+        },
+        {
+          "id": "node_storage_pry",
+          "data": {
+            "text": "我將黃銅調酒匙插進木窗縫隙稍稍使力——『喀噠！』卡榫應聲彈開，窗台下的暗格滑出！\n裡面放著一瓶深金黃色的【番紅花糖漿】。",
+            "type": "dialogue",
+            "title": "撬開暗格",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 2380,
+            "y": 620
+          }
+        },
+        {
+          "id": "plugin_grant_saffron",
+          "data": {
+            "type": "plugin",
+            "title": "拾取：番紅花糖漿",
+            "pluginId": "larch-inventory",
+            "platforms": [
+              "web"
+            ],
+            "pluginHtml": "<!doctype html>\n<html lang=\"zh-Hant\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>取得道具</title>\n<style>\n  *{box-sizing:border-box;margin:0;padding:0}\n  html,body{height:100%}\n  body{font-family:-apple-system,\"Segoe UI\",\"Noto Sans TC\",system-ui,sans-serif;color:#27322b;background:transparent;\n    display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden;-webkit-tap-highlight-color:transparent}\n  .wrap{width:100%;max-width:760px;display:flex;flex-direction:column;gap:11px;padding:16px;border:1px solid #e4eae3;\n    border-radius:22px;background:#fff;box-shadow:0 18px 48px rgba(39,50,43,.12);animation:arrive .55s cubic-bezier(.18,1.35,.36,1)}\n  h1{font-size:15px;letter-spacing:.01em;font-weight:780;display:flex;align-items:center;gap:8px}\n  h1 small{font-weight:700;color:#78a67d;font-size:9px;letter-spacing:.14em}\n  svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}\n  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}\n  .cta,.ghost{min-height:38px;padding:8px 16px;border-radius:13px;font-size:12px;font-weight:760;\n    transition:transform .38s cubic-bezier(.18,1.35,.36,1),background .18s ease,border-color .18s ease,box-shadow .18s ease}\n  .cta{background:#78a67d;color:#fff;box-shadow:0 8px 18px rgba(82,123,88,.2)}\n  .ghost{border:1px solid #dfe7de;background:#f7f9f6;color:#5c685f}\n  .cta:hover,.ghost:hover{transform:translateY(-3px) scale(1.025)}\n  .cta:active,.ghost:active{transform:scale(.96)}\n  .cta[disabled]{opacity:.35;cursor:default;transform:none;box-shadow:none}\n  .row{display:flex;align-items:center;gap:8px;justify-content:flex-end}\n  .soft-card{border:1px solid #e3eae2;border-radius:17px;background:#f6f8f5}\n  .item-mark{width:58px;height:58px;flex:none;display:grid;place-items:center;border-radius:17px;background:#e8f1e8;color:#628d68}\n  .item-mark svg{width:27px;height:27px}\n  @keyframes arrive{0%{opacity:0;transform:translateY(12px) scale(.94)}65%{transform:translateY(-2px) scale(1.012)}100%{opacity:1;transform:none}}\n  @media(max-width:520px){body{padding:8px}.wrap{padding:13px;border-radius:18px}}\n</style></head>\n<body><div class=\"wrap\">\n  <style>\n    body{padding:0;background:transparent}\n    .wrap{width:100%;max-width:none;height:100%;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;animation:none}\n    .pickup{position:relative;width:clamp(156px,40vmin,350px);height:clamp(156px,40vmin,350px);display:grid;place-items:center;border-radius:50%;outline:0;\n      transition:transform .5s cubic-bezier(.18,1.35,.36,1);animation:pickup-arrive .72s cubic-bezier(.16,1.28,.3,1) both}\n    .pickup::before{position:absolute;inset:7%;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:radial-gradient(circle at 42% 35%,rgba(255,255,255,.35),rgba(238,247,239,.16) 52%,rgba(168,197,172,.09));\n      box-shadow:inset 0 0 42px rgba(255,255,255,.22),0 24px 70px rgba(17,31,21,.22);content:''}\n    .pickup::after{position:absolute;inset:-2%;border:1px solid rgba(220,241,224,.24);border-radius:50%;content:'';animation:pickup-halo 2.4s ease-out infinite}\n    .pickup-media{position:relative;z-index:1;width:76%;height:76%;display:grid;place-items:center;color:rgba(238,247,239,.92)}\n    .pickup,.pickup-media{-webkit-user-select:none;user-select:none}\n    .pickup-media img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;display:none;width:100%;height:100%;object-fit:contain;animation:pickup-float 3s ease-in-out infinite}\n    .pickup-media svg{width:42%;height:42%}\n    .pickup:hover{transform:scale(1.06)}\n    .pickup:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.82),0 0 0 8px rgba(112,160,119,.55)}\n    .pickup:active{transform:scale(.94)}\n    .pickup.collected{pointer-events:none;animation:pickup-collect .36s cubic-bezier(.4,0,.2,1) forwards}\n    .pickup.confirmed{pointer-events:none;animation:pickup-confirm .36s cubic-bezier(.18,1.35,.36,1) both}\n    @keyframes pickup-arrive{0%{opacity:0;transform:translateY(24px) scale(.58) rotate(-4deg)}70%{opacity:1;transform:translateY(-5px) scale(1.06) rotate(1deg)}100%{transform:none}}\n    @keyframes pickup-float{0%,100%{transform:translateY(3px) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}\n    @keyframes pickup-halo{0%{opacity:.7;transform:scale(.82)}75%,100%{opacity:0;transform:scale(1.16)}}\n    @keyframes pickup-collect{45%{opacity:1;transform:scale(1.13)}100%{opacity:0;transform:scale(.72) translateY(-12px)}}\n    @keyframes pickup-confirm{50%{transform:scale(1.12)}100%{transform:scale(1)}}\n    @media(prefers-reduced-motion:reduce){.pickup,.pickup-media img,.pickup::after{animation:none}.pickup{transition:opacity .18s ease}.pickup.collected{opacity:0}}\n  </style>\n  <button type=\"button\" class=\"pickup\" id=\"go\" aria-label=\"收進背包\">\n    <span class=\"pickup-media\" id=\"item-mark\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z\"/><path d=\"m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9\"/></svg><img id=\"item-image\" alt=\"\" draggable=\"false\"/></span>\n  </button>\n</div>\n<script>\nvar values={},vars={},assets=[],characters=[],locale='zh-Hant',done=false;\nfunction setVar(name,value){ if(name) parent.postMessage({type:'larch:set',name:name,value:value},'*'); }\nfunction finish(result,payload){ if(done)return; done=true; parent.postMessage({type:'larch:complete',result:result,payload:payload},'*'); }\nfunction num(value,fallback){ var parsed=Number(value); return isNaN(parsed)?fallback:parsed; }\nfunction str(value,fallback){ return (value===undefined||value===null||value==='')?fallback:String(value); }\nparent.postMessage({type:'larch:ready'},'*');\nwindow.addEventListener('message',function(event){\n  var data=event.data;\n  if(!data||data.type!=='larch:init')return;\n  values=data.values||{};vars=data.variables||{};assets=data.assets||[];characters=data.characters||[];locale=data.locale||'zh-Hant';\n  try{ start(); }catch(error){ finish('error'); }\n});\n\nfunction readBag(name){\n  var raw=vars[name];\n  if(!raw)return [];\n  if(typeof raw!=='string'){ return []; }\n  try{ var parsed=JSON.parse(raw); return Array.isArray(parsed)?parsed:[]; }\n  catch(error){\n    // 作者也可能自己在專案設定裡填了「繩索,火把」這種預設值 —— 照樣讀得懂。\n    return raw.split(/[,、]/).map(function(item){return item.trim();}).filter(Boolean).map(function(item){return {n:item,i:''};});\n  }\n}\nfunction writeBag(name,items){ setVar(name,JSON.stringify(items)); }\n\nfunction start(){\n  if(done)return;\n  var name=str(values.itemName,'神秘道具');\n  var note=str(values.itemNote,'');\n  var bagVar=str(values.bagVar,'');\n  var count=Math.max(1,num(values.itemCount,1));\n  var hideAfterCollect=values.hideAfterCollect!==false;\n  var button=document.getElementById('go');\n  button.setAttribute('aria-label','收進背包：'+name+(count>1?'，數量 '+count:''));\n  button.title=name;\n  var itemImage=str(values.itemImage,'');\n  if(itemImage){\n    var image=document.getElementById('item-image');\n    image.src=itemImage;image.alt=name;image.style.display='block';\n    image.onerror=function(){image.style.display='none';document.querySelector('#item-mark svg').style.display='block';};\n    document.querySelector('#item-mark svg').style.display='none';\n  }\n  var collected=false;\n  button.onclick=function(){\n    if(collected)return;\n    collected=true;button.disabled=true;button.classList.add(hideAfterCollect?'collected':'confirmed');\n    var bag=readBag(bagVar);\n    var itemId=(str(values.itemId,'').trim()||name.trim()).toLowerCase().replace(/\\s+/g,'-');\n    var existing=bag.find(function(item){return String(item.id||item.n)===itemId;});\n    var item={id:itemId,n:name,i:itemImage,d:note,q:count,c:values.consumable!==false,e:str(values.effectKind,'none'),v:str(values.effectVar,''),x:values.effectValue,t:str(values.storyNodeId,''),useConditionVariable:str(values.useConditionVariable,'').trim(),useConditionValue:values.useConditionValue,useConditionMessage:str(values.useConditionMessage,'')};\n    if(existing){\n      existing.q=Math.max(1,num(existing.q,1))+count;\n      existing.n=name;existing.i=itemImage;existing.d=note;existing.c=item.c;existing.e=item.e;existing.v=item.v;existing.x=item.x;existing.t=item.t;\n      existing.useConditionVariable=item.useConditionVariable;existing.useConditionValue=item.useConditionValue;existing.useConditionMessage=item.useConditionMessage;\n    }else bag.push(item);\n    if(bagVar)writeBag(bagVar,bag);\n    if(values.countVar)setVar(str(values.countVar,''),bag.reduce(function(total,entry){return total+Math.max(1,num(entry.q,1));},0));\n    if(values.autoCollect===true)finish('granted',{item:name,count:count});\n    else setTimeout(function(){finish('granted',{item:name,count:count});},280);\n  };\n  if(values.autoCollect===true){button.style.display='none';button.onclick();}\n}\n</script></body></html>",
+            "pluginIcon": "box",
+            "pluginName": "背包系統",
+            "pluginColor": "#78a67d",
+            "pluginCardId": "grant-item",
+            "pluginValues": {
+              "bagVar": "inventory",
+              "itemId": "saffron_syrup",
+              "countVar": "inventoryCount",
+              "itemName": "番紅花糖漿",
+              "itemNote": "深邃金黃色的濃郁糖漿，沈淮與安雅初遇時甜白酒的核心風味。",
+              "effectVar": "",
+              "itemCount": 1,
+              "itemImage": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568842314_prop_saffron_chroma",
+              "consumable": false,
+              "effectKind": "none",
+              "autoCollect": false,
+              "effectValue": "",
+              "storyNodeId": "node_mix_step1",
+              "hideAfterCollect": true,
+              "useConditionValue": "",
+              "useConditionMessage": "",
+              "useConditionVariable": ""
+            },
+            "pluginVersion": "1.9.0",
+            "pluginCardName": "取得道具",
+            "pluginReadVars": [
+              "inventory"
+            ],
+            "pluginSkippable": false,
+            "pluginWriteVars": [
+              "inventory",
+              "inventoryCount"
+            ],
+            "pluginPresentation": "fullscreen"
+          },
+          "type": "story",
+          "position": {
+            "x": 2760,
+            "y": 550
+          }
+        },
+        {
+          "id": "plugin_grant_key",
+          "data": {
+            "type": "plugin",
+            "title": "拾取：心型吊墜鑰匙",
+            "pluginId": "larch-inventory",
+            "platforms": [
+              "web"
+            ],
+            "pluginHtml": "<!doctype html>\n<html lang=\"zh-Hant\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>取得道具</title>\n<style>\n  *{box-sizing:border-box;margin:0;padding:0}\n  html,body{height:100%}\n  body{font-family:-apple-system,\"Segoe UI\",\"Noto Sans TC\",system-ui,sans-serif;color:#27322b;background:transparent;\n    display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden;-webkit-tap-highlight-color:transparent}\n  .wrap{width:100%;max-width:760px;display:flex;flex-direction:column;gap:11px;padding:16px;border:1px solid #e4eae3;\n    border-radius:22px;background:#fff;box-shadow:0 18px 48px rgba(39,50,43,.12);animation:arrive .55s cubic-bezier(.18,1.35,.36,1)}\n  h1{font-size:15px;letter-spacing:.01em;font-weight:780;display:flex;align-items:center;gap:8px}\n  h1 small{font-weight:700;color:#78a67d;font-size:9px;letter-spacing:.14em}\n  svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}\n  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}\n  .cta,.ghost{min-height:38px;padding:8px 16px;border-radius:13px;font-size:12px;font-weight:760;\n    transition:transform .38s cubic-bezier(.18,1.35,.36,1),background .18s ease,border-color .18s ease,box-shadow .18s ease}\n  .cta{background:#78a67d;color:#fff;box-shadow:0 8px 18px rgba(82,123,88,.2)}\n  .ghost{border:1px solid #dfe7de;background:#f7f9f6;color:#5c685f}\n  .cta:hover,.ghost:hover{transform:translateY(-3px) scale(1.025)}\n  .cta:active,.ghost:active{transform:scale(.96)}\n  .cta[disabled]{opacity:.35;cursor:default;transform:none;box-shadow:none}\n  .row{display:flex;align-items:center;gap:8px;justify-content:flex-end}\n  .soft-card{border:1px solid #e3eae2;border-radius:17px;background:#f6f8f5}\n  .item-mark{width:58px;height:58px;flex:none;display:grid;place-items:center;border-radius:17px;background:#e8f1e8;color:#628d68}\n  .item-mark svg{width:27px;height:27px}\n  @keyframes arrive{0%{opacity:0;transform:translateY(12px) scale(.94)}65%{transform:translateY(-2px) scale(1.012)}100%{opacity:1;transform:none}}\n  @media(max-width:520px){body{padding:8px}.wrap{padding:13px;border-radius:18px}}\n</style></head>\n<body><div class=\"wrap\">\n  <style>\n    body{padding:0;background:transparent}\n    .wrap{width:100%;max-width:none;height:100%;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;animation:none}\n    .pickup{position:relative;width:clamp(156px,40vmin,350px);height:clamp(156px,40vmin,350px);display:grid;place-items:center;border-radius:50%;outline:0;\n      transition:transform .5s cubic-bezier(.18,1.35,.36,1);animation:pickup-arrive .72s cubic-bezier(.16,1.28,.3,1) both}\n    .pickup::before{position:absolute;inset:7%;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:radial-gradient(circle at 42% 35%,rgba(255,255,255,.35),rgba(238,247,239,.16) 52%,rgba(168,197,172,.09));\n      box-shadow:inset 0 0 42px rgba(255,255,255,.22),0 24px 70px rgba(17,31,21,.22);content:''}\n    .pickup::after{position:absolute;inset:-2%;border:1px solid rgba(220,241,224,.24);border-radius:50%;content:'';animation:pickup-halo 2.4s ease-out infinite}\n    .pickup-media{position:relative;z-index:1;width:76%;height:76%;display:grid;place-items:center;color:rgba(238,247,239,.92)}\n    .pickup,.pickup-media{-webkit-user-select:none;user-select:none}\n    .pickup-media img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;display:none;width:100%;height:100%;object-fit:contain;animation:pickup-float 3s ease-in-out infinite}\n    .pickup-media svg{width:42%;height:42%}\n    .pickup:hover{transform:scale(1.06)}\n    .pickup:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.82),0 0 0 8px rgba(112,160,119,.55)}\n    .pickup:active{transform:scale(.94)}\n    .pickup.collected{pointer-events:none;animation:pickup-collect .36s cubic-bezier(.4,0,.2,1) forwards}\n    .pickup.confirmed{pointer-events:none;animation:pickup-confirm .36s cubic-bezier(.18,1.35,.36,1) both}\n    @keyframes pickup-arrive{0%{opacity:0;transform:translateY(24px) scale(.58) rotate(-4deg)}70%{opacity:1;transform:translateY(-5px) scale(1.06) rotate(1deg)}100%{transform:none}}\n    @keyframes pickup-float{0%,100%{transform:translateY(3px) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}\n    @keyframes pickup-halo{0%{opacity:.7;transform:scale(.82)}75%,100%{opacity:0;transform:scale(1.16)}}\n    @keyframes pickup-collect{45%{opacity:1;transform:scale(1.13)}100%{opacity:0;transform:scale(.72) translateY(-12px)}}\n    @keyframes pickup-confirm{50%{transform:scale(1.12)}100%{transform:scale(1)}}\n    @media(prefers-reduced-motion:reduce){.pickup,.pickup-media img,.pickup::after{animation:none}.pickup{transition:opacity .18s ease}.pickup.collected{opacity:0}}\n  </style>\n  <button type=\"button\" class=\"pickup\" id=\"go\" aria-label=\"收進背包\">\n    <span class=\"pickup-media\" id=\"item-mark\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z\"/><path d=\"m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9\"/></svg><img id=\"item-image\" alt=\"\" draggable=\"false\"/></span>\n  </button>\n</div>\n<script>\nvar values={},vars={},assets=[],characters=[],locale='zh-Hant',done=false;\nfunction setVar(name,value){ if(name) parent.postMessage({type:'larch:set',name:name,value:value},'*'); }\nfunction finish(result,payload){ if(done)return; done=true; parent.postMessage({type:'larch:complete',result:result,payload:payload},'*'); }\nfunction num(value,fallback){ var parsed=Number(value); return isNaN(parsed)?fallback:parsed; }\nfunction str(value,fallback){ return (value===undefined||value===null||value==='')?fallback:String(value); }\nparent.postMessage({type:'larch:ready'},'*');\nwindow.addEventListener('message',function(event){\n  var data=event.data;\n  if(!data||data.type!=='larch:init')return;\n  values=data.values||{};vars=data.variables||{};assets=data.assets||[];characters=data.characters||[];locale=data.locale||'zh-Hant';\n  try{ start(); }catch(error){ finish('error'); }\n});\n\nfunction readBag(name){\n  var raw=vars[name];\n  if(!raw)return [];\n  if(typeof raw!=='string'){ return []; }\n  try{ var parsed=JSON.parse(raw); return Array.isArray(parsed)?parsed:[]; }\n  catch(error){\n    // 作者也可能自己在專案設定裡填了「繩索,火把」這種預設值 —— 照樣讀得懂。\n    return raw.split(/[,、]/).map(function(item){return item.trim();}).filter(Boolean).map(function(item){return {n:item,i:''};});\n  }\n}\nfunction writeBag(name,items){ setVar(name,JSON.stringify(items)); }\n\nfunction start(){\n  if(done)return;\n  var name=str(values.itemName,'神秘道具');\n  var note=str(values.itemNote,'');\n  var bagVar=str(values.bagVar,'');\n  var count=Math.max(1,num(values.itemCount,1));\n  var hideAfterCollect=values.hideAfterCollect!==false;\n  var button=document.getElementById('go');\n  button.setAttribute('aria-label','收進背包：'+name+(count>1?'，數量 '+count:''));\n  button.title=name;\n  var itemImage=str(values.itemImage,'');\n  if(itemImage){\n    var image=document.getElementById('item-image');\n    image.src=itemImage;image.alt=name;image.style.display='block';\n    image.onerror=function(){image.style.display='none';document.querySelector('#item-mark svg').style.display='block';};\n    document.querySelector('#item-mark svg').style.display='none';\n  }\n  var collected=false;\n  button.onclick=function(){\n    if(collected)return;\n    collected=true;button.disabled=true;button.classList.add(hideAfterCollect?'collected':'confirmed');\n    var bag=readBag(bagVar);\n    var itemId=(str(values.itemId,'').trim()||name.trim()).toLowerCase().replace(/\\s+/g,'-');\n    var existing=bag.find(function(item){return String(item.id||item.n)===itemId;});\n    var item={id:itemId,n:name,i:itemImage,d:note,q:count,c:values.consumable!==false,e:str(values.effectKind,'none'),v:str(values.effectVar,''),x:values.effectValue,t:str(values.storyNodeId,''),useConditionVariable:str(values.useConditionVariable,'').trim(),useConditionValue:values.useConditionValue,useConditionMessage:str(values.useConditionMessage,'')};\n    if(existing){\n      existing.q=Math.max(1,num(existing.q,1))+count;\n      existing.n=name;existing.i=itemImage;existing.d=note;existing.c=item.c;existing.e=item.e;existing.v=item.v;existing.x=item.x;existing.t=item.t;\n      existing.useConditionVariable=item.useConditionVariable;existing.useConditionValue=item.useConditionValue;existing.useConditionMessage=item.useConditionMessage;\n    }else bag.push(item);\n    if(bagVar)writeBag(bagVar,bag);\n    if(values.countVar)setVar(str(values.countVar,''),bag.reduce(function(total,entry){return total+Math.max(1,num(entry.q,1));},0));\n    if(values.autoCollect===true)finish('granted',{item:name,count:count});\n    else setTimeout(function(){finish('granted',{item:name,count:count});},280);\n  };\n  if(values.autoCollect===true){button.style.display='none';button.onclick();}\n}\n</script></body></html>",
+            "pluginIcon": "box",
+            "pluginName": "背包系統",
+            "pluginColor": "#78a67d",
+            "pluginCardId": "grant-item",
+            "pluginValues": {
+              "bagVar": "inventory",
+              "itemId": "heart_key",
+              "countVar": "inventoryCount",
+              "itemName": "心型吊墜鑰匙",
+              "itemNote": "安雅貼身佩戴的心型鑰匙，能開啟臥室梳妝台上上了鎖的雕花木盒。",
+              "effectVar": "",
+              "itemCount": 1,
+              "itemImage": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568785759_prop_key_chroma",
+              "consumable": false,
+              "effectKind": "none",
+              "autoCollect": false,
+              "effectValue": "",
+              "storyNodeId": "node_bedroom_unlock",
+              "hideAfterCollect": true,
+              "useConditionValue": "",
+              "useConditionMessage": "",
+              "useConditionVariable": ""
+            },
+            "pluginVersion": "1.9.0",
+            "pluginCardName": "取得道具",
+            "pluginReadVars": [
+              "inventory"
+            ],
+            "pluginSkippable": false,
+            "pluginWriteVars": [
+              "inventory",
+              "inventoryCount"
+            ],
+            "pluginPresentation": "fullscreen"
+          },
+          "type": "story",
+          "position": {
+            "x": 3500,
+            "y": 550
+          }
+        },
+        {
+          "id": "node_bedroom_hub",
+          "data": {
+            "text": "臥室的行動：",
+            "type": "choice",
+            "title": "梳妝台・行動抉擇",
+            "choices": [
+              "【解鎖】使用【心型吊墜鑰匙】打開木盒",
+              "【調查】端詳木盒上的鎖孔",
+              "【移動】前往【香料儲藏間】",
+              "【返回】回到【吧檯】"
+            ],
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+            "choiceMode": "branch",
+            "choicePlacement": "center",
+            "choiceConditions": [
+              {
+                "op": "hasItem",
+                "kind": "variable",
+                "match": "all",
+                "value": "heart_key",
+                "variable": "inventory",
+                "conditions": [
+                  {
+                    "op": "hasItem",
+                    "value": "heart_key",
+                    "variable": "inventory",
+                    "valueSource": "value"
+                  }
+                ],
+                "valueSource": "value"
+              },
+              null,
+              null,
+              null
+            ]
+          },
+          "type": "story",
+          "position": {
+            "x": 2000,
+            "y": 850
+          }
+        },
+        {
+          "id": "node_bedroom_examine",
+          "data": {
+            "text": "木盒上的小銅鎖雕刻著心型藤蔓，鎖孔極其纖巧。強行撬開只會損壞盒子，需要對應的心型小鑰匙。",
+            "type": "dialogue",
+            "title": "雕花木盒",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 2380,
+            "y": 800
+          }
+        },
+        {
+          "id": "node_bedroom_unlock",
+          "data": {
+            "text": "心型鑰匙插入鎖孔，順時針輕轉——「喀啦」，鎖扣彈開！\n裡面放著一罐【粉紅胡椒研磨罐】，以及幾張染血的病歷單碎頁。",
+            "type": "dialogue",
+            "title": "木盒開啟",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 2380,
+            "y": 1050
+          }
+        },
+        {
+          "id": "plugin_grant_pepper",
+          "data": {
+            "type": "plugin",
+            "title": "拾取：粉紅胡椒研磨罐",
+            "pluginId": "larch-inventory",
+            "platforms": [
+              "web"
+            ],
+            "pluginHtml": "<!doctype html>\n<html lang=\"zh-Hant\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>取得道具</title>\n<style>\n  *{box-sizing:border-box;margin:0;padding:0}\n  html,body{height:100%}\n  body{font-family:-apple-system,\"Segoe UI\",\"Noto Sans TC\",system-ui,sans-serif;color:#27322b;background:transparent;\n    display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden;-webkit-tap-highlight-color:transparent}\n  .wrap{width:100%;max-width:760px;display:flex;flex-direction:column;gap:11px;padding:16px;border:1px solid #e4eae3;\n    border-radius:22px;background:#fff;box-shadow:0 18px 48px rgba(39,50,43,.12);animation:arrive .55s cubic-bezier(.18,1.35,.36,1)}\n  h1{font-size:15px;letter-spacing:.01em;font-weight:780;display:flex;align-items:center;gap:8px}\n  h1 small{font-weight:700;color:#78a67d;font-size:9px;letter-spacing:.14em}\n  svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}\n  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}\n  .cta,.ghost{min-height:38px;padding:8px 16px;border-radius:13px;font-size:12px;font-weight:760;\n    transition:transform .38s cubic-bezier(.18,1.35,.36,1),background .18s ease,border-color .18s ease,box-shadow .18s ease}\n  .cta{background:#78a67d;color:#fff;box-shadow:0 8px 18px rgba(82,123,88,.2)}\n  .ghost{border:1px solid #dfe7de;background:#f7f9f6;color:#5c685f}\n  .cta:hover,.ghost:hover{transform:translateY(-3px) scale(1.025)}\n  .cta:active,.ghost:active{transform:scale(.96)}\n  .cta[disabled]{opacity:.35;cursor:default;transform:none;box-shadow:none}\n  .row{display:flex;align-items:center;gap:8px;justify-content:flex-end}\n  .soft-card{border:1px solid #e3eae2;border-radius:17px;background:#f6f8f5}\n  .item-mark{width:58px;height:58px;flex:none;display:grid;place-items:center;border-radius:17px;background:#e8f1e8;color:#628d68}\n  .item-mark svg{width:27px;height:27px}\n  @keyframes arrive{0%{opacity:0;transform:translateY(12px) scale(.94)}65%{transform:translateY(-2px) scale(1.012)}100%{opacity:1;transform:none}}\n  @media(max-width:520px){body{padding:8px}.wrap{padding:13px;border-radius:18px}}\n</style></head>\n<body><div class=\"wrap\">\n  <style>\n    body{padding:0;background:transparent}\n    .wrap{width:100%;max-width:none;height:100%;display:grid;place-items:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;animation:none}\n    .pickup{position:relative;width:clamp(156px,40vmin,350px);height:clamp(156px,40vmin,350px);display:grid;place-items:center;border-radius:50%;outline:0;\n      transition:transform .5s cubic-bezier(.18,1.35,.36,1);animation:pickup-arrive .72s cubic-bezier(.16,1.28,.3,1) both}\n    .pickup::before{position:absolute;inset:7%;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:radial-gradient(circle at 42% 35%,rgba(255,255,255,.35),rgba(238,247,239,.16) 52%,rgba(168,197,172,.09));\n      box-shadow:inset 0 0 42px rgba(255,255,255,.22),0 24px 70px rgba(17,31,21,.22);content:''}\n    .pickup::after{position:absolute;inset:-2%;border:1px solid rgba(220,241,224,.24);border-radius:50%;content:'';animation:pickup-halo 2.4s ease-out infinite}\n    .pickup-media{position:relative;z-index:1;width:76%;height:76%;display:grid;place-items:center;color:rgba(238,247,239,.92)}\n    .pickup,.pickup-media{-webkit-user-select:none;user-select:none}\n    .pickup-media img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none;display:none;width:100%;height:100%;object-fit:contain;animation:pickup-float 3s ease-in-out infinite}\n    .pickup-media svg{width:42%;height:42%}\n    .pickup:hover{transform:scale(1.06)}\n    .pickup:focus-visible{box-shadow:0 0 0 4px rgba(255,255,255,.82),0 0 0 8px rgba(112,160,119,.55)}\n    .pickup:active{transform:scale(.94)}\n    .pickup.collected{pointer-events:none;animation:pickup-collect .36s cubic-bezier(.4,0,.2,1) forwards}\n    .pickup.confirmed{pointer-events:none;animation:pickup-confirm .36s cubic-bezier(.18,1.35,.36,1) both}\n    @keyframes pickup-arrive{0%{opacity:0;transform:translateY(24px) scale(.58) rotate(-4deg)}70%{opacity:1;transform:translateY(-5px) scale(1.06) rotate(1deg)}100%{transform:none}}\n    @keyframes pickup-float{0%,100%{transform:translateY(3px) rotate(-1deg)}50%{transform:translateY(-7px) rotate(1deg)}}\n    @keyframes pickup-halo{0%{opacity:.7;transform:scale(.82)}75%,100%{opacity:0;transform:scale(1.16)}}\n    @keyframes pickup-collect{45%{opacity:1;transform:scale(1.13)}100%{opacity:0;transform:scale(.72) translateY(-12px)}}\n    @keyframes pickup-confirm{50%{transform:scale(1.12)}100%{transform:scale(1)}}\n    @media(prefers-reduced-motion:reduce){.pickup,.pickup-media img,.pickup::after{animation:none}.pickup{transition:opacity .18s ease}.pickup.collected{opacity:0}}\n  </style>\n  <button type=\"button\" class=\"pickup\" id=\"go\" aria-label=\"收進背包\">\n    <span class=\"pickup-media\" id=\"item-mark\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z\"/><path d=\"m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9\"/></svg><img id=\"item-image\" alt=\"\" draggable=\"false\"/></span>\n  </button>\n</div>\n<script>\nvar values={},vars={},assets=[],characters=[],locale='zh-Hant',done=false;\nfunction setVar(name,value){ if(name) parent.postMessage({type:'larch:set',name:name,value:value},'*'); }\nfunction finish(result,payload){ if(done)return; done=true; parent.postMessage({type:'larch:complete',result:result,payload:payload},'*'); }\nfunction num(value,fallback){ var parsed=Number(value); return isNaN(parsed)?fallback:parsed; }\nfunction str(value,fallback){ return (value===undefined||value===null||value==='')?fallback:String(value); }\nparent.postMessage({type:'larch:ready'},'*');\nwindow.addEventListener('message',function(event){\n  var data=event.data;\n  if(!data||data.type!=='larch:init')return;\n  values=data.values||{};vars=data.variables||{};assets=data.assets||[];characters=data.characters||[];locale=data.locale||'zh-Hant';\n  try{ start(); }catch(error){ finish('error'); }\n});\n\nfunction readBag(name){\n  var raw=vars[name];\n  if(!raw)return [];\n  if(typeof raw!=='string'){ return []; }\n  try{ var parsed=JSON.parse(raw); return Array.isArray(parsed)?parsed:[]; }\n  catch(error){\n    // 作者也可能自己在專案設定裡填了「繩索,火把」這種預設值 —— 照樣讀得懂。\n    return raw.split(/[,、]/).map(function(item){return item.trim();}).filter(Boolean).map(function(item){return {n:item,i:''};});\n  }\n}\nfunction writeBag(name,items){ setVar(name,JSON.stringify(items)); }\n\nfunction start(){\n  if(done)return;\n  var name=str(values.itemName,'神秘道具');\n  var note=str(values.itemNote,'');\n  var bagVar=str(values.bagVar,'');\n  var count=Math.max(1,num(values.itemCount,1));\n  var hideAfterCollect=values.hideAfterCollect!==false;\n  var button=document.getElementById('go');\n  button.setAttribute('aria-label','收進背包：'+name+(count>1?'，數量 '+count:''));\n  button.title=name;\n  var itemImage=str(values.itemImage,'');\n  if(itemImage){\n    var image=document.getElementById('item-image');\n    image.src=itemImage;image.alt=name;image.style.display='block';\n    image.onerror=function(){image.style.display='none';document.querySelector('#item-mark svg').style.display='block';};\n    document.querySelector('#item-mark svg').style.display='none';\n  }\n  var collected=false;\n  button.onclick=function(){\n    if(collected)return;\n    collected=true;button.disabled=true;button.classList.add(hideAfterCollect?'collected':'confirmed');\n    var bag=readBag(bagVar);\n    var itemId=(str(values.itemId,'').trim()||name.trim()).toLowerCase().replace(/\\s+/g,'-');\n    var existing=bag.find(function(item){return String(item.id||item.n)===itemId;});\n    var item={id:itemId,n:name,i:itemImage,d:note,q:count,c:values.consumable!==false,e:str(values.effectKind,'none'),v:str(values.effectVar,''),x:values.effectValue,t:str(values.storyNodeId,''),useConditionVariable:str(values.useConditionVariable,'').trim(),useConditionValue:values.useConditionValue,useConditionMessage:str(values.useConditionMessage,'')};\n    if(existing){\n      existing.q=Math.max(1,num(existing.q,1))+count;\n      existing.n=name;existing.i=itemImage;existing.d=note;existing.c=item.c;existing.e=item.e;existing.v=item.v;existing.x=item.x;existing.t=item.t;\n      existing.useConditionVariable=item.useConditionVariable;existing.useConditionValue=item.useConditionValue;existing.useConditionMessage=item.useConditionMessage;\n    }else bag.push(item);\n    if(bagVar)writeBag(bagVar,bag);\n    if(values.countVar)setVar(str(values.countVar,''),bag.reduce(function(total,entry){return total+Math.max(1,num(entry.q,1));},0));\n    if(values.autoCollect===true)finish('granted',{item:name,count:count});\n    else setTimeout(function(){finish('granted',{item:name,count:count});},280);\n  };\n  if(values.autoCollect===true){button.style.display='none';button.onclick();}\n}\n</script></body></html>",
+            "pluginIcon": "box",
+            "pluginName": "背包系統",
+            "pluginColor": "#78a67d",
+            "pluginCardId": "grant-item",
+            "pluginValues": {
+              "bagVar": "inventory",
+              "itemId": "pink_pepper",
+              "countVar": "inventoryCount",
+              "itemName": "粉紅胡椒研磨罐",
+              "itemNote": "裝滿艷粉色乾燥胡椒粒，咬碎時能帶來觸電般的微辣麻感。",
+              "effectVar": "",
+              "itemCount": 1,
+              "itemImage": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789568906846_prop_pepper_chroma",
+              "consumable": false,
+              "effectKind": "none",
+              "autoCollect": false,
+              "effectValue": "",
+              "storyNodeId": "node_mix_step1",
+              "hideAfterCollect": true,
+              "useConditionValue": "",
+              "useConditionMessage": "",
+              "useConditionVariable": ""
+            },
+            "pluginVersion": "1.9.0",
+            "pluginCardName": "取得道具",
+            "pluginReadVars": [
+              "inventory"
+            ],
+            "pluginSkippable": false,
+            "pluginWriteVars": [
+              "inventory",
+              "inventoryCount"
+            ],
+            "pluginPresentation": "fullscreen"
+          },
+          "type": "story",
+          "position": {
+            "x": 2760,
+            "y": 1050
+          }
+        },
+        {
+          "id": "node_bedroom_memory",
+          "data": {
+            "text": "『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』",
+            "type": "dialogue",
+            "title": "安雅的回憶語音",
+            "speaker": "安雅（回憶）",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571305626_f5a21c4f.mp3",
+            "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+            "voiceMode": "ai",
+            "voiceName": "Chinese (Mandarin)_Soft_Girl",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+            "voiceModel": "speech-2.8-hd",
+            "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+            "voiceEmotion": "calm",
+            "voiceProvider": "minimax",
+            "characterLayers": [
+              {
+                "x": 0,
+                "y": 0,
+                "id": "layer_anya_memory",
+                "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+                "scale": 1,
+                "position": "center"
+              }
+            ],
+            "voiceDisclosure": true,
+            "characterEmotion": "smile",
+            "characterPosition": "center"
+          },
+          "type": "story",
+          "position": {
+            "x": 3120,
+            "y": 1050
+          }
+        },
+        {
+          "id": "node_bedroom_shock",
+          "data": {
+            "text": "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。",
+            "type": "dialogue",
+            "stage": {
+              "actors": []
+            },
+            "title": "病歷單的真相",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp",
+            "dialogueLines": [
+              {
+                "id": "legacy",
+                "text": "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。",
+                "speaker": "沈淮"
+              }
+            ],
+            "characterLayers": []
+          },
+          "type": "story",
+          "position": {
+            "x": 3500,
+            "y": 1050
+          }
+        },
+        {
+          "id": "node_bar_mix_check",
+          "data": {
+            "text": "調製「初遇滋味」的準備：",
+            "type": "choice",
+            "title": "節點 4：吧檯【謎底拼湊】",
+            "choices": [
+              "【開始調製】注入糖漿、攪拌並磨入胡椒",
+              "【材料不足】返回繼續搜查"
+            ],
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "choiceMode": "branch",
+            "choicePlacement": "center",
+            "choiceConditions": [
+              {
+                "op": "hasItem",
+                "kind": "variable",
+                "match": "all",
+                "value": "saffron_syrup",
+                "variable": "inventory",
+                "conditions": [
+                  {
+                    "op": "hasItem",
+                    "value": "saffron_syrup",
+                    "variable": "inventory",
+                    "valueSource": "value"
+                  },
+                  {
+                    "op": "hasItem",
+                    "value": "pink_pepper",
+                    "variable": "inventory",
+                    "valueSource": "value"
+                  },
+                  {
+                    "op": "hasItem",
+                    "value": "brass_spoon",
+                    "variable": "inventory",
+                    "valueSource": "value"
+                  }
+                ],
+                "valueSource": "value"
+              },
+              null
+            ]
+          },
+          "type": "story",
+          "position": {
+            "x": 1240,
+            "y": 650
+          }
+        },
+        {
+          "id": "node_mix_step1",
+          "data": {
+            "text": "對高腳杯使用【番紅花糖漿】——\n濃稠燦爛的金黃色液體注入杯底，宛如地平線初升的朝陽，散發溫潤甘甜的草本清香。",
+            "type": "dialogue",
+            "title": "調酒：注入糖漿",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 1240,
+            "y": 960
+          }
+        },
+        {
+          "id": "node_mix_step2",
+          "data": {
+            "text": "拿起【黃銅調酒匙】貼著杯壁輕輕攪拌——\n金黃色液體旋轉著融為一體，純淨透亮，折射出璀璨的琥珀光澤。",
+            "type": "dialogue",
+            "title": "調酒：黃銅匙攪拌",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 1240,
+            "y": 1240
+          }
+        },
+        {
+          "id": "node_mix_step3",
+          "data": {
+            "text": "拿起【粉紅胡椒研磨罐】在杯口旋轉——\n磨入細碎顆粒，表面浮起一層曖昧的淡粉色油脂與碎粒，空氣中瀰漫出一股誘人又微刺的辛香。金黃與粉紅交織，如落日晚霞。",
+            "type": "dialogue",
+            "title": "調酒：研磨粉紅胡椒",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 1240,
+            "y": 1520
+          }
+        },
+        {
+          "id": "node_mix_reveal",
+          "data": {
+            "text": "杯架下方的機關「喀噠」一聲下沉，吧檯暗格彈開，裡面是一封完整的遺書。",
+            "type": "dialogue",
+            "title": "機關下沉：最後的遺書",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 1240,
+            "y": 1800
+          }
+        },
+        {
+          "id": "node_mix_anya_confession",
+          "data": {
+            "bgm": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132345785_10-crystal-wings-at-dawn.mp3",
+            "text": "『當你喝到這杯酒時，我的世界應該已經徹底失去所有味道了。\n我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\n沈淮，這是我為自己選的終點。\n不要嚐它，替我倒掉。』",
+            "type": "dialogue",
+            "title": "安雅的遺書獨白",
+            "bgmLoop": true,
+            "speaker": "安雅（獨白）",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571391989_3c87a9c4.mp3",
+            "bgmVolume": 0.4,
+            "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+            "voiceMode": "ai",
+            "voiceName": "Chinese (Mandarin)_Soft_Girl",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+            "voiceModel": "speech-2.8-hd",
+            "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+            "voiceEmotion": "sad",
+            "voiceProvider": "minimax",
+            "characterLayers": [
+              {
+                "x": 0,
+                "y": 0,
+                "id": "layer_anya_spirit_confess",
+                "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+                "scale": 1,
+                "position": "center"
+              }
+            ],
+            "voiceDisclosure": true,
+            "characterEmotion": "spirit",
+            "characterPosition": "center"
+          },
+          "type": "story",
+          "position": {
+            "x": 1620,
+            "y": 1800
+          }
+        },
+        {
+          "id": "node_final_choice",
+          "data": {
+            "text": "你要如何抉擇？",
+            "type": "choice",
+            "title": "節點 5：終局抉擇",
+            "choices": [
+              "【共赴的辣度】端起酒杯，一口飲盡",
+              "【冷卻的餘溫】遵從遺願，倒進水槽"
+            ],
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp",
+            "choiceMode": "branch",
+            "choicePlacement": "center"
+          },
+          "type": "story",
+          "position": {
+            "x": 2000,
+            "y": 1800
+          }
+        },
+        {
+          "id": "node_ending_burn_1",
+          "data": {
+            "text": "我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。",
+            "type": "dialogue",
+            "title": "節點 6-A：共赴的辣度",
+            "speaker": "沈淮",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571598095_2304150e.mp3",
+            "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+            "voiceMode": "ai",
+            "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "voiceModel": "speech-2.8-hd",
+            "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+            "voiceEmotion": "sad",
+            "voiceProvider": "minimax",
+            "characterLayers": [
+              {
+                "x": 0,
+                "y": 0,
+                "id": "layer_anya_burn1",
+                "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+                "scale": 1,
+                "position": "center"
+              }
+            ],
+            "voiceDisclosure": true,
+            "characterEmotion": "sad",
+            "characterPosition": "center"
+          },
+          "type": "story",
+          "position": {
+            "x": 2380,
+            "y": 1650
+          }
+        },
+        {
+          "id": "node_ending_burn_2",
+          "data": {
+            "text": "入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。",
+            "type": "dialogue",
+            "title": "心跳的刺痛",
+            "speaker": "沈淮",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572040059_1b8a90a9.mp3",
+            "character": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+            "voiceMode": "ai",
+            "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "voiceModel": "speech-2.8-hd",
+            "characterId": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+            "voiceEmotion": "sad",
+            "voiceProvider": "minimax",
+            "characterLayers": [
+              {
+                "x": 0,
+                "y": 0,
+                "id": "layer_anya_burn2",
+                "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex",
+                "scale": 1,
+                "position": "center"
+              }
+            ],
+            "voiceDisclosure": true,
+            "characterEmotion": "sad",
+            "characterPosition": "center"
+          },
+          "type": "story",
+          "position": {
+            "x": 2760,
+            "y": 1650
+          }
+        },
+        {
+          "id": "node_ending_burn_3",
+          "data": {
+            "text": "眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅，這一次，妳不必一個人走。\n\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**",
+            "type": "dialogue",
+            "title": "真結局：共赴晚霞",
+            "speaker": "沈淮",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571654884_7769d525.mp3",
+            "voiceMode": "ai",
+            "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "transition": "fadeBlack",
+            "voiceModel": "speech-2.8-hd",
+            "voiceEmotion": "sad",
+            "voiceProvider": "minimax",
+            "voiceDisclosure": true
+          },
+          "type": "story",
+          "position": {
+            "x": 3140,
+            "y": 1650
+          }
+        },
+        {
+          "id": "node_ending_cold_1",
+          "data": {
+            "text": "手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。",
+            "type": "dialogue",
+            "title": "節點 7-B：冷卻的餘溫",
+            "speaker": "沈淮",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572160891_46526436.mp3",
+            "bgmAction": "fadeOut",
+            "voiceMode": "ai",
+            "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "voiceModel": "speech-2.8-hd",
+            "bgmFadeOutMs": 2000,
+            "voiceEmotion": "sad",
+            "voiceProvider": "minimax",
+            "voiceDisclosure": true
+          },
+          "type": "story",
+          "position": {
+            "x": 2380,
+            "y": 1950
+          }
+        },
+        {
+          "id": "node_ending_cold_2",
+          "data": {
+            "text": "屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\n\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**",
+            "type": "dialogue",
+            "title": "壞結局：冷卻的餘溫",
+            "speaker": "沈淮",
+            "voiceUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571740808_a90337d8.mp3",
+            "voiceMode": "ai",
+            "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "transition": "fadeWhite",
+            "voiceModel": "speech-2.8-hd",
+            "voiceEmotion": "sad",
+            "voiceProvider": "minimax",
+            "voiceDisclosure": true
+          },
+          "type": "story",
+          "position": {
+            "x": 2760,
+            "y": 1950
+          }
+        },
+        {
+          "id": "node_bar_observe",
+          "data": {
+            "text": "擦拭乾淨的木質吧檯上，放著一只空的高腳杯，底座嵌著電子秤凹槽。要調出那杯酒，我需要收集齊材料。",
+            "type": "dialogue",
+            "stage": {
+              "actors": []
+            },
+            "title": "吧檯巡視",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp",
+            "dialogueLines": [
+              {
+                "id": "legacy",
+                "text": "擦拭乾淨的木質吧檯上，放著一只空的高腳杯，底座嵌著電子秤凹槽。要調出那杯酒，我需要收集齊材料。",
+                "speaker": "沈淮"
+              }
+            ],
+            "characterLayers": []
+          },
+          "type": "story",
+          "position": {
+            "x": 860,
+            "y": 300
+          }
+        },
+        {
+          "id": "node_storage_observe",
+          "data": {
+            "text": "儲藏間裡飄散著乾枯的草本香氣。夕陽透過百葉窗照在排列整齊的玻璃罐上。\n右側卡死的鐵木百葉窗縫隙裡，似乎反光透出一抹深邃的金黃。",
+            "type": "dialogue",
+            "title": "節點 2：香料儲藏間",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 1620,
+            "y": 450
+          }
+        },
+        {
+          "id": "node_bedroom_observe",
+          "data": {
+            "text": "臥室裡安靜得只有時鐘滴答聲。梳妝台上散落著乾枯的花瓣，中央擺著那個雕花上了鎖的木盒。\n平時，她總是不讓我看這個盒子。",
+            "type": "dialogue",
+            "title": "節點 3：臥室梳妝台",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 1620,
+            "y": 850
+          }
+        },
+        {
+          "id": "node_storage_find_key",
+          "data": {
+            "text": "等等……糖漿後方還躺著一串金屬鑰匙！\n這串【心型吊墜鑰匙】……安雅平時總戴在胸口，從不離身。它一定能打開她鎖在臥室裡的東西。",
+            "type": "dialogue",
+            "title": "發現心型鑰匙",
+            "speaker": "沈淮",
+            "background": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp"
+          },
+          "type": "story",
+          "position": {
+            "x": 3120,
+            "y": 550
+          }
+        }
+      ],
+      "updatedAt": "2026-09-16T15:54:51.948Z",
+      "description": "完整劇本與分鏡：吧檯、香料儲藏間、臥室梳妝台探索解謎，背包調酒合成與終局雙分歧結局"
+    }
+  ],
+  "locale": "zh-Hant",
+  "ownerId": "c29cd393-779b-4d47-b71a-9f2596bfaa8b",
+  "settings": {
+    "aiMode": "authored",
+    "plugins": {
+      "larch-inventory": {
+        "enabled": true,
+        "settings": {
+          "bagVar": "inventory",
+          "radius": 22,
+          "buttonX": 89.3,
+          "buttonY": 10.4,
+          "itemColor": "#f3f6f2",
+          "slotCount": 12,
+          "textColor": "#27322b",
+          "buttonSize": 48,
+          "hudEnabled": true,
+          "accentColor": "#78a67d",
+          "buttonImage": "",
+          "buttonLabel": "",
+          "buttonPivot": "top-left",
+          "buttonStyle": "icon",
+          "hudPosition": "right",
+          "motionStyle": "gentle",
+          "shadowStyle": "soft",
+          "surfaceColor": "#ffffff",
+          "surfaceOpacity": 0.94,
+          "buttonShowCount": true,
+          "buttonPositionMode": "custom"
+        }
+      }
+    },
+    "textSpeed": 32,
+    "cardBanner": "none",
+    "cursorMode": "system",
+    "cursorSize": 34,
+    "dialogueUi": {
+      "preset": "cinematic",
+      "fontSize": 25,
+      "textColor": "#f6f2e8",
+      "fontFamily": "serif",
+      "panelColor": "#05070a",
+      "panelWidth": 100,
+      "accentColor": "#b68a3d",
+      "borderColor": "#caa85f",
+      "panelOffset": 0,
+      "backdropBlur": 0,
+      "borderRadius": 0,
+      "nameFontSize": 18,
+      "panelOpacity": 0.84,
+      "panelPadding": 30,
+      "presentation": "gradient",
+      "speakerColor": "#e2c17c",
+      "textOverflow": "grow"
+    },
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "showRpgHud": false,
+    "organization": {
+      "tags": [
+        "LINE社群分享",
+        "gemini"
+      ],
+      "stage": "",
+      "genres": []
+    },
+    "typingEffect": true,
+    "cursorHotspotX": 50,
+    "cursorHotspotY": 50,
+    "cursorRotation": 342,
+    "defaultAiModel": "google/gemini-3.5-flash",
+    "liveApiEnabled": true,
+    "aiDirectorModel": "google/gemini-3.5-flash-lite",
+    "titleCoverShade": 0.58,
+    "aiDirectorUseBgm": true,
+    "autoAdvanceDelay": 1800,
+    "cgGalleryEnabled": true,
+    "projectThumbnail": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/muse-link/yaze.lin.j303@gmail.com/1789569966068_d510d4a9.png",
+    "showVersionBadge": true,
+    "liveApiConfigured": false,
+    "returnToTitleOnEnd": true,
+    "titleScreenEnabled": true,
+    "titleCoverPositionX": 50,
+    "titleCoverPositionY": 50,
+    "aiDirectorMediaScope": "board-only",
+    "aiDirectorAllowPlayerInput": true,
+    "aiDirectorAllowImprovisation": true
+  },
+  "createdAt": "2026-09-16T12:35:15.273Z",
+  "languages": [
+    {
+      "code": "zh-Hant",
+      "label": "繁體中文"
+    },
+    {
+      "code": "en",
+      "label": "English"
+    },
+    {
+      "code": "ja",
+      "label": "日本語"
+    }
+  ],
+  "updatedAt": "2026-10-14T04:32:41.586Z",
+  "variables": [
+    {
+      "id": "playerName",
+      "name": "playerName",
+      "type": "string",
+      "label": "玩家名字",
+      "description": "對話中使用 {{playerName}}",
+      "defaultValue": "沈淮"
+    },
+    {
+      "id": "aoiAffection",
+      "name": "aoiAffection",
+      "type": "number",
+      "label": "葵的好感度",
+      "description": "記錄角色好感度",
+      "defaultValue": 10
+    },
+    {
+      "id": "inventory",
+      "name": "inventory",
+      "type": "string",
+      "label": "背包內容",
+      "description": "背包插件使用的道具資料",
+      "defaultValue": "[]"
+    },
+    {
+      "id": "inventoryLastUsed",
+      "name": "inventoryLastUsed",
+      "type": "string",
+      "label": "最後使用的道具",
+      "description": "可在條件分支判斷玩家剛用了什麼",
+      "defaultValue": ""
+    },
+    {
+      "id": "inventoryCount",
+      "name": "inventoryCount",
+      "type": "number",
+      "label": "背包道具數量",
+      "description": "背包裡目前的道具總數",
+      "defaultValue": 0
+    },
+    {
+      "id": "inventoryHudVisible",
+      "name": "inventoryHudVisible",
+      "type": "string",
+      "label": "背包按鈕狀態",
+      "description": "auto 使用插件設定；流程卡片可切換顯示或隱藏",
+      "defaultValue": "auto"
+    },
+    {
+      "id": "current_scene",
+      "name": "current_scene",
+      "type": "string",
+      "label": "當前場景",
+      "defaultValue": "bar"
+    }
+  ],
+  "characters": [
+    {
+      "id": "character-59bc3745-44f0-45df-8e27-24ac1cbab979",
+      "name": "安雅",
+      "role": "女主角，沈淮的摯愛與調酒師",
+      "slug": "安雅",
+      "secrets": "味覺中樞已全面壞死，世界的味道正在徹底消逝；胸前常掛著心型吊墜鑰匙，鎖著珍貴回憶與病歷單碎頁。",
+      "backstory": "患有無法逆轉的味覺中樞神經病變，歷時三年研發出外觀宛如晚霞般美麗、實為神經止痛毒劑的調酒配方。",
+      "voiceName": "Chinese (Mandarin)_Gentle_Youth",
+      "expressions": [
+        {
+          "id": "expression-6ea37c5d-3e7d-4999-b045-d34380b7d823",
+          "kind": "expression",
+          "name": "微笑",
+          "emotion": "smile",
+          "imageUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex"
+        },
+        {
+          "id": "expression-56bd4e18-9e8d-4e0d-83fd-909c4388ffbc",
+          "kind": "expression",
+          "name": "靈魂虛影",
+          "emotion": "spirit",
+          "imageUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex"
+        },
+        {
+          "id": "expression-445dbf5f-8120-4ff4-b917-ed4d53700a54",
+          "kind": "expression",
+          "name": "悲傷含淚",
+          "emotion": "sad",
+          "imageUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex"
+        }
+      ],
+      "personality": "溫柔沉靜、心思細膩，患有無法逆轉的神經病變卻對主角隱瞞至深。",
+      "portraitUrl": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex",
+      "speakingStyle": "溫柔、輕柔氣音、語速偏慢、帶有淡淡鼻音與疲憊感。",
+      "voiceProvider": "minimax"
+    }
+  ],
+  "description": "【第二屆創作者挑戰賽參賽作品】《晚霞是舌尖最後的刺痛》\n\n「如果世界的味道正在消逝，你會想記住什麼？」\n\n【故事大綱】\n沈淮的摯愛安雅是一位才華洋溢的調酒師。然而，一場無法逆轉的神經病變，正在悄悄剝奪她的味覺中樞。\n世界的味道對她而言正在一片一片熄滅。為了不讓沈淮擔心，安雅隱瞞了所有病歷，並在調酒檯前歷時三年，研發出一款外觀宛如落日晚霞般絢麗、入口帶著細微刺痛感，卻實為最後神經止痛的告別配方——「晚霞」。",
+  "activeBoardId": "board-project-8cb1ab7e-891c-46b4-bd38-df29060e5717-main",
+  "schemaVersion": 1
+}
