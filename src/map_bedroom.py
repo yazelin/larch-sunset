@@ -39,14 +39,14 @@ def build_bedroom(art):
            marker={'label': '雕花木盒', 'kind': 'quest'},
            actions=[
                branch([cond('box_unlocked', True)],
-                      [say('雕花木盒已經開啟，幾張泛黃染血的病歷單碎頁已被握在手心。空氣中依然殘留著那股微弱而刺痛的粉紅胡椒香氣。', speaker='沈淮')],
+                      [say('雕花木盒已經開啟，幾張泛黃染血的病歷單碎頁已被握在手心。空氣中依然殘留著那股微弱而刺痛的粉紅胡椒香氣。', speaker='player')],
                       [branch([cond('storage_pried', True)],
                               [
-                                  say('推開臥室的門，屋裡安靜得能聽見自己逐漸紊亂的心跳聲。\n梳妝台上散落著乾枯的花瓣，中央擺著那只刻滿心型藤蔓的小胡桃木盒。交往的這三年裡，她從不曾讓我碰它。', speaker='沈淮'),
-                                  say('我將胸前那串心型鑰匙對準鎖孔輕輕旋入——順時針輕轉，簧片發出極微小而沉重的回響。', speaker='沈淮'),
+                                  say('推開臥室的門，屋裡安靜得能聽見自己逐漸紊亂的心跳聲。\n梳妝台上散落著乾枯的花瓣，中央擺著那只刻滿心型藤蔓的小胡桃木盒。交往的這三年裡，她從不曾讓我碰它。', speaker='player'),
+                                  say('我將胸前那串心型鑰匙對準鎖孔輕輕旋入——順時針輕轉，簧片發出極微小而沉重的回響。', speaker='player'),
                                   sound('door'),
                                   flash('#ffb6c1', strength=0.6, duration=350),
-                                  say('「喀啦！」木盒彈開！\n裡面赫然放著一罐精巧的【粉紅胡椒研磨罐】，以及幾張折疊多次、染有暗紅斑漬的醫院病歷單碎頁。', speaker='沈淮'),
+                                  say('「喀啦！」木盒彈開！\n裡面赫然放著一罐精巧的【粉紅胡椒研磨罐】，以及幾張折疊多次、染有暗紅斑漬的醫院病歷單碎頁。', speaker='player'),
                                   item('pepper', '粉紅胡椒研磨罐'),
                                   sound('item'),
                                   # 播放回憶卡（安雅輕柔女孩語音）與真相卡（沈淮震驚語音）
@@ -58,7 +58,7 @@ def build_bedroom(art):
                                   balloon('exclamation', target='player'),
                               ],
                               [
-                                  say('木盒上的小銅鎖雕刻著心型藤蔓，鎖孔極其纖巧緊密。強行撬開只會損壞盒子，需要對應的那串心型小鑰匙。', speaker='沈淮'),
+                                  say('木盒上的小銅鎖雕刻著心型藤蔓，鎖孔極其纖巧緊密。強行撬開只會損壞盒子，需要對應的那串心型小鑰匙。', speaker='player'),
                                   balloon('sweat', target='player'),
                               ])
                       ])
@@ -90,7 +90,7 @@ def build_bedroom(art):
         'shake': 0,
         'fog': {'density': 0.15, 'color': '#fcd5ce'},
         'lights': [
-            {'id': 'vanity-light', 'x': 8.5, 'y': 2.5, 'radius': 4.5, 'color': '#ffccd5', 'flicker': True},
+            {'id': 'vanity-light', 'x': 8, 'y': 2, 'radius': 4.5, 'color': '#ffccd5', 'flicker': True},
             {'id': 'bed-lamp', 'x': 2, 'y': 2, 'radius': 3.5, 'color': '#ffe5d9', 'flicker': False},
         ],
         'ambience': {

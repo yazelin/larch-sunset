@@ -37,13 +37,15 @@ def dialogue(id, title, lines, bg='', start=False, speaker='', actors=None, voic
 
 
 def choice(id, title, text, choices, speaker='沈淮', bg=''):
-    """choices: [{'text': '選項', 'target': 'target_id'}]"""
+    """choices: ['選項一', '選項二', ...]"""
     data = {
         'type': 'choice',
         'title': title,
         'speaker': speaker,
         'text': text,
-        'choices': choices
+        'choices': choices,
+        'choiceMode': 'branch',
+        'choicePlacement': 'center'
     }
     if bg: data['background'] = bg
     return {'id': id, 'type': 'story', 'position': _pos(), 'data': data}
@@ -51,6 +53,17 @@ def choice(id, title, text, choices, speaker='沈淮', bg=''):
 
 def link(board, a, b):
     board['edges'].append({'id': f'{a}--{b}', 'source': a, 'target': b, 'sourceHandle': 'right', 'targetHandle': 'left'})
+
+
+def choice_link(board, source, target, choice_index):
+    board['edges'].append({
+        'id': f'{source}--choice-{choice_index}',
+        'source': source,
+        'target': target,
+        'sourceHandle': f'choice-{choice_index}',
+        'targetHandle': 'left',
+        'animated': True
+    })
 
 
 def setvar(id, title, ops):

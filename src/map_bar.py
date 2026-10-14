@@ -37,17 +37,17 @@ def build_bar(art):
            conditions=[cond('note_read', False)],
            marker={'label': '便條紙與高腳杯', 'kind': 'quest'},
            actions=[
-               say('午夜兩點十七分。吧檯頂上的黃銅吊燈泛著暖黃微光，橡木桌面上映著一圈朦朧的寂靜。\n空氣裡沒有了往常那股清甜的柑橘與微苦草本香氣——那是安雅平時站在這裡時，身上總會帶著的溫度。', speaker='沈淮'),
-               say('一只空的高腳杯倒扣在吧檯中央，底座壓著一張折得工整的淡黃色便條。字跡纖細、末筆微微下沉，那是她的字。', speaker='沈淮'),
+               say('午夜兩點十七分。吧檯頂上的黃銅吊燈泛著暖黃微光，橡木桌面上映著一圈朦朧的寂靜。\n空氣裡沒有了往常那股清甜的柑橘與微苦草本香氣——那是安雅平時站在這裡時，身上總會帶著的溫度。', speaker='player'),
+               say('一只空的高腳杯倒扣在吧檯中央，底座壓著一張折得工整的淡黃色便條。字跡纖細、末筆微微下沉，那是她的字。', speaker='player'),
                card('card_anya_note'),
                setv('note_read', True),
                setv('phase', 'spoon'),
                balloon('idea', target='player'),
-               say('『初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。』', speaker='沈淮'),
+               say('『初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。』', speaker='player'),
            ],
            pages=[
                page('note_read_page', [cond('note_read', True)], [
-                   say('杯底留著安雅的便條紙：『如果你還記得我們初遇的滋味，就替我把它完成吧。』', speaker='沈淮')
+                   say('杯底留著安雅的便條紙：『如果你還記得我們初遇的滋味，就替我把它完成吧。』', speaker='player')
                ])
            ]),
 
@@ -57,17 +57,17 @@ def build_bar(art):
            conditions=[cond('spoon_taken', False)],
            marker={'label': '黃銅調酒匙', 'kind': 'quest'},
            actions=[
-               say('杯架角落靜靜躺著這把常用的黃銅調酒匙。螺紋細密精緻，柄端被反覆握持得溫潤光滑。\n她總是用這把匙輕巧地貼著杯壁旋轉，讓酒液如晚霞般層層舒展。', speaker='沈淮'),
+               say('杯架角落靜靜躺著這把常用的黃銅調酒匙。螺紋細密精緻，柄端被反覆握持得溫潤光滑。\n她總是用這把匙輕巧地貼著杯壁旋轉，讓酒液如晚霞般層層舒展。', speaker='player'),
                item('spoon', '黃銅調酒匙'),
                sound('item'),
                setv('spoon_taken', True),
                setv('phase', 'storage'),
                balloon('heart', target='player'),
-               say('調酒匙末端微扁而堅硬。或許……可以用它撬開儲藏間那扇卡死多年的百葉窗木暗格。', speaker='沈淮'),
+               say('調酒匙末端微扁而堅硬。或許……可以用它撬開儲藏間那扇卡死多年的百葉窗木暗格。', speaker='player'),
            ],
            pages=[
                page('spoon_taken_page', [cond('spoon_taken', True)], [
-                   say('杯架角落已經空了，黃銅調酒匙已收入隨身背包中。', speaker='沈淮')
+                   say('杯架角落已經空了，黃銅調酒匙已收入隨身背包中。', speaker='player')
                ])
            ]),
 
@@ -92,19 +92,19 @@ def build_bar(art):
            conditions=[cond('box_unlocked', True), cond('cocktail_mixed', False)],
            marker={'label': '調製『晚霞』', 'kind': 'quest'},
            actions=[
-               say('所有被她刻意藏匿的材料，終於在深夜的吧檯前聚齊：\n一瓶金黃濃稠的【番紅花糖漿】、一柄質地堅硬的【黃銅調酒匙】、一罐散發觸電般麻刺感的【粉紅胡椒研磨罐】……以及那張揭示了殘酷真相的病歷單。', speaker='沈淮'),
+               say('所有被她刻意藏匿的材料，終於在深夜的吧檯前聚齊：\n一瓶金黃濃稠的【番紅花糖漿】、一柄質地堅硬的【黃銅調酒匙】、一罐散發觸電般麻刺感的【粉紅胡椒研磨罐】……以及那張揭示了殘酷真相的病歷單。', speaker='player'),
                flash('#ffb347', strength=0.6, duration=450),
                sound('heal'),
-               say('【第一步：注入番紅花糖漿】\n深金黃色的厚重糖漿順著杯壁緩緩流淌入高腳杯底。宛如初升朝陽的第一抹熔金，溫潤甘甜的草本清香瞬間充盈了空氣。', speaker='沈淮'),
+               say('【第一步：注入番紅花糖漿】\n深金黃色的厚重糖漿順著杯壁緩緩流淌入高腳杯底。宛如初升朝陽的第一抹熔金，溫潤甘甜的草本清香瞬間充盈了空氣。', speaker='player'),
                wait(450),
                sound('slash'),
-               say('【第二步：黃銅匙勻速攪拌】\n手握調酒匙貼緊杯壁，以優雅而穩定的節奏旋轉。金黃的酒液如旋渦般融為一體，純淨透亮，折射出璀璨溫暖的琥珀光芒。', speaker='沈淮'),
+               say('【第二步：黃銅匙勻速攪拌】\n手握調酒匙貼緊杯壁，以優雅而穩定的節奏旋轉。金黃的酒液如旋渦般融為一體，純淨透亮，折射出璀璨溫暖的琥珀光芒。', speaker='player'),
                wait(450),
                flash('#ff69b4', strength=0.75, duration=500),
                sound('burst'),
-               say('【第三步：研磨粉紅胡椒】\n轉動研磨罐，細碎微紅的胡椒顆粒如落櫻般散落在金黃酒面上。油脂在燈下悄然暈染，一股極具誘惑又帶有刺痛微辣的奇妙辛香撲鼻而來！金黃與粉紅交織融合，宛如深秋黃昏最後的落日晚霞。', speaker='沈淮'),
+               say('【第三步：研磨粉紅胡椒】\n轉動研磨罐，細碎微紅的胡椒顆粒如落櫻般散落在金黃酒面上。油脂在燈下悄然暈染，一股極具誘惑又帶有刺痛微辣的奇妙辛香撲鼻而來！金黃與粉紅交織融合，宛如深秋黃昏最後的落日晚霞。', speaker='player'),
                sound('door'),
-               say('機關「喀噠」一聲沉悶作響，杯架下方的暗格悄然滑出，裡面躺著一封完整的白色遺書。', speaker='沈淮'),
+               say('機關「喀噠」一聲沉悶作響，杯架下方的暗格悄然滑出，裡面躺著一封完整的白色遺書。', speaker='player'),
                setv('cocktail_mixed', True),
                setv('phase', 'confession'),
                jump('card_confession'),
@@ -131,8 +131,8 @@ def build_bar(art):
         'shake': 0,
         'fog': {'density': 0.15, 'color': '#ffa07a'},
         'lights': [
-            {'id': 'bar-light', 'x': 7.5, 'y': 3.5, 'radius': 4.5, 'color': '#ffb347', 'flicker': True},
-            {'id': 'shelf-light', 'x': 11.5, 'y': 2, 'radius': 3.5, 'color': '#ffa07a', 'flicker': False},
+            {'id': 'bar-light', 'x': 7, 'y': 3, 'radius': 4.5, 'color': '#ffb347', 'flicker': True},
+            {'id': 'shelf-light', 'x': 11, 'y': 2, 'radius': 3.5, 'color': '#ffa07a', 'flicker': False},
             {'id': 'door-light', 'x': 2, 'y': 8, 'radius': 2.5, 'color': '#ffd180', 'flicker': False},
         ],
         'ambience': {

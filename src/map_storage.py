@@ -39,20 +39,20 @@ def build_storage(art):
            marker={'label': '百葉窗暗格', 'kind': 'quest'},
            actions=[
                branch([cond('storage_pried', True)],
-                      [say('百葉窗下的暗格已被撬開，裡面原本隱藏的番紅花糖漿與心型鑰匙已被取出。', speaker='沈淮')],
+                      [say('百葉窗下的暗格已被撬開，裡面原本隱藏的番紅花糖漿與心型鑰匙已被取出。', speaker='player')],
                       [branch([cond('spoon_taken', True)],
                               [
-                                  say('儲藏間陰涼而乾燥，空氣中混合著陳年八角、風乾橙皮與迷迭香的微苦草本香氣。\n夕陽的餘光透過百葉窗的細縫斜斜割進來，在浮塵中照亮了縫隙深處那抹深邃的琥珀金光。', speaker='沈淮'),
-                                  say('我取出那柄黃銅調酒匙，將扁平堅韌的柄端插進百葉窗的木榫縫隙中，沉下身子稍稍發力——', speaker='沈淮'),
+                                  say('儲藏間陰涼而乾燥，空氣中混合著陳年八角、風乾橙皮與迷迭香的微苦草本香氣。\n夕陽的餘光透過百葉窗的細縫斜斜割進來，在浮塵中照亮了縫隙深處那抹深邃的琥珀金光。', speaker='player'),
+                                  say('我取出那柄黃銅調酒匙，將扁平堅韌的柄端插進百葉窗的木榫縫隙中，沉下身子稍稍發力——', speaker='player'),
                                   sound('hit'),
                                   flash('#ffd700', strength=0.6, duration=350),
-                                  say('『喀噠！』\n伴隨著一聲清脆的木榫彈響，窗台下方的隱藏暗格平滑地彈了出來！', speaker='沈淮'),
-                                  say('暗格天鵝絨襯墊中央，端端正正擺著一瓶封存完好的【番紅花糖漿】。那濃郁純淨的金黃色澤，宛如凝固的黎明。', speaker='沈淮'),
+                                  say('『喀噠！』\n伴隨著一聲清脆的木榫彈響，窗台下方的隱藏暗格平滑地彈了出來！', speaker='player'),
+                                  say('暗格天鵝絨襯墊中央，端端正正擺著一瓶封存完好的【番紅花糖漿】。那濃郁純淨的金黃色澤，宛如凝固的黎明。', speaker='player'),
                                   item('saffron', '番紅花糖漿'),
                                   sound('item'),
                                   wait(300),
-                                  say('等等……糖漿後方還躺著一串金屬鑰匙！\n那是一串雕刻著纖細藤蔓的【心型吊墜鑰匙】……安雅平時總戴在胸口，貼著肌膚，從不離身。', speaker='沈淮'),
-                                  say('握在手心裡，冰冷的金屬彷彿還帶著某種令人心悸的餘溫。這把鑰匙，一定能打開她在臥室裡鎖著的所有秘密。', speaker='沈淮'),
+                                  say('等等……糖漿後方還躺著一串金屬鑰匙！\n那是一串雕刻著纖細藤蔓的【心型吊墜鑰匙】……安雅平時總戴在胸口，貼著肌膚，從不離身。', speaker='player'),
+                                  say('握在手心裡，冰冷的金屬彷彿還帶著某種令人心悸的餘溫。這把鑰匙，一定能打開她在臥室裡鎖著的所有秘密。', speaker='player'),
                                   item('key', '心型吊墜鑰匙'),
                                   sound('item'),
                                   balloon('idea', target='player'),
@@ -60,7 +60,7 @@ def build_storage(art):
                                   setv('phase', 'bedroom'),
                               ],
                               [
-                                  say('窗台木榫咬合得死緊，徒手根本扒不開。必須找到細長而質地堅硬的金屬工具才能撬開這處暗格。', speaker='沈淮'),
+                                  say('窗台木榫咬合得死緊，徒手根本扒不開。必須找到細長而質地堅硬的金屬工具才能撬開這處暗格。', speaker='player'),
                                   balloon('sweat', target='player'),
                               ])
                       ])
@@ -93,7 +93,7 @@ def build_storage(art):
         'fog': {'density': 0.2, 'color': '#edd8b0'},
         'lights': [
             {'id': 'window-sun', 'x': 6, 'y': 1, 'radius': 5, 'color': '#ffb347', 'flicker': False},
-            {'id': 'door-glow', 'x': 6, 'y': 7.5, 'radius': 2.5, 'color': '#ffa07a', 'flicker': False},
+            {'id': 'door-glow', 'x': 6, 'y': 7, 'radius': 2.5, 'color': '#ffa07a', 'flicker': False},
         ],
         'ambience': {
             'particles': 'motes',

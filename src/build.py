@@ -137,13 +137,14 @@ def build():
                      actors=[cards.actor('安雅（獨白）', a['p-anya-spirit'], 'center')]))
 
     # (d) 終局抉擇卡
-    choice_card = cards.choice('card_choice', '節點 5：終局抉擇', '你要如何抉擇？', [
-        {'id': 'opt_burn', 'text': '【共赴的辣度】端起酒杯，一口飲盡', 'target': 'ending_burn_1'},
-        {'id': 'opt_cold', 'text': '【冷卻的餘溫】遵從遺願，倒進水槽', 'target': 'ending_cold_1'}
-    ], speaker='沈淮', bg=a['cg-cocktail'])
-    N(choice_card)
-
+    choice_texts = [
+        '【共赴的辣度】端起酒杯，一口飲盡',
+        '【冷卻的餘溫】遵從遺願，倒進水槽'
+    ]
+    N(cards.choice('card_choice', '節點 5：終局抉擇', '你要如何抉擇？', choice_texts, speaker='沈淮', bg=a['cg-cocktail']))
     L('card_confession', 'card_choice')
+    cards.choice_link(board, 'card_choice', 'ending_burn_1', 0)
+    cards.choice_link(board, 'card_choice', 'ending_cold_1', 1)
 
     # (e) 結局 A（真結局：共赴晚霞）
     N(cards.dialogue('ending_burn_1', '節點 6-A：共赴的辣度',
