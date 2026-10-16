@@ -57,8 +57,8 @@ try {
   await until(/第一次說想看晚霞|妳想看的晚霞/); await shot('3-cg'); assert(true, '過了 CG 3');
   await until(/妳想看的晚霞，在這杯裡/); await shot('4-return'); assert(true, '回到現實');
   await until(/一口飲盡/); await shot('5-choice'); assert(true, '接上終局抉擇');
-  if (WRONG) { const miss = [/貪心/, /今晚聽我的/, /看我做什麼/, /還是攪成一團/, /近到看得見/, /沒有問/].filter(r => !r.test(seen)); assert(!miss.length, '錯的選項都有反應' + (miss.length ? '，缺：' + miss.join(' ') : '')); }
-  else for (const r of [/雨停之前/, /握進掌心/, /怎麼了/, /嚐不出你調的酒/]) assert(r.test(seen), '選項台詞有出現：' + r);
+  if (WRONG) { const miss = [/貪心/, /不像會喝苦/, /看我做什麼/, /還是攪成一團/, /近到看得見/, /沒有問/].filter(r => !r.test(seen)); assert(!miss.length, '錯的選項都有反應' + (miss.length ? '，缺：' + miss.join(' ') : '')); }
+  else for (const r of [/你也怕苦/, /雨停之前/, /握進掌心/, /怎麼了/, /嚐不出你調的酒/]) assert(r.test(seen), '選項台詞有出現：' + r);
   console.log(ui.errors.length ? ui.errors : '沒有頁面錯誤');
 } catch (e) { await shot('fail'); console.error(e.message); process.exitCode = 1; }
 finally { await ui.close(); s.kill(); }
