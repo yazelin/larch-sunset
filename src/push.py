@@ -14,8 +14,8 @@ BASE = f'https://larch.ink/api/agent/projects/{build.PROJECT_ID}'
 # 素材走 jsDelivr（作者 2026-10-17）：/files/assets/… 只有本機預覽讀得到，推之前換成 GitHub tag 的固定網址。
 # 改了素材要先 commit、推 main、打新 tag，再改這裡。
 # 用 tag 指向的 commit 編號：新 tag 要等 jsDelivr 刷新版本清單（實測幾分鐘以上回 404），commit 編號馬上能用、一樣固定不變。
-# 這裡是 tag v2b-20261017 的 commit。
-CDN_TAG = os.environ.get('CDN_TAG', '4d91872eb8cec49463be898326d8a4cffc663114')
+# 這裡是 tag v2c-20261017 的 commit。
+CDN_TAG = os.environ.get('CDN_TAG', 'c36b1bdc52758b9824764caa0e2bb739cc1aeeeb')
 CDN = f'https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@{CDN_TAG}/'
 
 
