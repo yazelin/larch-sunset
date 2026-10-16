@@ -192,6 +192,14 @@ def build_bar(art):
                jump('card_confession'),
            ]),
 
+        # 頭七店裡她的東西：可選看，不擋主線（design/重寫.md 第二輪）
+        ev('look_apron', 12, 3, name='她的圍裙', trigger='action', marker={'label': '她的圍裙', 'kind': 'talk'},
+           actions=[say('掛鉤上是她的圍裙。口袋裡有一支沒蓋好的筆，和一張寫了一半的進貨單。\n她的字總是往右上斜，像在趕時間。我把筆蓋蓋上。', speaker='player')]),
+        ev('look_labels', 8, 3, name='酒櫃的標籤', trigger='action', marker={'label': '酒櫃的標籤', 'kind': 'talk'},
+           actions=[say('酒櫃上每一瓶都貼著她手寫的標籤。「甜白酒，貴腐，別給客人倒太滿。」\n最上層那瓶寫著：「沈淮的，不准賣。」我不知道她什麼時候貼的。', speaker='player')]),
+        ev('look_mug', 13, 6, name='她的馬克杯', trigger='action', marker={'label': '她的馬克杯', 'kind': 'talk'},
+           actions=[say('吧檯尾巴擺著她的馬克杯，杯緣有一圈淡淡的口紅印。\n她調一整晚的酒，自己只喝白開水，說舌頭要留給客人。我拿起來，裡面的水早就乾了。', speaker='player')]),
+
         # 頭七的她：調完酒後出現在吧檯後她的位置（10,3）
         npc('anya_ghost', 10, 3, walker(art['walk-anya-spirit']), direction='down',
             conditions=[cond('cocktail_mixed', True)]),

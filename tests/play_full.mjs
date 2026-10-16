@@ -18,7 +18,8 @@ const GUIDE = ['看看吧檯上的空杯和便條', '坐到吧檯前的高腳椅
 const END_RE = COLD ? /我留下來，替她記得/ : /最後留下來的，也是/;
 const MUST = [/她的頭七這一晚，我才知道/, /記得吃飯/, /那就叫它〈破曉〉/, /以後我調不動了/, /第一次接吻/, /少兩匙/, /還差一點/,
   /這罐有毒/, /瞞了你快三年/, /只剩我一個人/, /目前無治療方式/, /偏頭痛/, /你調的，都好甜/, /跟你一起看，才是這種顏色/, /兩個人換了位置/, /睡吧/, /我就知道你會找到這裡/, /毒在胡椒裡/, COLD ? /沒有人回答/ : /是那天晚上的味道/];
-const s = await serve('dist/project.json');
+// LIVE=<Larch 預覽網址>：直接在 Larch 本站的播放器上跑（推上去之後驗收用）
+const s = process.env.LIVE ? { base: process.env.LIVE, kill() {} } : await serve('dist/project.json');
 const ui = await open(s.base, { width: 1600, height: 900 });
 const { page } = ui;
 // 預覽器的「跳到…」下拉選單有全部卡片標題，讀畫面文字時要拿掉，不然會把卡名當成任務提示

@@ -84,6 +84,9 @@ def build_storage(art):
                       ])
            ]),
 
+        ev('look_numbers', 3, 5, name='牆上的字', trigger='action', marker={'label': '牆上的字', 'kind': 'talk'},
+           actions=[say('架子旁的牆上，用鉛筆寫滿了進貨的數字。番紅花那一欄，最後幾個月都是同一個數字。\n她一直在熬糖漿。我以為是生意好。', speaker='player')]),
+
         # 返回吧檯的大門（南側雙開木門）
         ev('door_bar', *PT['door_bar'], name='返回吧檯', trigger='touch',
            actions=[

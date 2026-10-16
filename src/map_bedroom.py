@@ -71,6 +71,9 @@ def build_bedroom(art):
         ev('bed', 10, 7, name='她那一側的床', trigger='action', conditions=[cond('phase', 'bed')],
            actions=[card('card_bed'), setv('phase', 'mix')]),
 
+        ev('look_cream', 6, 4, name='護手霜', trigger='action', marker={'label': '護手霜', 'kind': 'talk'},
+           actions=[say('梳妝台上有一條護手霜，擠到只剩扁扁的一片。\n她每天開店前都要擦，說調酒的手不能乾。我替她買過一條新的，還沒拆。', speaker='player')]),
+
         # 返回吧檯的大門（南側雙開木門）
         ev('door_bar', *PT['door_bar'], name='返回吧檯', trigger='touch',
            actions=[
