@@ -106,7 +106,7 @@ def build_bar(art):
 
         # 2. 吧檯角落的黃銅調酒匙視覺道具（尚未取得時顯現於吧檯面上，拿到後立即消失）
         ev('prop_spoon_visual', 0, 8, name='黃銅調酒匙視覺',
-           free={'url': art['prop-spoon'], 'x': 11.2, 'y': 3.3, 'w': 0.35, 'h': 0.35},
+           free={'url': art['prop-spoon-tall'], 'x': 10.85, 'y': 4.35, 'w': 0.35, 'h': 2.7},
            conditions=[cond('spoon_taken', False)]),
 
         # 黃銅調酒匙調查行動點（位於吧檯外側 x=11, y=6）

@@ -17,6 +17,8 @@ ART = {
 
     # 45 度實體道具
     'prop-spoon': '/files/assets/props/prop_spoon.webp',
+    # 匙下方補透明到 y+h-1=6.05（圖的長寬比要跟 w:h 一樣，改 h 要重產圖），排序在吧檯（圖框下緣第 6 列）之後畫，才不會被吧檯蓋住
+    'prop-spoon-tall': '/files/assets/props/prop_spoon_tall.webp',
     'prop-saffron': '/files/assets/props/prop_saffron.webp',
     'prop-key': '/files/assets/props/prop_key.webp',
     'prop-pepper': '/files/assets/props/prop_pepper.webp',

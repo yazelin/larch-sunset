@@ -202,7 +202,7 @@ def build(board, art):
         guest(9, 7, 'up'),   # 還在學，穿便服；第三年才換上調酒師的衣服
         ev('mem2-intro', 1, 11, trigger='auto', once=True, actions=[card('card_mem2_intro'), setv('mem2', 'spoon')]),
         # 吧檯角落的匙：跟現在的吧檯同一張道具圖、同一個位置，拿起來就消失
-        ev('mem2-spoon-visual', 0, 8, name='黃銅調酒匙視覺', free={'url': art['prop-spoon'], 'x': 11.2, 'y': 3.3, 'w': 0.35, 'h': 0.35},
+        ev('mem2-spoon-visual', 0, 8, name='黃銅調酒匙視覺', free={'url': art['prop-spoon-tall'], 'x': 10.85, 'y': 4.35, 'w': 0.35, 'h': 2.7},
            conditions=[cond('mem2', 'spoon')]),
         ev('mem2-spoon', 11, 6, name='黃銅調酒匙', marker={'label': '黃銅匙', 'kind': 'quest'}, conditions=[cond('mem2', 'spoon')],
            actions=[say('吧檯角落的黃銅調酒匙，柄被她握得發亮。', speaker='player'), item('spoon_old', '黃銅調酒匙'), setv('mem2', 'teach')]),
