@@ -10,7 +10,7 @@ KEY = open(os.path.expanduser('~/.config/larch-tts/key')).read().strip()
 OUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../assets/voice'))
 
 
-def gen_tts(text, voice, emotion, out_filename):
+def gen_tts(text, voice, emotion, out_filename, force=False):
     os.makedirs(OUT_DIR, exist_ok=True)
     out_path = os.path.join(OUT_DIR, out_filename)
     
@@ -23,7 +23,8 @@ def gen_tts(text, voice, emotion, out_filename):
         'text': speak_text,
         'voice': voice,
         'format': 'mp3',
-        'emotion': emotion
+        'emotion': emotion,
+        **({'force': True} if force else {}),   # 橋接服務 PR #8：丟掉這句快取重新產
     }).encode('utf-8')
     
     req = urllib.request.Request(
@@ -34,7 +35,7 @@ def gen_tts(text, voice, emotion, out_filename):
     )
     
     print(f'Generating TTS: [{voice} | {emotion}] -> {out_filename}...')
-    data = urllib.request.urlopen(req, timeout=120).read()
+    data = urllib.request.urlopen(req, timeout=300).read()
     
     with open(out_path, 'wb') as f:
         f.write(data)

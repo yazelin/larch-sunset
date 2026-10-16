@@ -108,99 +108,92 @@ def build_bar(art):
            free={'url': art['prop-spoon-tall'], 'x': 10.85, 'y': 4.35, 'w': 0.35, 'h': 2.7},
            conditions=[cond('spoon_taken', False)]),
 
-        # 黃銅調酒匙調查行動點（位於吧檯外側 x=11, y=6）
+        # 黃銅調酒匙（吧檯外側 x=11, y=6）：她唯一沒藏的東西 → 回憶二
         ev('spoon', *PT['interact_spoon'], name='黃銅調酒匙', trigger='action',
            actions=[
                branch([cond('spoon_taken', True)],
-                      [say('杯架角落已經空了，黃銅調酒匙已收入隨身背包中。', speaker='player')],
+                      [say('匙在我口袋裡。', speaker='player')],
                       [
-                          say('杯架角落靜靜躺著這把常用的黃銅調酒匙。螺紋細密精緻，柄端被反覆握持得溫潤光滑。\n她總是用這把匙輕巧地貼著杯壁旋轉，讓酒液如晚霞般層層舒展。', speaker='player'),
+                          say('吧檯角落，黃銅匙洗得很乾淨，放在她平常放的位置。\n她把東西都收走了，只留下這一把。', speaker='player'),
                           item('spoon', '黃銅調酒匙'),
                           sound('item'),
                           setv('spoon_taken', True),
                           setv('phase', 'storage'),
-                          balloon('heart', target='player'),
-                          say('調酒匙末端微扁而質地堅硬。有了它，就能去左上角香料儲藏間撬開木榫暗格，取得第一步所需的【番紅花糖漿】了！', speaker='player'),
                           jump('card_mem2_enter'),
                       ])
            ]),
 
-        # 3. 通往香料儲藏間（左上拱門通道）
+        # 3. 通往香料儲藏間（左上）
         ev('door_storage', *PT['door_storage'], name='通往香料儲藏間', trigger='touch',
            actions=[
                sound('door'),
                jump('m-storage', arrive={'x': 8, 'y': 9, 'direction': 'up'}),
            ]),
 
-        # 4. 通往臥室梳妝台（右上拱門通道）
-        ev('door_bedroom', *PT['door_bedroom'], name='通往臥室梳妝台', trigger='touch',
+        # 4. 上樓的樓梯（右上，通往兩人的臥室）
+        ev('door_bedroom', *PT['door_bedroom'], name='上樓', trigger='touch',
            actions=[
                sound('door'),
                jump('m-bedroom', arrive={'x': 8, 'y': 9, 'direction': 'up'}),
            ]),
 
-        # 5. 調酒工作台（材料齊全後啟動調酒儀式，位於吧檯內側 x=9, y=3）
-        ev('shaker', *PT['interact_shaker'], name='調酒工作台', trigger='action',
-           conditions=[cond('box_unlocked', True), cond('cocktail_mixed', False)],
+        # 5. 她的工作位（吧檯內側 x=9, y=3）：調〈晚霞〉→ 杯墊下的遺言
+        ev('shaker', *PT['interact_shaker'], name='她的位置', trigger='action',
+           conditions=[cond('phase', 'mix'), cond('cocktail_mixed', False)],
            actions=[
-               say('所有被她刻意藏匿的材料，終於在深夜的吧檯前聚齊：\n一瓶金黃濃稠的【番紅花糖漿】、一柄質地堅硬的【黃銅調酒匙】、一罐散發觸電般麻刺感的【粉紅胡椒研磨罐】……以及那張揭示了殘酷真相的病歷單。', speaker='player'),
-               # 調酒步驟一：底色注入
+               say('我走進吧檯，站到她的位置。\n三年來，我第一次站在這裡，她不在旁邊。', speaker='player'),
                choice_action(
-                   '【調酒儀式 · 第一步：基底注入】在高腳杯底應該先注入哪種材料？',
+                   '先放什麼？',
                    [
-                       ('【緩緩注入深金黃色的「番紅花糖漿」】', [
+                       ('甜白酒，再兩匙番紅花糖漿', [
                            sound('heal'),
-                           flash('#ffb347', strength=0.6, duration=450),
-                           say('厚重濃稠的金黃糖漿順著杯壁緩緩流淌入高腳杯底。宛如初升朝陽的第一抹熔金，溫潤甘甜的草本清香瞬間充盈了空氣。', speaker='player'),
+                           flash('#ffb347', strength=0.4, duration=450),
+                           say('甜白酒倒進碟形杯，糖漿順著杯壁滑下去，沉在底下。', speaker='player'),
                        ]),
-                       ('【直接倒滿烈酒】', [
+                       ('先磨胡椒', [
                            sound('guard'),
-                           say('「不行，沒有厚重的金黃糖漿沉底，晚霞的漸層就無法成型。」沈淮穩住心神，重新倒入番紅花糖漿。', speaker='player'),
-                           sound('heal'),
-                           flash('#ffb347', strength=0.6, duration=450),
+                           say('她說過，胡椒最後才放。我先倒了甜白酒和糖漿。', speaker='player'),
+                           flash('#ffb347', strength=0.4, duration=450),
                        ]),
                    ],
                    speaker='player',
                ),
                wait(300),
-               # 調酒步驟二：調酒匙旋轉
                choice_action(
-                   '【調酒儀式 · 第二步：旋轉融合】手握黃銅調酒匙，該以何種手法調和？',
+                   '匙怎麼轉？',
                    [
-                       ('【貼緊杯壁，以優雅而穩定的節奏勻速旋轉】', [
+                       ('貼著杯壁，慢慢轉，不要用力', [
                            sound('slash'),
-                           say('手握調酒匙貼緊杯壁，以安雅平日最熟悉的手勢勻速旋轉。金黃的酒液如旋渦般融為一體，純淨透亮，折射出璀璨溫暖的琥珀光芒。', speaker='player'),
+                           say('貼著杯壁，慢慢轉。我好像又感覺到她的手覆在我手上。\n金黃在杯裡旋開，沒有混。', speaker='player'),
                        ]),
-                       ('【用力上下抽動調酒匙】', [
+                       ('用力攪勻', [
                            sound('guard'),
-                           say('「太過粗暴會破壞酒體的清澈度。」沈淮放輕力道，改以手腕帶動調酒匙，在杯中旋出一道優美的金黃漩渦。', speaker='player'),
+                           say('「不要用力。」她的聲音好像就在耳邊。我放輕手，貼著杯壁慢慢轉。', speaker='player'),
                            sound('slash'),
                        ]),
                    ],
                    speaker='player',
                ),
                wait(300),
-               # 調酒步驟三：研磨粉紅胡椒
                choice_action(
-                   '【調酒儀式 · 第三步：舌尖最後的刺痛】最後的點睛之筆是……？',
+                   '最後是那罐胡椒。',
                    [
-                       ('【輕輕轉動研磨罐，撒上細碎嫣紅的「粉紅胡椒」】', [
-                           flash('#ff69b4', strength=0.8, duration=500),
+                       ('磨在杯口', [
+                           flash('#ff69b4', strength=0.6, duration=500),
                            sound('burst'),
-                           say('轉動研磨罐，細碎微紅的胡椒顆粒如落櫻般散落在金黃酒面上。油脂在燈下悄然暈染，一股極具誘惑又帶有刺痛微辣的奇妙辛香撲鼻而來！金黃與粉紅交織融合，宛如深秋黃昏最後的落日晚霞。', speaker='player'),
+                           say('我轉了三下研磨罐。粉紅的碎粒落在金黃上，慢慢浮起來。\n金黃沉在底下，粉紅浮在上面。跟她留下的那只空杯一模一樣。', speaker='player'),
                        ]),
                    ],
                    speaker='player',
                ),
-               sound('door'),
-               say('機關「喀噠」一聲沉悶作響，杯架下方的暗格悄然滑出，裡面躺著一封完整的白色遺書。', speaker='player'),
+               say('我照她的習慣，把杯子放上她出杯用的那塊杯墊。\n杯墊底下露出一角紙。', speaker='player'),
                setv('cocktail_mixed', True),
                setv('phase', 'confession'),
                jump('card_confession'),
            ]),
 
-        # 安雅的靈魂虛影（調完酒後現身於吧檯外側高腳椅前 x=7, y=6）
-        npc('anya_ghost', 7, 6, walker(art['walk-anya-spirit']), direction='up',
+        # 頭七的她：調完酒後出現在吧檯後她的位置（10,3）
+        npc('anya_ghost', 10, 3, walker(art['walk-anya-spirit']), direction='down',
             conditions=[cond('cocktail_mixed', True)]),
 
     ]
@@ -210,11 +203,10 @@ def build_bar(art):
 
     guidance = [
         {'text': '看看吧檯上的空杯和便條', 'eventId': 'note', 'conditions': [cond('note_read', False)]},
-        {'text': '拿取旁邊吧檯角落的黃銅調酒匙', 'eventId': 'spoon', 'conditions': [cond('spoon_taken', False)]},
-        {'text': '帶著黃銅調酒匙前往左上香料儲藏間撬開暗格', 'eventId': 'door_storage', 'conditions': [cond('storage_pried', False)]},
-        {'text': '帶著心型鑰匙前往右上臥室梳妝台（密碼 0217）', 'eventId': 'door_bedroom', 'conditions': [cond('box_unlocked', False)]},
-        {'text': '在吧檯依序調製『晚霞』（番紅花→黃銅匙→研磨粉）', 'eventId': 'shaker', 'conditions': [cond('cocktail_mixed', False)]},
-        {'text': '做出終局抉擇', 'eventId': 'shaker', 'conditions': []},
+        {'text': '吧檯角落的黃銅匙', 'eventId': 'spoon', 'conditions': [cond('spoon_taken', False)]},
+        {'text': '去儲藏間找她熬的番紅花糖漿', 'eventId': 'door_storage', 'conditions': [cond('phase', 'storage')]},
+        {'text': '上樓，回我們的房間', 'eventId': 'door_bedroom', 'conditions': [cond('phase', 'bedroom')]},
+        {'text': '站到她的位置', 'eventId': 'shaker', 'conditions': [cond('phase', 'mix')]},
     ]
 
     # 頭七的現在：冷藍主光（窗外路燈），只留吧檯上那只空杯一點暖光；回憶是暖金，兩邊一眼看得出（design/重寫.md 光的顏色）

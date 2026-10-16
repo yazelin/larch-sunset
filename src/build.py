@@ -64,15 +64,17 @@ def build():
     p['settings']['cgGallerySource'] = 'picked'
     p['settings']['cgGalleryItems'] = [
         {'url': a['cover'], 'title': '晚霞是舌尖最後的刺痛'},
-        {'url': a['cg-mem1'], 'title': '暴雨的夜'},
-        {'url': a['cg-mem2'], 'title': '黃銅匙'},
-        {'url': a['cg-mem3'], 'title': '想看晚霞'},
-        {'url': a['cg-cocktail'], 'title': '初遇與終點的晚霞'},
+        {'url': a['cg-mem1'], 'title': '破曉'},
+        {'url': a['cg-mem2'], 'title': '只借你'},
+        {'url': a['cg-mem3'], 'title': '甜嗎'},
+        {'url': a['cg-mem3b'], 'title': '還差一點'},
+        {'url': a['cg-mem4'], 'title': '有風就好'},
+        {'url': a['cg-cocktail'], 'title': '晚霞'},
         {'url': a['cg-ending-burn'], 'title': '共赴晚霞'},
         {'url': a['cg-ending-cold'], 'title': '冷卻的餘溫'},
-        {'url': a['bg-bar'], 'title': '深夜吧檯'},
+        {'url': a['bg-bar'], 'title': '頭七的吧檯'},
         {'url': a['bg-storage'], 'title': '香料儲藏間'},
-        {'url': a['bg-bedroom'], 'title': '臥室梳妝台'}
+        {'url': a['bg-bedroom'], 'title': '我們的房間'}
     ]
 
     # UI 主題風格搭配：暗夜暖橙酒吧風
@@ -98,78 +100,8 @@ def build():
     N(map_bedroom.build_bedroom(a))
 
 
-    # 3. 劇情卡片（供地圖事件直接演出或跳轉）
-    # (b) 臥室回憶與真相卡
-    N(cards.dialogue('card_bedroom_memory', '安雅的回憶',
-                     '『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』',
-                     bg='', speaker='安雅（回憶）',
-                     voiceUrl=v['anya-memory'],
-                     actors=[cards.actor('安雅（回憶）', a['p-anya'], 'right')]))
-
-    shock_text = "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。"
-    N(cards.dialogue('card_bedroom_shock', '病歷單的真相',
-                     shock_text,
-                     bg='', speaker='沈淮',
-                     actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
-
-    # (c) 調酒完成：安雅遺書獨白卡
-    confession_text = "『當你調出這杯酒時，我已經先喝下它了。\n我的世界早就失去所有味道，痛卻一天比一天清楚。我研發了三年，把神經止痛毒劑做成這杯酒……它很美，金黃像日出，粉紅像晚霞。\n沈淮，這是我為自己選的終點。\n你調出來的這一杯，不要嚐它，替我倒掉。』"
-    N(cards.dialogue('card_confession', '安雅的遺書獨白',
-                     confession_text,
-                     bg=a['cg-cocktail'], speaker='安雅（獨白）',
-                     voiceUrl=v['anya-confession'], bgm=a['bgm-confession'],
-                     actors=[cards.actor('安雅（獨白）', a['p-anya-spirit'], 'right')]))
-
-    # (d) 終局抉擇卡
-    choice_texts = [
-        '【共赴的辣度】端起酒杯，一口飲盡',
-        '【冷卻的餘溫】遵從遺願，倒進水槽'
-    ]
-    N(cards.choice('card_choice', '節點 5：終局抉擇', '你要如何抉擇？', choice_texts, speaker='沈淮', bg=a['cg-cocktail']))
-    # 序幕、便條與回憶穿插在解謎中（design/重寫.md）
+    # 3. 劇情卡片：序幕、便條、回憶、病歷、遺言、抉擇與兩個結局都在 memory.py（design/重寫.md）
     memory.build(board, a)
-    L('card_confession', 'card_choice')
-    cards.choice_link(board, 'card_choice', 'ending_burn_1', 0)
-    cards.choice_link(board, 'card_choice', 'ending_cold_1', 1)
-
-    # (e) 結局 A（共赴晚霞）
-    N(cards.dialogue('ending_burn_1', '共赴的辣度',
-                     '我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。',
-                     bg=a['cg-cocktail'], speaker='沈淮',
-                     voiceUrl=v['shen-burn-1'],
-                     actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
-
-    N(cards.dialogue('ending_burn_2', '心跳的刺痛',
-                     '入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n朦朧的淚光中，吧檯對面彷彿映出了她初遇時溫柔的微笑……',
-                     bg=a['cg-cocktail'], speaker='沈淮',
-                     voiceUrl=v['shen-burn-2'],
-                     actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
-
-    # 結局 A 終局：完全由精美專屬 CG 替代，移除任何「結局 A」等文字標記
-    N(cards.dialogue('ending_burn_3', '共赴晚霞',
-                     '眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅……這一次，妳不必一個人走。',
-                     bg=a['cg-ending-burn'], speaker='沈淮',
-                     voiceUrl=v['shen-burn-3'],
-                     actors=[]))
-
-    L('ending_burn_1', 'ending_burn_2')
-    L('ending_burn_2', 'ending_burn_3')
-
-    # (f) 結局 B（冷卻的餘溫）
-    N(cards.dialogue('ending_cold_1', '冷卻的餘溫',
-                     '手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。',
-                     bg=a['bg-bar'], speaker='沈淮',
-                     voiceUrl=v['shen-cold-1'],
-                     actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
-
-    # 結局 B 終局：完全由精美專屬 CG 替代，移除任何「結局 B」等文字標記
-    N(cards.dialogue('ending_cold_2', '冷卻的餘溫',
-                     '屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟……再也嚐不出任何溫度。',
-                     bg=a['cg-ending-cold'], speaker='沈淮',
-                     voiceUrl=v['shen-cold-2'],
-                     actors=[]))
-
-    L('ending_cold_1', 'ending_cold_2')
 
 
     (ROOT / 'dist').mkdir(exist_ok=True)

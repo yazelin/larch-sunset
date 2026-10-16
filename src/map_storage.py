@@ -24,82 +24,65 @@ def build_storage(art):
         # 主角 沈淮入場點（從南門進入 x=8, y=9）
         ev('hero', *PT['hero_start'], actor='player', direction='up', sprite=walker(art['walk-shen']), actorId='shen'),
 
-        # 窗台暗格（北側天平工作台正下方 x=8, y=4）
-        ev('window_grate', *PT['window_grate'], name='百葉窗工作台暗格', trigger='action',
+        # 工作台抽屜（北側 x=8, y=4）：靠後巷那面牆返潮，抽屜咬死；要用黃銅匙照她教過的角度撬 → 回憶三
+        ev('window_grate', *PT['window_grate'], name='工作台的抽屜', trigger='action',
            actions=[
                branch([cond('storage_pried', True)],
-                      [say('百葉窗工作台下的暗格已被撬開，裡面原本隱藏的番紅花糖漿與心型鑰匙已被取出。', speaker='player')],
+                      [say('抽屜已經空了。', speaker='player')],
                       [branch([cond('spoon_taken', True)],
                               [
-                                  say('儲藏間陰涼而乾燥，空氣中混合著陳年八角、風乾橙皮與迷迭香的微苦草本香氣。\n夕陽的餘光透過百葉窗的細縫斜斜割進來，在浮塵中照亮了天平工作台縫隙深處那抹深邃的琥珀金光。', speaker='player'),
-                                  say('我取出那柄黃銅調酒匙。老工作台抽屜常年受潮，木榫緊緊咬死，必須像精密的調酒師一樣找到正確的著力點與角度。', speaker='player'),
-                                  # 步驟一：尋找支點
+                                  say('儲藏間靠後巷那面牆一直在返潮，空氣裡是八角、風乾橙皮和迷迭香的味道。\n窗縫透進一點路燈。', speaker='player'),
+                                  say('糖漿平常放的那一格是空的。\n工作台的抽屜咬死了。她說過，這個抽屜有一個角度，只有她開得了。', speaker='player'),
                                   choice_action(
-                                      '【木榫暗格撬動 · 著力支點】面對咬死的老胡桃木抽屜，調酒匙的扁平柄端應插向何處？',
+                                      '匙要插進哪裡？',
                                       [
-                                          ('【插進右側滑軌暗卡榫（傳來微弱金屬彈簧聲）】', [
+                                          ('右邊滑軌的縫', [
                                               sound('slash'),
-                                              say('調酒匙末端順利滑入右側縫隙，頂端準確抵住了卡榫簧片！', speaker='player'),
+                                              say('匙的扁柄滑進右邊的縫，抵住了卡榫。', speaker='player'),
                                           ]),
-                                          ('【直接插入正中央把手下方硬撬】', [
+                                          ('正中間的把手下面', [
                                               sound('hit'),
-                                              say('正中間是整塊厚實實心木，紋絲不動。沈淮改將匙端移向右側微有鬆動的滑軌縫隙。', speaker='player'),
+                                              say('正中間是一整塊實木，紋絲不動。我把匙移到右邊滑軌的縫。', speaker='player'),
                                               sound('slash'),
                                           ]),
                                       ],
                                       speaker='player',
                                   ),
-                                  # 步驟二：力道與槓桿
                                   choice_action(
-                                      '【木榫暗格撬動 · 槓桿角度】匙端已卡入卡榫，此時該如何施力？',
+                                      '怎麼用力？',
                                       [
-                                          ('【手腕沉穩下壓，以 45 度角向上順時針輕挑】', [
+                                          ('手腕放輕，貼著慢慢轉', [
                                               sound('hit'),
-                                              flash('#ffd700', strength=0.5),
-                                              say('「喀！」手腕巧勁一發，內部木卡齒鬆脫了一格，抽屜微微彈出半寸！', speaker='player'),
+                                              flash('#ffd700', strength=0.4),
+                                              say('「不要用力。」跟她教我轉匙的時候一樣。\n卡榫鬆了一格，抽屜彈出半寸。', speaker='player'),
                                           ]),
-                                          ('【用全身重量垂直向下硬壓】', [
+                                          ('整個人壓下去', [
                                               sound('guard'),
-                                              say('調酒匙發出危險的金屬哀鳴！沈淮立刻收力，改以手腕巧勁順時針向上輕挑。', speaker='player'),
+                                              say('匙發出一聲細響。我收了力，手腕放輕，貼著慢慢轉。', speaker='player'),
                                               sound('hit'),
-                                              flash('#ffd700', strength=0.5),
+                                              flash('#ffd700', strength=0.4),
                                           ]),
                                       ],
                                       speaker='player',
                                   ),
-                                  # 步驟三：釋放彈舌
-                                  choice_action(
-                                      '【木榫暗格撬動 · 釋放底舌】抽屜露出了半寸縫隙，底層的黃銅鎖舌若隱若現！',
-                                      [
-                                          ('【以匙柄尖端精準下壓鎖舌彈片，順勢向外勾拉】', [
-                                              sound('door'),
-                                              flash('#ffd700', strength=0.7, duration=400),
-                                              say('『喀噠！』伴隨著一聲清脆明快的木榫彈響，整層暗格平滑地彈了出來！', speaker='player'),
-                                          ]),
-                                      ],
-                                      speaker='player',
-                                  ),
-                                  say('暗格天鵝絨襯墊中央，端端正正擺著一瓶封存完好的【番紅花糖漿】。那濃郁純淨的金黃色澤，宛如凝固的黎明。', speaker='player'),
+                                  sound('door'),
+                                  say('抽屜裡墊著一塊舊毛巾。毛巾上放著一小瓶番紅花糖漿，是她熬的最後一瓶。', speaker='player'),
                                   item('saffron', '番紅花糖漿'),
                                   sound('item'),
                                   wait(300),
-                                  say('等等……糖漿後方還躺著一串金屬鑰匙！\n那是一串雕刻著纖細藤蔓的【心型吊墜鑰匙】……安雅平時總戴在胸口，貼著肌膚，從不離身。', speaker='player'),
-                                  say('握在手心裡，冰冷的金屬彷彿還帶著某種令人心悸的餘溫。這把鑰匙，一定能打開她在臥室裡鎖著的所有秘密。', speaker='player'),
+                                  say('糖漿旁邊是一條細鍊子，掛著一把心型的小鑰匙。\n她總是貼身戴著，洗澡也不拿下來。那天早上，她的脖子上是空的。', speaker='player'),
                                   item('key', '心型吊墜鑰匙'),
                                   sound('item'),
-                                  balloon('idea', target='player'),
                                   setv('storage_pried', True),
                                   setv('phase', 'bedroom'),
                                   jump('card_mem3_enter'),
                               ],
                               [
-                                  say('工作台抽屜木榫咬合得死緊，徒手根本扒不開。必須找到細長而質地堅硬的金屬工具才能撬開這處暗格。', speaker='player'),
+                                  say('工作台的抽屜咬死了，徒手拉不開。要有一樣扁而硬的東西。', speaker='player'),
                                   balloon('sweat', target='player'),
                               ])
                       ])
            ]),
-
-
 
         # 返回吧檯的大門（南側雙開木門）
         ev('door_bar', *PT['door_bar'], name='返回吧檯', trigger='touch',
@@ -112,19 +95,18 @@ def build_storage(art):
     events += layout.events(D, urls)
 
     guidance = [
-        {'text': '第一步：使用黃銅調酒匙撬開百葉窗暗格取得番紅花', 'eventId': 'window_grate', 'conditions': [cond('storage_pried', False)]},
-        {'text': '帶著番紅花與心型鑰匙返回吧檯', 'eventId': 'door_bar', 'conditions': []},
+        {'text': '工作台的抽屜', 'eventId': 'window_grate', 'conditions': [cond('storage_pried', False)]},
+        {'text': '回吧檯', 'eventId': 'door_bar', 'conditions': [cond('storage_pried', True)]},
     ]
 
+    # 頭七的現在：冷藍、窗縫透進路燈
     env = {
-        'weather': 'clear',
-        'intensity': 0,
-        'darkness': 0,
-        'shake': 0,
+        'weather': 'clear', 'intensity': 0, 'darkness': 0.5, 'shake': 0,
         'lights': [
-            {'id': 'window-sun', 'x': 8, 'y': 3, 'radius': 5, 'color': '#ffb347', 'flicker': False},
-            {'id': 'door-glow', 'x': 8, 'y': 10, 'radius': 3, 'color': '#ffa07a', 'flicker': False},
-        ]
+            {'id': 'street-crack', 'x': 8, 'y': 3, 'radius': 4, 'color': '#7d95c4', 'flicker': False},
+            {'id': 'door-glow', 'x': 8, 'y': 10, 'radius': 2.5, 'color': '#6f86b8', 'flicker': False},
+        ],
+        'ambience': {'tint': '#3c5c9c', 'tintStrength': 0.38, 'vignette': 0.4, 'particles': 'motes', 'density': 0.1},
     }
 
     m = map_dict('香料儲藏間', W, H, ground_url, layout.walls(D), events, guidance, env)

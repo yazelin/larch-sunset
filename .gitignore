@@ -11,3 +11,6 @@ art/**/*.json
 /screen_*
 dist/assets/
 dist/feedback/
+art/music_raw/
+art/raw/
+art/check/
