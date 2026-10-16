@@ -618,7 +618,7 @@
           "web"
         ],
         "pluginValues": {
-          "map": "{\"version\": 1, \"name\": \"頭七的吧檯\", \"width\": 20, \"height\": 12, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"/files/assets/tilesets/tiny-dungeon.webp\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 10, \"y\": 7, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"/files/assets/art/walk/walk-shen.webp\", \"width\": 192, \"height\": 256, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1.85}, \"actorId\": \"shen\"}, {\"id\": \"note\", \"name\": \"空杯與便條\", \"x\": 8, \"y\": 6, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a1\", \"kind\": \"dialogue\", \"text\": \"吧檯的燈我沒開。窗外的路燈照進來，冷冷的，落在她的位置上。\\n空氣裡沒有柑橘，也沒有草本。她站在這裡的時候，身上總是那個味道。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a2\", \"kind\": \"dialogue\", \"text\": \"吧檯上留著一只碟形杯。杯底剩下薄薄一層，金黃沉在底下，粉紅浮在上面。\\n杯子旁邊壓著一張摺好的便條。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a3\", \"kind\": \"dialogue\", \"text\": \"牆上的掛鐘停在兩點十七分。三年前，她就是抬頭看了這座鐘，說我是她今天最後一個客人。\\n不知道是誰把它停在那裡的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a4\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_anya_note\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a5\", \"kind\": \"dialogue\", \"text\": \"水槽裡有一小撮灰。灰底下壓著半張沒燒完的紙，是她的字。\\n風味筆記。燒掉的那一半捲成黑邊，剩下的字斷在三個地方。\\n我認得這三個空格。那是她給我的第一杯酒。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a12\", \"kind\": \"choice\", \"text\": \"『底：＿＿＿＿。要甜，不要苦。他怕苦。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"貴腐甜白酒\", \"actions\": [{\"id\": \"a6\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a7\", \"kind\": \"dialogue\", \"text\": \"貴腐甜白酒。那一晚她從酒櫃最上層拿下來，瓶身還沾著灰。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"黑麥威士忌\", \"actions\": [{\"id\": \"a8\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a9\", \"kind\": \"dialogue\", \"text\": \"她怕苦，我也怕苦。那一杯裡沒有一點煙燻。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"伏特加\", \"actions\": [{\"id\": \"a10\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a11\", \"kind\": \"dialogue\", \"text\": \"伏特加太冷了。那一晚我渾身濕透，她給我的是暖的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a19\", \"kind\": \"choice\", \"text\": \"『香：＿＿＿＿糖漿，兩匙。他說剛好。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"番紅花\", \"actions\": [{\"id\": \"a13\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"holy\", \"volume\": 0.7}}, {\"id\": \"a14\", \"kind\": \"dialogue\", \"text\": \"番紅花。她自己熬的，一次只熬一小瓶，平常收在儲藏間。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"白砂糖\", \"actions\": [{\"id\": \"a15\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a16\", \"kind\": \"dialogue\", \"text\": \"白糖水調不出那種顏色。那一杯是金的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"薄荷\", \"actions\": [{\"id\": \"a17\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a18\", \"kind\": \"dialogue\", \"text\": \"我第一次伸手拿薄荷的時候，她笑著拍開我的手：「要溫的，沈淮。」\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a27\", \"kind\": \"choice\", \"text\": \"『收尾：＿＿＿＿，磨在杯口。像天快亮。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"粉紅胡椒\", \"actions\": [{\"id\": \"a20\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a21\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.5, \"durationMs\": 300, \"color\": \"#ff69b4\"}}, {\"id\": \"a22\", \"kind\": \"dialogue\", \"text\": \"粉紅胡椒。咬碎的時候，舌尖會麻一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"紅辣椒粉\", \"actions\": [{\"id\": \"a23\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a24\", \"kind\": \"dialogue\", \"text\": \"辣椒會燒。那一杯不會燒，只是麻了一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"檸檬皮\", \"actions\": [{\"id\": \"a25\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a26\", \"kind\": \"dialogue\", \"text\": \"檸檬太酸了。那一杯是甜的，最後才麻一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a28\", \"kind\": \"dialogue\", \"text\": \"〈破曉〉。那是她給那杯酒取的名字。\\n紙的最上面燒掉了，只剩一個字的下半截。我看了很久，認不出來。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a29\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"flavor_deduced\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a30\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"note_read\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a31\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"spoon\", \"amount\": 1}, {\"id\": \"a32\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_mem1_enter\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"pages\": [{\"id\": \"note_read_page\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actor\": \"none\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"movement\": \"still\", \"solid\": false, \"trigger\": \"action\", \"once\": false, \"actions\": [{\"id\": \"a33\", \"kind\": \"dialogue\", \"text\": \"甜白酒為底，番紅花糖漿兩匙，粉紅胡椒磨在杯口。〈破曉〉。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}, {\"id\": \"prop_spoon_visual\", \"name\": \"黃銅調酒匙視覺\", \"x\": 0, \"y\": 8, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"free\": {\"url\": \"/files/assets/props/prop_spoon_tall.webp\", \"x\": 10.85, \"y\": 4.35, \"w\": 0.35, \"h\": 2.7}}, {\"id\": \"spoon\", \"name\": \"黃銅調酒匙\", \"x\": 11, \"y\": 6, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a41\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a34\", \"kind\": \"dialogue\", \"text\": \"匙在我口袋裡。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}], \"else\": [{\"id\": \"a35\", \"kind\": \"dialogue\", \"text\": \"吧檯角落，黃銅匙洗得很乾淨，放在她平常放的位置。\\n她把東西都收走了，只留下這一把。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a36\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"spoon\", \"itemName\": \"黃銅調酒匙\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a37\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a38\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"spoon_taken\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a39\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"storage\", \"amount\": 1}, {\"id\": \"a40\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_mem2_enter\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}]}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"door_storage\", \"name\": \"通往香料儲藏間\", \"x\": 3, \"y\": 1, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a42\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a43\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-storage\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 8, \"y\": 9, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"door_bedroom\", \"name\": \"上樓\", \"x\": 17, \"y\": 1, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a44\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a45\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bedroom\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 8, \"y\": 9, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"shaker\", \"name\": \"她的位置\", \"x\": 9, \"y\": 3, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"mix\", \"itemId\": \"\", \"count\": 1}, {\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a46\", \"kind\": \"dialogue\", \"text\": \"我走進吧檯，站到她的位置。\\n三年來，我第一次站在這裡，她不在旁邊。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a53\", \"kind\": \"choice\", \"text\": \"先放什麼？\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"甜白酒，再兩匙番紅花糖漿\", \"actions\": [{\"id\": \"a47\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a48\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.4, \"durationMs\": 450, \"color\": \"#ffb347\"}}, {\"id\": \"a49\", \"kind\": \"dialogue\", \"text\": \"甜白酒倒進碟形杯，糖漿順著杯壁滑下去，沉在底下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"先磨胡椒\", \"actions\": [{\"id\": \"a50\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a51\", \"kind\": \"dialogue\", \"text\": \"她說過，胡椒最後才放。我先倒了甜白酒和糖漿。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a52\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.4, \"durationMs\": 450, \"color\": \"#ffb347\"}}]}]}}, {\"id\": \"a54\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a60\", \"kind\": \"choice\", \"text\": \"匙怎麼轉？\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"貼著杯壁，慢慢轉，不要用力\", \"actions\": [{\"id\": \"a55\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}, {\"id\": \"a56\", \"kind\": \"dialogue\", \"text\": \"貼著杯壁，慢慢轉。我好像又感覺到她的手覆在我手上。\\n金黃在杯裡旋開，沒有混。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"用力攪勻\", \"actions\": [{\"id\": \"a57\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a58\", \"kind\": \"dialogue\", \"text\": \"「不要用力。」她的聲音好像就在耳邊。我放輕手，貼著杯壁慢慢轉。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a59\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}]}]}}, {\"id\": \"a61\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a65\", \"kind\": \"choice\", \"text\": \"最後是那罐胡椒。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"磨在杯口\", \"actions\": [{\"id\": \"a62\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 500, \"color\": \"#ff69b4\"}}, {\"id\": \"a63\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a64\", \"kind\": \"dialogue\", \"text\": \"我轉了三下研磨罐。粉紅的碎粒落在金黃上，慢慢浮起來。\\n金黃沉在底下，粉紅浮在上面。跟她留下的那只空杯一模一樣。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a66\", \"kind\": \"dialogue\", \"text\": \"我照她的習慣，把杯子放上她出杯用的那塊杯墊。\\n杯墊底下露出一角紙。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a67\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"cocktail_mixed\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a68\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"confession\", \"amount\": 1}, {\"id\": \"a69\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_confession\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"anya_ghost\", \"name\": \"anya_ghost\", \"x\": 10, \"y\": 3, \"actor\": \"npc\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": true, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"/files/assets/art/walk/walk-anya-spirit.webp\", \"width\": 192, \"height\": 256, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1.85}}, {\"id\": \"obj-m-bar-0\", \"name\": \"中央吧檯桌\", \"x\": 0, \"y\": 0, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"free\": {\"url\": \"/files/assets/objects/bar/中央吧檯桌.webp\", \"x\": 6, \"y\": 3, \"w\": 8, \"h\": 4}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"/files/assets/maps/bar_ground.webp\"}, \"guidance\": [{\"text\": \"看看吧檯上的空杯和便條\", \"eventId\": \"note\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"吧檯角落的黃銅匙\", \"eventId\": \"spoon\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"去儲藏間找她熬的番紅花糖漿\", \"eventId\": \"door_storage\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"storage\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"上樓，回我們的房間\", \"eventId\": \"door_bedroom\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"bedroom\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"站到她的位置\", \"eventId\": \"shaker\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"mix\", \"itemId\": \"\", \"count\": 1}]}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.55, \"shake\": 0, \"lights\": [{\"id\": \"window-street\", \"x\": 15, \"y\": 5, \"radius\": 9, \"color\": \"#6f8fc9\", \"flicker\": false}, {\"id\": \"bar-cold\", \"x\": 9, \"y\": 4, \"radius\": 6, \"color\": \"#5d78b0\", \"flicker\": false}, {\"id\": \"glass-warm\", \"x\": 8, \"y\": 5, \"radius\": 1.6, \"color\": \"#ffb35c\", \"flicker\": true}, {\"id\": \"door-left\", \"x\": 3, \"y\": 1, \"radius\": 2.5, \"color\": \"#7d95c4\", \"flicker\": false}, {\"id\": \"door-right\", \"x\": 17, \"y\": 1, \"radius\": 2.5, \"color\": \"#7d95c4\", \"flicker\": false}], \"ambience\": {\"tint\": \"#3c5c9c\", \"tintStrength\": 0.38, \"vignette\": 0.4, \"particles\": \"motes\", \"density\": 0.12}}}"
+          "map": "{\"version\": 1, \"name\": \"頭七的吧檯\", \"width\": 20, \"height\": 12, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"/files/assets/tilesets/tiny-dungeon.webp\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 10, \"y\": 7, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"/files/assets/art/walk/walk-shen.webp\", \"width\": 192, \"height\": 256, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1.85}, \"actorId\": \"shen\"}, {\"id\": \"note\", \"name\": \"空杯與便條\", \"x\": 8, \"y\": 6, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a1\", \"kind\": \"dialogue\", \"text\": \"吧檯的燈我沒開。窗外的路燈照進來，冷冷的，落在她的位置上。\\n空氣裡沒有柑橘，也沒有草本。她站在這裡的時候，身上總是那個味道。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a2\", \"kind\": \"dialogue\", \"text\": \"吧檯上留著一只碟形杯。杯底乾成一圈金黃，上緣黏著幾粒粉紅胡椒。\\n杯子旁邊壓著一張摺好的便條。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a3\", \"kind\": \"dialogue\", \"text\": \"牆上的掛鐘停在兩點十七分。三年前，她就是抬頭看了這座鐘，說我是她今天最後一個客人。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a4\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_anya_note\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a5\", \"kind\": \"dialogue\", \"text\": \"水槽裡有一小撮灰。灰底下壓著半張沒燒完的紙，是她的字。\\n風味筆記。燒掉的那一半捲成黑邊，剩下的字斷在三個地方。\\n我認得這三種材料。那是她給我的第一杯酒。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a12\", \"kind\": \"choice\", \"text\": \"『底：＿＿＿＿。要甜，不要苦。他怕苦。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"貴腐甜白酒\", \"actions\": [{\"id\": \"a6\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a7\", \"kind\": \"dialogue\", \"text\": \"貴腐甜白酒。那一晚她從酒櫃最上層拿下來，瓶身還沾著灰。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"黑麥威士忌\", \"actions\": [{\"id\": \"a8\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a9\", \"kind\": \"dialogue\", \"text\": \"她怕苦，我也怕苦。那一杯裡沒有一點煙燻。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"伏特加\", \"actions\": [{\"id\": \"a10\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a11\", \"kind\": \"dialogue\", \"text\": \"伏特加太冷了。那一晚我渾身濕透，她給我的是暖的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a19\", \"kind\": \"choice\", \"text\": \"『香：＿＿＿＿糖漿。〈破曉〉是一小匙，這一杯要兩匙。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"番紅花\", \"actions\": [{\"id\": \"a13\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"holy\", \"volume\": 0.7}}, {\"id\": \"a14\", \"kind\": \"dialogue\", \"text\": \"番紅花。她自己熬的，一次只熬一小瓶，平常收在儲藏間。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"白砂糖\", \"actions\": [{\"id\": \"a15\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a16\", \"kind\": \"dialogue\", \"text\": \"白糖水調不出那種顏色。那一杯是金的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"薄荷\", \"actions\": [{\"id\": \"a17\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a18\", \"kind\": \"dialogue\", \"text\": \"我第一次伸手拿薄荷的時候，她笑著拍開我的手：「要溫的，沈淮。」\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a27\", \"kind\": \"choice\", \"text\": \"『收尾：＿＿＿＿，磨在杯口。像天快亮。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"粉紅胡椒\", \"actions\": [{\"id\": \"a20\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a21\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.5, \"durationMs\": 300, \"color\": \"#ff69b4\"}}, {\"id\": \"a22\", \"kind\": \"dialogue\", \"text\": \"粉紅胡椒。咬碎的時候，舌尖會麻一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"紅辣椒粉\", \"actions\": [{\"id\": \"a23\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a24\", \"kind\": \"dialogue\", \"text\": \"辣椒會燒。那一杯不會燒，只是麻了一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"檸檬皮\", \"actions\": [{\"id\": \"a25\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a26\", \"kind\": \"dialogue\", \"text\": \"檸檬太酸了。那一杯是甜的，最後才麻一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a28\", \"kind\": \"dialogue\", \"text\": \"〈破曉〉。那是她給那杯酒取的名字。\\n紙的最上面燒掉了，只剩一個字的下半截。我看了很久，認不出來。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a29\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"flavor_deduced\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a30\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"note_read\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a31\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"spoon\", \"amount\": 1}, {\"id\": \"a32\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_mem1_enter\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"pages\": [{\"id\": \"note_read_page\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actor\": \"none\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"movement\": \"still\", \"solid\": false, \"trigger\": \"action\", \"once\": false, \"actions\": [{\"id\": \"a33\", \"kind\": \"dialogue\", \"text\": \"甜白酒為底，番紅花糖漿，粉紅胡椒磨在杯口。〈破曉〉。可是這一張寫的是兩匙。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}, {\"id\": \"prop_spoon_visual\", \"name\": \"黃銅調酒匙視覺\", \"x\": 0, \"y\": 8, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"free\": {\"url\": \"/files/assets/props/prop_spoon_tall.webp\", \"x\": 10.85, \"y\": 4.35, \"w\": 0.35, \"h\": 2.7}}, {\"id\": \"spoon\", \"name\": \"黃銅調酒匙\", \"x\": 11, \"y\": 6, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a41\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a34\", \"kind\": \"dialogue\", \"text\": \"匙在我口袋裡。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}], \"else\": [{\"id\": \"a35\", \"kind\": \"dialogue\", \"text\": \"吧檯角落，黃銅匙洗得很乾淨，放在她平常放的位置。\\n她把東西都收走了，只留下這一把。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a36\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"spoon\", \"itemName\": \"黃銅調酒匙\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a37\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a38\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"spoon_taken\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a39\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"storage\", \"amount\": 1}, {\"id\": \"a40\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_mem2_enter\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}]}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"door_storage\", \"name\": \"通往香料儲藏間\", \"x\": 3, \"y\": 1, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a42\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a43\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-storage\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 8, \"y\": 9, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"door_bedroom\", \"name\": \"上樓\", \"x\": 17, \"y\": 1, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a44\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a45\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bedroom\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 8, \"y\": 9, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"shaker\", \"name\": \"她的位置\", \"x\": 9, \"y\": 3, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"mix\", \"itemId\": \"\", \"count\": 1}, {\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a46\", \"kind\": \"dialogue\", \"text\": \"我走進吧檯，站到她的位置。\\n三年來，我第一次站在這裡，她不在旁邊。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a53\", \"kind\": \"choice\", \"text\": \"先放什麼？\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"甜白酒，再兩匙番紅花糖漿\", \"actions\": [{\"id\": \"a47\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a48\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.4, \"durationMs\": 450, \"color\": \"#ffb347\"}}, {\"id\": \"a49\", \"kind\": \"dialogue\", \"text\": \"甜白酒倒進碟形杯，糖漿順著杯壁滑下去，沉在底下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"先磨胡椒\", \"actions\": [{\"id\": \"a50\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a51\", \"kind\": \"dialogue\", \"text\": \"她說過，胡椒最後才放。我先倒了甜白酒和糖漿。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a52\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.4, \"durationMs\": 450, \"color\": \"#ffb347\"}}]}]}}, {\"id\": \"a54\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a60\", \"kind\": \"choice\", \"text\": \"匙怎麼轉？\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"貼著杯壁，慢慢轉，不要用力\", \"actions\": [{\"id\": \"a55\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}, {\"id\": \"a56\", \"kind\": \"dialogue\", \"text\": \"貼著杯壁，慢慢轉。我好像又感覺到她的手覆在我手上。\\n金黃在杯裡旋開，沒有混。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"用力攪勻\", \"actions\": [{\"id\": \"a57\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a58\", \"kind\": \"dialogue\", \"text\": \"「不要用力。」她的聲音好像就在耳邊。我放輕手，貼著杯壁慢慢轉。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a59\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}]}]}}, {\"id\": \"a61\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a65\", \"kind\": \"choice\", \"text\": \"最後是那罐胡椒。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"磨在杯口\", \"actions\": [{\"id\": \"a62\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 500, \"color\": \"#ff69b4\"}}, {\"id\": \"a63\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a64\", \"kind\": \"dialogue\", \"text\": \"我轉了三下研磨罐。粉紅的碎粒落在金黃上，慢慢浮起來。\\n金黃沉在底下，粉紅浮在上面。跟她留下的那只空杯，是同一個顏色。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a66\", \"kind\": \"dialogue\", \"text\": \"我照她的習慣，把杯子放上她出杯用的那塊杯墊。\\n杯墊底下露出一角紙。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a67\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"cocktail_mixed\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a68\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"confession\", \"amount\": 1}, {\"id\": \"a69\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_confession\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"anya_ghost\", \"name\": \"anya_ghost\", \"x\": 10, \"y\": 3, \"actor\": \"npc\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": true, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"/files/assets/art/walk/walk-anya-spirit.webp\", \"width\": 192, \"height\": 256, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1.85}}, {\"id\": \"obj-m-bar-0\", \"name\": \"中央吧檯桌\", \"x\": 0, \"y\": 0, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"free\": {\"url\": \"/files/assets/objects/bar/中央吧檯桌.webp\", \"x\": 6, \"y\": 3, \"w\": 8, \"h\": 4}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"/files/assets/maps/bar_ground.webp\"}, \"guidance\": [{\"text\": \"看看吧檯上的空杯和便條\", \"eventId\": \"note\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"吧檯角落的黃銅匙\", \"eventId\": \"spoon\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"去儲藏間找她熬的番紅花糖漿\", \"eventId\": \"door_storage\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"storage\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"上樓，回我們的房間\", \"eventId\": \"door_bedroom\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"bedroom\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"站到她的位置\", \"eventId\": \"shaker\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"mix\", \"itemId\": \"\", \"count\": 1}]}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.55, \"shake\": 0, \"lights\": [{\"id\": \"window-street\", \"x\": 15, \"y\": 5, \"radius\": 9, \"color\": \"#6f8fc9\", \"flicker\": false}, {\"id\": \"bar-cold\", \"x\": 9, \"y\": 4, \"radius\": 6, \"color\": \"#5d78b0\", \"flicker\": false}, {\"id\": \"glass-warm\", \"x\": 8, \"y\": 5, \"radius\": 1.6, \"color\": \"#ffb35c\", \"flicker\": true}, {\"id\": \"door-left\", \"x\": 3, \"y\": 1, \"radius\": 2.5, \"color\": \"#7d95c4\", \"flicker\": false}, {\"id\": \"door-right\", \"x\": 17, \"y\": 1, \"radius\": 2.5, \"color\": \"#7d95c4\", \"flicker\": false}], \"ambience\": {\"tint\": \"#3c5c9c\", \"tintStrength\": 0.38, \"vignette\": 0.4, \"particles\": \"motes\", \"density\": 0.12}}}"
         },
         "bgm": "/files/assets/bgm/theme.mp3",
         "bgmVolume": 0.4,
@@ -809,7 +809,7 @@
           {
             "id": "prologue-l2",
             "speaker": "沈淮",
-            "text": "安雅走後第七天，我才知道，最先被帶走的，就是味道。",
+            "text": "她的頭七這一晚，我才知道，最先被帶走的，就是味道。",
             "voiceUrl": "/files/assets/voice/p_shen_open3.mp3"
           },
           {
@@ -820,7 +820,7 @@
           {
             "id": "prologue-l4",
             "speaker": "",
-            "text": "店門口的燈箱已經七天沒亮了。我推開門，門上的鈴響了一聲，跟三年前一模一樣。"
+            "text": "店門口的燈箱，從她走後就沒再亮過。我推開門，門上的鈴響了一聲，跟三年前一模一樣。"
           }
         ],
         "stage": {
@@ -856,7 +856,7 @@
           {
             "id": "card_anya_note-l1",
             "speaker": "安雅",
-            "text": "酒櫃第二層那瓶甜白酒快沒了，下次叫貨多叫一箱。",
+            "text": "後門記得上鎖。",
             "voiceUrl": "/files/assets/voice/n_anya_2.mp3",
             "speakerActorId": "actor-安雅"
           },
@@ -910,23 +910,13 @@
             "id": "card_mem1_enter-l1",
             "speaker": "沈淮",
             "text": "三年前的那個晚上，也在下雨。",
-            "voiceUrl": "/files/assets/voice/mem_shen_enter.mp3",
-            "speakerActorId": "actor-沈淮"
+            "voiceUrl": "/files/assets/voice/mem_shen_enter.mp3"
           }
         ],
         "stage": {
-          "actors": [
-            {
-              "id": "actor-沈淮",
-              "name": "沈淮",
-              "url": "/files/assets/art/p_shen.webp",
-              "slot": "left",
-              "offsetX": 0,
-              "offsetY": 0,
-              "scale": 1
-            }
-          ]
+          "actors": []
         },
+        "background": "/files/assets/art/bg_black.webp",
         "bgm": "/files/assets/bgm/storm.mp3",
         "bgmVolume": 0.5,
         "bgmLoop": true
@@ -949,8 +939,7 @@
             "id": "card_mem2_enter-l0",
             "speaker": "沈淮",
             "text": "只借你。",
-            "voiceUrl": "/files/assets/voice/mem2_shen_enter.mp3",
-            "speakerActorId": "actor-沈淮"
+            "voiceUrl": "/files/assets/voice/mem2_shen_enter.mp3"
           },
           {
             "id": "card_mem2_enter-l1",
@@ -959,18 +948,9 @@
           }
         ],
         "stage": {
-          "actors": [
-            {
-              "id": "actor-沈淮",
-              "name": "沈淮",
-              "url": "/files/assets/art/p_shen.webp",
-              "slot": "left",
-              "offsetX": 0,
-              "offsetY": 0,
-              "scale": 1
-            }
-          ]
-        }
+          "actors": []
+        },
+        "background": "/files/assets/art/bg_black.webp"
       }
     },
     {
@@ -995,23 +975,13 @@
             "id": "card_mem3_enter-l1",
             "speaker": "沈淮",
             "text": "第三年，她開始每一杯都問我甜不甜。",
-            "voiceUrl": "/files/assets/voice/mem3_shen_enter.mp3",
-            "speakerActorId": "actor-沈淮"
+            "voiceUrl": "/files/assets/voice/mem3_shen_enter.mp3"
           }
         ],
         "stage": {
-          "actors": [
-            {
-              "id": "actor-沈淮",
-              "name": "沈淮",
-              "url": "/files/assets/art/p_shen.webp",
-              "slot": "left",
-              "offsetX": 0,
-              "offsetY": 0,
-              "scale": 1
-            }
-          ]
-        }
+          "actors": []
+        },
+        "background": "/files/assets/art/bg_black.webp"
       }
     },
     {
@@ -1309,12 +1279,12 @@
         "type": "dialogue",
         "title": "回憶：想看晚霞",
         "speaker": "",
-        "text": "那是她第一次說想看晚霞。",
+        "text": "那是她第一次說，想跟他一起看晚霞。",
         "dialogueLines": [
           {
             "id": "card_mem3_cg-l0",
             "speaker": "",
-            "text": "那是她第一次說想看晚霞。"
+            "text": "那是她第一次說，想跟他一起看晚霞。"
           }
         ],
         "stage": {
@@ -1510,23 +1480,13 @@
             "id": "card_mem4_enter-l0",
             "speaker": "沈淮",
             "text": "三年裡，我只帶她看過一次晚霞。",
-            "voiceUrl": "/files/assets/voice/mem4_shen_enter.mp3",
-            "speakerActorId": "actor-沈淮"
+            "voiceUrl": "/files/assets/voice/mem4_shen_enter.mp3"
           }
         ],
         "stage": {
-          "actors": [
-            {
-              "id": "actor-沈淮",
-              "name": "沈淮",
-              "url": "/files/assets/art/p_shen.webp",
-              "slot": "left",
-              "offsetX": 0,
-              "offsetY": 0,
-              "scale": 1
-            }
-          ]
-        }
+          "actors": []
+        },
+        "background": "/files/assets/art/bg_black.webp"
       }
     },
     {
@@ -1555,30 +1515,47 @@
           {
             "id": "card_mem4_1-l2",
             "speaker": "安雅",
-            "text": "原來晚霞是這個顏色。",
-            "voiceUrl": "/files/assets/voice/mem4_anya_color.mp3"
+            "text": "晚霞我自己看過很多次。",
+            "voiceUrl": "/files/assets/voice/mem4_anya_seen.mp3"
           },
           {
             "id": "card_mem4_1-l3",
+            "speaker": "安雅",
+            "text": "跟你一起看，才是這種顏色。",
+            "voiceUrl": "/files/assets/voice/mem4_anya_color.mp3"
+          },
+          {
+            "id": "card_mem4_1-l4",
             "speaker": "",
             "text": "他從保溫瓶裡倒出一杯〈破曉〉。是照著她教的，一個步驟都沒有少。"
           },
           {
-            "id": "card_mem4_1-l4",
+            "id": "card_mem4_1-l5",
             "speaker": "沈淮",
             "text": "甜嗎？",
             "voiceUrl": "/files/assets/voice/mem4_shen_sweet.mp3"
           },
           {
-            "id": "card_mem4_1-l5",
+            "id": "card_mem4_1-l6",
             "speaker": "",
             "text": "她喝了一口，看著天，很久才開口。"
           },
           {
-            "id": "card_mem4_1-l6",
+            "id": "card_mem4_1-l7",
             "speaker": "安雅",
             "text": "好甜。",
             "voiceUrl": "/files/assets/voice/mem4_anya_sweet.mp3"
+          },
+          {
+            "id": "card_mem4_1-l8",
+            "speaker": "",
+            "text": "她把杯子捧在手心裡，靠上他的肩膀。"
+          },
+          {
+            "id": "card_mem4_1-l9",
+            "speaker": "安雅",
+            "text": "你調的，都好甜。",
+            "voiceUrl": "/files/assets/voice/mem4_anya_yours.mp3"
           }
         ],
         "stage": {
@@ -1672,30 +1649,19 @@
             "id": "card_mem4_return-l0",
             "speaker": "沈淮",
             "text": "她說好甜。",
-            "voiceUrl": "/files/assets/voice/mem4_shen_ret1.mp3",
-            "speakerActorId": "actor-沈淮"
+            "voiceUrl": "/files/assets/voice/mem4_shen_ret1.mp3"
           },
           {
             "id": "card_mem4_return-l1",
             "speaker": "沈淮",
             "text": "那時候，她已經什麼都嚐不出來了。",
-            "voiceUrl": "/files/assets/voice/mem4_shen_ret2.mp3",
-            "speakerActorId": "actor-沈淮"
+            "voiceUrl": "/files/assets/voice/mem4_shen_ret2.mp3"
           }
         ],
         "stage": {
-          "actors": [
-            {
-              "id": "actor-沈淮",
-              "name": "沈淮",
-              "url": "/files/assets/art/p_shen.webp",
-              "slot": "left",
-              "offsetX": 0,
-              "offsetY": 0,
-              "scale": 1
-            }
-          ]
+          "actors": []
         },
+        "background": "/files/assets/maps/bedroom_ground.webp",
         "bgm": "/files/assets/bgm/theme.mp3",
         "bgmVolume": 0.5,
         "bgmLoop": true
@@ -1712,12 +1678,12 @@
         "type": "dialogue",
         "title": "她那一側的床",
         "speaker": "",
-        "text": "床的另一邊，枕頭還凹著。",
+        "text": "床的另一邊，枕套上還留著幾根她的頭髮。",
         "dialogueLines": [
           {
             "id": "card_bed-l0",
             "speaker": "",
-            "text": "床的另一邊，枕頭還凹著。"
+            "text": "床的另一邊，枕套上還留著幾根她的頭髮。"
           },
           {
             "id": "card_bed-l1",
@@ -1802,7 +1768,7 @@
           {
             "id": "card_confession-l1",
             "speaker": "安雅",
-            "text": "我騙了你快三年。那年七月，我就知道自己會嚐不到味道。我本來想叫你不要再來了，可是你每天兩點十七分都來。",
+            "text": "我騙了你快三年。那年七月，我就知道自己會嚐不到味道。我本來想叫你不要再來了，可是你每天都坐到兩點十七分才走。",
             "voiceUrl": "/files/assets/voice/c_anya_2.mp3"
           },
           {
@@ -2616,68 +2582,73 @@
           },
           {
             "id": "card_mem1_taste-l1",
+            "speaker": "",
+            "text": "她也低頭抿了一口。甜味和胡椒的麻，在舌尖上慢慢分開。"
+          },
+          {
+            "id": "card_mem1_taste-l2",
             "speaker": "沈淮",
             "text": "好辣……可是好甜。",
             "voiceUrl": "/files/assets/voice/a_mem1_shen_spicy.mp3",
             "speakerActorId": "actor-沈淮"
           },
           {
-            "id": "card_mem1_taste-l2",
+            "id": "card_mem1_taste-l3",
             "speaker": "安雅",
             "text": "像不像天快亮的時候？",
             "voiceUrl": "/files/assets/voice/a_mem1_anya_dawn.mp3",
             "speakerActorId": "actor-安雅"
           },
           {
-            "id": "card_mem1_taste-l3",
+            "id": "card_mem1_taste-l4",
             "speaker": "沈淮",
             "text": "像。",
             "voiceUrl": "/files/assets/voice/a_mem1_shen_like.mp3",
             "speakerActorId": "actor-沈淮"
           },
           {
-            "id": "card_mem1_taste-l4",
+            "id": "card_mem1_taste-l5",
             "speaker": "",
             "text": "她笑了。那是她那一晚第一次真的笑。"
           },
           {
-            "id": "card_mem1_taste-l5",
+            "id": "card_mem1_taste-l6",
             "speaker": "安雅",
             "text": "那就叫它〈破曉〉。",
             "voiceUrl": "/files/assets/voice/a_mem1_anya_name.mp3",
             "speakerActorId": "actor-安雅"
           },
           {
-            "id": "card_mem1_taste-l6",
+            "id": "card_mem1_taste-l7",
             "speaker": "",
             "text": "她這才發現他髮尾的水還在往吧檯上滴。她拿過毛巾，探身越過吧檯，替他把頭髮擦乾。"
           },
           {
-            "id": "card_mem1_taste-l7",
+            "id": "card_mem1_taste-l8",
             "speaker": "",
             "text": "她的手停在他耳邊，過了很久才拿開。"
           },
           {
-            "id": "card_mem1_taste-l8",
+            "id": "card_mem1_taste-l9",
             "speaker": "",
             "text": "她抬頭看牆上的掛鐘。"
           },
           {
-            "id": "card_mem1_taste-l9",
+            "id": "card_mem1_taste-l10",
             "speaker": "安雅",
             "text": "兩點十七分。你是我今天最後一個客人。",
             "voiceUrl": "/files/assets/voice/a_mem1_anya_last.mp3",
             "speakerActorId": "actor-安雅"
           },
           {
-            "id": "card_mem1_taste-l10",
+            "id": "card_mem1_taste-l11",
             "speaker": "沈淮",
             "text": "那我明天早一點來。",
             "voiceUrl": "/files/assets/voice/a_mem1_shen_tomorrow.mp3",
             "speakerActorId": "actor-沈淮"
           },
           {
-            "id": "card_mem1_taste-l11",
+            "id": "card_mem1_taste-l12",
             "speaker": "安雅",
             "text": "……兩點十七分。我會記得。",
             "voiceUrl": "/files/assets/voice/a_mem1_anya_remember.mp3",
@@ -2767,12 +2738,12 @@
         "type": "dialogue",
         "title": "mem2_intro",
         "speaker": "",
-        "text": "開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天兩點十七分。",
+        "text": "開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天都坐到兩點十七分，等她抬頭看鐘，才走。",
         "dialogueLines": [
           {
             "id": "card_mem2_intro-l0",
             "speaker": "",
-            "text": "開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天兩點十七分。"
+            "text": "開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天都坐到兩點十七分，等她抬頭看鐘，才走。"
           },
           {
             "id": "card_mem2_intro-l1",
@@ -3126,15 +3097,20 @@
         "type": "dialogue",
         "title": "mem3_intro",
         "speaker": "",
-        "text": "第三年。打烊後，店裡只剩他們兩個。",
+        "text": "第三年。他已經能自己站吧檯了。",
         "dialogueLines": [
           {
             "id": "card_mem3_intro-l0",
             "speaker": "",
-            "text": "第三年。打烊後，店裡只剩他們兩個。"
+            "text": "第三年。他已經能自己站吧檯了。"
           },
           {
             "id": "card_mem3_intro-l1",
+            "speaker": "",
+            "text": "打烊後，兩個人換了位置：他坐到客人那一側，她回到吧檯後面，照例調一杯給他試。"
+          },
+          {
+            "id": "card_mem3_intro-l2",
             "speaker": "安雅",
             "text": "來，試試這杯。",
             "voiceUrl": "/files/assets/voice/mem3_anya_try.mp3",
@@ -3167,17 +3143,17 @@
         "type": "dialogue",
         "title": "mem3_ask",
         "speaker": "",
-        "text": "她先自己嚐了一口，皺了一下眉，又往杯裡加了兩匙糖漿。",
+        "text": "她把酒含在舌尖，停了一會，像在等味道回來。然後往杯裡加了兩匙糖漿。",
         "dialogueLines": [
           {
             "id": "card_mem3_ask-l0",
             "speaker": "",
-            "text": "她先自己嚐了一口，皺了一下眉，又往杯裡加了兩匙糖漿。"
+            "text": "她把酒含在舌尖，停了一會，像在等味道回來。然後往杯裡加了兩匙糖漿。"
           },
           {
             "id": "card_mem3_ask-l1",
             "speaker": "安雅",
-            "text": "嗯，剛好。",
+            "text": "照我記得的，應該剛好。",
             "voiceUrl": "/files/assets/voice/mem3_anya_justright.mp3",
             "speakerActorId": "actor-安雅"
           },
@@ -3347,40 +3323,33 @@
           {
             "id": "card_mem3_shoulder-l1",
             "speaker": "安雅",
-            "text": "沈淮，我想看一次真正的晚霞。",
+            "text": "沈淮，我想跟你一起看一次晚霞。",
             "voiceUrl": "/files/assets/voice/mem3_anya_sunset.mp3",
             "speakerActorId": "actor-安雅"
           },
           {
             "id": "card_mem3_shoulder-l2",
-            "speaker": "安雅",
-            "text": "要在外面、看得到整片天空的那種。傍晚我都在備料。",
-            "voiceUrl": "/files/assets/voice/mem3_anya_outside.mp3",
-            "speakerActorId": "actor-安雅"
-          },
-          {
-            "id": "card_mem3_shoulder-l3",
             "speaker": "沈淮",
             "text": "明天傍晚就帶妳去。",
             "voiceUrl": "/files/assets/voice/mem3_shen_tomorrow.mp3",
             "speakerActorId": "actor-沈淮"
           },
           {
-            "id": "card_mem3_shoulder-l4",
+            "id": "card_mem3_shoulder-l3",
             "speaker": "安雅",
             "text": "如果有一天，我嚐不出你調的酒了呢？",
             "voiceUrl": "/files/assets/voice/a_mem3_anya_ifone.mp3",
             "speakerActorId": "actor-安雅"
           },
           {
-            "id": "card_mem3_shoulder-l5",
+            "id": "card_mem3_shoulder-l4",
             "speaker": "沈淮",
             "text": "那我就調到妳嚐得出來為止。",
             "voiceUrl": "/files/assets/voice/a_mem3_shen_until.mp3",
             "speakerActorId": "actor-沈淮"
           },
           {
-            "id": "card_mem3_shoulder-l6",
+            "id": "card_mem3_shoulder-l5",
             "speaker": "",
             "text": "她把臉埋進他的肩膀，很久沒有抬起來。"
           }
@@ -3639,7 +3608,7 @@
               "web"
             ],
             "pluginValues": {
-              "map": "{\"version\": 1, \"name\": \"頭七的吧檯\", \"width\": 20, \"height\": 12, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"/files/assets/tilesets/tiny-dungeon.webp\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 10, \"y\": 7, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"/files/assets/art/walk/walk-shen.webp\", \"width\": 192, \"height\": 256, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1.85}, \"actorId\": \"shen\"}, {\"id\": \"note\", \"name\": \"空杯與便條\", \"x\": 8, \"y\": 6, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a1\", \"kind\": \"dialogue\", \"text\": \"吧檯的燈我沒開。窗外的路燈照進來，冷冷的，落在她的位置上。\\n空氣裡沒有柑橘，也沒有草本。她站在這裡的時候，身上總是那個味道。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a2\", \"kind\": \"dialogue\", \"text\": \"吧檯上留著一只碟形杯。杯底剩下薄薄一層，金黃沉在底下，粉紅浮在上面。\\n杯子旁邊壓著一張摺好的便條。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a3\", \"kind\": \"dialogue\", \"text\": \"牆上的掛鐘停在兩點十七分。三年前，她就是抬頭看了這座鐘，說我是她今天最後一個客人。\\n不知道是誰把它停在那裡的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a4\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_anya_note\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a5\", \"kind\": \"dialogue\", \"text\": \"水槽裡有一小撮灰。灰底下壓著半張沒燒完的紙，是她的字。\\n風味筆記。燒掉的那一半捲成黑邊，剩下的字斷在三個地方。\\n我認得這三個空格。那是她給我的第一杯酒。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a12\", \"kind\": \"choice\", \"text\": \"『底：＿＿＿＿。要甜，不要苦。他怕苦。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"貴腐甜白酒\", \"actions\": [{\"id\": \"a6\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a7\", \"kind\": \"dialogue\", \"text\": \"貴腐甜白酒。那一晚她從酒櫃最上層拿下來，瓶身還沾著灰。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"黑麥威士忌\", \"actions\": [{\"id\": \"a8\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a9\", \"kind\": \"dialogue\", \"text\": \"她怕苦，我也怕苦。那一杯裡沒有一點煙燻。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"伏特加\", \"actions\": [{\"id\": \"a10\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a11\", \"kind\": \"dialogue\", \"text\": \"伏特加太冷了。那一晚我渾身濕透，她給我的是暖的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a19\", \"kind\": \"choice\", \"text\": \"『香：＿＿＿＿糖漿，兩匙。他說剛好。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"番紅花\", \"actions\": [{\"id\": \"a13\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"holy\", \"volume\": 0.7}}, {\"id\": \"a14\", \"kind\": \"dialogue\", \"text\": \"番紅花。她自己熬的，一次只熬一小瓶，平常收在儲藏間。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"白砂糖\", \"actions\": [{\"id\": \"a15\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a16\", \"kind\": \"dialogue\", \"text\": \"白糖水調不出那種顏色。那一杯是金的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"薄荷\", \"actions\": [{\"id\": \"a17\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a18\", \"kind\": \"dialogue\", \"text\": \"我第一次伸手拿薄荷的時候，她笑著拍開我的手：「要溫的，沈淮。」\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a27\", \"kind\": \"choice\", \"text\": \"『收尾：＿＿＿＿，磨在杯口。像天快亮。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"粉紅胡椒\", \"actions\": [{\"id\": \"a20\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a21\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.5, \"durationMs\": 300, \"color\": \"#ff69b4\"}}, {\"id\": \"a22\", \"kind\": \"dialogue\", \"text\": \"粉紅胡椒。咬碎的時候，舌尖會麻一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"紅辣椒粉\", \"actions\": [{\"id\": \"a23\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a24\", \"kind\": \"dialogue\", \"text\": \"辣椒會燒。那一杯不會燒，只是麻了一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"檸檬皮\", \"actions\": [{\"id\": \"a25\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a26\", \"kind\": \"dialogue\", \"text\": \"檸檬太酸了。那一杯是甜的，最後才麻一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a28\", \"kind\": \"dialogue\", \"text\": \"〈破曉〉。那是她給那杯酒取的名字。\\n紙的最上面燒掉了，只剩一個字的下半截。我看了很久，認不出來。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a29\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"flavor_deduced\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a30\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"note_read\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a31\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"spoon\", \"amount\": 1}, {\"id\": \"a32\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_mem1_enter\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"pages\": [{\"id\": \"note_read_page\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actor\": \"none\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"movement\": \"still\", \"solid\": false, \"trigger\": \"action\", \"once\": false, \"actions\": [{\"id\": \"a33\", \"kind\": \"dialogue\", \"text\": \"甜白酒為底，番紅花糖漿兩匙，粉紅胡椒磨在杯口。〈破曉〉。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}, {\"id\": \"prop_spoon_visual\", \"name\": \"黃銅調酒匙視覺\", \"x\": 0, \"y\": 8, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"free\": {\"url\": \"/files/assets/props/prop_spoon_tall.webp\", \"x\": 10.85, \"y\": 4.35, \"w\": 0.35, \"h\": 2.7}}, {\"id\": \"spoon\", \"name\": \"黃銅調酒匙\", \"x\": 11, \"y\": 6, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a41\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a34\", \"kind\": \"dialogue\", \"text\": \"匙在我口袋裡。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}], \"else\": [{\"id\": \"a35\", \"kind\": \"dialogue\", \"text\": \"吧檯角落，黃銅匙洗得很乾淨，放在她平常放的位置。\\n她把東西都收走了，只留下這一把。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a36\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"spoon\", \"itemName\": \"黃銅調酒匙\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a37\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a38\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"spoon_taken\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a39\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"storage\", \"amount\": 1}, {\"id\": \"a40\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_mem2_enter\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}]}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"door_storage\", \"name\": \"通往香料儲藏間\", \"x\": 3, \"y\": 1, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a42\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a43\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-storage\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 8, \"y\": 9, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"door_bedroom\", \"name\": \"上樓\", \"x\": 17, \"y\": 1, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a44\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a45\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bedroom\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 8, \"y\": 9, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"shaker\", \"name\": \"她的位置\", \"x\": 9, \"y\": 3, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"mix\", \"itemId\": \"\", \"count\": 1}, {\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a46\", \"kind\": \"dialogue\", \"text\": \"我走進吧檯，站到她的位置。\\n三年來，我第一次站在這裡，她不在旁邊。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a53\", \"kind\": \"choice\", \"text\": \"先放什麼？\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"甜白酒，再兩匙番紅花糖漿\", \"actions\": [{\"id\": \"a47\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a48\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.4, \"durationMs\": 450, \"color\": \"#ffb347\"}}, {\"id\": \"a49\", \"kind\": \"dialogue\", \"text\": \"甜白酒倒進碟形杯，糖漿順著杯壁滑下去，沉在底下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"先磨胡椒\", \"actions\": [{\"id\": \"a50\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a51\", \"kind\": \"dialogue\", \"text\": \"她說過，胡椒最後才放。我先倒了甜白酒和糖漿。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a52\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.4, \"durationMs\": 450, \"color\": \"#ffb347\"}}]}]}}, {\"id\": \"a54\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a60\", \"kind\": \"choice\", \"text\": \"匙怎麼轉？\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"貼著杯壁，慢慢轉，不要用力\", \"actions\": [{\"id\": \"a55\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}, {\"id\": \"a56\", \"kind\": \"dialogue\", \"text\": \"貼著杯壁，慢慢轉。我好像又感覺到她的手覆在我手上。\\n金黃在杯裡旋開，沒有混。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"用力攪勻\", \"actions\": [{\"id\": \"a57\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a58\", \"kind\": \"dialogue\", \"text\": \"「不要用力。」她的聲音好像就在耳邊。我放輕手，貼著杯壁慢慢轉。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a59\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}]}]}}, {\"id\": \"a61\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a65\", \"kind\": \"choice\", \"text\": \"最後是那罐胡椒。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"磨在杯口\", \"actions\": [{\"id\": \"a62\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 500, \"color\": \"#ff69b4\"}}, {\"id\": \"a63\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a64\", \"kind\": \"dialogue\", \"text\": \"我轉了三下研磨罐。粉紅的碎粒落在金黃上，慢慢浮起來。\\n金黃沉在底下，粉紅浮在上面。跟她留下的那只空杯一模一樣。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a66\", \"kind\": \"dialogue\", \"text\": \"我照她的習慣，把杯子放上她出杯用的那塊杯墊。\\n杯墊底下露出一角紙。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a67\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"cocktail_mixed\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a68\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"confession\", \"amount\": 1}, {\"id\": \"a69\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_confession\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"anya_ghost\", \"name\": \"anya_ghost\", \"x\": 10, \"y\": 3, \"actor\": \"npc\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": true, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"/files/assets/art/walk/walk-anya-spirit.webp\", \"width\": 192, \"height\": 256, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1.85}}, {\"id\": \"obj-m-bar-0\", \"name\": \"中央吧檯桌\", \"x\": 0, \"y\": 0, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"free\": {\"url\": \"/files/assets/objects/bar/中央吧檯桌.webp\", \"x\": 6, \"y\": 3, \"w\": 8, \"h\": 4}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"/files/assets/maps/bar_ground.webp\"}, \"guidance\": [{\"text\": \"看看吧檯上的空杯和便條\", \"eventId\": \"note\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"吧檯角落的黃銅匙\", \"eventId\": \"spoon\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"去儲藏間找她熬的番紅花糖漿\", \"eventId\": \"door_storage\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"storage\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"上樓，回我們的房間\", \"eventId\": \"door_bedroom\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"bedroom\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"站到她的位置\", \"eventId\": \"shaker\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"mix\", \"itemId\": \"\", \"count\": 1}]}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.55, \"shake\": 0, \"lights\": [{\"id\": \"window-street\", \"x\": 15, \"y\": 5, \"radius\": 9, \"color\": \"#6f8fc9\", \"flicker\": false}, {\"id\": \"bar-cold\", \"x\": 9, \"y\": 4, \"radius\": 6, \"color\": \"#5d78b0\", \"flicker\": false}, {\"id\": \"glass-warm\", \"x\": 8, \"y\": 5, \"radius\": 1.6, \"color\": \"#ffb35c\", \"flicker\": true}, {\"id\": \"door-left\", \"x\": 3, \"y\": 1, \"radius\": 2.5, \"color\": \"#7d95c4\", \"flicker\": false}, {\"id\": \"door-right\", \"x\": 17, \"y\": 1, \"radius\": 2.5, \"color\": \"#7d95c4\", \"flicker\": false}], \"ambience\": {\"tint\": \"#3c5c9c\", \"tintStrength\": 0.38, \"vignette\": 0.4, \"particles\": \"motes\", \"density\": 0.12}}}"
+              "map": "{\"version\": 1, \"name\": \"頭七的吧檯\", \"width\": 20, \"height\": 12, \"tileSize\": 48, \"tilesets\": [{\"id\": \"kn-dungeon\", \"name\": \"地城\", \"url\": \"/files/assets/tilesets/tiny-dungeon.webp\", \"tileSize\": 16, \"columns\": 12, \"rows\": 11}], \"layers\": [{\"id\": \"walk\", \"name\": \"通行設定\", \"visible\": false, \"locked\": false, \"collision\": true, \"damage\": 0, \"above\": false, \"tiles\": [\"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, null, null, null, null, null, null, null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", null, null, null, null, \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\", \"kn-dungeon:0\"]}], \"events\": [{\"id\": \"hero\", \"name\": \"hero\", \"x\": 10, \"y\": 7, \"actor\": \"player\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"up\", \"sprite\": {\"url\": \"/files/assets/art/walk/walk-shen.webp\", \"width\": 192, \"height\": 256, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1.85}, \"actorId\": \"shen\"}, {\"id\": \"note\", \"name\": \"空杯與便條\", \"x\": 8, \"y\": 6, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a1\", \"kind\": \"dialogue\", \"text\": \"吧檯的燈我沒開。窗外的路燈照進來，冷冷的，落在她的位置上。\\n空氣裡沒有柑橘，也沒有草本。她站在這裡的時候，身上總是那個味道。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a2\", \"kind\": \"dialogue\", \"text\": \"吧檯上留著一只碟形杯。杯底乾成一圈金黃，上緣黏著幾粒粉紅胡椒。\\n杯子旁邊壓著一張摺好的便條。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a3\", \"kind\": \"dialogue\", \"text\": \"牆上的掛鐘停在兩點十七分。三年前，她就是抬頭看了這座鐘，說我是她今天最後一個客人。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a4\", \"kind\": \"dialogue\", \"text\": \"\", \"cardId\": \"card_anya_note\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\"}, {\"id\": \"a5\", \"kind\": \"dialogue\", \"text\": \"水槽裡有一小撮灰。灰底下壓著半張沒燒完的紙，是她的字。\\n風味筆記。燒掉的那一半捲成黑邊，剩下的字斷在三個地方。\\n我認得這三種材料。那是她給我的第一杯酒。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a12\", \"kind\": \"choice\", \"text\": \"『底：＿＿＿＿。要甜，不要苦。他怕苦。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"貴腐甜白酒\", \"actions\": [{\"id\": \"a6\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a7\", \"kind\": \"dialogue\", \"text\": \"貴腐甜白酒。那一晚她從酒櫃最上層拿下來，瓶身還沾著灰。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"黑麥威士忌\", \"actions\": [{\"id\": \"a8\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a9\", \"kind\": \"dialogue\", \"text\": \"她怕苦，我也怕苦。那一杯裡沒有一點煙燻。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"伏特加\", \"actions\": [{\"id\": \"a10\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a11\", \"kind\": \"dialogue\", \"text\": \"伏特加太冷了。那一晚我渾身濕透，她給我的是暖的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a19\", \"kind\": \"choice\", \"text\": \"『香：＿＿＿＿糖漿。〈破曉〉是一小匙，這一杯要兩匙。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"番紅花\", \"actions\": [{\"id\": \"a13\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"holy\", \"volume\": 0.7}}, {\"id\": \"a14\", \"kind\": \"dialogue\", \"text\": \"番紅花。她自己熬的，一次只熬一小瓶，平常收在儲藏間。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"白砂糖\", \"actions\": [{\"id\": \"a15\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a16\", \"kind\": \"dialogue\", \"text\": \"白糖水調不出那種顏色。那一杯是金的。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"薄荷\", \"actions\": [{\"id\": \"a17\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a18\", \"kind\": \"dialogue\", \"text\": \"我第一次伸手拿薄荷的時候，她笑著拍開我的手：「要溫的，沈淮。」\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a27\", \"kind\": \"choice\", \"text\": \"『收尾：＿＿＿＿，磨在杯口。像天快亮。』\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"粉紅胡椒\", \"actions\": [{\"id\": \"a20\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a21\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.5, \"durationMs\": 300, \"color\": \"#ff69b4\"}}, {\"id\": \"a22\", \"kind\": \"dialogue\", \"text\": \"粉紅胡椒。咬碎的時候，舌尖會麻一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"紅辣椒粉\", \"actions\": [{\"id\": \"a23\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a24\", \"kind\": \"dialogue\", \"text\": \"辣椒會燒。那一杯不會燒，只是麻了一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_2\", \"label\": \"檸檬皮\", \"actions\": [{\"id\": \"a25\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a26\", \"kind\": \"dialogue\", \"text\": \"檸檬太酸了。那一杯是甜的，最後才麻一下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a28\", \"kind\": \"dialogue\", \"text\": \"〈破曉〉。那是她給那杯酒取的名字。\\n紙的最上面燒掉了，只剩一個字的下半截。我看了很久，認不出來。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a29\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"flavor_deduced\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a30\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"note_read\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a31\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"spoon\", \"amount\": 1}, {\"id\": \"a32\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_mem1_enter\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"pages\": [{\"id\": \"note_read_page\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actor\": \"none\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"movement\": \"still\", \"solid\": false, \"trigger\": \"action\", \"once\": false, \"actions\": [{\"id\": \"a33\", \"kind\": \"dialogue\", \"text\": \"甜白酒為底，番紅花糖漿，粉紅胡椒磨在杯口。〈破曉〉。可是這一張寫的是兩匙。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}, {\"id\": \"prop_spoon_visual\", \"name\": \"黃銅調酒匙視覺\", \"x\": 0, \"y\": 8, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"free\": {\"url\": \"/files/assets/props/prop_spoon_tall.webp\", \"x\": 10.85, \"y\": 4.35, \"w\": 0.35, \"h\": 2.7}}, {\"id\": \"spoon\", \"name\": \"黃銅調酒匙\", \"x\": 11, \"y\": 6, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a41\", \"kind\": \"if\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"if\": {\"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"then\": [{\"id\": \"a34\", \"kind\": \"dialogue\", \"text\": \"匙在我口袋裡。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}], \"else\": [{\"id\": \"a35\", \"kind\": \"dialogue\", \"text\": \"吧檯角落，黃銅匙洗得很乾淨，放在她平常放的位置。\\n她把東西都收走了，只留下這一把。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a36\", \"kind\": \"item\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"spoon\", \"itemName\": \"黃銅調酒匙\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}, {\"id\": \"a37\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"item\", \"volume\": 0.7}}, {\"id\": \"a38\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"spoon_taken\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a39\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"storage\", \"amount\": 1}, {\"id\": \"a40\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_mem2_enter\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}]}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"door_storage\", \"name\": \"通往香料儲藏間\", \"x\": 3, \"y\": 1, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a42\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a43\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-storage\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 8, \"y\": 9, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"door_bedroom\", \"name\": \"上樓\", \"x\": 17, \"y\": 1, \"actor\": \"none\", \"trigger\": \"touch\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [{\"id\": \"a44\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"door\", \"volume\": 0.7}}, {\"id\": \"a45\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"m-bedroom\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"arrive\": {\"x\": 8, \"y\": 9, \"direction\": \"up\"}}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"shaker\", \"name\": \"她的位置\", \"x\": 9, \"y\": 3, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"mix\", \"itemId\": \"\", \"count\": 1}, {\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}], \"actions\": [{\"id\": \"a46\", \"kind\": \"dialogue\", \"text\": \"我走進吧檯，站到她的位置。\\n三年來，我第一次站在這裡，她不在旁邊。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a53\", \"kind\": \"choice\", \"text\": \"先放什麼？\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"甜白酒，再兩匙番紅花糖漿\", \"actions\": [{\"id\": \"a47\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"heal\", \"volume\": 0.7}}, {\"id\": \"a48\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.4, \"durationMs\": 450, \"color\": \"#ffb347\"}}, {\"id\": \"a49\", \"kind\": \"dialogue\", \"text\": \"甜白酒倒進碟形杯，糖漿順著杯壁滑下去，沉在底下。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"先磨胡椒\", \"actions\": [{\"id\": \"a50\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a51\", \"kind\": \"dialogue\", \"text\": \"她說過，胡椒最後才放。我先倒了甜白酒和糖漿。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a52\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.4, \"durationMs\": 450, \"color\": \"#ffb347\"}}]}]}}, {\"id\": \"a54\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a60\", \"kind\": \"choice\", \"text\": \"匙怎麼轉？\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"貼著杯壁，慢慢轉，不要用力\", \"actions\": [{\"id\": \"a55\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}, {\"id\": \"a56\", \"kind\": \"dialogue\", \"text\": \"貼著杯壁，慢慢轉。我好像又感覺到她的手覆在我手上。\\n金黃在杯裡旋開，沒有混。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}, {\"id\": \"opt_1\", \"label\": \"用力攪勻\", \"actions\": [{\"id\": \"a57\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"guard\", \"volume\": 0.7}}, {\"id\": \"a58\", \"kind\": \"dialogue\", \"text\": \"「不要用力。」她的聲音好像就在耳邊。我放輕手，貼著杯壁慢慢轉。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a59\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"slash\", \"volume\": 0.7}}]}]}}, {\"id\": \"a61\", \"kind\": \"wait\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 300}, {\"id\": \"a65\", \"kind\": \"choice\", \"text\": \"最後是那罐胡椒。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"speaker\": \"player\", \"choice\": {\"options\": [{\"id\": \"opt_0\", \"label\": \"磨在杯口\", \"actions\": [{\"id\": \"a62\", \"kind\": \"screen\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"screen\": {\"effect\": \"flash\", \"strength\": 0.6, \"durationMs\": 500, \"color\": \"#ff69b4\"}}, {\"id\": \"a63\", \"kind\": \"sound\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"audio\": {\"url\": \"\", \"sound\": \"burst\", \"volume\": 0.7}}, {\"id\": \"a64\", \"kind\": \"dialogue\", \"text\": \"我轉了三下研磨罐。粉紅的碎粒落在金黃上，慢慢浮起來。\\n金黃沉在底下，粉紅浮在上面。跟她留下的那只空杯，是同一個顏色。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}]}]}}, {\"id\": \"a66\", \"kind\": \"dialogue\", \"text\": \"我照她的習慣，把杯子放上她出杯用的那塊杯墊。\\n杯墊底下露出一角紙。\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1, \"presentation\": \"text\", \"speaker\": \"player\"}, {\"id\": \"a67\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"cocktail_mixed\", \"value\": \"true\", \"amount\": 1}, {\"id\": \"a68\", \"kind\": \"variable\", \"text\": \"\", \"cardId\": \"\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"phase\", \"value\": \"confession\", \"amount\": 1}, {\"id\": \"a69\", \"kind\": \"jump\", \"text\": \"\", \"cardId\": \"card_confession\", \"itemId\": \"\", \"itemName\": \"\", \"variable\": \"\", \"value\": \"\", \"amount\": 1}], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}}, {\"id\": \"anya_ghost\", \"name\": \"anya_ghost\", \"x\": 10, \"y\": 3, \"actor\": \"npc\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": true, \"once\": false, \"conditions\": [{\"kind\": \"variable\", \"variable\": \"cocktail_mixed\", \"op\": \"eq\", \"value\": \"true\", \"itemId\": \"\", \"count\": 1}], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"/files/assets/art/walk/walk-anya-spirit.webp\", \"width\": 192, \"height\": 256, \"frames\": 3, \"rows\": 4, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 1, \"scale\": 1.85}}, {\"id\": \"obj-m-bar-0\", \"name\": \"中央吧檯桌\", \"x\": 0, \"y\": 0, \"actor\": \"none\", \"trigger\": \"action\", \"movement\": \"still\", \"solid\": false, \"once\": false, \"conditions\": [], \"actions\": [], \"direction\": \"down\", \"sprite\": {\"url\": \"\", \"width\": 32, \"height\": 32, \"frames\": 1, \"rows\": 1, \"offsetX\": 0, \"offsetY\": 0, \"idleFrame\": 0}, \"free\": {\"url\": \"/files/assets/objects/bar/中央吧檯桌.webp\", \"x\": 6, \"y\": 3, \"w\": 8, \"h\": 4}}], \"hp\": 100, \"hpVariable\": \"rpgHp\", \"bagVariable\": \"inventory\", \"stateVariable\": \"rpgState\", \"hideDesktopControls\": false, \"combat\": \"none\", \"view\": {\"mode\": \"2d\", \"tilt\": 48, \"zoom\": 1, \"depthOfField\": 0, \"atmosphere\": \"day\"}, \"picture\": {\"url\": \"/files/assets/maps/bar_ground.webp\"}, \"guidance\": [{\"text\": \"看看吧檯上的空杯和便條\", \"eventId\": \"note\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"note_read\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"吧檯角落的黃銅匙\", \"eventId\": \"spoon\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"spoon_taken\", \"op\": \"eq\", \"value\": \"false\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"去儲藏間找她熬的番紅花糖漿\", \"eventId\": \"door_storage\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"storage\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"上樓，回我們的房間\", \"eventId\": \"door_bedroom\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"bedroom\", \"itemId\": \"\", \"count\": 1}]}, {\"text\": \"站到她的位置\", \"eventId\": \"shaker\", \"conditions\": [{\"kind\": \"variable\", \"variable\": \"phase\", \"op\": \"eq\", \"value\": \"mix\", \"itemId\": \"\", \"count\": 1}]}], \"camera\": \"normal\", \"environment\": {\"weather\": \"clear\", \"intensity\": 0, \"darkness\": 0.55, \"shake\": 0, \"lights\": [{\"id\": \"window-street\", \"x\": 15, \"y\": 5, \"radius\": 9, \"color\": \"#6f8fc9\", \"flicker\": false}, {\"id\": \"bar-cold\", \"x\": 9, \"y\": 4, \"radius\": 6, \"color\": \"#5d78b0\", \"flicker\": false}, {\"id\": \"glass-warm\", \"x\": 8, \"y\": 5, \"radius\": 1.6, \"color\": \"#ffb35c\", \"flicker\": true}, {\"id\": \"door-left\", \"x\": 3, \"y\": 1, \"radius\": 2.5, \"color\": \"#7d95c4\", \"flicker\": false}, {\"id\": \"door-right\", \"x\": 17, \"y\": 1, \"radius\": 2.5, \"color\": \"#7d95c4\", \"flicker\": false}], \"ambience\": {\"tint\": \"#3c5c9c\", \"tintStrength\": 0.38, \"vignette\": 0.4, \"particles\": \"motes\", \"density\": 0.12}}}"
             },
             "bgm": "/files/assets/bgm/theme.mp3",
             "bgmVolume": 0.4,
@@ -3830,7 +3799,7 @@
               {
                 "id": "prologue-l2",
                 "speaker": "沈淮",
-                "text": "安雅走後第七天，我才知道，最先被帶走的，就是味道。",
+                "text": "她的頭七這一晚，我才知道，最先被帶走的，就是味道。",
                 "voiceUrl": "/files/assets/voice/p_shen_open3.mp3"
               },
               {
@@ -3841,7 +3810,7 @@
               {
                 "id": "prologue-l4",
                 "speaker": "",
-                "text": "店門口的燈箱已經七天沒亮了。我推開門，門上的鈴響了一聲，跟三年前一模一樣。"
+                "text": "店門口的燈箱，從她走後就沒再亮過。我推開門，門上的鈴響了一聲，跟三年前一模一樣。"
               }
             ],
             "stage": {
@@ -3877,7 +3846,7 @@
               {
                 "id": "card_anya_note-l1",
                 "speaker": "安雅",
-                "text": "酒櫃第二層那瓶甜白酒快沒了，下次叫貨多叫一箱。",
+                "text": "後門記得上鎖。",
                 "voiceUrl": "/files/assets/voice/n_anya_2.mp3",
                 "speakerActorId": "actor-安雅"
               },
@@ -3931,23 +3900,13 @@
                 "id": "card_mem1_enter-l1",
                 "speaker": "沈淮",
                 "text": "三年前的那個晚上，也在下雨。",
-                "voiceUrl": "/files/assets/voice/mem_shen_enter.mp3",
-                "speakerActorId": "actor-沈淮"
+                "voiceUrl": "/files/assets/voice/mem_shen_enter.mp3"
               }
             ],
             "stage": {
-              "actors": [
-                {
-                  "id": "actor-沈淮",
-                  "name": "沈淮",
-                  "url": "/files/assets/art/p_shen.webp",
-                  "slot": "left",
-                  "offsetX": 0,
-                  "offsetY": 0,
-                  "scale": 1
-                }
-              ]
+              "actors": []
             },
+            "background": "/files/assets/art/bg_black.webp",
             "bgm": "/files/assets/bgm/storm.mp3",
             "bgmVolume": 0.5,
             "bgmLoop": true
@@ -3970,8 +3929,7 @@
                 "id": "card_mem2_enter-l0",
                 "speaker": "沈淮",
                 "text": "只借你。",
-                "voiceUrl": "/files/assets/voice/mem2_shen_enter.mp3",
-                "speakerActorId": "actor-沈淮"
+                "voiceUrl": "/files/assets/voice/mem2_shen_enter.mp3"
               },
               {
                 "id": "card_mem2_enter-l1",
@@ -3980,18 +3938,9 @@
               }
             ],
             "stage": {
-              "actors": [
-                {
-                  "id": "actor-沈淮",
-                  "name": "沈淮",
-                  "url": "/files/assets/art/p_shen.webp",
-                  "slot": "left",
-                  "offsetX": 0,
-                  "offsetY": 0,
-                  "scale": 1
-                }
-              ]
-            }
+              "actors": []
+            },
+            "background": "/files/assets/art/bg_black.webp"
           }
         },
         {
@@ -4016,23 +3965,13 @@
                 "id": "card_mem3_enter-l1",
                 "speaker": "沈淮",
                 "text": "第三年，她開始每一杯都問我甜不甜。",
-                "voiceUrl": "/files/assets/voice/mem3_shen_enter.mp3",
-                "speakerActorId": "actor-沈淮"
+                "voiceUrl": "/files/assets/voice/mem3_shen_enter.mp3"
               }
             ],
             "stage": {
-              "actors": [
-                {
-                  "id": "actor-沈淮",
-                  "name": "沈淮",
-                  "url": "/files/assets/art/p_shen.webp",
-                  "slot": "left",
-                  "offsetX": 0,
-                  "offsetY": 0,
-                  "scale": 1
-                }
-              ]
-            }
+              "actors": []
+            },
+            "background": "/files/assets/art/bg_black.webp"
           }
         },
         {
@@ -4330,12 +4269,12 @@
             "type": "dialogue",
             "title": "回憶：想看晚霞",
             "speaker": "",
-            "text": "那是她第一次說想看晚霞。",
+            "text": "那是她第一次說，想跟他一起看晚霞。",
             "dialogueLines": [
               {
                 "id": "card_mem3_cg-l0",
                 "speaker": "",
-                "text": "那是她第一次說想看晚霞。"
+                "text": "那是她第一次說，想跟他一起看晚霞。"
               }
             ],
             "stage": {
@@ -4531,23 +4470,13 @@
                 "id": "card_mem4_enter-l0",
                 "speaker": "沈淮",
                 "text": "三年裡，我只帶她看過一次晚霞。",
-                "voiceUrl": "/files/assets/voice/mem4_shen_enter.mp3",
-                "speakerActorId": "actor-沈淮"
+                "voiceUrl": "/files/assets/voice/mem4_shen_enter.mp3"
               }
             ],
             "stage": {
-              "actors": [
-                {
-                  "id": "actor-沈淮",
-                  "name": "沈淮",
-                  "url": "/files/assets/art/p_shen.webp",
-                  "slot": "left",
-                  "offsetX": 0,
-                  "offsetY": 0,
-                  "scale": 1
-                }
-              ]
-            }
+              "actors": []
+            },
+            "background": "/files/assets/art/bg_black.webp"
           }
         },
         {
@@ -4576,30 +4505,47 @@
               {
                 "id": "card_mem4_1-l2",
                 "speaker": "安雅",
-                "text": "原來晚霞是這個顏色。",
-                "voiceUrl": "/files/assets/voice/mem4_anya_color.mp3"
+                "text": "晚霞我自己看過很多次。",
+                "voiceUrl": "/files/assets/voice/mem4_anya_seen.mp3"
               },
               {
                 "id": "card_mem4_1-l3",
+                "speaker": "安雅",
+                "text": "跟你一起看，才是這種顏色。",
+                "voiceUrl": "/files/assets/voice/mem4_anya_color.mp3"
+              },
+              {
+                "id": "card_mem4_1-l4",
                 "speaker": "",
                 "text": "他從保溫瓶裡倒出一杯〈破曉〉。是照著她教的，一個步驟都沒有少。"
               },
               {
-                "id": "card_mem4_1-l4",
+                "id": "card_mem4_1-l5",
                 "speaker": "沈淮",
                 "text": "甜嗎？",
                 "voiceUrl": "/files/assets/voice/mem4_shen_sweet.mp3"
               },
               {
-                "id": "card_mem4_1-l5",
+                "id": "card_mem4_1-l6",
                 "speaker": "",
                 "text": "她喝了一口，看著天，很久才開口。"
               },
               {
-                "id": "card_mem4_1-l6",
+                "id": "card_mem4_1-l7",
                 "speaker": "安雅",
                 "text": "好甜。",
                 "voiceUrl": "/files/assets/voice/mem4_anya_sweet.mp3"
+              },
+              {
+                "id": "card_mem4_1-l8",
+                "speaker": "",
+                "text": "她把杯子捧在手心裡，靠上他的肩膀。"
+              },
+              {
+                "id": "card_mem4_1-l9",
+                "speaker": "安雅",
+                "text": "你調的，都好甜。",
+                "voiceUrl": "/files/assets/voice/mem4_anya_yours.mp3"
               }
             ],
             "stage": {
@@ -4693,30 +4639,19 @@
                 "id": "card_mem4_return-l0",
                 "speaker": "沈淮",
                 "text": "她說好甜。",
-                "voiceUrl": "/files/assets/voice/mem4_shen_ret1.mp3",
-                "speakerActorId": "actor-沈淮"
+                "voiceUrl": "/files/assets/voice/mem4_shen_ret1.mp3"
               },
               {
                 "id": "card_mem4_return-l1",
                 "speaker": "沈淮",
                 "text": "那時候，她已經什麼都嚐不出來了。",
-                "voiceUrl": "/files/assets/voice/mem4_shen_ret2.mp3",
-                "speakerActorId": "actor-沈淮"
+                "voiceUrl": "/files/assets/voice/mem4_shen_ret2.mp3"
               }
             ],
             "stage": {
-              "actors": [
-                {
-                  "id": "actor-沈淮",
-                  "name": "沈淮",
-                  "url": "/files/assets/art/p_shen.webp",
-                  "slot": "left",
-                  "offsetX": 0,
-                  "offsetY": 0,
-                  "scale": 1
-                }
-              ]
+              "actors": []
             },
+            "background": "/files/assets/maps/bedroom_ground.webp",
             "bgm": "/files/assets/bgm/theme.mp3",
             "bgmVolume": 0.5,
             "bgmLoop": true
@@ -4733,12 +4668,12 @@
             "type": "dialogue",
             "title": "她那一側的床",
             "speaker": "",
-            "text": "床的另一邊，枕頭還凹著。",
+            "text": "床的另一邊，枕套上還留著幾根她的頭髮。",
             "dialogueLines": [
               {
                 "id": "card_bed-l0",
                 "speaker": "",
-                "text": "床的另一邊，枕頭還凹著。"
+                "text": "床的另一邊，枕套上還留著幾根她的頭髮。"
               },
               {
                 "id": "card_bed-l1",
@@ -4823,7 +4758,7 @@
               {
                 "id": "card_confession-l1",
                 "speaker": "安雅",
-                "text": "我騙了你快三年。那年七月，我就知道自己會嚐不到味道。我本來想叫你不要再來了，可是你每天兩點十七分都來。",
+                "text": "我騙了你快三年。那年七月，我就知道自己會嚐不到味道。我本來想叫你不要再來了，可是你每天都坐到兩點十七分才走。",
                 "voiceUrl": "/files/assets/voice/c_anya_2.mp3"
               },
               {
@@ -5637,68 +5572,73 @@
               },
               {
                 "id": "card_mem1_taste-l1",
+                "speaker": "",
+                "text": "她也低頭抿了一口。甜味和胡椒的麻，在舌尖上慢慢分開。"
+              },
+              {
+                "id": "card_mem1_taste-l2",
                 "speaker": "沈淮",
                 "text": "好辣……可是好甜。",
                 "voiceUrl": "/files/assets/voice/a_mem1_shen_spicy.mp3",
                 "speakerActorId": "actor-沈淮"
               },
               {
-                "id": "card_mem1_taste-l2",
+                "id": "card_mem1_taste-l3",
                 "speaker": "安雅",
                 "text": "像不像天快亮的時候？",
                 "voiceUrl": "/files/assets/voice/a_mem1_anya_dawn.mp3",
                 "speakerActorId": "actor-安雅"
               },
               {
-                "id": "card_mem1_taste-l3",
+                "id": "card_mem1_taste-l4",
                 "speaker": "沈淮",
                 "text": "像。",
                 "voiceUrl": "/files/assets/voice/a_mem1_shen_like.mp3",
                 "speakerActorId": "actor-沈淮"
               },
               {
-                "id": "card_mem1_taste-l4",
+                "id": "card_mem1_taste-l5",
                 "speaker": "",
                 "text": "她笑了。那是她那一晚第一次真的笑。"
               },
               {
-                "id": "card_mem1_taste-l5",
+                "id": "card_mem1_taste-l6",
                 "speaker": "安雅",
                 "text": "那就叫它〈破曉〉。",
                 "voiceUrl": "/files/assets/voice/a_mem1_anya_name.mp3",
                 "speakerActorId": "actor-安雅"
               },
               {
-                "id": "card_mem1_taste-l6",
+                "id": "card_mem1_taste-l7",
                 "speaker": "",
                 "text": "她這才發現他髮尾的水還在往吧檯上滴。她拿過毛巾，探身越過吧檯，替他把頭髮擦乾。"
               },
               {
-                "id": "card_mem1_taste-l7",
+                "id": "card_mem1_taste-l8",
                 "speaker": "",
                 "text": "她的手停在他耳邊，過了很久才拿開。"
               },
               {
-                "id": "card_mem1_taste-l8",
+                "id": "card_mem1_taste-l9",
                 "speaker": "",
                 "text": "她抬頭看牆上的掛鐘。"
               },
               {
-                "id": "card_mem1_taste-l9",
+                "id": "card_mem1_taste-l10",
                 "speaker": "安雅",
                 "text": "兩點十七分。你是我今天最後一個客人。",
                 "voiceUrl": "/files/assets/voice/a_mem1_anya_last.mp3",
                 "speakerActorId": "actor-安雅"
               },
               {
-                "id": "card_mem1_taste-l10",
+                "id": "card_mem1_taste-l11",
                 "speaker": "沈淮",
                 "text": "那我明天早一點來。",
                 "voiceUrl": "/files/assets/voice/a_mem1_shen_tomorrow.mp3",
                 "speakerActorId": "actor-沈淮"
               },
               {
-                "id": "card_mem1_taste-l11",
+                "id": "card_mem1_taste-l12",
                 "speaker": "安雅",
                 "text": "……兩點十七分。我會記得。",
                 "voiceUrl": "/files/assets/voice/a_mem1_anya_remember.mp3",
@@ -5788,12 +5728,12 @@
             "type": "dialogue",
             "title": "mem2_intro",
             "speaker": "",
-            "text": "開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天兩點十七分。",
+            "text": "開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天都坐到兩點十七分，等她抬頭看鐘，才走。",
             "dialogueLines": [
               {
                 "id": "card_mem2_intro-l0",
                 "speaker": "",
-                "text": "開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天兩點十七分。"
+                "text": "開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天都坐到兩點十七分，等她抬頭看鐘，才走。"
               },
               {
                 "id": "card_mem2_intro-l1",
@@ -6147,15 +6087,20 @@
             "type": "dialogue",
             "title": "mem3_intro",
             "speaker": "",
-            "text": "第三年。打烊後，店裡只剩他們兩個。",
+            "text": "第三年。他已經能自己站吧檯了。",
             "dialogueLines": [
               {
                 "id": "card_mem3_intro-l0",
                 "speaker": "",
-                "text": "第三年。打烊後，店裡只剩他們兩個。"
+                "text": "第三年。他已經能自己站吧檯了。"
               },
               {
                 "id": "card_mem3_intro-l1",
+                "speaker": "",
+                "text": "打烊後，兩個人換了位置：他坐到客人那一側，她回到吧檯後面，照例調一杯給他試。"
+              },
+              {
+                "id": "card_mem3_intro-l2",
                 "speaker": "安雅",
                 "text": "來，試試這杯。",
                 "voiceUrl": "/files/assets/voice/mem3_anya_try.mp3",
@@ -6188,17 +6133,17 @@
             "type": "dialogue",
             "title": "mem3_ask",
             "speaker": "",
-            "text": "她先自己嚐了一口，皺了一下眉，又往杯裡加了兩匙糖漿。",
+            "text": "她把酒含在舌尖，停了一會，像在等味道回來。然後往杯裡加了兩匙糖漿。",
             "dialogueLines": [
               {
                 "id": "card_mem3_ask-l0",
                 "speaker": "",
-                "text": "她先自己嚐了一口，皺了一下眉，又往杯裡加了兩匙糖漿。"
+                "text": "她把酒含在舌尖，停了一會，像在等味道回來。然後往杯裡加了兩匙糖漿。"
               },
               {
                 "id": "card_mem3_ask-l1",
                 "speaker": "安雅",
-                "text": "嗯，剛好。",
+                "text": "照我記得的，應該剛好。",
                 "voiceUrl": "/files/assets/voice/mem3_anya_justright.mp3",
                 "speakerActorId": "actor-安雅"
               },
@@ -6368,40 +6313,33 @@
               {
                 "id": "card_mem3_shoulder-l1",
                 "speaker": "安雅",
-                "text": "沈淮，我想看一次真正的晚霞。",
+                "text": "沈淮，我想跟你一起看一次晚霞。",
                 "voiceUrl": "/files/assets/voice/mem3_anya_sunset.mp3",
                 "speakerActorId": "actor-安雅"
               },
               {
                 "id": "card_mem3_shoulder-l2",
-                "speaker": "安雅",
-                "text": "要在外面、看得到整片天空的那種。傍晚我都在備料。",
-                "voiceUrl": "/files/assets/voice/mem3_anya_outside.mp3",
-                "speakerActorId": "actor-安雅"
-              },
-              {
-                "id": "card_mem3_shoulder-l3",
                 "speaker": "沈淮",
                 "text": "明天傍晚就帶妳去。",
                 "voiceUrl": "/files/assets/voice/mem3_shen_tomorrow.mp3",
                 "speakerActorId": "actor-沈淮"
               },
               {
-                "id": "card_mem3_shoulder-l4",
+                "id": "card_mem3_shoulder-l3",
                 "speaker": "安雅",
                 "text": "如果有一天，我嚐不出你調的酒了呢？",
                 "voiceUrl": "/files/assets/voice/a_mem3_anya_ifone.mp3",
                 "speakerActorId": "actor-安雅"
               },
               {
-                "id": "card_mem3_shoulder-l5",
+                "id": "card_mem3_shoulder-l4",
                 "speaker": "沈淮",
                 "text": "那我就調到妳嚐得出來為止。",
                 "voiceUrl": "/files/assets/voice/a_mem3_shen_until.mp3",
                 "speakerActorId": "actor-沈淮"
               },
               {
-                "id": "card_mem3_shoulder-l6",
+                "id": "card_mem3_shoulder-l5",
                 "speaker": "",
                 "text": "她把臉埋進他的肩膀，很久沒有抬起來。"
               }

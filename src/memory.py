@@ -19,14 +19,14 @@ L = {
     'prologue': [
         (SHEN, '都說味道是最後才會忘記的東西。比臉晚，比聲音晚。', 'p_shen_open1', 'calm'),
         (SHEN, '很多年以後，一杯酒送到嘴邊，人就回到了那一晚。', 'p_shen_open2', 'calm'),
-        (SHEN, '安雅走後第七天，我才知道，最先被帶走的，就是味道。', 'p_shen_open3', 'sad'),
+        (SHEN, '她的頭七這一晚，我才知道，最先被帶走的，就是味道。', 'p_shen_open3', 'sad'),
         ('', '頭七。人家說，這一晚她會回家。', None, ''),
-        ('', '店門口的燈箱已經七天沒亮了。我推開門，門上的鈴響了一聲，跟三年前一模一樣。', None, ''),
+        ('', '店門口的燈箱，從她走後就沒再亮過。我推開門，門上的鈴響了一聲，跟三年前一模一樣。', None, ''),
     ],
     # 空杯旁的便條：只交代店與生活，不提酒
     'card_anya_note': [
         (ANYA, '沈淮：店交給你了。冰箱裡有我包好的餃子，記得吃飯。', 'n_anya_1', 'calm'),
-        (ANYA, '酒櫃第二層那瓶甜白酒快沒了，下次叫貨多叫一箱。', 'n_anya_2', 'calm'),
+        (ANYA, '後門記得上鎖。', 'n_anya_2', 'calm'),
         (ANYA, '不要每天都等到兩點十七分才關門。', 'n_anya_3', 'sad'),
         ('', '她寫便條，從來不署名。', None, ''),
     ],
@@ -66,6 +66,7 @@ L = {
     'card_mem1_stare': [(ANYA, '看我做什麼？喝酒。', 'a_mem1_anya_stare', 'happy')],
     'card_mem1_taste': [
         ('', '他咬到胡椒，舌尖麻了一下，愣住了。她撐著吧檯看他，等他開口。', None, ''),
+        ('', '她也低頭抿了一口。甜味和胡椒的麻，在舌尖上慢慢分開。', None, ''),
         (SHEN, '好辣……可是好甜。', 'a_mem1_shen_spicy', 'surprised'),
         (ANYA, '像不像天快亮的時候？', 'a_mem1_anya_dawn', 'happy'),
         (SHEN, '像。', 'a_mem1_shen_like', 'calm'),
@@ -94,7 +95,7 @@ L = {
         (SHEN, '第三年，她開始每一杯都問我甜不甜。', 'mem3_shen_enter', 'sad'),
     ],
     'card_mem2_intro': [
-        ('', '開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天兩點十七分。', None, ''),
+        ('', '開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天都坐到兩點十七分，等她抬頭看鐘，才走。', None, ''),
         ('', '吧檯上放著一小瓶藥。她看了他一眼，把藥收進圍裙口袋。', None, ''),
         (ANYA, '偏頭痛。老毛病了。', 'a_mem2_anya_migraine', 'calm'),
         (ANYA, '沈淮，過來。今天教你調酒。', 'a_mem2_anya_teach', 'happy'),
@@ -132,12 +133,13 @@ L = {
     'card_mem2_cg': [('', '那把匙，她一直放在自己的位置上。', None, '')],
     # 回憶三：甜嗎
     'card_mem3_intro': [
-        ('', '第三年。打烊後，店裡只剩他們兩個。', None, ''),
+        ('', '第三年。他已經能自己站吧檯了。', None, ''),
+        ('', '打烊後，兩個人換了位置：他坐到客人那一側，她回到吧檯後面，照例調一杯給他試。', None, ''),
         (ANYA, '來，試試這杯。', 'mem3_anya_try', 'happy'),
     ],
     'card_mem3_ask': [
-        ('', '她先自己嚐了一口，皺了一下眉，又往杯裡加了兩匙糖漿。', None, ''),
-        (ANYA, '嗯，剛好。', 'mem3_anya_justright', 'calm'),
+        ('', '她把酒含在舌尖，停了一會，像在等味道回來。然後往杯裡加了兩匙糖漿。', None, ''),
+        (ANYA, '照我記得的，應該剛好。', 'mem3_anya_justright', 'calm'),
         ('', '她把杯子推到他面前。', None, ''),
         (ANYA, '甜嗎？', 'mem3_anya_sweet', 'calm'),
     ],
@@ -152,14 +154,13 @@ L = {
     ],
     'card_mem3_shoulder': [
         ('', '她繞出吧檯，在他旁邊的高腳椅坐下，頭靠上他的肩膀。', None, ''),
-        (ANYA, '沈淮，我想看一次真正的晚霞。', 'mem3_anya_sunset', 'sad'),
-        (ANYA, '要在外面、看得到整片天空的那種。傍晚我都在備料。', 'mem3_anya_outside', 'calm'),
+        (ANYA, '沈淮，我想跟你一起看一次晚霞。', 'mem3_anya_sunset', 'sad'),
         (SHEN, '明天傍晚就帶妳去。', 'mem3_shen_tomorrow', 'calm'),
         (ANYA, '如果有一天，我嚐不出你調的酒了呢？', 'a_mem3_anya_ifone', 'sad'),
         (SHEN, '那我就調到妳嚐得出來為止。', 'a_mem3_shen_until', 'calm'),
         ('', '她把臉埋進他的肩膀，很久沒有抬起來。', None, ''),
     ],
-    'card_mem3_cg': [('', '那是她第一次說想看晚霞。', None, '')],
+    'card_mem3_cg': [('', '那是她第一次說，想跟他一起看晚霞。', None, '')],
     'card_mem3_night': [
         ('', '那天夜裡，他醒過來。床的另一邊是空的，還留著她的體溫。', None, ''),
         ('', '他下樓。店裡只開了一盞燈。', None, ''),
@@ -191,11 +192,14 @@ L = {
     'card_mem4_1': [
         ('', '第三年的秋天。一個公休日的傍晚，他終於帶她上了頂樓。', None, ''),
         ('', '風很大。整片天從金黃燒成粉紅，再一點一點暗下去。', None, ''),
-        (ANYA, '原來晚霞是這個顏色。', 'mem4_anya_color', 'happy'),
+        (ANYA, '晚霞我自己看過很多次。', 'mem4_anya_seen', 'calm'),
+        (ANYA, '跟你一起看，才是這種顏色。', 'mem4_anya_color', 'happy'),
         ('', '他從保溫瓶裡倒出一杯〈破曉〉。是照著她教的，一個步驟都沒有少。', None, ''),
         (SHEN, '甜嗎？', 'mem4_shen_sweet', 'calm'),
         ('', '她喝了一口，看著天，很久才開口。', None, ''),
         (ANYA, '好甜。', 'mem4_anya_sweet', 'happy'),
+        ('', '她把杯子捧在手心裡，靠上他的肩膀。', None, ''),
+        (ANYA, '你調的，都好甜。', 'mem4_anya_yours', 'happy'),
     ],
     'card_mem4_2': [
         ('', '天暗下來以後，她把杯子擱在欄杆上，牽起他的手。', None, ''),
@@ -213,7 +217,7 @@ L = {
     ],
     # 她那一側的床
     'card_bed': [
-        ('', '床的另一邊，枕頭還凹著。', None, ''),
+        ('', '床的另一邊，枕套上還留著幾根她的頭髮。', None, ''),
         ('', '那天夜裡我醒過一次。她剛從樓下上來，身上很冰，躺回我身邊。', None, ''),
         ('', '我問她去了哪裡。', None, ''),
         (ANYA, '睡吧。', 'bed_anya_sleep', 'calm'),
@@ -224,7 +228,7 @@ L = {
     # ---- 杯墊下的遺言 ----
     'card_confession': [
         (ANYA, '沈淮：我就知道你會找到這裡。所以我賭你，最後一次會聽我的。', 'c_anya_1', 'sad'),
-        (ANYA, '我騙了你快三年。那年七月，我就知道自己會嚐不到味道。我本來想叫你不要再來了，可是你每天兩點十七分都來。', 'c_anya_2', 'sad'),
+        (ANYA, '我騙了你快三年。那年七月，我就知道自己會嚐不到味道。我本來想叫你不要再來了，可是你每天都坐到兩點十七分才走。', 'c_anya_2', 'sad'),
         (ANYA, '偏頭痛是假的。研發新酒是真的。', 'c_anya_3', 'sad'),
         (ANYA, '這杯叫〈晚霞〉，我本來是要調給你的。初遇是快要破曉，我想再給我們一個傍晚。', 'c_anya_4', 'sad'),
         (ANYA, '可是我調了快三年，還差一點，舌頭就先不行了。痛也一天比一天清楚。', 'c_anya_5', 'sad'),
@@ -321,9 +325,9 @@ def build(board, art):
     N(_card('prologue', '序幕：頭七', art, bg=art['bg-bar'], start=True, bgm=art.get('bgm-bar')))
     N(_card('card_anya_note', '安雅的便條', art))
     # 每段回憶的入口（地圖事件 jump 過來）
-    N(_card('card_mem1_enter', '回憶：兩點十七分', art, bgm=art['bgm-storm']))
-    N(_card('card_mem2_enter', '回憶：黃銅匙', art))
-    N(_card('card_mem3_enter', '回憶：甜嗎', art))
+    N(_card('card_mem1_enter', '回憶：兩點十七分', art, bg=art['bg-black'], bgm=art['bgm-storm']))
+    N(_card('card_mem2_enter', '回憶：黃銅匙', art, bg=art['bg-black']))
+    N(_card('card_mem3_enter', '回憶：甜嗎', art, bg=art['bg-black']))
 
     # ── 回憶一〈02:17，暴雨〉：他淋濕進門（9,9）；她在吧檯後（10,3）；高腳椅（9,6）；門口（9,10） ──
     guest = lambda x, y, d: ev('hero', x, y, actor='player', direction=d, sprite=walker(art['walk-shen-casual']), actorId='shen')
@@ -421,10 +425,10 @@ def build(board, art):
     cg = lambda k, alt: art.get(k) or art[alt]
     N(_card('card_mem3_night', '回憶：還差一點', art, bg=cg('cg-mem3b', 'cg-mem3'), bgm=art['bgm-almost']))
     N(_card('card_box_truth', '木盒', art, bgm=art['bgm-almost']))
-    N(_card('card_mem4_enter', '回憶：晚霞', art))
+    N(_card('card_mem4_enter', '回憶：晚霞', art, bg=art['bg-black']))
     N(_card('card_mem4_1', '回憶：頂樓', art, bg=cg('cg-mem4', 'cg-mem3'), bgm=art['bgm-rooftop']))
     N(_card('card_mem4_2', '回憶：有風就好', art, bg=cg('cg-mem4', 'cg-mem3')))
-    N(_card('card_mem4_return', '回到現在', art, bgm=art['bgm-bar']))
+    N(_card('card_mem4_return', '回到現在', art, bg=art['bg-bedroom'], bgm=art['bgm-bar']))
     N(_card('card_bed', '她那一側的床', art))
     N(_card('card_confession', '杯墊下的信', art, bg=art['cg-cocktail'], bgm=art.get('bgm-confession')))
     N(_card('card_spirit', '頭七', art, bg=art['cg-cocktail']))

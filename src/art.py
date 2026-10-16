@@ -34,6 +34,7 @@ ART = {
     'bgm-confession': '/files/assets/bgm/letter.mp3',
     'bgm-together': '/files/assets/bgm/together.mp3',
     'bgm-cold': '/files/assets/bgm/cold.mp3',
+    'bg-black': '/files/assets/art/bg_black.webp',   # 進回憶的過場：全黑，不讓前一張地圖透出來
     'cg-cocktail': '/files/assets/art/cg_cocktail.webp',
     'cg-ending-burn': '/files/assets/art/cg_ending_burn.webp',
     'cg-ending-cold': '/files/assets/art/cg_ending_cold.webp',
