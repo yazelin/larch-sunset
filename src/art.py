@@ -26,6 +26,10 @@ ART = {
     'cg-cocktail': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp',
     'cg-ending-burn': '/files/assets/art/cg_ending_burn.webp',
     'cg-ending-cold': '/files/assets/art/cg_ending_cold.webp',
+    # 回憶篇（design/回憶篇.md）
+    'cg-mem1': '/files/assets/art/cg_mem1_rain.webp',
+    'cg-mem2': '/files/assets/art/cg_mem2_spoon.webp',
+    'cg-mem3': '/files/assets/art/cg_mem3_shoulder.webp',
 
     # 角色行走圖 (Walker Sprites, 3x4, 48x64)
     'walk-shen': '/files/assets/art/walk/walk-shen.webp',

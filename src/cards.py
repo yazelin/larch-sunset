@@ -13,8 +13,11 @@ def dialogue(id, title, lines, bg='', start=False, speaker='', actors=None, voic
     if isinstance(lines, str):
         lines = [lines]
     for i, l in enumerate(lines):
-        sp, tx = (l if isinstance(l, tuple) else (speaker, l))
+        # (講者, 文字) 或 (講者, 文字, 這一句的配音網址)
+        sp, tx, lv = (l + (None,))[:3] if isinstance(l, tuple) else (speaker, l, None)
         line_dict = {'id': f'{id}-l{i}', 'speaker': sp, 'text': tx}
+        if lv:
+            line_dict['voiceUrl'] = lv
         if actors:
             matched = next((a['id'] for a in actors if a['name'] == sp), None)
             if matched:

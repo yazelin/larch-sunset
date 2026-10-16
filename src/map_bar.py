@@ -217,10 +217,11 @@ def build_bar(art):
         {'text': '做出終局抉擇', 'eventId': 'shaker', 'conditions': []},
     ]
 
+    # 現在的吧檯比回憶裡暗一些（回憶篇是全亮的暖燈，兩邊要看得出差別）
     env = {
         'weather': 'clear',
         'intensity': 0,
-        'darkness': 0,
+        'darkness': 0.25,
         'shake': 0,
         'lights': [
             {'id': 'bar-light', 'x': 9, 'y': 3, 'radius': 5, 'color': '#ffb347', 'flicker': True},

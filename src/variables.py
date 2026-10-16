@@ -11,6 +11,9 @@ VARS = {
     'truth_known': ('boolean', False, '已得知病歷單真相'),
     'cocktail_mixed': ('boolean', False, '已調製晚霞'),
     'ending_choice': ('string', '', '終局抉擇'),
+    'mem1': ('string', '', '回憶一進度'),
+    'mem2': ('string', '', '回憶二進度'),
+    'mem3': ('string', '', '回憶三進度'),
 }
 
 RPG_VARS = [

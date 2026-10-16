@@ -1,7 +1,7 @@
 """組出 dist/project.json：骨架＋RPG地圖＋劇情卡＋配音演出。"""
 import json, pathlib, shutil
 import cards, variables, art, mapkit
-import map_bar, map_storage, map_bedroom
+import map_bar, map_storage, map_bedroom, memory
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PROJECT_ID = 'project-8cb1ab7e-891c-46b4-bd38-df29060e5717'
@@ -64,6 +64,9 @@ def build():
     p['settings']['cgGallerySource'] = 'picked'
     p['settings']['cgGalleryItems'] = [
         {'url': a['cover'], 'title': '晚霞是舌尖最後的刺痛'},
+        {'url': a['cg-mem1'], 'title': '暴雨的夜'},
+        {'url': a['cg-mem2'], 'title': '黃銅匙'},
+        {'url': a['cg-mem3'], 'title': '想看晚霞'},
         {'url': a['cg-cocktail'], 'title': '初遇與終點的晚霞'},
         {'url': a['cg-ending-burn'], 'title': '共赴晚霞'},
         {'url': a['cg-ending-cold'], 'title': '冷卻的餘溫'},
@@ -145,7 +148,10 @@ def build():
         '【冷卻的餘溫】遵從遺願，倒進水槽'
     ]
     N(cards.choice('card_choice', '節點 5：終局抉擇', '你要如何抉擇？', choice_texts, speaker='沈淮', bg=a['cg-cocktail']))
-    L('card_confession', 'card_choice')
+    # 遺言之後先進回憶篇，回到現實才做抉擇（design/回憶篇.md）
+    mem_in, mem_out = memory.build(board, a)
+    L('card_confession', mem_in)
+    L(mem_out, 'card_choice')
     cards.choice_link(board, 'card_choice', 'ending_burn_1', 0)
     cards.choice_link(board, 'card_choice', 'ending_cold_1', 1)
 
