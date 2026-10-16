@@ -95,7 +95,7 @@ L = {
         (SHEN, '第三年，她開始每一杯都問我甜不甜。', 'mem3_shen_enter', 'sad'),
     ],
     'card_mem2_intro': [
-        ('', '開店前的傍晚，夕陽從大窗照進來。他已經連著來了四個多月，每天都坐到兩點十七分，等她抬頭看鐘，才走。', None, ''),
+        ('', '開店前的午後，陽光斜斜照進大窗。他已經連著來了四個多月，每天都坐到兩點十七分，等她抬頭看鐘，才走。', None, ''),
         ('', '吧檯上放著一小瓶藥。她看了他一眼，把藥收進圍裙口袋。', None, ''),
         (ANYA, '偏頭痛。老毛病了。', 'a_mem2_anya_migraine', 'calm'),
         (ANYA, '沈淮，過來。今天教你調酒。', 'a_mem2_anya_teach', 'happy'),
@@ -127,10 +127,13 @@ L = {
     'card_mem2_mine': [
         (ANYA, '……這把匙是我的。只借你。', 'a_mem2_anya_mine', 'calm'),
         ('', '他低下頭。她沒有躲。', None, ''),
-        ('', '夕陽落在吧檯上，杯子裡的金黃還在慢慢地轉。那是他們第一次接吻。', None, ''),
+        ('', '陽光落在吧檯上，杯子裡的金黃還在慢慢地轉。那是他們第一次接吻。', None, ''),
         ('', '很久以後，她才把手抽回去。', None, ''),
     ],
     'card_mem2_cg': [('', '那把匙，她一直放在自己的位置上。', None, '')],
+    'card_mem1_back': [(SHEN, '窗外的雨還在下。吧檯前，只剩我一個人。', 'back1_shen', 'sad')],
+    'card_mem2_back': [(SHEN, '匙在我手裡。她的手不在了。', 'back2_shen', 'sad')],
+    'card_mem3_back': [(SHEN, '我還蹲在儲藏間的抽屜前，手裡是她熬的最後一瓶糖漿。', 'back3_shen', 'sad')],
     # 回憶三：甜嗎
     'card_mem3_intro': [
         ('', '第三年。他已經能自己站吧檯了。', None, ''),
@@ -174,7 +177,7 @@ L = {
     # ---- 臥室：木盒、病歷、胡椒上的字條 ----
     'card_box_truth': [
         ('', '盒子裡墊著暗紅色的絨布。上面是一疊病歷，摺痕被摺開又摺回很多次。', None, ''),
-        ('', '「味覺中樞進行性壞死。伴隨神經痛，將逐年加重。」', None, ''),
+        ('', '「味覺中樞進行性壞死。伴隨神經痛，將逐年加重。目前無治療方式，以止痛為主。」', None, ''),
         ('', '確診日期，是三年前的七月。', None, ''),
         (SHEN, '七月……', 'b_shen_july', 'sad'),
         (SHEN, '那年夏天的尾巴，她開始教我調酒。', 'b_shen_teach', 'sad'),
@@ -228,7 +231,7 @@ L = {
     # ---- 杯墊下的遺言 ----
     'card_confession': [
         (ANYA, '沈淮：我就知道你會找到這裡。所以我賭你，最後一次會聽我的。', 'c_anya_1', 'sad'),
-        (ANYA, '我騙了你快三年。那年七月，我就知道自己會嚐不到味道。我本來想叫你不要再來了，可是你每天都坐到兩點十七分才走。', 'c_anya_2', 'sad'),
+        (ANYA, '我瞞了你快三年。那年七月，我就知道自己會嚐不到味道。我本來想叫你不要再來了，可是你每天都坐到兩點十七分才走。', 'c_anya_2', 'sad'),
         (ANYA, '偏頭痛是假的。研發新酒是真的。', 'c_anya_3', 'sad'),
         (ANYA, '這杯叫〈晚霞〉，我本來是要調給你的。初遇是快要破曉，我想再給我們一個傍晚。', 'c_anya_4', 'sad'),
         (ANYA, '可是我調了快三年，還差一點，舌頭就先不行了。痛也一天比一天清楚。', 'c_anya_5', 'sad'),
@@ -318,7 +321,9 @@ def voice_map_lines(board):
                 MAP_LINES['card_' + vid] = [(SHEN, t, vid, 'sad')]
                 if 'card_' + vid not in have:
                     have.add('card_' + vid); added.append(cards.dialogue('card_' + vid, '沈淮', [(SHEN, t, f'/files/assets/voice/{vid}.mp3')]))
-                for k in ('text', 'speaker'): o.pop(k, None)
+                # text 要留空字串：引擎讀地圖時每個動作都會去處理 text，欄位不在整張地圖就讀不了（2026-10-17 推上 Larch 才發現）
+                o['text'] = ''
+                o.pop('speaker', None)
                 o['cardId'] = 'card_' + vid
             for k in list(o): o[k] = walk(o[k])
         elif isinstance(o, list):
@@ -437,7 +442,7 @@ def build(board, art):
         {'text': '拿吧檯角落的黃銅匙', 'eventId': 'mem2-spoon', 'conditions': [cond('mem2', 'spoon')]},
         {'text': '繞進吧檯，把匙交給她', 'eventId': 'mem2-anya', 'conditions': [cond('mem2', 'teach')]},
     ]
-    N(_map('m-mem-2', '回憶：開店前的傍晚', art, m2, g2,
+    N(_map('m-mem-2', '回憶：開店前的午後', art, m2, g2,
            _env(0, [('m2-sun', 14, 4, 8, '#ff8a3d', False), ('m2-bar', 9, 3, 5, '#ffb35c', False)])))
     N(_card('card_mem2_cg', '回憶：黃銅匙', art, bg=art['cg-mem2']))
 
@@ -465,6 +470,8 @@ def build(board, art):
 
     # 回憶三夜裡、臥室真相、回憶四、遺言、抉擇、結局
     cg = lambda k, alt: art.get(k) or art[alt]
+    for k in ('card_mem1_back', 'card_mem2_back', 'card_mem3_back'):
+        N(_card(k, '回到現在', art, bg=art['bg-black'], bgm=art['bgm-bar']))
     N(_card('card_mem3_night', '回憶：還差一點', art, bg=cg('cg-mem3b', 'cg-mem3'), bgm=art['bgm-almost']))
     N(_card('card_box_truth', '木盒', art, bgm=art['bgm-almost']))
     N(_card('card_mem4_enter', '回憶：晚霞', art, bg=art['bg-black']))
@@ -492,12 +499,15 @@ def build(board, art):
     # 回憶結束回到原本那張地圖（主角回到該地圖的起點，變數與背包都還在）
     link('prologue', 'm-bar')
     link('card_mem1_enter', 'm-mem-1')
-    link('card_mem1_cg', 'm-bar')
+    link('card_mem1_cg', 'card_mem1_back')
+    link('card_mem1_back', 'm-bar')
     link('card_mem2_enter', 'm-mem-2')
-    link('card_mem2_cg', 'm-bar')
+    link('card_mem2_cg', 'card_mem2_back')
+    link('card_mem2_back', 'm-bar')
     link('card_mem3_enter', 'm-mem-3')
     link('card_mem3_cg', 'card_mem3_night')
-    link('card_mem3_night', 'm-storage')
+    link('card_mem3_night', 'card_mem3_back')
+    link('card_mem3_back', 'm-storage')
     link('card_mem4_enter', 'card_mem4_1')
     link('card_mem4_1', 'card_mem4_2')
     link('card_mem4_2', 'card_mem4_return')

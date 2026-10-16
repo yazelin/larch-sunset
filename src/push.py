@@ -13,7 +13,7 @@ KEY = open(os.path.expanduser(os.environ.get('LARCH_KEY_FILE', '~/.config/larch/
 BASE = f'https://larch.ink/api/agent/projects/{build.PROJECT_ID}'
 # 素材走 jsDelivr（作者 2026-10-17）：/files/assets/… 只有本機預覽讀得到，推之前換成 GitHub tag 的固定網址。
 # 改了素材要先 commit、推 main、打新 tag，再改這裡。
-CDN_TAG = os.environ.get('CDN_TAG', 'v2-20261017')
+CDN_TAG = os.environ.get('CDN_TAG', 'v2b-20261017')
 CDN = f'https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@{CDN_TAG}/'
 
 
