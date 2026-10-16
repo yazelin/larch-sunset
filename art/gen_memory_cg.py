@@ -12,6 +12,17 @@ STYLE = ('Soft anime illustration, painterly cel shading, warm amber bar lightin
          'Keep both faces exactly like the references. No text, no letters, no signs, no clock. Cinematic 16:9 composition, '
          'characters fill the frame. Exactly one ANYA and one SHEN, two hands each.')
 CG = {
+    # 設定 A（2026-10-16）：她是調酒師，他是淋濕來躲雨的客人；她教他調酒
+    'cg_mem1_towel': 'Rainy night, almost closing time. SHEN is a customer here, NOT a bartender: he sits on a bar stool, completely soaked by the storm, '
+                     'wearing a wet plain white shirt with the collar open (NO waistcoat, NO tie), wet hair. ANYA, the bartender in her dusty-pink apron over the cream sweater, '
+                     'leans across the wooden counter and dries his hair with a white towel in both hands; their faces are very close, eyes meeting, '
+                     'she is half laughing, he is stunned and blushing. A coupe glass with a golden cocktail and tiny pink peppercorn flecks sits on the counter between them. '
+                     'Rain streaks on the dark window behind, warm amber lamps. Strong romantic tension.',
+    'cg_mem2_teach': 'Early evening before opening, orange sunset light pouring through the big window. Behind the counter, SHEN in a casual white shirt with rolled sleeves '
+                     '(NO waistcoat, NO tie) holds a long thin brass bar spoon in a tall clear mixing glass with NO ice. ANYA in her dusty-pink apron over the cream sweater '
+                     'stands pressed close at his side, her RIGHT hand wrapped over the back of his right hand on the spoon, guiding it; inside the glass clear golden liquid spins in a smooth spiral. '
+                     'The spoon has stopped; she looks up at him, he looks down at her, faces inches apart, both blushing, neither pulling away. Strong romantic tension.',
+
     'cg_mem1_rain': 'Rainy night, almost closing time. ANYA sits on a bar stool at the counter, completely soaked by the storm: wet hair with droplets, '
                     'a dry white towel draped over her shoulders, wearing a damp cream cable-knit sweater (NO apron). She holds a coupe glass with both hands; '
                     'the cocktail is golden with tiny pink peppercorn flecks floating on top. She has just taken a sip and is laughing, eyes slightly teary from the spice. '

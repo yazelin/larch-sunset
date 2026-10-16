@@ -27,13 +27,15 @@ ART = {
     'cg-ending-burn': '/files/assets/art/cg_ending_burn.webp',
     'cg-ending-cold': '/files/assets/art/cg_ending_cold.webp',
     # 回憶篇（design/回憶篇.md）
-    'cg-mem1': '/files/assets/art/cg_mem1_rain.webp',
-    'cg-mem2': '/files/assets/art/cg_mem2_spoon.webp',
+    'cg-mem1': '/files/assets/art/cg_mem1_towel.webp',
+    'cg-mem2': '/files/assets/art/cg_mem2_teach.webp',
     'cg-mem3': '/files/assets/art/cg_mem3_shoulder.webp',
 
     # 角色行走圖 (Walker Sprites, 3x4, 48x64)
     'walk-shen': '/files/assets/art/walk/walk-shen.webp',
     'walk-anya': '/files/assets/art/walk/walk-anya.webp',
+    # 回憶一、二：還不是調酒師的沈淮（便服）
+    'walk-shen-casual': '/files/assets/art/walk/walk-shen-casual.webp',
     'walk-anya-spirit': '/files/assets/art/walk/walk-anya-spirit.webp',
 
     # 角色立繪 (Portraits)

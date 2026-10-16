@@ -18,48 +18,78 @@ L = {
         (SHEN, '三年前的那個晚上，也是兩點十七分。', 'mem_shen_enter', 'sad'),
         ('', '窗外響起了雨聲。', None, ''),
     ],
+    # 回憶一：他淋濕進門，她是調酒師（設定 A，作者 2026-10-16 拍板）
     'card_mem1_intro': [
         ('', '三年前。雨下得很大，打烊前最後一刻，門上的鈴響了。', None, ''),
-        (ANYA, '還有營業嗎？', 'mem1_anya_open', 'calm'),
-        (SHEN, '還有一杯的時間。', 'mem1_shen_open', 'calm'),
-        ('', '她全身都濕透了，坐上吧檯前的高腳椅，髮梢還在滴水。', None, ''),
+        (SHEN, '還有營業嗎？', 'a_mem1_shen_open', 'calm'),
+        (ANYA, '還有一杯的時間。', 'a_mem1_anya_open', 'calm'),
+        ('', '一條毛巾從吧檯後面飛過來，正好蓋在他頭上。', None, ''),
+        (ANYA, '先擦乾。地板都被你滴濕了。', 'a_mem1_anya_towel', 'happy'),
     ],
-    'card_mem1_talk': [
-        (ANYA, '謝謝。', 'mem1_anya_thanks', 'calm'),
-        (ANYA, '我不喝苦的，煙燻味也不行。', 'mem1_anya_nobitter', 'calm'),
-        (ANYA, '有沒有喝起來，像天快亮的東西？', 'mem1_anya_dawn', 'happy'),
-        (SHEN, '坐一下，我調給妳。', 'mem1_shen_mix', 'calm'),
+    'card_mem1_seat': [
+        ('', '他還在跟毛巾奮鬥。她嘆了口氣，繞出吧檯，從他手裡抽走毛巾，替他把頭髮擦乾。', None, ''),
+        ('', '她的手停在他耳邊。', None, ''),
+        (ANYA, '你是來躲雨，還是來喝酒的？', 'a_mem1_anya_why', 'happy'),
     ],
-    'card_mem1_peat': [(ANYA, '這個聞起來像燒焦的木頭。', 'mem1_anya_peat', 'happy')],
-    'card_mem1_bitters': [(ANYA, '苦的不要。', 'mem1_anya_bitters', 'calm')],
+    'card_mem1_rain': [(ANYA, '那雨停之前，你都是我的客人。', 'a_mem1_anya_guest', 'happy')],
+    'card_mem1_both': [
+        (ANYA, '貪心。', 'a_mem1_anya_greedy', 'happy'),
+        ('', '她把毛巾丟回他懷裡，轉身走回吧檯後面。', None, ''),
+    ],
+    'card_mem1_order': [(ANYA, '想喝什麼？', 'a_mem1_anya_order', 'calm')],
+    'card_mem1_strong': [(ANYA, '淋成這樣還喝烈的？不行。今晚聽我的。', 'a_mem1_anya_strong', 'happy')],
+    'card_mem1_mix': [
+        (ANYA, '那我調一杯我自己最喜歡的。還沒給別人喝過。', 'a_mem1_anya_fav', 'happy'),
+        ('', '金黃的甜白酒，一小匙番紅花糖漿，最後她在杯口磨了幾粒粉紅胡椒，把杯子推到他面前。', None, ''),
+    ],
+    'card_mem1_stare': [(ANYA, '看我做什麼？喝酒。', 'a_mem1_anya_stare', 'happy')],
     'card_mem1_taste': [
-        ('', '她雙手捧著杯子喝了一口，咬到胡椒，嗆了一下，然後笑出來。', None, ''),
-        (ANYA, '好辣……可是好甜。', 'mem1_anya_spicy', 'happy'),
-        (ANYA, '真的像天快亮了。', 'mem1_anya_likedawn', 'happy'),
+        ('', '他咬到胡椒，嗆了一下。她撐著吧檯笑出聲，笑到眼角都濕了。', None, ''),
+        (SHEN, '好辣……可是好甜。', 'a_mem1_shen_spicy', 'happy'),
+        (ANYA, '像不像天快亮的時候？', 'a_mem1_anya_dawn', 'happy'),
         ('', '她抬頭看牆上的掛鐘。', None, ''),
-        (ANYA, '兩點十七分。我會記得。', 'mem1_anya_remember', 'happy'),
+        (ANYA, '兩點十七分。你是我今天最後一個客人。', 'a_mem1_anya_last', 'calm'),
+        (SHEN, '那我明天早一點來。', 'a_mem1_shen_tomorrow', 'calm'),
+        (ANYA, '……兩點十七分。我會記得。', 'a_mem1_anya_remember', 'happy'),
+    ],
+    'card_mem1_leave': [
+        (ANYA, '喂。', 'a_mem1_anya_hey', 'calm'),
+        ('', '她追到門口，把一把傘塞進他手裡。指尖碰到的時候，她沒有馬上縮回去。', None, ''),
+        (ANYA, '明天要還。', 'a_mem1_anya_return', 'happy'),
     ],
     'card_mem1_cg': [('', '那天晚上的雨，一直下到天亮。', None, '')],
+    # 回憶二：她教他用黃銅匙
     'card_mem2_intro': [
         ('', '幾個月後。開店前的傍晚，夕陽從大窗照進來。', None, ''),
-        (ANYA, '又混掉了。', 'mem2_anya_mixed', 'sad'),
-        ('', '她站在吧檯後面，杯裡的顏色攪成一團。', None, ''),
+        (ANYA, '沈淮，過來。今天教你調酒。', 'a_mem2_anya_teach', 'happy'),
+        (ANYA, '吧檯角落那把匙，幫我拿過來。', 'a_mem2_anya_spoon', 'calm'),
     ],
     'card_mem2_spoon': [
-        (SHEN, '用這個，貼著杯壁慢慢轉。', 'mem2_shen_spoon', 'calm'),
-        (ANYA, '這樣？', 'mem2_anya_like', 'calm'),
+        (ANYA, '貼著杯壁，慢慢轉。不要用力。', 'a_mem2_anya_how', 'calm'),
+        (SHEN, '這樣？', 'a_mem2_shen_like', 'calm'),
+        ('', '杯裡的顏色一下子全攪混了。', None, ''),
     ],
-    'card_mem2_pull': [
-        (ANYA, '你說的我聽不懂，你來。', 'mem2_anya_youdo', 'happy'),
-        ('', '她拉過他的手，放在自己的手上。', None, ''),
+    'card_mem2_again': [
+        ('', '他又轉了一次。顏色還是攪成一團。', None, ''),
+        (ANYA, '你不行啦。手給我。', 'a_mem2_anya_hand', 'happy'),
     ],
     'card_mem2_hands': [
-        ('', '他的手覆在她手上，匙沿著杯壁轉了一圈。金黃在杯裡慢慢旋開，沒有混。', None, ''),
-        (ANYA, '……手好燙。', 'mem2_anya_hot', 'happy'),
-        (SHEN, '是妳的手太冰。', 'mem2_shen_cold', 'happy'),
-        (ANYA, '這把匙借我。以後就是我的了。', 'mem2_anya_mine', 'happy'),
+        ('', '她站到他身後，手覆上他的手。匙沿著杯壁轉了一圈，金黃在杯裡慢慢旋開，沒有混。', None, ''),
+        (ANYA, '感覺到了嗎？', 'a_mem2_anya_feel', 'calm'),
+        (SHEN, '……感覺到了。', 'a_mem2_shen_feel', 'calm'),
+        ('', '匙停了。她的手沒有放開。', None, ''),
+        (ANYA, '你的手好冰。', 'a_mem2_anya_cold', 'calm'),
+        (SHEN, '是妳的手太燙。', 'a_mem2_shen_hot', 'calm'),
+        ('', '誰都沒有先退開。', None, ''),
     ],
-    'card_mem2_cg': [('', '那之後，那把匙一直放在她的位置上。', None, '')],
+    'card_mem2_grip': [('', '他翻過手，把她的手握進掌心。', None, '')],
+    'card_mem2_turn': [('', '他轉過身。她就在他面前，近到看得見她的睫毛在抖。', None, '')],
+    'card_mem2_mine': [
+        (ANYA, '……這把匙是我的。只借你。', 'a_mem2_anya_mine', 'calm'),
+        ('', '她說完，才慢慢把手抽回去。', None, ''),
+    ],
+    'card_mem2_cg': [('', '那把匙，她一直放在自己的位置上。', None, '')],
+    # 回憶三：甜嗎
     'card_mem3_intro': [
         ('', '第三年。打烊後，店裡只剩他們兩個。', None, ''),
         (ANYA, '來，試試這杯。', 'mem3_anya_try', 'happy'),
@@ -77,7 +107,9 @@ L = {
         ('', '她繞出吧檯，在他旁邊的高腳椅坐下，頭靠上他的肩膀。', None, ''),
         (ANYA, '沈淮，我想看一次真正的晚霞。', 'mem3_anya_sunset', 'sad'),
         (SHEN, '明天傍晚就帶妳去。', 'mem3_shen_tomorrow', 'calm'),
-        ('', '她笑了一下，沒有說好。', None, ''),
+        (ANYA, '如果有一天，我嚐不出你調的酒了呢？', 'a_mem3_anya_ifone', 'sad'),
+        (SHEN, '那我就調到妳嚐得出來為止。', 'a_mem3_shen_until', 'calm'),
+        ('', '她把臉埋進他的肩膀，很久沒有抬起來。', None, ''),
     ],
     'card_mem3_cg': [('', '那是她第一次說想看晚霞。', None, '')],
     'card_mem_return': [
@@ -122,66 +154,71 @@ def build(board, art):
     # 進入回憶：遺言之後
     N(_card('card_mem_enter', '回憶：兩點十七分', art))
 
-    # ── 回憶一〈02:17，暴雨〉：她坐在吧檯前（9,6），沈淮從前場開始 ──
+    # ── 回憶一〈02:17，暴雨〉：他淋濕進門（9,9）；她在吧檯後（10,3）；高腳椅（9,6）；門口（9,10） ──
+    guest = lambda x, y, d: ev('hero', x, y, actor='player', direction=d, sprite=walker(art['walk-shen-casual']), actorId='shen')
     m1 = [
-        shen(13, 7, 'left'),
-        ev('mem1-intro', 1, 11, trigger='auto', once=True, actions=[card('card_mem1_intro'), setv('mem1', 'towel')]),
-        ev('mem1-towel', 15, 7, name='沙發扶手上的乾毛巾', marker={'label': '乾毛巾', 'kind': 'quest'}, conditions=[cond('mem1', 'towel')],
-           actions=[say('沙發扶手上掛著一條乾毛巾。', speaker='player'), item('towel', '乾毛巾'), setv('mem1', 'give')]),
-        npc('mem1-anya', 9, 6, anya, direction='up', name='安雅', marker={'label': '安雅', 'kind': 'talk'},
-            actions=[branch([cond('mem1', 'give')],
-                            [remove('towel', '乾毛巾'), card('card_mem1_talk'), setv('mem1', 'mix')],
-                            [say('她冷得一直發抖。先找點東西讓她擦乾。', speaker='player')])]),
-        ev('mem1-mix', 9, 3, name='吧檯工作台', marker={'label': '替她調第一杯', 'kind': 'quest'}, conditions=[cond('mem1', 'mix')],
+        guest(9, 9, 'up'),
+        ev('mem1-intro', 1, 11, trigger='auto', once=True, actions=[card('card_mem1_intro'), setv('mem1', 'seat')]),
+        npc('mem1-anya', 10, 3, anya, direction='down', name='安雅', marker={'label': '安雅', 'kind': 'talk'},
+            actions=[say('她用下巴指了指吧檯前的高腳椅。', speaker='player')]),
+        ev('mem1-seat', 9, 6, name='吧檯前的高腳椅', marker={'label': '坐下', 'kind': 'quest'}, conditions=[cond('mem1', 'seat')],
            actions=[
-               # 第一個動作不能是選擇題：按互動鍵的那一下會直接選到第一個選項
-               say('她說，要喝起來像天快亮的東西。他看著酒櫃想了一下。', speaker='player'),
-               choice_action('基酒用什麼？', [
-                   ('貴腐甜白酒', [say('金黃的甜白酒倒進杯底，像還沒亮透的天色。', speaker='player')]),
-                   ('泥煤威士忌', [card('card_mem1_peat'), say('他把瓶子放回去，換了甜白酒。', speaker='player')]),
+               # 第一個動作不能是選擇題：按互動鍵的那一下會直接選到選擇題的第一個選項
+               card('card_mem1_seat'),
+               choice_action('回答她：躲雨，還是喝酒？', [
+                   ('「躲雨。」', [card('card_mem1_rain')]),
+                   ('「都有。」', [card('card_mem1_both')]),
                ], speaker='player'),
-               choice_action('再加一點什麼？', [
-                   ('番紅花糖漿', [say('一小匙番紅花糖漿，杯裡的金黃亮了起來。', speaker='player')]),
-                   ('苦精', [card('card_mem1_bitters'), say('他收起苦精，改拿番紅花糖漿。', speaker='player')]),
+               card('card_mem1_order'),
+               choice_action('點什麼？', [
+                   ('「不要太苦就好。」', []),
+                   ('「來杯最烈的。」', [card('card_mem1_strong')]),
                ], speaker='player'),
-               choice_action('最後收尾？', [
-                   ('粉紅胡椒', [say('磨碎的粉紅胡椒落在酒面上。', speaker='player')]),
-                   ('肉桂粉', [say('他聞了一下，把肉桂放回架上，拿起粉紅胡椒。', speaker='player')]),
+               card('card_mem1_mix'),
+               choice_action('杯子推到你面前。', [
+                   ('喝一口', []),
+                   ('先看著她', [card('card_mem1_stare')]),
                ], speaker='player'),
-               card('card_mem1_taste'), setv('mem1', 'done'), jump('card_mem1_cg'),
+               card('card_mem1_taste'), setv('mem1', 'leave'),
            ]),
+        ev('mem1-door', 9, 10, name='門口', marker={'label': '雨小了，該走了', 'kind': 'quest'}, conditions=[cond('mem1', 'leave')],
+           actions=[card('card_mem1_leave'), setv('mem1', 'done'), jump('card_mem1_cg')]),
     ]
     g1 = [
-        {'text': '拿沙發上的乾毛巾給她', 'eventId': 'mem1-towel', 'conditions': [cond('mem1', 'towel')]},
-        {'text': '把毛巾交給安雅', 'eventId': 'mem1-anya', 'conditions': [cond('mem1', 'give')]},
-        {'text': '從左邊翻板繞進吧檯，替她調第一杯', 'eventId': 'mem1-mix', 'conditions': [cond('mem1', 'mix')]},
+        {'text': '坐到吧檯前的高腳椅', 'eventId': 'mem1-seat', 'conditions': [cond('mem1', 'seat')]},
+        {'text': '雨小了，往門口走', 'eventId': 'mem1-door', 'conditions': [cond('mem1', 'leave')]},
     ]
     N(_map('m-mem-1', '回憶：暴雨的夜', art, m1, g1,
-           _env(0, [('m1-bar', 9, 3, 6, '#ffc46b', False), ('m1-lounge', 10, 7, 7, '#ffb04d', False), ('m1-sofa', 15, 6, 4, '#ffd18a', False)])))
+           _env(0, [('m1-bar', 9, 3, 6, '#ffc46b', False), ('m1-lounge', 10, 7, 7, '#ffb04d', False), ('m1-door', 9, 9, 3, '#ffd18a', False)])))
     N(_card('card_mem1_cg', '回憶：初遇', art, bg=art['cg-mem1']))
 
-    # ── 回憶二〈黃銅匙〉：她在吧檯後（10,3），匙在吧檯前角落（11,6） ──
+    # ── 回憶二〈黃銅匙〉：她在吧檯後（10,3）教他；匙在吧檯前角落（11,6） ──
     m2 = [
-        shen(9, 7, 'up'),
+        guest(9, 7, 'up'),   # 還在學，穿便服；第三年才換上調酒師的衣服
         ev('mem2-intro', 1, 11, trigger='auto', once=True, actions=[card('card_mem2_intro'), setv('mem2', 'spoon')]),
         # 吧檯角落的匙：跟現在的吧檯同一張道具圖、同一個位置，拿起來就消失
         ev('mem2-spoon-visual', 0, 8, name='黃銅調酒匙視覺', free={'url': art['prop-spoon'], 'x': 11.2, 'y': 3.3, 'w': 0.35, 'h': 0.35},
            conditions=[cond('mem2', 'spoon')]),
         ev('mem2-spoon', 11, 6, name='黃銅調酒匙', marker={'label': '黃銅匙', 'kind': 'quest'}, conditions=[cond('mem2', 'spoon')],
-           actions=[say('吧檯角落的黃銅調酒匙，跟了他好幾年。', speaker='player'), item('spoon_old', '黃銅調酒匙'), setv('mem2', 'teach')]),
+           actions=[say('吧檯角落的黃銅調酒匙，柄被她握得發亮。', speaker='player'), item('spoon_old', '黃銅調酒匙'), setv('mem2', 'teach')]),
         npc('mem2-anya', 10, 3, anya, direction='down', name='安雅', marker={'label': '安雅', 'kind': 'talk'},
             actions=[branch([cond('mem2', 'teach')],
                             [remove('spoon_old', '黃銅調酒匙'), card('card_mem2_spoon'),
-                             choice_action('怎麼教她？', [
-                                 ('握住她的手示範', []),
-                                 ('在旁邊說給她聽', [card('card_mem2_pull')]),
+                             choice_action('又混了。', [
+                                 ('「妳教我。」', []),
+                                 ('再試一次', [card('card_mem2_again')]),
                              ], speaker='player'),
-                             card('card_mem2_hands'), setv('mem2', 'done'), jump('card_mem2_cg')],
-                            [say('她盯著攪混的杯子嘆氣。吧檯角落那把黃銅匙，或許幫得上忙。', speaker='player')])]),
+                             card('card_mem2_hands'),
+                             choice_action('她的手還覆在你手上。', [
+                                 ('握緊她的手', [card('card_mem2_grip')]),
+                                 ('轉過身', [card('card_mem2_turn')]),
+                             ], speaker='player'),
+                             card('card_mem2_mine'), setv('mem2', 'done'), jump('card_mem2_cg')],
+                            [say('她在等那把匙。吧檯角落。', speaker='player')])]),
     ]
     g2 = [
         {'text': '拿吧檯角落的黃銅匙', 'eventId': 'mem2-spoon', 'conditions': [cond('mem2', 'spoon')]},
-        {'text': '繞進吧檯，教她用黃銅匙', 'eventId': 'mem2-anya', 'conditions': [cond('mem2', 'teach')]},
+        {'text': '繞進吧檯，把匙交給她', 'eventId': 'mem2-anya', 'conditions': [cond('mem2', 'teach')]},
     ]
     N(_map('m-mem-2', '回憶：開店前的傍晚', art, m2, g2,
            _env(0, [('m2-sun', 14, 4, 8, '#ff8a3d', False), ('m2-bar', 9, 3, 5, '#ffb35c', False)])))
@@ -195,7 +232,7 @@ def build(board, art):
         ev('mem3-glass', 10, 6, name='她推過來的那杯', marker={'label': '她推過來的那杯', 'kind': 'quest'}, conditions=[cond('mem3', 'glass')],
            actions=[
                card('card_mem3_ask'),
-               choice_action('甜嗎？', [('「剛好。」', []), ('「有點太甜。」', [])], speaker='player'),
+               choice_action('回答她甜不甜。', [('「剛好。」', []), ('「有點太甜。」', [])], speaker='player'),
                card('card_mem3_sugar'),
                choice_action('她看起來有點不一樣。', [
                    ('問她怎麼了', [card('card_mem3_why')]),
