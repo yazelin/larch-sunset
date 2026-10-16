@@ -302,13 +302,13 @@ def _env(darkness, lights):
             'lights': [dict(zip(('id', 'x', 'y', 'radius', 'color', 'flicker'), l)) for l in lights]}
 
 
-def _map(mid, title, art, events, guidance, env):
+def _map(mid, title, art, events, guidance, env, bgm='bgm-spoon'):
     real = (ROOT / 'assets/maps/bar_ground.webp').exists()
     kind = 'objects' if real else 'blocks'
     urls = {o['name']: f"/files/assets/{kind}/bar/{o['name']}.webp" for o in layout.objects(D)}
     events = events + [dict(e, id=e['id'].replace('obj-m-bar', f'obj-{mid}')) for e in layout.events(D, urls)]
     m = map_dict(title, W, H, f'/files/assets/maps/bar_{"ground" if real else "blocks"}.webp', layout.walls(D), events, guidance, env)
-    return map_node(mid, title, m, bgm=art.get('bgm-memory', art.get('bgm-bar', '')))
+    return map_node(mid, title, m, bgm=art.get(bgm, ''))
 
 
 def build(board, art):
@@ -321,7 +321,7 @@ def build(board, art):
     N(_card('prologue', '序幕：頭七', art, bg=art['bg-bar'], start=True, bgm=art.get('bgm-bar')))
     N(_card('card_anya_note', '安雅的便條', art))
     # 每段回憶的入口（地圖事件 jump 過來）
-    N(_card('card_mem1_enter', '回憶：兩點十七分', art))
+    N(_card('card_mem1_enter', '回憶：兩點十七分', art, bgm=art['bgm-storm']))
     N(_card('card_mem2_enter', '回憶：黃銅匙', art))
     N(_card('card_mem3_enter', '回憶：甜嗎', art))
 
@@ -360,7 +360,7 @@ def build(board, art):
         {'text': '雨小了，往門口走', 'eventId': 'mem1-door', 'conditions': [cond('mem1', 'leave')]},
     ]
     N(_map('m-mem-1', '回憶：暴雨的夜', art, m1, g1,
-           _env(0, [('m1-bar', 9, 3, 6, '#ffc46b', False), ('m1-lounge', 10, 7, 7, '#ffb04d', False), ('m1-door', 9, 9, 3, '#ffd18a', False)])))
+           _env(0, [('m1-bar', 9, 3, 6, '#ffc46b', False), ('m1-lounge', 10, 7, 7, '#ffb04d', False), ('m1-door', 9, 9, 3, '#ffd18a', False)]), bgm='bgm-storm'))
     N(_card('card_mem1_cg', '回憶：初遇', art, bg=art['cg-mem1']))
 
     # ── 回憶二〈黃銅匙〉：她在吧檯後（10,3）教他；匙在吧檯前角落（11,6） ──
@@ -419,21 +419,21 @@ def build(board, art):
 
     # 回憶三夜裡、臥室真相、回憶四、遺言、抉擇、結局
     cg = lambda k, alt: art.get(k) or art[alt]
-    N(_card('card_mem3_night', '回憶：還差一點', art, bg=cg('cg-mem3b', 'cg-mem3')))
-    N(_card('card_box_truth', '木盒', art))
+    N(_card('card_mem3_night', '回憶：還差一點', art, bg=cg('cg-mem3b', 'cg-mem3'), bgm=art['bgm-almost']))
+    N(_card('card_box_truth', '木盒', art, bgm=art['bgm-almost']))
     N(_card('card_mem4_enter', '回憶：晚霞', art))
-    N(_card('card_mem4_1', '回憶：頂樓', art, bg=cg('cg-mem4', 'cg-mem3'), bgm=art.get('bgm-memory')))
+    N(_card('card_mem4_1', '回憶：頂樓', art, bg=cg('cg-mem4', 'cg-mem3'), bgm=art['bgm-rooftop']))
     N(_card('card_mem4_2', '回憶：有風就好', art, bg=cg('cg-mem4', 'cg-mem3')))
-    N(_card('card_mem4_return', '回到現在', art))
+    N(_card('card_mem4_return', '回到現在', art, bgm=art['bgm-bar']))
     N(_card('card_bed', '她那一側的床', art))
     N(_card('card_confession', '杯墊下的信', art, bg=art['cg-cocktail'], bgm=art.get('bgm-confession')))
     N(_card('card_spirit', '頭七', art, bg=art['cg-cocktail']))
     N(cards.choice('card_choice', '抉擇', '她拜託我倒掉。', ['替她嚐', '照她說的倒掉'], speaker=SHEN, bg=art['cg-cocktail']))
-    N(_card('ending_burn_1', '共赴晚霞', art, bg=art['cg-cocktail']))
+    N(_card('ending_burn_1', '共赴晚霞', art, bg=art['cg-cocktail'], bgm=art['bgm-together']))
     N(_card('ending_burn_2', '共赴晚霞', art, bg=art['cg-cocktail']))
     N(_card('ending_burn_3', '共赴晚霞', art, bg=art['cg-ending-burn']))
     N(_card('ending_burn_4', '共赴晚霞', art, bg=art['cg-ending-burn']))
-    N(_card('ending_cold_1', '冷卻的餘溫', art, bg=art['bg-bar']))
+    N(_card('ending_cold_1', '冷卻的餘溫', art, bg=art['bg-bar'], bgm=art['bgm-cold']))
     N(_card('ending_cold_2', '冷卻的餘溫', art, bg=art['cg-ending-cold']))
     N(_card('ending_cold_3', '冷卻的餘溫', art, bg=art['cg-ending-cold']))
 

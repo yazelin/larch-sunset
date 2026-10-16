@@ -25,6 +25,15 @@ ART = {
 
     # 原作 CG 與封面（故事劇情卡使用，全部一律為 webp 格式）
     'cover': '/files/assets/art/cover.webp',
+    # 配樂：gemini-web 重配、切 58.5 秒循環（art/music.py，作者 2026-10-17）
+    'bgm-bar': '/files/assets/bgm/theme.mp3',
+    'bgm-storm': '/files/assets/bgm/storm.mp3',
+    'bgm-spoon': '/files/assets/bgm/spoon.mp3',
+    'bgm-almost': '/files/assets/bgm/almost.mp3',
+    'bgm-rooftop': '/files/assets/bgm/rooftop.mp3',
+    'bgm-confession': '/files/assets/bgm/letter.mp3',
+    'bgm-together': '/files/assets/bgm/together.mp3',
+    'bgm-cold': '/files/assets/bgm/cold.mp3',
     'cg-cocktail': '/files/assets/art/cg_cocktail.webp',
     'cg-ending-burn': '/files/assets/art/cg_ending_burn.webp',
     'cg-ending-cold': '/files/assets/art/cg_ending_cold.webp',
@@ -48,8 +57,6 @@ ART = {
     'p-anya-spirit': '/files/assets/art/p_anya_spirit.webp',
 
     # 配樂 (BGM)
-    'bgm-bar': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3',
-    'bgm-confession': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132345785_10-crystal-wings-at-dawn.mp3',
 }
 
 VOICES = {
