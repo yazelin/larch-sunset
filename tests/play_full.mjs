@@ -37,6 +37,7 @@ try {
   await ui.clickText('開始遊戲'); await sleep(1500);
   const end = Date.now() + 25 * 60000;
   while (Date.now() < end) {
+   try {
     const t = await text(); seen += t;
     if (END_RE.test(t)) break;
     const inp = await inputBox();
@@ -44,7 +45,8 @@ try {
     const q = Object.keys(CHOICES).find(k => t.includes(k));
     if (q && await vis(CHOICES[q])) { await shot(); await clickVisible(CHOICES[q]); await sleep(700); continue; }
     if (q) { await sleep(300); continue; }
-    if (await boxOpen()) { await ui.advance(); await sleep(400); continue; }
+    // 翻頁前後各讀一次：Larch 本站比較慢，長句打字還沒完就翻過去會漏讀
+    if (await boxOpen()) { await sleep(300); seen += await text(); await ui.advance(); await sleep(700); seen += await text(); continue; }
     let g = null; for (const x of GUIDE) if (t.includes(x) && await vis(x)) { g = x; break; }
     if (g) {
       const k = (guided.get(g) || 0) + 1; guided.set(g, k);
@@ -52,6 +54,11 @@ try {
       await shot(); await clickVisible(g); await sleep(5000); await page.keyboard.press('Space'); await sleep(900); continue;
     }
     await ui.advance(); await sleep(400);
+   } catch (e) {
+    // 換場時畫面框架會整個換掉，剛好讀到就會丟 detached；等一下再讀
+    if (!/detached|Target closed|Execution context/.test(e.message)) throw e;
+    await sleep(800);
+   }
   }
   await shot();
   assert(END_RE.test(seen), '走到結局 ' + (COLD ? '〈冷卻的餘溫〉' : '〈共赴晚霞〉'));
