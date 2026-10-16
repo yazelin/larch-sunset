@@ -102,6 +102,7 @@ def build():
 
     # 3. 劇情卡片：序幕、便條、回憶、病歷、遺言、抉擇與兩個結局都在 memory.py（design/重寫.md）
     memory.build(board, a)
+    print('地圖內心話轉成配音卡：', memory.voice_map_lines(board))
 
 
     (ROOT / 'dist').mkdir(exist_ok=True)

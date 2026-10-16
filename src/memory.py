@@ -289,9 +289,51 @@ L = {
 }
 
 
+# 地圖上沈淮的第一人稱內心話（地圖對話框掛不了音檔）：建置時轉成一句一張的對話卡，地圖改播卡片（作者 2026-10-17：要配）
+MAP_LINES = {}
+
+
+def _map_voice_id(text):
+    import hashlib
+    return 'mv_' + hashlib.md5(text.encode()).hexdigest()[:8]
+
+
+def voice_map_lines(board):
+    """把地圖事件裡含「我」的旁白換成帶配音的卡片；回傳新增的卡片數。"""
+    import json as _j
+    have = {n['id'] for n in board['nodes']}
+    added = []
+
+    def walk(o):
+        # 地圖資料有的層是 JSON 字串（pluginValues），解開走完再包回去
+        if isinstance(o, str) and o[:1] in '{[':
+            try:
+                d = _j.loads(o)
+            except ValueError:
+                return o
+            return _j.dumps(walk(d), ensure_ascii=False)
+        if isinstance(o, dict):
+            if o.get('kind') == 'dialogue' and not o.get('cardId') and '我' in (o.get('text') or ''):
+                t = o['text']; vid = _map_voice_id(t)
+                MAP_LINES['card_' + vid] = [(SHEN, t, vid, 'sad')]
+                if 'card_' + vid not in have:
+                    have.add('card_' + vid); added.append(cards.dialogue('card_' + vid, '沈淮', [(SHEN, t, f'/files/assets/voice/{vid}.mp3')]))
+                for k in ('text', 'speaker'): o.pop(k, None)
+                o['cardId'] = 'card_' + vid
+            for k in list(o): o[k] = walk(o[k])
+        elif isinstance(o, list):
+            for i in range(len(o)): o[i] = walk(o[i])
+        return o
+    for n in board['nodes']:
+        if n['id'].startswith('m-'):
+            walk(n['data'])
+    board['nodes'].extend(added)
+    return len(added)
+
+
 def voice_lines():
     """給配音腳本：[(檔名, 文字, 聲線, 情緒)]"""
-    return [(f'{vid}.mp3', tx, VOICE[sp][0], emo or VOICE[sp][1]) for ls in L.values() for sp, tx, vid, emo in ls if vid]
+    return [(f'{vid}.mp3', tx, VOICE[sp][0], emo or VOICE[sp][1]) for ls in list(L.values()) + list(MAP_LINES.values()) for sp, tx, vid, emo in ls if vid]
 
 
 def _card(cid, title, art, bg='', **kw):

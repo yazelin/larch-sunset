@@ -5,7 +5,9 @@ FORCE=1：全部重產（作者 2026-10-17：Larch 能帶情緒了，全部重�
 import os, sys
 from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(__file__))
-import memory, tts11
+import memory, tts11, build
+
+build.build()   # 先建置一次，地圖內心話才會進 memory.MAP_LINES
 
 FORCE = bool(os.environ.get('FORCE'))
 lines = memory.voice_lines()
