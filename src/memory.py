@@ -1,5 +1,7 @@
-"""回憶篇（design/回憶篇.md，作者 2026-10-16 拍板）：遺言之後、終局抉擇之前，回到三年前跟還活著的安雅相處三段。
-三段都用現在的吧檯分層圖，靠燈光、時間、人物位置區分；台詞全部在這一份，配音檔名＝台詞 id。
+"""劇本台詞（design/重寫.md，2026-10-17 定稿）：序幕、便條，與穿插在解謎中的回憶。
+找到一樣東西就回到一段過去：答完風味筆記→回憶一、拿匙→回憶二、儲藏間→回憶三。
+回憶都用現在的吧檯分層圖，靠燈光、時間、人物位置區分；配音檔名＝台詞 id。
+現在（頭七）用沈淮第一人稱，回憶用第三人稱。
 """
 import pathlib
 from mapkit import *
@@ -13,10 +15,25 @@ VOICE = {ANYA: ('Chinese (Mandarin)_Soft_Girl', 'calm'), SHEN: ('Chinese (Mandar
 
 # 台詞：卡片 id → [(講者, 文字, 配音 id 或 None, 情緒)]。講者空字串＝旁白，不配音
 L = {
-    'card_mem_enter': [
-        ('', '杯子裡的金黃慢慢沉到底，粉紅的胡椒碎浮在上面。', None, ''),
-        (SHEN, '三年前的那個晚上，也是兩點十七分。', 'mem_shen_enter', 'sad'),
-        ('', '窗外響起了雨聲。', None, ''),
+    # 序幕：開頭獨白＋頭七回店
+    'prologue': [
+        (SHEN, '都說味道是最後才會忘記的東西。比臉晚，比聲音晚。', 'p_shen_open1', 'calm'),
+        (SHEN, '很多年以後，一杯酒送到嘴邊，人就回到了那一晚。', 'p_shen_open2', 'calm'),
+        (SHEN, '安雅走後第七天，我才知道，最先被帶走的，就是味道。', 'p_shen_open3', 'sad'),
+        ('', '頭七。人家說，這一晚她會回家。', None, ''),
+        ('', '店門口的燈箱已經七天沒亮了。我推開門，門上的鈴響了一聲，跟三年前一模一樣。', None, ''),
+    ],
+    # 空杯旁的便條：只交代店與生活，不提酒
+    'card_anya_note': [
+        (ANYA, '沈淮：店交給你了。冰箱裡有我包好的餃子，記得吃飯。', 'n_anya_1', 'calm'),
+        (ANYA, '酒櫃第二層那瓶甜白酒快沒了，下次叫貨多叫一箱。', 'n_anya_2', 'calm'),
+        (ANYA, '不要每天都等到兩點十七分才關門。', 'n_anya_3', 'sad'),
+        ('', '她寫便條，從來不署名。', None, ''),
+    ],
+    # 答完風味筆記，進回憶一
+    'card_mem1_enter': [
+        ('', '窗外開始下雨了。', None, ''),
+        (SHEN, '三年前的那個晚上，也在下雨。', 'mem_shen_enter', 'sad'),
     ],
     # 回憶一：他淋濕進門，她是調酒師（設定 A，作者 2026-10-16 拍板）
     'card_mem1_intro': [
@@ -44,13 +61,17 @@ L = {
     'card_mem1_mix': [
         (ANYA, '那我調一杯我自己最喜歡的。還沒給別人喝過。', 'a_mem1_anya_fav', 'happy'),
         ('', '金黃的甜白酒，一小匙番紅花糖漿，最後她在杯口磨了幾粒粉紅胡椒，把杯子推到他面前。', None, ''),
+        (ANYA, '最黑的時候，喝一杯天亮。', 'a_mem1_anya_dark', 'calm'),
     ],
     'card_mem1_stare': [(ANYA, '看我做什麼？喝酒。', 'a_mem1_anya_stare', 'happy')],
     'card_mem1_taste': [
-        ('', '他咬到胡椒，嗆了一下。她撐著吧檯笑出聲，笑到眼角都濕了。', None, ''),
-        (SHEN, '好辣……可是好甜。', 'a_mem1_shen_spicy', 'happy'),
+        ('', '他咬到胡椒，舌尖麻了一下，愣住了。她撐著吧檯看他，等他開口。', None, ''),
+        (SHEN, '好辣……可是好甜。', 'a_mem1_shen_spicy', 'surprised'),
         (ANYA, '像不像天快亮的時候？', 'a_mem1_anya_dawn', 'happy'),
-        ('', '笑完，她才發現他髮尾的水還在往吧檯上滴。她拿過毛巾，探身越過吧檯，替他把頭髮擦乾。', None, ''),
+        (SHEN, '像。', 'a_mem1_shen_like', 'calm'),
+        ('', '她笑了。那是她那一晚第一次真的笑。', None, ''),
+        (ANYA, '那就叫它〈破曉〉。', 'a_mem1_anya_name', 'happy'),
+        ('', '她這才發現他髮尾的水還在往吧檯上滴。她拿過毛巾，探身越過吧檯，替他把頭髮擦乾。', None, ''),
         ('', '她的手停在他耳邊，過了很久才拿開。', None, ''),
         ('', '她抬頭看牆上的掛鐘。', None, ''),
         (ANYA, '兩點十七分。你是我今天最後一個客人。', 'a_mem1_anya_last', 'calm'),
@@ -64,6 +85,12 @@ L = {
     ],
     'card_mem1_cg': [('', '那天晚上的雨，一直下到天亮。', None, '')],
     # 回憶二：她教他用黃銅匙
+    'card_mem2_enter': [
+        ('', '匙柄被她握得發亮。', None, ''),
+    ],
+    'card_mem3_enter': [
+        ('', '糖漿的瓶口還黏著一圈乾掉的金黃。', None, ''),
+    ],
     'card_mem2_intro': [
         ('', '幾個月後。開店前的傍晚，夕陽從大窗照進來。', None, ''),
         (ANYA, '沈淮，過來。今天教你調酒。', 'a_mem2_anya_teach', 'happy'),
@@ -117,10 +144,6 @@ L = {
         ('', '她把臉埋進他的肩膀，很久沒有抬起來。', None, ''),
     ],
     'card_mem3_cg': [('', '那是她第一次說想看晚霞。', None, '')],
-    'card_mem_return': [
-        ('', '雨聲停了。燈暗下來，吧檯上只剩那一杯。', None, ''),
-        (SHEN, '妳想看的晚霞，在這杯裡。', 'mem_shen_return', 'sad'),
-    ],
 }
 
 
@@ -129,11 +152,11 @@ def voice_lines():
     return [(f'{vid}.mp3', tx, VOICE[sp][0], emo or VOICE[sp][1]) for ls in L.values() for sp, tx, vid, emo in ls if vid]
 
 
-def _card(cid, title, art, bg=''):
+def _card(cid, title, art, bg='', **kw):
     lines = [(sp, tx, f'/files/assets/voice/{vid}.mp3' if vid else None) for sp, tx, vid, _ in L[cid]]
     actors = [cards.actor(n, art['p-anya'] if n == ANYA else art['p-shen'], 'right' if n == ANYA else 'left')
               for n in (SHEN, ANYA) if any(sp == n for sp, *_ in L[cid])] if not bg else []
-    return cards.dialogue(cid, title, lines, bg=bg, actors=actors)
+    return cards.dialogue(cid, title, lines, bg=bg, actors=actors, **kw)
 
 
 def _env(darkness, lights):
@@ -156,8 +179,13 @@ def build(board, art):
     shen = lambda x, y, d: ev('hero', x, y, actor='player', direction=d, sprite=walker(art['walk-shen']), actorId='shen')
     anya = walker(art['walk-anya'])
 
-    # 進入回憶：遺言之後
-    N(_card('card_mem_enter', '回憶：兩點十七分', art))
+    # 序幕與便條
+    N(_card('prologue', '序幕：頭七', art, bg=art['bg-bar'], start=True, bgm=art.get('bgm-bar')))
+    N(_card('card_anya_note', '安雅的便條', art))
+    # 每段回憶的入口（地圖事件 jump 過來）
+    N(_card('card_mem1_enter', '回憶：兩點十七分', art))
+    N(_card('card_mem2_enter', '回憶：黃銅匙', art))
+    N(_card('card_mem3_enter', '回憶：甜嗎', art))
 
     # ── 回憶一〈02:17，暴雨〉：他淋濕進門（9,9）；她在吧檯後（10,3）；高腳椅（9,6）；門口（9,10） ──
     guest = lambda x, y, d: ev('hero', x, y, actor='player', direction=d, sprite=walker(art['walk-shen-casual']), actorId='shen')
@@ -251,8 +279,6 @@ def build(board, art):
            _env(0.3, [('m3-lamp', 10, 4, 5, '#ffc078', False)])))
     N(_card('card_mem3_cg', '回憶：想看晚霞', art, bg=art['cg-mem3']))
 
-    # 回到現實
-    N(_card('card_mem_return', '回到現實', art, bg=art['cg-cocktail']))
 
     # 地圖上演出的對話卡（card(...) 叫的）也要是專案裡的卡
     have = {n['id'] for n in board['nodes']}
@@ -260,8 +286,11 @@ def build(board, art):
         if cid not in have:
             N(_card(cid, cid.replace('card_', ''), art))
 
-    link('card_mem_enter', 'm-mem-1')
-    link('card_mem1_cg', 'm-mem-2')
-    link('card_mem2_cg', 'm-mem-3')
-    link('card_mem3_cg', 'card_mem_return')
-    return 'card_mem_enter', 'card_mem_return'
+    # 回憶結束回到原本那張地圖（主角回到該地圖的起點，變數與背包都還在）
+    link('prologue', 'm-bar')
+    link('card_mem1_enter', 'm-mem-1')
+    link('card_mem1_cg', 'm-bar')
+    link('card_mem2_enter', 'm-mem-2')
+    link('card_mem2_cg', 'm-bar')
+    link('card_mem3_enter', 'm-mem-3')
+    link('card_mem3_cg', 'm-storage')

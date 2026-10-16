@@ -90,6 +90,7 @@ def build_storage(art):
                                   balloon('idea', target='player'),
                                   setv('storage_pried', True),
                                   setv('phase', 'bedroom'),
+                                  jump('card_mem3_enter'),
                               ],
                               [
                                   say('工作台抽屜木榫咬合得死緊，徒手根本扒不開。必須找到細長而質地堅硬的金屬工具才能撬開這處暗格。', speaker='player'),

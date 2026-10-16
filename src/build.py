@@ -92,35 +92,13 @@ def build():
     N = board['nodes'].append
     L = lambda x, y: cards.link(board, x, y)
 
-    # 1. 序幕引子（可直接由序幕點擊進入深夜吧檯）
-    prologue_text = "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條，右下角標註著初遇時間【02:17】。\n牆上的古董掛鐘，也永遠停在了兩點十七分。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。"
-    N(cards.dialogue('prologue', '序幕：安雅的便條', prologue_text,
-                     bg=a['bg-bar'], start=True, speaker='沈淮',
-                     voiceUrl=v['shen-start'], bgm=a['bgm-bar'],
-                     actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
-
     # 2. 地圖卡：深夜吧檯、香料儲藏間、臥室梳妝台
     N(map_bar.build_bar(a))
     N(map_storage.build_storage(a))
     N(map_bedroom.build_bedroom(a))
 
-    # 連接序幕到地圖
-    L('prologue', map_bar.MAP_ID)
 
     # 3. 劇情卡片（供地圖事件直接演出或跳轉）
-    # (a) 便條卡
-    N(cards.dialogue('card_bar_start', '節點 1：吧檯【起點】',
-                     prologue_text,
-                     bg='', speaker='沈淮',
-                     voiceUrl=v['shen-start'],
-                     actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
-
-    N(cards.dialogue('card_anya_note', '安雅的便條',
-                     '『沈淮，如果你還記得我們初遇的滋味，就替我把它完成吧。\n吧檯上方牆上的老掛鐘停在 02:17……那是我們故事開始的時刻，也是我留給你的密碼。』',
-                     bg='', speaker='安雅',
-                     voiceUrl=v['anya-note'],
-                     actors=[cards.actor('安雅', a['p-anya'], 'right')]))
-
     # (b) 臥室回憶與真相卡
     N(cards.dialogue('card_bedroom_memory', '安雅的回憶',
                      '『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』',
@@ -148,10 +126,9 @@ def build():
         '【冷卻的餘溫】遵從遺願，倒進水槽'
     ]
     N(cards.choice('card_choice', '節點 5：終局抉擇', '你要如何抉擇？', choice_texts, speaker='沈淮', bg=a['cg-cocktail']))
-    # 遺言之後先進回憶篇，回到現實才做抉擇（design/回憶篇.md）
-    mem_in, mem_out = memory.build(board, a)
-    L('card_confession', mem_in)
-    L(mem_out, 'card_choice')
+    # 序幕、便條與回憶穿插在解謎中（design/重寫.md）
+    memory.build(board, a)
+    L('card_confession', 'card_choice')
     cards.choice_link(board, 'card_choice', 'ending_burn_1', 0)
     cards.choice_link(board, 'card_choice', 'ending_cold_1', 1)
 
