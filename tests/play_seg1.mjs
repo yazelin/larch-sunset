@@ -39,7 +39,7 @@ try {
   await until(/坐到吧檯前的高腳椅/);
   await step('坐到吧檯前的高腳椅', /往門口走/, '3-taste');
   for (const r of [/最黑的時候，喝一杯天亮/, /那就叫它〈破曉〉/, /你也怕苦/]) assert(r.test(seen), '回憶一有 ' + r);
-  await step('雨小了，往門口走', /一直下到天亮/, '4-cg'); assert(true, '過了 CG 1');
+  await step('雨小了，往門口走', /一直下到天亮|拿取旁邊吧檯角落/, '4-cg'); assert(true, '過了 CG 1');
   await until(/黃銅調酒匙/); await shot('5-back'); assert(true, '回到吧檯，任務換成拿匙');
   console.log(ui.errors.length ? ui.errors : '沒有頁面錯誤');
 } catch (e) { await shot('fail'); console.error(e.message); process.exitCode = 1; }
