@@ -1,0 +1,21 @@
+# 香料儲藏間（m-storage）高解析度手繪動漫分層設計
+# 依據原作原畫完整還原：
+# 北牆百葉窗夕陽光斑、木製天平工作台＋暗格、兩側高聳香料藥草架、中央古石磚地面與地毯。
+# 單位：細格（48px）。
+
+map: {id: m-storage, w: 16, h: 12}
+
+ground:
+  - {name: 北牆實體邊界與窗台, kind: border, rects: [[0, 0, 16, 2]]}
+  - {name: 西側高聳香料架, kind: border, rects: [[0, 0, 3, 12]]}
+  - {name: 東側陳列藥草架, kind: border, rects: [[13, 0, 3, 12]]}
+  - {name: 南牆實體邊界, kind: border, rects: [[0, 10, 7, 2], [9, 10, 7, 2]]}
+  - {name: 門扉實體卡榫, kind: border, rects: [[5, 8, 2, 3], [9, 8, 2, 3]]}
+  - {name: 北窗天平工作台, kind: border, rects: [[4, 1, 8, 3]]}
+
+objects: []
+
+points:
+  hero_start: [8, 9]
+  window_grate: [8, 4]
+  door_bar: [8, 11]

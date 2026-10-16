@@ -1,5 +1,5 @@
 """組出 dist/project.json：骨架＋RPG地圖＋劇情卡＋配音演出。"""
-import json, pathlib
+import json, pathlib, shutil
 import cards, variables, art, mapkit
 import map_bar, map_storage, map_bedroom
 
@@ -65,10 +65,13 @@ def build():
     p['settings']['cgGalleryItems'] = [
         {'url': a['cover'], 'title': '晚霞是舌尖最後的刺痛'},
         {'url': a['cg-cocktail'], 'title': '初遇與終點的晚霞'},
+        {'url': a['cg-ending-burn'], 'title': '共赴晚霞'},
+        {'url': a['cg-ending-cold'], 'title': '冷卻的餘溫'},
         {'url': a['bg-bar'], 'title': '深夜吧檯'},
         {'url': a['bg-storage'], 'title': '香料儲藏間'},
         {'url': a['bg-bedroom'], 'title': '臥室梳妝台'}
     ]
+
     # UI 主題風格搭配：暗夜暖橙酒吧風
     p['settings']['menuUi'] = {
         'preset': 'night',
@@ -87,7 +90,7 @@ def build():
     L = lambda x, y: cards.link(board, x, y)
 
     # 1. 序幕引子（可直接由序幕點擊進入深夜吧檯）
-    prologue_text = "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。"
+    prologue_text = "吧檯上的燈還亮著，空氣裡卻沒有往常那股濃郁的香氣。\n只有安雅壓在杯底的一張便條，右下角標註著初遇時間【02:17】。\n牆上的古董掛鐘，也永遠停在了兩點十七分。\n\n初遇的滋味……金黃的甜白酒、泛著淡粉色的微辣感。我得把那杯酒調出來。"
     N(cards.dialogue('prologue', '序幕：安雅的便條', prologue_text,
                      bg=a['bg-bar'], start=True, speaker='沈淮',
                      voiceUrl=v['shen-start'], bgm=a['bgm-bar'],
@@ -105,27 +108,27 @@ def build():
     # (a) 便條卡
     N(cards.dialogue('card_bar_start', '節點 1：吧檯【起點】',
                      prologue_text,
-                     bg=a['bg-bar'], speaker='沈淮',
+                     bg='', speaker='沈淮',
                      voiceUrl=v['shen-start'],
                      actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
 
     N(cards.dialogue('card_anya_note', '安雅的便條',
-                     '『如果你還記得我們初遇的滋味，就替我把它完成吧。』',
-                     bg=a['bg-bar'], speaker='安雅',
+                     '『沈淮，如果你還記得我們初遇的滋味，就替我把它完成吧。\n吧檯上方牆上的老掛鐘停在 02:17……那是我們故事開始的時刻，也是我留給你的密碼。』',
+                     bg='', speaker='安雅',
                      voiceUrl=v['anya-note'],
-                     actors=[cards.actor('安雅', a['p-anya'], 'center')]))
+                     actors=[cards.actor('安雅', a['p-anya'], 'right')]))
 
     # (b) 臥室回憶與真相卡
     N(cards.dialogue('card_bedroom_memory', '安雅的回憶',
                      '『沈淮，粉紅胡椒不是辣椒，但咬碎的時候，喉嚨會有一種像觸電一樣的麻辣感……就像我第一次牽你手時一樣。』',
-                     bg=a['bg-bedroom'], speaker='安雅（回憶）',
+                     bg='', speaker='安雅（回憶）',
                      voiceUrl=v['anya-memory'],
-                     actors=[cards.actor('安雅（回憶）', a['p-anya'], 'center')]))
+                     actors=[cards.actor('安雅（回憶）', a['p-anya'], 'right')]))
 
     shock_text = "病歷單上赫然印著：【味覺中樞全面壞死】……\n\n「味覺中樞壞死？！這是什麼意思？！她……早就嚐不出味道了？！」\n材料都齊全了，我必須立刻回到吧檯。"
     N(cards.dialogue('card_bedroom_shock', '病歷單的真相',
                      shock_text,
-                     bg=a['bg-bedroom'], speaker='沈淮',
+                     bg='', speaker='沈淮',
                      actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
 
     # (c) 調酒完成：安雅遺書獨白卡
@@ -134,7 +137,7 @@ def build():
                      confession_text,
                      bg=a['cg-cocktail'], speaker='安雅（獨白）',
                      voiceUrl=v['anya-confession'], bgm=a['bgm-confession'],
-                     actors=[cards.actor('安雅（獨白）', a['p-anya-spirit'], 'center')]))
+                     actors=[cards.actor('安雅（獨白）', a['p-anya-spirit'], 'right')]))
 
     # (d) 終局抉擇卡
     choice_texts = [
@@ -146,47 +149,56 @@ def build():
     cards.choice_link(board, 'card_choice', 'ending_burn_1', 0)
     cards.choice_link(board, 'card_choice', 'ending_cold_1', 1)
 
-    # (e) 結局 A（真結局：共赴晚霞）
-    N(cards.dialogue('ending_burn_1', '節點 6-A：共赴的辣度',
+    # (e) 結局 A（共赴晚霞）
+    N(cards.dialogue('ending_burn_1', '共赴的辣度',
                      '我沒有聽妳的話。\n\n我端起酒杯，一口飲盡。',
                      bg=a['cg-cocktail'], speaker='沈淮',
                      voiceUrl=v['shen-burn-1'],
                      actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
 
     N(cards.dialogue('ending_burn_2', '心跳的刺痛',
-                     '入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n安雅虛幻的半透明立繪浮現在吧檯對面，眼眶含淚，微微笑著。',
+                     '入口先是番紅花的溫潤金黃，隨即，粉紅胡椒那股狂暴的辛辣在咽喉裡燃燒撕裂。\n胸口像被火灼燒，但那股微辣的刺痛感……確實是心跳的感覺。\n\n朦朧的淚光中，吧檯對面彷彿映出了她初遇時溫柔的微笑……',
                      bg=a['cg-cocktail'], speaker='沈淮',
                      voiceUrl=v['shen-burn-2'],
-                     actors=[cards.actor('安雅', a['p-anya-spirit'], 'right'),
-                             cards.actor('沈淮', a['p-shen'], 'left')]))
+                     actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
 
-    N(cards.dialogue('ending_burn_3', '真結局：共赴晚霞',
-                     '眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅，這一次，妳不必一個人走。\n\n**【結局 A：共赴的辣度（心跳停頓，畫面淡入全黑）】**',
-                     bg=a['cg-cocktail'], speaker='沈淮',
+    # 結局 A 終局：完全由精美專屬 CG 替代，移除任何「結局 A」等文字標記
+    N(cards.dialogue('ending_burn_3', '共赴晚霞',
+                     '眼前的光線逐漸暈散成一片金黃與淡粉。\n安雅……這一次，妳不必一個人走。',
+                     bg=a['cg-ending-burn'], speaker='沈淮',
                      voiceUrl=v['shen-burn-3'],
-                     actors=[cards.actor('安雅', a['p-anya-spirit'], 'center')]))
+                     actors=[]))
 
     L('ending_burn_1', 'ending_burn_2')
     L('ending_burn_2', 'ending_burn_3')
 
-    # (f) 結局 B（壞結局：冷卻的餘溫）
-    N(cards.dialogue('ending_cold_1', '節點 7-B：冷卻的餘溫',
+    # (f) 結局 B（冷卻的餘溫）
+    N(cards.dialogue('ending_cold_1', '冷卻的餘溫',
                      '手在發抖，但我還是把杯子翻轉，倒進了水槽。\n\n金黃的液體被流水沖淡，淡粉色的胡椒碎粒在不鏽鋼表面旋轉著消逝。空氣裡那股短暫的辣香，轉瞬間被冰冷的水氣沖刷得一乾二淨。',
                      bg=a['bg-bar'], speaker='沈淮',
                      voiceUrl=v['shen-cold-1'],
                      actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
 
-    N(cards.dialogue('ending_cold_2', '壞結局：冷卻的餘溫',
-                     '屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟，再也嚐不出任何溫度。\n\n**【結局 B：冷卻的餘溫（水聲微弱，畫面淡入灰白）】**',
-                     bg=a['bg-bar'], speaker='沈淮',
+    # 結局 B 終局：完全由精美專屬 CG 替代，移除任何「結局 B」等文字標記
+    N(cards.dialogue('ending_cold_2', '冷卻的餘溫',
+                     '屋子裡重新歸於死寂。\n我遵從了妳最後的願望活了下來，但從此以後，我的舌尖與心臟……再也嚐不出任何溫度。',
+                     bg=a['cg-ending-cold'], speaker='沈淮',
                      voiceUrl=v['shen-cold-2'],
-                     actors=[cards.actor('沈淮', a['p-shen'], 'left')]))
+                     actors=[]))
 
     L('ending_cold_1', 'ending_cold_2')
+
 
     (ROOT / 'dist').mkdir(exist_ok=True)
     out_file = ROOT / 'dist/project.json'
     out_file.write_text(json.dumps(p, ensure_ascii=False, indent=2), encoding='utf-8')
+
+    # 同步 assets 目錄至 dist/assets 供本機 serve.py /files/assets/... 直供
+    dst = ROOT / 'dist/assets'
+    shutil.rmtree(dst, ignore_errors=True)
+    if (ROOT / 'assets').exists():
+        shutil.copytree(ROOT / 'assets', dst)
+
     nodes_count = len(board['nodes'])
     edges_count = len(board['edges'])
     print(f'Build finished! Output: {out_file} ({nodes_count} nodes, {edges_count} edges)')

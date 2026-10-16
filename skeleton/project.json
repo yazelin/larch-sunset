@@ -470,7 +470,7 @@
     },
     {
       "id": "ai-cover-8474703f-8499-4065-9f66-4add1815f8b2",
-      "url": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/muse-link/yaze.lin.j303@gmail.com/1789569966068_d510d4a9.png",
+      "url": "/files/assets/art/cover.webp",
       "name": "AI 封面 · 晚霞是舌尖最後的刺痛",
       "type": "image",
       "remote": true,
@@ -2968,7 +2968,7 @@
     "aiDirectorUseBgm": true,
     "autoAdvanceDelay": 1800,
     "cgGalleryEnabled": true,
-    "projectThumbnail": "https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/muse-link/yaze.lin.j303@gmail.com/1789569966068_d510d4a9.png",
+    "projectThumbnail": "/files/assets/art/cover.webp",
     "showVersionBadge": true,
     "liveApiConfigured": false,
     "returnToTitleOnEnd": true,
@@ -3090,7 +3090,7 @@
       "voiceProvider": "minimax"
     }
   ],
-  "description": "【第二屆創作者挑戰賽參賽作品】《晚霞是舌尖最後的刺痛》\n\n「如果世界的味道正在消逝，你會想記住什麼？」\n\n【故事大綱】\n沈淮的摯愛安雅是一位才華洋溢的調酒師。然而，一場無法逆轉的神經病變，正在悄悄剝奪她的味覺中樞。\n世界的味道對她而言正在一片一片熄滅。為了不讓沈淮擔心，安雅隱瞞了所有病歷，並在調酒檯前歷時三年，研發出一款外觀宛如落日晚霞般絢麗、入口帶著細微刺痛感，卻實為最後神經止痛的告別配方——「晚霞」。",
+  "description": "第二屆創作者挑戰參賽作品。\n\n吧檯的燈還亮著，安雅只在杯底壓了一張便條，要沈淮把兩人初遇的那杯酒調出來。牆上的掛鐘停在兩點十七分，那是他們故事開始的時刻，也是她留下的密碼。\n在吧檯、香料儲藏間和臥室梳妝台之間找材料和線索：心型吊墜鑰匙、雕花木盒，盒裡鎖著她的病歷，寫著味覺中樞全面壞死。番紅花糖漿、黃銅調酒匙、粉紅胡椒，依序調出那杯「晚霞」，才聽到她的遺言：這杯酒是她研發了三年的配方，用神經止痛毒劑做成，是她替自己選的終點。\n兩個結局：把它喝下去，或照她的遺願倒進水槽。",
   "activeBoardId": "board-project-8cb1ab7e-891c-46b4-bd38-df29060e5717-main",
   "schemaVersion": 1
 }

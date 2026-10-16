@@ -1,0 +1,22 @@
+# 臥室梳妝台（m-bedroom）高解析度手繪動漫分層設計
+# 依據原作原畫完整還原：
+# 左側蕾絲窗簾窗台、古典雕花橢圓鏡梳妝台＋化妝凳＋心型木盒、右側溫馨碎花被褥床、雙門衣櫃與扶手椅。
+# 單位：細格（48px）。
+
+map: {id: m-bedroom, w: 16, h: 12}
+
+ground:
+  - {name: 北牆實體邊界, kind: border, rects: [[0, 0, 16, 2]]}
+  - {name: 西牆與蕾絲窗台, kind: border, rects: [[0, 0, 3, 8], [0, 8, 2, 4]]}
+  - {name: 東牆與盆栽扶手椅, kind: border, rects: [[13, 0, 3, 7], [14, 7, 2, 5]]}
+  - {name: 南牆實體邊界, kind: border, rects: [[0, 10, 7, 2], [9, 10, 7, 2]]}
+  - {name: 門扉實體卡榫, kind: border, rects: [[5, 8, 2, 3], [9, 8, 2, 3]]}
+  - {name: 窗邊梳妝鏡台與化妝凳, kind: border, rects: [[2, 1, 5, 3], [4, 3, 1, 1]]}
+  - {name: 右側碎花大床與床柱, kind: border, rects: [[8, 1, 6, 6]]}
+
+objects: []
+
+points:
+  hero_start: [8, 9]
+  vanity_box: [4, 4]
+  door_bar: [8, 11]

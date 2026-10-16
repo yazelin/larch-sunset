@@ -1,46 +1,57 @@
-"""美術資源與網址定義：本機預覽與平台共用。"""
+"""美術資源與網址定義：真 RPG 45度俯視地圖與切圖物件。"""
 
 ART = {
-    'bg-bar': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675755_bg_bar.webp',
-    'bg-storage': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565741284_bg_storage.webp',
-    'bg-bedroom': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675799_bg_bedroom.webp',
+    # 45 度高角度俯視純地面底圖
+    'ground-bar': '/files/assets/maps/bar_ground.webp',
+    'ground-storage': '/files/assets/maps/storage_ground.webp',
+    'ground-bedroom': '/files/assets/maps/bedroom_ground.webp',
+
+    # 對話卡背景相容別名
+    'bg-bar': '/files/assets/maps/bar_ground.webp',
+    'bg-storage': '/files/assets/maps/storage_ground.webp',
+    'bg-bedroom': '/files/assets/maps/bedroom_ground.webp',
+
+    # 45 度獨立切圖物件（透明去背 PNG / WEBP）
+    'obj-bar-counter': '/files/assets/objects/obj_bar_counter.webp',
+    'obj-wood-box': '/files/assets/objects/obj_wood_box.webp',
+
+    # 45 度實體道具
+    'prop-spoon': '/files/assets/props/prop_spoon.webp',
+    'prop-saffron': '/files/assets/props/prop_saffron.webp',
+    'prop-key': '/files/assets/props/prop_key.webp',
+    'prop-pepper': '/files/assets/props/prop_pepper.webp',
+
+    # 原作 CG 與封面（故事劇情卡使用，全部一律為 webp 格式）
+    'cover': '/files/assets/art/cover.webp',
     'cg-cocktail': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565675765_cg_cocktail.webp',
-    'cover': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/muse-link/yaze.lin.j303@gmail.com/1789569966068_d510d4a9.png',
-    
-    'walk-shen': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955874176_walk-shen.png',
-    'walk-anya': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955876207_walk-anya.png',
-    'walk-anya-spirit': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791955856695_walk-anya-spirit.png',
-    
-    'p-shen': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-c0f31c1f-2b06-44d8-a62e-374bff81fd60/1791189695002_start-line_art_portraits_cheng-adult-calm.webp',
-    'p-anya': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569041149_anya_sprite_codex',
-    'p-anya-spirit': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789569092022_anya_spirit_codex',
-    
+    'cg-ending-burn': '/files/assets/art/cg_ending_burn.webp',
+    'cg-ending-cold': '/files/assets/art/cg_ending_cold.webp',
+
+    # 角色行走圖 (Walker Sprites, 3x4, 48x64)
+    'walk-shen': '/files/assets/art/walk/walk-shen.webp',
+    'walk-anya': '/files/assets/art/walk/walk-anya.webp',
+    'walk-anya-spirit': '/files/assets/art/walk/walk-anya-spirit.webp',
+
+    # 角色立繪 (Portraits)
+    'p-shen': '/files/assets/art/p_shen.webp',
+    'p-anya': '/files/assets/art/p_anya.webp',
+    'p-anya-spirit': '/files/assets/art/p_anya_spirit.webp',
+
+    # 配樂 (BGM)
     'bgm-bar': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132341799_08-black-feather-after-midnight.mp3',
     'bgm-confession': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/japanese-anime-kemonomimi/music/1787132345785_10-crystal-wings-at-dawn.mp3',
-    
-    'prop-spoon': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565753666_prop_spoon.webp',
-    'prop-saffron': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565676622_prop_saffron.webp',
-    'prop-key': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565676666_prop_key.webp',
-    'prop-pepper': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1789565753701_prop_pepper.webp',
-
-    # 分層遮擋素材（純分層家具與吧檯遮擋）
-    'obj-bar-counter': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791956430269_obj_bar_counter.png',
-    'obj-storage-left': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791956457741_obj_storage_shelf_left.png',
-    'obj-storage-right': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791956459690_obj_storage_shelf_right.png',
-    'obj-bedroom-bed': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791956461627_obj_bedroom_bed.png',
-    'obj-bedroom-vanity': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/project-8cb1ab7e-891c-46b4-bd38-df29060e5717/1791956463395_obj_bedroom_vanity.png',
 }
 
 VOICES = {
-    'shen-start': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571498901_40692464.mp3',
-    'anya-note': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571195856_7014bad6.mp3',
-    'anya-memory': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571305626_f5a21c4f.mp3',
-    'anya-confession': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571391989_3c87a9c4.mp3',
-    'shen-burn-1': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571598095_2304150e.mp3',
-    'shen-burn-2': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572040059_1b8a90a9.mp3',
-    'shen-burn-3': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571654884_7769d525.mp3',
-    'shen-cold-1': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789572160891_46526436.mp3',
-    'shen-cold-2': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/ai-generated/yaze.lin.j303@gmail.com/1789571740808_a90337d8.mp3',
+    'shen-start': '/files/assets/voice/shen_start.mp3',
+    'anya-note': '/files/assets/voice/anya_note.mp3',
+    'anya-memory': '/files/assets/voice/anya_memory.mp3',
+    'anya-confession': '/files/assets/voice/anya_confession.mp3',
+    'shen-burn-1': '/files/assets/voice/shen_burn_1.mp3',
+    'shen-burn-2': '/files/assets/voice/shen_burn_2.mp3',
+    'shen-burn-3': '/files/assets/voice/shen_burn_3.mp3',
+    'shen-cold-1': '/files/assets/voice/shen_cold_1.mp3',
+    'shen-cold-2': '/files/assets/voice/shen_cold_2.mp3',
 }
 
 

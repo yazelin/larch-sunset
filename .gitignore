@@ -2,3 +2,12 @@ __pycache__/
 *.pyc
 snapshots/
 .DS_Store
+
+# 本機產物:生圖原檔、預覽截圖、預覽回饋
+art/**/*.png
+art/**/*.webp
+art/**/*.json
+/preview_*
+/screen_*
+dist/assets/
+dist/feedback/

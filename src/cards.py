@@ -15,6 +15,10 @@ def dialogue(id, title, lines, bg='', start=False, speaker='', actors=None, voic
     for i, l in enumerate(lines):
         sp, tx = (l if isinstance(l, tuple) else (speaker, l))
         line_dict = {'id': f'{id}-l{i}', 'speaker': sp, 'text': tx}
+        if actors:
+            matched = next((a['id'] for a in actors if a['name'] == sp), None)
+            if matched:
+                line_dict['speakerActorId'] = matched
         if i == 0 and voiceUrl:
             line_dict['voiceUrl'] = voiceUrl
         dl.append(line_dict)
@@ -74,5 +78,5 @@ def setvar(id, title, ops):
                          'value': str(v).lower() if isinstance(v, bool) else str(v)} for i, (k, v) in enumerate(ops)]}}
 
 
-def actor(name, url, slot='center'):
-    return {'id': f'actor-{name}', 'name': name, 'url': url, 'slot': slot, 'offsetX': 0, 'offsetY': 0, 'scale': 1}
+def actor(name, url, slot='center', offsetX=0, offsetY=0, scale=1):
+    return {'id': f'actor-{name}', 'name': name, 'url': url, 'slot': slot, 'offsetX': offsetX, 'offsetY': offsetY, 'scale': scale}

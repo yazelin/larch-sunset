@@ -7,16 +7,16 @@ INVISIBLE = {'url': '', 'width': 32, 'height': 32, 'frames': 1, 'rows': 1, 'offs
 TILESET = {
     'id': 'kn-dungeon',
     'name': '地城',
-    'url': 'https://pub-4b20b43f5acf4dfaa3f6ab842daa51cf.r2.dev/2d3b0242-9a6d-4051-9825-46aa4efd064a/larch/built-in-assets/packs/kenney-rpg/tilesets/1790278984532_tiny-dungeon.png',
+    'url': '/files/assets/tilesets/tiny-dungeon.webp',
     'tileSize': 16,
     'columns': 12,
     'rows': 11
 }
 
 
-def walker(url):
-    """3 欄 × 4 列、每格 48×64 的走路圖。"""
-    return {'url': url, 'width': 48, 'height': 64, 'frames': 3, 'rows': 4, 'offsetX': 0, 'offsetY': 0, 'idleFrame': 1, 'scale': 1}
+def walker(url, scale=1.85):
+    """3 欄 × 4 列、高解析度 192×256 每格，scale=1.85 符合手繪場景家具比例。"""
+    return {'url': url, 'width': 192, 'height': 256, 'frames': 3, 'rows': 4, 'offsetX': 0, 'offsetY': 0, 'idleFrame': 1, 'scale': scale}
 
 
 def A(kind, **kw):
@@ -69,6 +69,36 @@ def branch(conditions, then_steps, else_steps=None):
     if else_steps:
         b['else'] = else_steps
     return A('if', **{'if': b})
+
+
+def choice_action(text, options, speaker='narrator', variable='', look=None, color=None):
+    """options: list of (label, actions) or dicts with {'id', 'label', 'actions'}"""
+    opts = []
+    for i, opt in enumerate(options):
+        if isinstance(opt, dict):
+            opts.append(opt)
+        else:
+            label, acts = opt
+            opts.append({'id': f'opt_{i}', 'label': label, 'actions': acts})
+    c = {'options': opts}
+    if variable: c['variable'] = variable
+    if look: c['look'] = look
+    if color: c['color'] = color
+    return A('choice', text=text, speaker=speaker, choice=c)
+
+
+def input_action(text, variable, answer='', placeholder='', right=None, wrong=None, number=False, max_len=40):
+    inp = {
+        'variable': variable,
+        'number': number,
+        'max': max_len,
+        'placeholder': placeholder,
+        'answer': answer,
+        'right': right or [],
+        'wrong': wrong or [],
+    }
+    return A('input', text=text, input=inp)
+
 
 
 def balloon(icon, target='player', event_id=None, ms=1600):

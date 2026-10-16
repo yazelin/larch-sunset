@@ -3,9 +3,11 @@
 VARS = {
     'phase': ('string', 'start', '進度階段'),
     'note_read': ('boolean', False, '已讀便條'),
+    'flavor_deduced': ('boolean', False, '已推理出初遇風味'),
     'spoon_taken': ('boolean', False, '已取得調酒匙'),
     'storage_pried': ('boolean', False, '已撬開儲藏室百葉窗'),
     'box_unlocked': ('boolean', False, '已解鎖臥室木盒'),
+    'box_pass': ('string', '', '木盒輸入密碼'),
     'truth_known': ('boolean', False, '已得知病歷單真相'),
     'cocktail_mixed': ('boolean', False, '已調製晚霞'),
     'ending_choice': ('string', '', '終局抉擇'),
