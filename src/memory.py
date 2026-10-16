@@ -164,6 +164,9 @@ def build(board, art):
     m2 = [
         shen(9, 7, 'up'),
         ev('mem2-intro', 1, 11, trigger='auto', once=True, actions=[card('card_mem2_intro'), setv('mem2', 'spoon')]),
+        # 吧檯角落的匙：跟現在的吧檯同一張道具圖、同一個位置，拿起來就消失
+        ev('mem2-spoon-visual', 0, 8, name='黃銅調酒匙視覺', free={'url': art['prop-spoon'], 'x': 11.2, 'y': 3.3, 'w': 0.35, 'h': 0.35},
+           conditions=[cond('mem2', 'spoon')]),
         ev('mem2-spoon', 11, 6, name='黃銅調酒匙', marker={'label': '黃銅匙', 'kind': 'quest'}, conditions=[cond('mem2', 'spoon')],
            actions=[say('吧檯角落的黃銅調酒匙，跟了他好幾年。', speaker='player'), item('spoon_old', '黃銅調酒匙'), setv('mem2', 'teach')]),
         npc('mem2-anya', 10, 3, anya, direction='down', name='安雅', marker={'label': '安雅', 'kind': 'talk'},
