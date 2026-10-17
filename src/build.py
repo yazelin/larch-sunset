@@ -40,6 +40,7 @@ def rpg_database(a):
 
 def build():
     p = load_skeleton()
+    p['boards'][0]['description'] = '頭七的吧檯、香料儲藏間、我們的房間，四段穿插的回憶，兩個結局。'   # 市集的章節說明從這裡抄（2026-10-18）
     # 角色資料照 design/重寫.md 定稿（2026-10-17 作者要修：舊背景寫「研發三年毒劑」、聲線誤設成沈淮的、立繪在 R2）
     anya = p['characters'][0]
     anya.update({

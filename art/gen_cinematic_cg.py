@@ -62,6 +62,13 @@ CG = {
         'The only outdoor scene and the only real sunset of the story: a city rooftop in autumn, the whole sky burning from gold to pink to violet. '
         'Backlit, near-silhouette: ANYA (cream sweater, no apron) leans against SHEN (casual clothes), slow dancing in the wind; '
         'a coupe glass glowing in the backlight rests on the railing beside them. Wide, lots of sky, her hair blown by the wind.'),
+    # 封面（2026-10-18 作者要重畫）：全劇母題一張說完：冷藍的頭七、吧檯上唯一的暖光是那杯〈晚霞〉、吧檯後她的位置有她很淡的影子、停在 2:17 的鐘
+    'cover': (['spirit', 'bar'],
+        'Key art for the title screen, no text. Deep night in an empty bar seven days after a funeral, the whole room in cold blue street light and faint rain on the big window. '
+        'In sharp focus in the lower foreground, on the dark wooden counter, a single coupe glass: deep gold settled at the bottom, rose pink floating on top, tiny pink peppercorn flecks, '
+        'glowing warm like a small sunset, the only warm light in the frame; a round coaster under it and a long brass bar spoon beside it. '
+        'Behind the counter, at her usual place, soft and out of focus, ANYA as a faint translucent spirit, looking down at the glass with a gentle sad smile. '
+        'An out-of-focus wall clock above her stopped at 2:17. Generous empty dark space in the upper part of the frame for a title. Melancholic, beautiful, unforgettable.'),
 }
 
 
