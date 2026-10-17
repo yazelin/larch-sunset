@@ -40,6 +40,32 @@ def rpg_database(a):
 
 def build():
     p = load_skeleton()
+    # 角色資料照 design/重寫.md 定稿（2026-10-17 作者要修：舊背景寫「研發三年毒劑」、聲線誤設成沈淮的、立繪在 R2）
+    anya = p['characters'][0]
+    anya.update({
+        'role': '女主角，調酒師，酒吧的主人',
+        'backstory': '三年前的暴雨夜，替淋濕的沈淮調了一杯〈破曉〉。四個月後確診味覺中樞進行性壞死，沒有告訴任何人，開始教他調酒。'
+                     '想為兩人調一杯〈晚霞〉，還沒調成，舌頭先不行了。',
+        'secrets': '確診後瞞了沈淮快三年；說是偏頭痛的藥，其實是神經止痛藥。',
+        'personality': '溫暖、愛笑、在吧檯後面說了算，會主動伸手，什麼都自己扛。',
+        'speakingStyle': '短句，笑著管人；說到自己的事就停住，改問「甜嗎？」。',
+        'voiceName': 'Chinese (Mandarin)_Soft_Girl',
+        'portraitUrl': '/files/assets/art/p_anya.webp',
+        'expressions': [
+            {'id': 'expression-6ea37c5d-3e7d-4999-b045-d34380b7d823', 'kind': 'expression', 'name': '微笑', 'emotion': 'smile', 'imageUrl': '/files/assets/art/p_anya.webp'},
+            {'id': 'expression-56bd4e18-9e8d-4e0d-83fd-909c4388ffbc', 'kind': 'expression', 'name': '頭七', 'emotion': 'spirit', 'imageUrl': '/files/assets/art/p_anya_spirit.webp'},
+        ],
+    })
+    if not any(c.get('name') == '沈淮' for c in p['characters']):
+        p['characters'].append({
+            'id': 'character-3f6c2a9e-8b41-4d27-9c5e-1a7d4b2e6f80', 'name': '沈淮', 'slug': '沈淮',
+            'role': '男主角，安雅教出來的調酒師',
+            'backstory': '三年前淋著暴雨走進她的酒吧，之後每天坐到兩點十七分才走。她教他調酒，第二年起兩人一起顧店。',
+            'secrets': '', 'personality': '安靜、怕苦，話不多，記得她說過的每一句。',
+            'speakingStyle': '低聲、慢，第一人稱回想時很克制。',
+            'voiceName': 'Chinese (Mandarin)_Gentle_Youth', 'voiceProvider': 'minimax',
+            'portraitUrl': '/files/assets/art/p_shen.webp', 'expressions': [],
+        })
     board = p['boards'][0]
     board['nodes'], board['edges'] = [], []
     p['nodes'], p['edges'] = board['nodes'], board['edges']
