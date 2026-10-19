@@ -129,6 +129,11 @@ def build():
 
     # 3. 劇情卡片：序幕、便條、回憶、病歷、遺言、抉擇與兩個結局都在 memory.py（design/重寫.md）
     memory.build(board, a)
+    # 兩個結局的最後一張停在畫面上，不要自己跳走（2026-10-19 作者在《雨幕》提醒的「無下一張時停留在此卡片」）
+    ends = [n for n in board['nodes'] if n['id'] in ('ending_burn_4', 'ending_cold_3')]
+    assert len(ends) == 2, [n['id'] for n in ends]
+    for n in ends:
+        n['data']['stayOnCard'] = True
     print('地圖內心話轉成配音卡：', memory.voice_map_lines(board))
 
 
