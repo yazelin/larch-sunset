@@ -103,7 +103,7 @@ def ingest(d):
                     if src: iss[iid]['anchored'] = any(q in src for q in frags(it['quote']))
         scene_level(iss, scene, '沒有打動人的句子', no_good, responded)
         scene_level(iss, scene, '對白沒有真人的痕跡', no_trace, responded)
-        if any(k.startswith('查證_') for k in sec): fac[scene] = {who: parse_fact(sec.get(f'查證_{who}', '')) for who in ('deepseek', 'qwen')}
+        if any(k.startswith('查證_') for k in sec): fac[scene] = {who: parse_fact(sec.get(f'查證_{who}', '')) for who in ('deepseek', 'deepseek2')}
     save(ISS, iss); save(FAC, fac); save(GOOD, good); print(f'新增 {n_new} 條，問題單共 {len(iss)} 條')
 
 def todo(key=None):

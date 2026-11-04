@@ -31,7 +31,9 @@ def _bashrc(name):   # .bashrc 尾端的 export 對非互動腳本無效，直�
 
 
 def ds(p):
-    rpm_slot(); return subprocess.run(['llmshare', 'raw', 'deepseek-v4.1-flash:1017', p], capture_output=True, text=True, timeout=600).stdout.strip()
+    rpm_slot(); r = subprocess.run(['llmshare', 'raw', 'deepseek-v4.1-flash:1017', p], capture_output=True, text=True, timeout=600)
+    if 'ExceededBudget' in r.stderr: print('llmshare 今日預算用完，停下：' + r.stderr.strip()[:200], file=sys.stderr, flush=True); os._exit(3)   # 不要空轉把整輪記成「沒有回應」
+    return r.stdout.strip()
 def gm(p):   # 作者自架 gemini-web（.11 瀏覽器驅動）；長回應可能截斷，所以不做查證
     import urllib.request
     q = urllib.request.Request('http://192.168.11.11:8070/api/chat', data=json.dumps({'prompt': p, 'timeout': 300}).encode(),
@@ -49,9 +51,6 @@ def cx(p):
     r = subprocess.run(['codex', 'exec', '-m', os.environ.get('CODEX_MODEL', 'gpt-6.1-sol'), '--skip-git-repo-check', '-s', 'read-only', '-C', '/tmp', '-'], input=p, capture_output=True, text=True, timeout=900).stdout
     return r.split('tokens used', 1)[-1].split('\n', 1)[-1].strip() if 'tokens used' in r else r.strip()
 _ds_lock = __import__('threading').Lock()
-def qw(p):   # llmshare 上的 qwen3.5:397b；2026-10-29 argon 額度用完（七天）時補第三位讀稿人
-    try: return subprocess.run(['llmshare', 'raw', 'qwen3.5:397b', p], capture_output=True, text=True, timeout=900, env={**os.environ, 'LLMSHARE_ALLOW_ANY': '1'}).stdout.strip()
-    except Exception: return ''
 
 
 def dsl(p):   # 同一時間只送一個、間隔 3 秒
@@ -62,13 +61,15 @@ def dsl(p):   # 同一時間只送一個、間隔 3 秒
 # 要強制指定：環境變數 READERS=codex,deepseek,geminiweb
 PREFERRED = {'opus': ag('claude-opus-5-5-high'), 'codex': cx, 'argon': ag('gemini-4-argon-high'), 'deepseek': dsl}
 FALLBACK = {'google': ('geminiweb', gm)}
-FAMILY = {'qwen': 'alibaba', 'claude': 'anthropic', 'opus': 'anthropic', 'codex': 'openai', 'argon': 'google', 'geminiweb': 'google', 'deepseek': 'deepseek'}
-ALL = {**PREFERRED, 'geminiweb': gm, 'qwen': qw}
+FAMILY = {'deepseek2': 'deepseek#2', 'deepseek3': 'deepseek#3', 'claude': 'anthropic', 'opus': 'anthropic', 'codex': 'openai', 'argon': 'google', 'geminiweb': 'google', 'deepseek': 'deepseek'}
+# 作者規定 llmshare 只用 deepseek-v4.1-flash:1017；要三位評審就同一個模型評三次（各自當一家，評審篩選與共識才算得到）
+ALL = {**PREFERRED, 'geminiweb': gm, 'deepseek2': ds, 'deepseek3': ds}
 
 
 def available():
     """探一次各讀稿人（快取 30 分鐘），額度用完或沒回應的拿掉；google 家族全缺時補 gemini-web。"""
-    if os.environ.get('READERS', 'deepseek,geminiweb,qwen'): return {k: ALL[k] for k in os.environ.get('READERS', 'deepseek,geminiweb,qwen').split(',') if k in ALL}
+    names = os.environ.get('READERS', 'deepseek,deepseek2,deepseek3')   # ponytail: 固定名單；要探額度自動換人再把下面那段接回來
+    if names: return {k: ALL[k] for k in names.split(',') if k in ALL}
     cache = json.loads(AVAIL.read_text()) if AVAIL.exists() else {}
     if time.time() - cache.get('t', 0) > 1800:
         ok = {}
@@ -169,7 +170,7 @@ def sweep(p, keys):
     def one(item):
         title, body = item; body = body[:14000]
         jobs = {**{f'讀_{w}': (f, READ.format(ctx=ctx, body=body)) for w, f in READERS.items()},
-                '查證_deepseek': (dsl, FACT.format(canon=canon, hist=hist, ctx=ctx, body=body)), '查證_qwen': (qw, FACT.format(canon=canon, hist=hist, ctx=ctx, body=body))}
+                '查證_deepseek': (dsl, FACT.format(canon=canon, hist=hist, ctx=ctx, body=body)), '查證_deepseek2': (ds, FACT.format(canon=canon, hist=hist, ctx=ctx, body=body))}
         with ThreadPoolExecutor(len(jobs)) as ex2: res = dict(zip(jobs, ex2.map(lambda fp: call(*fp), jobs.values())))
         out = f'# {title}\n\n' + ''.join(f'## {k}\n{v}\n\n' for k, v in res.items()) + f'## 原文\n{body}\n'
         (d / (re.sub(r'\W', '_', title)[:40] + '.md')).write_text(out); mark(p, title, body); return title

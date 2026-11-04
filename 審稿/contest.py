@@ -7,7 +7,7 @@ import sys, pathlib, random, re, concurrent.futures as cf
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import scene_review as sr, runner as R
 D = pathlib.Path(__file__).resolve().parent / '比賽'
-WRITERS = {k: sr.ALL[k] for k in ('opus', 'codex', 'deepseek', 'qwen') if k in sr.ALL}   # 《續》兩輪 argon、gemini-web 都在後段，不當寫手
+WRITERS = {k: sr.ALL[k] for k in ('opus', 'codex', 'deepseek') if k in sr.ALL}   # 《續》兩輪 argon、gemini-web 都在後段，不當寫手
 W = """你是互動小說（視覺小說）的編劇。請把下面這一場戲改寫成更自然、讓台灣讀者喜歡讀的版本。
 改的依據是審稿人列出的問題（見下），也可以自己發現並改掉其他問題。保留這一場必須完成的事；台詞要像真人說話。
 【寫稿準則】
