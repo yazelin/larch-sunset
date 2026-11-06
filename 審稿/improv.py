@@ -13,9 +13,13 @@ CARD = {n: (R / f'design/角色卡/{n}.md').read_text(encoding='utf-8').split('#
 CARD['醫師'] = '# 角色卡：醫師\n台灣醫院的醫師，四十多歲。講話清楚、溫和、實際，用病人聽得懂的話，一次講一件事，不打官腔，不說「要堅強」。'
 CARD['客人'] = '# 角色卡：客人\n三十多歲的熟客，以前常來這間店，話不多，客氣，不打聽別人的私事。'
 ACTORS = {'gemini': sr.gm, 'argon': sr.ag('gemini-4-argon-high'), 'opus': sr.ag('claude-opus-5-5-high')}
-import os
-for _a in filter(None, os.environ.get('NO_ACTOR', '').split(',')):   # 額度用完的演員改由 argon 代
-    ACTORS[_a] = ACTORS['argon']
+import os, subprocess, tempfile
+def luna(p):   # copilot CLI：這個帳號只能用 auto（實際是 gpt-6-luna），--model 指定都會被拒；每次約 0.07 點額度
+    r = subprocess.run(['copilot', '-p', p, '-s'], capture_output=True, text=True, timeout=300, stdin=subprocess.DEVNULL, cwd=tempfile.gettempdir())
+    return r.stdout.strip()
+ACTORS['luna'] = luna
+for _a in filter(None, os.environ.get('NO_ACTOR', '').split(',')):   # 額度用完的演員改由 SUB_ACTOR 代（預設 luna）
+    ACTORS[_a] = ACTORS[os.environ.get('SUB_ACTOR', 'luna')]
 TAKES = [{'安雅': 'gemini', '沈淮': 'argon', '安雅的母親': 'opus', '醫師': 'opus', '客人': 'opus'},
          {'安雅': 'opus', '沈淮': 'gemini', '安雅的母親': 'argon', '醫師': 'argon', '客人': 'argon'}]
 HARD = [(r'——|—|－－', '破折號'), (r'不是[^。！？]{1,30}而是', '不是…而是'), (r'而是', '而是'), (r'[\U0001F300-\U0001FAFF]', 'emoji'),
