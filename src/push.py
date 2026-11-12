@@ -1,5 +1,5 @@
 """推到 Larch（照 larch-ember 的 src/push.py）：快照 → 重建 → 遊戲用到的素材做成 jsDelivr 用的孤兒 tag（圖一包、聲音一包）
-→ 每個網址都抓到 200 → 整包 PUT（If-Match）→ 讀回比對。素材不存 Larch（作者 10-29：放公開 repo 走 jsDelivr）。
+→ 每個網址都抓到 200 → 整包 PUT（If-Match）→ 讀回比對。素材不存 Larch（放公開 repo 走 jsDelivr）。
 jsDelivr 對 GitHub 的上限是「那個 commit 的檔案總和 50 MB」，這個 repo 一個 commit 有幾百 MB（art/raw），直接用會 403；
 孤兒 tag 只放用到的檔（做法見 larch-preview SKILL.md），每包 40 MB 以內。tag 名帶樹的雜湊：素材沒改就沿用，網址不變、快取一直熱。
 素材要先 commit 並 git push（tag 用的是 repo 裡的 blob）。
@@ -46,7 +46,7 @@ def _git(*args):
     return subprocess.run(['git', *args], cwd=ROOT, capture_output=True, text=True, check=True).stdout
 
 
-GROUPS = {'img': ('art/',), 'audio': ('bgm/', 'songs/', 'sfx/', 'voice/')}   # 10-29 用到的：圖 21 MB、聲音 28 MB
+GROUPS = {'img': ('art/',), 'audio': ('bgm/', 'songs/', 'sfx/', 'voice/')}
 LIMIT = 40e6
 ASSET = r'/files/assets/([\w./-]+\.(?:png|webp|jpg|mp3))'
 

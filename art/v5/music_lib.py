@@ -65,7 +65,7 @@ def audit_key():
 def gen(name, k, tries=4, extra=''):
     os.makedirs(RAW, exist_ok=True)
     for n in range(tries):
-        req = urllib.request.Request(URL, method='POST', data=json.dumps({'prompt': PROMPT[name] + extra, 'timeout': 720, 'vocals': VOCALS.get(name, 'instrumental')}).encode(),
+        req = urllib.request.Request(URL, method='POST', data=json.dumps({'prompt': PROMPT[name] + extra, 'timeout': 720, **({'vocals': VOCALS[name]} if name in VOCALS else {})}).encode(),
                                      headers={'Content-Type': 'application/json', 'x-goog-api-key': k})
         try: d = json.load(urllib.request.urlopen(req, timeout=900, context=CTX))
         except Exception as e: print(f'{name} 產生第{n + 1}次 例外 {e!r}', flush=True); continue

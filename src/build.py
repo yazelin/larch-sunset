@@ -37,7 +37,12 @@ def track(cid):
     return next((t for p, t in TRACK_BY_PREFIX if cid.startswith(p)), None)
 
 
+FALLBACK = {'seventh': 'alone', 'theme': 'main'}   # 還沒產出來的曲子先用哪一首頂著（Gemini 音樂額度用完時）
+
+
 def music(name):
+    if name and not (R / f'assets/bgm/{name}.mp3').exists():
+        name = FALLBACK.get(name)
     return A + f'bgm/{name}.mp3' if name and (R / f'assets/bgm/{name}.mp3').exists() else ''
 
 
@@ -104,7 +109,7 @@ def build():
     board.update(name='晚霞', thumbnail=cover, description='從第一年春天的暴雨夜，到她走後的第七天。')
     p['variables'] = []
     s = p['settings']
-    s['plugins'] = {**{k: ({**v, 'enabled': False} if k == 'larch-inventory' else v) for k, v in s.get('plugins', {}).items()}, 'credits-roll': {'enabled': True}}
+    s['plugins'] = {**{k: ({**v, 'enabled': False} if k in ('larch-inventory', 'larch-rpg-system') else v) for k, v in s.get('plugins', {}).items()}, 'credits-roll': {'enabled': True}}
     s.update(showRpgHud=False, textSpeed=TEXT_MS, stageFit='contain', titleCoverImage=cover, projectThumbnail=cover,
              cgGalleryEnabled=bool(GALLERY), cgGallerySource='picked',
              cgGalleryItems=[{'url': cover, 'title': NAME}] + [{'url': shot_url(k), 'title': t, 'locked': True} for k, t in GALLERY if shot_url(k)])
