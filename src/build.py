@@ -1,5 +1,5 @@
 """組出 dist/project.json：第五版（2026-11），單線、純劇情卡、一個結局（設計 design/重製.md）。
-canon/劇本.md 的每個 `##` 是一張對話卡，照劇本順序串起來；〔圖〕標記的那一句換背景，不放立繪。全程自動播放、沒有選項、不配音。
+canon/劇本.md 的每個 `##` 是一張對話卡，照劇本順序串起來；〔圖〕標記的那一句換背景，不放立繪。沒有選項、不配音；玩家自己點著看（作者 11-12：不預設自動播放，要自動的人會自己按）。
 python3 src/build.py
 """
 import json, os, pathlib, shutil, sys
@@ -10,12 +10,10 @@ R = ROOT = pathlib.Path(__file__).resolve().parent.parent
 PROJECT_ID = 'project-8cb1ab7e-891c-46b4-bd38-df29060e5717'
 A = '/files/assets/'
 TEXT_MS = 55
-AUTO = {'enabled': True, 'mode': 'delay', 'delayMs': 2000}
-HINT = ['這是一部從頭到尾會自己播放的小說，大約四十分鐘。', '戴上耳機，不用點滑鼠，看到最後。想快一點，點一下畫面。']
 NAME = '晚霞'
 DESCRIPTION = ('巷子裡一間只有七張高腳椅的小酒吧。調酒師安雅和加班到深夜的沈淮，從一個暴雨夜的第一杯〈破曉〉開始，'
                '鬥嘴、吵架、一起把店撐起來，過了三年。她走後的第七天，他回到店裡，翻開她從不讓人看的小筆記本。'
-               '單線劇情、一個結局，全程自動播放。')
+               '單線劇情、一個結局。')
 # 配樂：每張卡用哪一首（assets/bgm/<名>.mp3）。同一首連續的卡不重設，曲子不會從頭重播；'' 是安靜
 TRACK_BY_PREFIX = [('open', 'days'), ('return', 'seventh'), ('rain', 'dawn'), ('weeks', 'dawn'), ('clinic', 'alone'), ('lesson', 'days'),
                    ('confess', 'dawn'), ('together', 'days'), ('quit_1', 'alone'), ('quit_2', 'alone'), ('quit_3', 'days'), ('home', 'days'),
@@ -81,7 +79,7 @@ def story_card(cid, bg_carry, bgm=''):
            if c == cid and sh in {k for k, _ in GALLERY} and shot_url(sh)]
     if ops:
         card['data']['cgOps'] = ops
-    card['data'].update(stage={'actors': []}, characterLayers=[], autoAdvance=dict(AUTO))
+    card['data'].update(stage={'actors': []}, characterLayers=[])
     return card, bg
 
 
@@ -119,10 +117,7 @@ def build():
     for k in ('title', 'dialogue'):
         ci[k] = {'html': (R / f'ui/{k}.html').read_text(encoding='utf-8'), 'enabled': True}
     N = board['nodes'].append
-    hint = cards.dialogue('hint', '開始之前', [('旁白', t) for t in HINT], bg=cover)
-    hint['data'].update(start=True, autoAdvance=dict(AUTO), stage={'actors': []}, characterLayers=[])
-    N(hint)
-    prev, ptrack, bg = 'hint', None, ''
+    prev, ptrack, bg = None, None, ''
     for cid in script.ORDER:
         t = track(cid)
         url = music(t) if t and t != ptrack else ''
@@ -130,7 +125,11 @@ def build():
         if t == '' and ptrack:   # 安靜的卡：停掉上一首
             c['data'].update(bgm='', bgmVolume=0, bgmLoop=False)
         ptrack = t if (url or t == '') else ptrack
-        N(c); cards.link(board, prev, cid); prev = cid
+        if prev is None:
+            c['data']['start'] = True
+        else:
+            cards.link(board, prev, cid)
+        N(c); prev = cid
     N(credits_card(bg)); cards.link(board, prev, 'credits')
     (R / 'dist').mkdir(exist_ok=True)
     out = R / 'dist/project.json'

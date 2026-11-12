@@ -1,4 +1,4 @@
-// 免點試玩：只按「開始遊戲」，之後什麼都不點，要自己從第一張卡播到片尾字卷，再回標題。
+// 全劇試玩：按「開始遊戲」後一路點到片尾字卷，再等它捲完回標題（作者 11-12：不預設自動播放）。
 // SPEED=16 node tests/play_auto.mjs（先 python3 src/build.py）。檢查：每張卡的第一句與最後一句依序出現、每個鏡頭的圖有載到、沒有頁面錯誤。
 import { serve, open, sleep, assert, SPEED } from './lib.mjs';
 import { readFileSync } from 'node:fs';
@@ -17,13 +17,14 @@ try {
   const end = Date.now() + 80 * 60000 / SPEED + 8 * 60000;   // 片尾字卷是插件卡，不吃 SPEED，照真實秒數捲
   while (Date.now() < end) {
     const t = await text(); seen += t;
+    if (!/林亞澤/.test(t)) await ui.advance().catch(() => {});
     if (/製作名單|幕後/.test(t) && /林亞澤/.test(t)) { done = true; break; }
-    await new Promise(r => setTimeout(r, 80));
+    await new Promise(r => setTimeout(r, 120));
   }
   let at = 0, miss = [];
   for (const [id, line] of MUST) { const i = seen.indexOf(line.slice(0, 12), at); if (i < 0) miss.push(id + '：' + line.slice(0, 16)); else at = i; }
   assert(!miss.length, `每張卡的頭尾句依序出現（缺 ${miss.length}：${miss.slice(0, 5).join('、')}）`);
-  assert(done, '自己播到片尾字卷');
+  assert(done, '一路點到片尾字卷');
   console.log('正片約', Math.round((Date.now() - t0) * SPEED / 60000), '分鐘（真實速度）');
   // 開頭幾張圖在按「開始遊戲」前就預載了，監聽不到；沒監聽到的直接向預覽器要一次，要得到才算
   const notLoaded = [];

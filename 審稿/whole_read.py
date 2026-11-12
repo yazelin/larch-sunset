@@ -2,7 +2,7 @@
 """整部通讀：閘門逐卡比，看不到跨卡的事。把全劇一次給幾位讀稿人，只問跨卡問題；兩位以上提到同一句的列為要改。
   python3 審稿/whole_read.py [canon/劇本.md]   → 審稿/紀錄/whole_<時間>.md
 讀稿人：deepseek（讀兩次）、codex、gemini-web；環境變數 WHOLE=deepseek,codex 可指定。"""
-import sys, re, pathlib, datetime
+import sys, re, os, pathlib, datetime
 from concurrent.futures import ThreadPoolExecutor
 D = pathlib.Path(__file__).resolve().parent; sys.path.insert(0, str(D))
 import scene_review as sr
@@ -15,10 +15,20 @@ ASK = """你是視覺小說的總編，下面是整部劇本（每個「## 代�
 最多 20 個，最嚴重的排前面；沒把握的不要寫；逐卡的用詞、語氣問題不要寫。最後一行寫「整體｜」加一句話：全劇讀完最大的一個問題。
 【劇本】
 """
+ASK_AI = """你是台灣的資深編劇，下面是一部視覺小說的整部劇本（每個「## 代號（時空）」是一張卡；〔圖〕那行不用挑）。
+作者覺得台詞還有「AI 味」。你只找聽起來像 AI 寫的台詞與旁白，類型只用這些：
+太工整（句子完整得像書面、對仗、排比、一句話把理由講完）、功能性台詞（這句話只為了讓觀眾知道某件事，真人不會講）、
+每句都在推進（沒有廢話、岔題、接話尾，像在交接資訊）、金句或格言腔、情緒轉得沒有原因（上一句還在氣，下一句就好了，中間沒有讓人信的理由）、
+同一個梗或句型反覆（下命令再回嘴、指位置、打分數之類用太多次）、旁白像舞台指示（一連串「他把什麼放到哪裡」）、不像這個人會說的話。
+每個問題一行：「卡代號｜原句（照抄）｜類型｜為什麼｜改成什麼（直接寫出新句子，要像台灣人平常講話）」。
+最多 25 個，最嚴重的排前面；沒把握的不要寫。最後一行寫「整體｜」加一句話：全劇最有 AI 味的是哪一點。
+【劇本】
+"""
 def main(path):
+    global ASK
+    if os.environ.get('MODE') == 'ai': ASK = ASK_AI
     body = pathlib.Path(path).read_text()
     R = {'deepseek': sr.ds, 'deepseek2': sr.ds, 'codex': sr.cx, 'geminiweb': sr.gm}
-    import os
     who = (os.environ.get('WHOLE') or 'deepseek,deepseek2,codex,geminiweb').split(',')
     with ThreadPoolExecutor(len(who)) as ex: outs = dict(zip(who, ex.map(lambda k: sr.call(R[k], ASK + body), who)))
     rows = []
