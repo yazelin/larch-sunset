@@ -25,8 +25,10 @@ try {
   assert(!miss.length, `每張卡的頭尾句依序出現（缺 ${miss.length}：${miss.slice(0, 5).join('、')}）`);
   assert(done, '自己播到片尾字卷');
   console.log('正片約', Math.round((Date.now() - t0) * SPEED / 60000), '分鐘（真實速度）');
-  const notLoaded = [...BGS].filter(u => !loaded.has(u));
-  assert(!notLoaded.length && !failed.length, `鏡頭圖都有載到（${BGS.size} 張；沒載到 ${notLoaded.length}、失敗 ${failed.length}）`);
+  // 開頭幾張圖在按「開始遊戲」前就預載了，監聽不到；沒監聽到的直接向預覽器要一次，要得到才算
+  const notLoaded = [];
+  for (const u of [...BGS].filter(u => !loaded.has(u))) { const r = await fetch(s.base + u); if (!r.ok) notLoaded.push(u); }
+  assert(!notLoaded.length && !failed.length, `鏡頭圖都有載到（${BGS.size} 張；沒載到 ${notLoaded.length}：${notLoaded.map(u => u.split("/").pop()).join(" ")}；失敗 ${failed.join(" ")}）`);
   for (let k = 0; k < 400 && !back; k++) { await new Promise(r => setTimeout(r, 1000)); back = /開始遊戲/.test(await text()); }
   assert(back, '片尾字卷捲完自己回到標題');
   assert(!ui.errors.length, '沒有頁面錯誤 ' + ui.errors.slice(0, 3).join(' / '));

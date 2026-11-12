@@ -25,6 +25,11 @@ TRACK_BY_PREFIX = [('open', 'days'), ('return', 'seventh'), ('rain', 'dawn'), ('
                    ('evening', 'main')]
 SPEAKER = {'念': '{}的筆記', '心': '{}（心）'}
 LINE_SFX = {('door_1', 0): '/sfx/knock.mp3'}   # 逐句音效（Larch 內建音效庫）：頭七那晚的敲門聲。內建庫只有短的雨聲、風聲，環境音交給配樂
+# 換圖時機：劇本每張卡只標一張圖，畫的是那張卡最要緊的一刻。同一場戲接續的卡，前半沿用上一張圖，演到那一刻才換（值是那一句的開頭）
+SHOT_AT = {'open_2': '旁白：她又碰了碰他的手肘', 'rain_2': '旁白：她先倒洛神花糖漿', 'rain_3': '旁白：她把傘塞進他手裡', 'confess_2': '旁白：他彎下身',
+           'quit_2': '旁白：他把捲起的袖子拉下來', 'roof_2': '旁白：她把他的手按在自己腰上', 'winter_2': '沈淮：我現在坐不下去', 'sunset_3': '旁白：他把杯子放下，拉過飯碗'}
+# 同一張卡裡再換一次圖（沿用別張已有的圖）
+EXTRA_SHOTS = {('farewell_3', '旁白：後門關上'): 'front_night', ('evening_2', '旁白：他沿樓梯下樓'): 'evening_bar'}
 GALLERY = []   # (圖名, 標題)：CG 定稿後再填
 
 
@@ -47,12 +52,20 @@ def title_of(cid):
 def story_card(cid, bg_carry, bgm=''):
     """一張劇本卡 → 一張對話卡；〔圖〕標記的那一句換背景。回傳 (卡, 這張卡結束時的背景)。"""
     lines, bgs, bg = [], [], bg_carry
+    raw = [f'{n}（{g}）：{x}' if g else f'{n}：{x}' for n, g, x in script.L[cid]]
+    at = {}
+    for (c, i), sh in script.SHOTS.items():
+        if c == cid:
+            at[next(k for k, l in enumerate(raw) if l.startswith(SHOT_AT[cid])) if cid in SHOT_AT and i == 0 else i] = sh
+    for (c, anchor), sh in EXTRA_SHOTS.items():
+        if c == cid:
+            at[next(k for k, l in enumerate(raw) if l.startswith(anchor))] = sh
     for i, (name, tag, text) in enumerate(script.L[cid]):
-        url = shot_url(script.SHOTS.get((cid, i), ''))
+        url = shot_url(at.get(i, ''))
         if url:
             bg = url
         lines.append((SPEAKER[tag].format(name) if tag else name, text)); bgs.append(url)
-    card = cards.dialogue(cid, title_of(cid), lines, bg=next((b for b in bgs if b), bg_carry) or '', bgm=bgm or None)
+    card = cards.dialogue(cid, title_of(cid), lines, bg=bgs[0] or bg_carry or '', bgm=bgm or None)
     for dst, b in zip(card['data']['dialogueLines'], bgs):
         if b:
             dst['background'] = b
