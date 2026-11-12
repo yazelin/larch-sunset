@@ -1,0 +1,35 @@
+<script type="application/larch-params">
+{
+  "shade": { "type": "range", "label": "字後暗影濃度", "labelEn": "Text shade", "min": 30, "max": 90, "step": 5, "unit": "%", "default": 60 }
+}
+</script>
+<style>
+/* 晚霞對話框：不鋪框，字直接壓在 CG 下緣的一層暗影上；講者名字前面是一小截三層酒柱（紅、金、粉紅）。 */
+:root { --ink: #f6efe2; --soft: #e6dccb; --roselle: #b3243f; --saffron: #dba53f; --rose: #eaa9b6; --skin-shade: 60%;
+  --serif: "Noto Serif TC", "Songti TC", "Source Han Serif TC", "PMingLiU", Georgia, serif; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: transparent; overflow: hidden; }
+body { padding: 8px clamp(16px, 5vw, 96px) clamp(12px, 2.6vh, 28px); font-family: var(--serif);
+  background: linear-gradient(0deg, color-mix(in srgb, #0c0910 var(--skin-shade), transparent), transparent); }
+.box { position: relative; padding: 10px 46px 12px 0; color: var(--ink); }
+.name { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; color: #f1d9a6; font-size: clamp(13px, 1.1vw, 18px); font-weight: 600; letter-spacing: .28em; text-shadow: 0 1px 3px rgba(0, 0, 0, .9); }
+.name::before { width: 5px; height: 1.25em; flex: none; border-radius: 2px 2px 1px 1px; background: linear-gradient(0deg, var(--roselle) 0 34%, var(--saffron) 34% 68%, var(--rose) 68%); content: ""; }
+html:not([data-has-speaker]) .name { display: none; }
+.text { min-height: 3.2em; margin: 0; font-size: max(var(--larch-text-size, 0px), clamp(21px, 1.85vw, 30px)); font-weight: 500; line-height: 1.6; letter-spacing: .04em; white-space: pre-wrap; overflow-wrap: anywhere;
+  text-shadow: 0 1px 2px #000, 0 0 6px rgba(0, 0, 0, .9), 0 0 16px rgba(0, 0, 0, .8), 0 0 28px rgba(0, 0, 0, .6); }
+html:not([data-has-speaker]) .text { color: var(--soft); }
+.next { position: absolute; right: 0; bottom: 12px; display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border: 1px solid rgba(241, 217, 166, .5); border-radius: 50%; background: transparent; color: #f1d9a6; cursor: pointer; transition: background .2s, border-color .2s; }
+.next::after { width: 8px; height: 8px; margin-top: -4px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; content: ""; transform: rotate(45deg); animation: sink 1.8s ease-in-out infinite; }
+.next:hover { border-color: var(--rose); background: rgba(234, 169, 182, .18); }
+.next:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+.next:disabled { opacity: .35; cursor: default; }
+@keyframes sink { 0%, 100% { translate: 0 0; } 50% { translate: 0 3px; } }
+@media (max-width: 640px) { body { padding: 6px 14px 12px; } .box { padding: 8px 34px 10px 0; } .text { font-size: 17px; } .next { width: 28px; height: 28px; bottom: 8px; } }
+@media (pointer: coarse) and (min-width: 641px) and (max-width: 1000px) { body { padding: 0 clamp(12px, 3vw, 40px) 4px; } .box { padding: 4px 34px 6px 0; } .name { margin: 0; font-size: 12px; } .text { min-height: 0; font-size: 15px; line-height: 1.5; } .next { width: 26px; height: 26px; bottom: 6px; } }
+@media (prefers-reduced-motion: reduce) { .next::after { animation: none; } .next { transition: none; } }
+</style>
+<section class="box" aria-label="對話">
+  <div class="name"><span data-larch-slot="speaker"></span></div>
+  <p class="text" data-larch-slot="text"></p>
+  <button class="next" data-larch-action="advance" aria-label="繼續"></button>
+</section>

@@ -1,46 +1,47 @@
-# 《晚霞是舌尖最後的刺痛》Larch RPG 版
+# 晚霞
 
-> 「最黑的時候，喝一杯天亮。」
+Larch 視覺小說。巷子裡一間只有七張高腳椅的小酒吧，調酒師安雅和加班到深夜的沈淮，從一個暴雨夜的第一杯〈破曉〉開始，鬥嘴、吵架、一起把店撐起來，過了三年。她走後的第七天，他回到店裡，翻開她從不讓人看的小筆記本。
 
-安雅走後第七天，頭七的深夜，沈淮第一次回到兩人一起顧的那間酒吧。吧檯上留著一只空杯和一張只交代店務的便條。他照著燒到一半的配方一樣一樣找回材料，每找到一樣，就回到一段跟活著的她在一起的時候：暴雨夜的初遇、教他調酒的那把黃銅匙、她每一杯都問的「甜嗎」、頂樓唯一一次一起看的晚霞。最後他站到她的位置，調出她留給自己的那一杯〈晚霞〉。
+**2026-11 起是重製版**：單線、純劇情卡、一個結局、全程自動播放、不配音（設計 `design/重製.md`）。舊版《晚霞是舌尖最後的刺痛》（RPG 地圖、兩個結局）的劇本與程式留在 git 歷史；`src/build_v2_maps.py`、`src/push_v2.py`、`src/map_*.py`、`src/memory.py`、`art/` 底下第五版以前的腳本是舊版的，重製版的建置不再使用。
 
-設計文件：`design/重寫.md`（2026-10-17 定稿，含時間線、人物心境、CG 與配樂的理由）。
+- 公開站：`docs/index.html`（兩杯酒的做法、她的病、結局為什麼改寫、參考資料）
 
----
+## 資料夾
 
-## 遊戲架構
+| 路徑 | 內容 |
+|---|---|
+| `canon/劇本.md` | 劇本。每個 `## 代號（時空）` 是一張卡，`〔圖：名字〕` 從下一句起換那張 CG |
+| `canon/歌詞.md` | 片尾主題曲〈晚霞〉歌詞 |
+| `design/` | 重製設計與代決紀錄（`重製.md`）、調酒與病理考據（`研究-調酒.md`、`研究-病理.md`）、角色卡 |
+| `審稿/` | 寫稿準則（`準則.md`）、逐卡閘門（`runner.py`）、整部通讀（`whole_read.py`）、全劇句型掃描（`pattern_scan.py`） |
+| `src/` | `script.py` 讀劇本、`build.py` 組成 `dist/project.json`、`push.py` 推上 Larch、`credits.txt` 片尾名單、`plugin/` 片尾字卷插件 |
+| `art/v5/` | 第五版素材產線：`ref/` 定錨（角色、空景、兩杯酒）、`shots.py` 分鏡與產圖、`bgm.py` 配樂、`theme.py` 主題曲 |
+| `assets/` | 正式素材：`art/cg/` 鏡頭圖、`bgm/` 配樂與主題曲 |
+| `tests/` | `play_auto.mjs` 免點試玩 |
 
-- **平台**：[Larch Story Studio](https://larch.ink)，`larch-rpg-system` 地圖行走與事件。
-- **頭七的現在**（冷藍色調，沈淮第一人稱）：
-  1. `m-bar` 頭七的吧檯：空杯與便條、燒到一半的風味筆記、黃銅匙、她的工作位、她的圍裙／酒櫃標籤／馬克杯（可選看）
-  2. `m-storage` 香料儲藏間：返潮咬死的抽屜（番紅花糖漿、心型鑰匙）、牆上的進貨數字（可選看）
-  3. `m-bedroom` 我們的房間：木盒（病歷與有毒的粉紅胡椒）、她那一側的床、護手霜（可選看）
-- **回憶**（暖金色調，第三人稱），穿插在解謎中：回憶一〈破曉〉、回憶二〈黃銅匙〉、回憶三〈甜嗎〉（含凌晨一整排杯子）、回憶四〈晚霞〉頂樓。
-- **兩個結局**：〈共赴晚霞〉、〈冷卻的餘溫〉。介面不標「真結局」「好結局」。
-- **素材**：8 張劇情 CG（`art/gen_cinematic_cg.py`，.11 codex-image）、8 首配樂（`art/music.py`，gemini-web，切 58.5 秒循環）、全劇配音（`src/tts_memory.py`，larch-tts-bridge；沈淮 Gentle_Youth、安雅 Soft_Girl）。台詞全在 `src/memory.py`。
+## 指令
 
----
+    python3 審稿/runner.py next canon/劇本.md      # 各卡審稿狀態與下一步
+    python3 審稿/runner.py gate canon/劇本.md <卡>  # 改過的卡跟上一版比（讀稿人找問題、評審兩兩比較）
+    python3 審稿/whole_read.py                     # 幾位讀稿人各讀一遍全劇，只找跨卡的問題
+    python3 審稿/pattern_scan.py                   # 全劇句型統計（重複開頭、旁白句型、重複交代）
+    python3 art/v5/shots.py list                   # 鏡頭與各自帶的定錨
+    python3 art/v5/shots.py gen <鏡頭|all> [張數]   # 產候選圖到 art/v5/raw/（走全機共用的產圖排隊）
+    python3 art/v5/shots.py install <鏡頭>_<n>      # 選定 → assets/art/cg/<鏡頭>.webp
+    python3 art/v5/bgm.py [名字…]                  # 配樂（gemini-web，代聽驗收）
+    python3 art/v5/theme.py 3                      # 主題曲候選
+    python3 src/build.py                           # 產出 dist/project.json
+    SPEED=16 node tests/play_auto.mjs              # 只按「開始遊戲」，要自己播到片尾再回標題
+    python3 src/push.py "這次改了什麼"              # 推上 Larch（素材走 jsDelivr 孤兒 tag，要先 commit 並 git push）
 
-## 開發與建置
+`tests/` 需要本機預覽器 `~/larch-preview` 與 Playwright。產圖與配樂要連自架服務，金鑰從環境變數與本機設定檔讀，不放進 repo。
 
-```bash
-python3 src/build.py                 # 組出 dist/project.json
-python3 src/tts_memory.py            # 補缺的配音（FORCE=1 全部強制重配）
-node tests/play_full.mjs             # 全劇自動試玩〈共赴晚霞〉；END=cold 走〈冷卻的餘溫〉
-python3 ~/larch-preview/serve.py dist/project.json   # 本機預覽，畫面上可留回饋（dist/feedback/）
-```
+## 分工
 
-推上 Larch（只更新專案，不上架）：
+劇本方向與角色由作者決定。文字由 AI 依作者的方向撰寫，並用審稿閘門與整部通讀把關；美術、配樂與主題曲由 AI 生成；程式由 AI 製作。這一版沒有配音。
 
-1. 素材有改：commit、推 main、打新 tag，把 `src/push.py` 的 `CDN_TAG` 換成那個 tag 的 commit 編號（新 tag jsDelivr 要等刷新，commit 編號馬上能用）。
-2. `DRY=1 python3 src/push.py x`：素材換成 jsDelivr 並逐一確認打得開，只產 `dist/project-larch.json`。
-3. 最後一個改動之後重跑兩個結局的試玩，全過才推。
-4. `python3 src/push.py "這次改了什麼"`：先存線上快照到 `snapshots/`，整包 PUT。推之前關掉 Larch 編輯器分頁。
-5. 讀回核對卡片數，再用 `LIVE=<Larch 預覽網址> node tests/play_full.mjs` 在 Larch 本站跑兩個結局。
+## 授權
 
----
+程式碼以 MIT 授權（`LICENSE`）。故事文字、美術、音樂與公開站內容以 CC BY-NC 4.0 授權（`LICENSE-CONTENT.md`）。
 
-## 授權與社群
-
-- 程式碼：MIT © 林亞澤
-- [GitHub @yazelin](https://github.com/yazelin) · [Facebook](https://facebook.com/yazelin) · [Buy Me a Coffee](https://buymeacoffee.com/yazelin)
+[GitHub @yazelin](https://github.com/yazelin) · [Facebook](https://facebook.com/yazelin) · [Buy Me a Coffee](https://buymeacoffee.com/yazelin)

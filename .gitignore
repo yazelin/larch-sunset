@@ -15,3 +15,8 @@ art/music_raw/
 art/raw/
 art/check/
 /dist/project-larch.json
+art/v5/music_raw/
+art/v5/anchors/
+art/v5/prompts/shot_*.txt
+art/v5/*.log
+!art/v5/ref/*.webp

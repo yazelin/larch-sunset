@@ -1,0 +1,75 @@
+<script type="application/larch-params">
+{
+  "eyebrow": { "type": "text", "label": "標題上方小字", "labelEn": "Eyebrow", "default": "巷子裡，七張高腳椅", "maxLength": 40 },
+  "howto": { "type": "text", "label": "選單下方的說明（空白＝不顯示）", "labelEn": "How to play", "default": "按下「開始遊戲」後全程自動播放。戴上耳機，不用點滑鼠。", "maxLength": 60 },
+  "veil": { "type": "range", "label": "左側暗幕濃度", "labelEn": "Left veil", "min": 30, "max": 90, "step": 5, "unit": "%", "default": 70 },
+  "intro": { "type": "select", "label": "入場動畫", "labelEn": "Entrance", "options": [{ "value": "full", "label": "完整", "labelEn": "Full" }, { "value": "off", "label": "關閉", "labelEn": "Off" }], "default": "full" }
+}
+</script>
+<style>
+/* 晚霞標題畫面：封面滿版，左下角一條三層的細長酒柱（紅、金、粉紅，照〈晚霞〉由下往上疊）陪著作品名，沒有卡片。 */
+:root { --night: #130e18; --ink: #f4ecdc; --soft: #cdbfae; --roselle: #b3243f; --saffron: #dba53f; --rose: #eaa9b6;
+  --serif: "Noto Serif TC", "Songti TC", "Source Han Serif TC", "PMingLiU", Georgia, serif; --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --skin-veil: 70%; --t: 1; }
+html[data-skin-intro="off"] { --t: 0; }
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; overflow: hidden; background: var(--night); }
+body { color: var(--ink); font-family: var(--serif); }
+.screen { position: fixed; inset: 0; overflow: hidden; isolation: isolate; }
+.cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: clear calc(2.6s * var(--t)) cubic-bezier(.2, .7, .2, 1) both; }
+.cover:not([src]) { display: none; }
+@keyframes clear { from { filter: brightness(.3) saturate(.6); } to { filter: none; } }
+.veil { position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--night) var(--skin-veil), transparent), color-mix(in srgb, var(--night) calc(var(--skin-veil) * .55), transparent) 38%, transparent 68%), linear-gradient(0deg, color-mix(in srgb, var(--night) 55%, transparent), transparent 42%); }
+.stage { position: absolute; inset: 0; display: grid; align-items: end; justify-items: start; padding: clamp(24px, 6vh, 72px) clamp(24px, 6vw, 96px); }
+.block { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(18px, 2vw, 30px); max-width: min(560px, 100%); }
+/* 酒柱：三層由下往上依序倒滿 */
+.pour { grid-row: 1 / span 5; width: 10px; align-self: stretch; display: flex; flex-direction: column-reverse; border-radius: 5px 5px 2px 2px; overflow: hidden; background: rgba(244, 236, 220, .12); box-shadow: 0 0 18px rgba(219, 165, 63, .25); }
+.pour i { flex: 1; transform-origin: bottom; animation: fill calc(.9s * var(--t)) cubic-bezier(.3, .7, .2, 1) both; }
+.pour i:nth-child(1) { background: var(--roselle); animation-delay: calc(.9s * var(--t)); }
+.pour i:nth-child(2) { background: var(--saffron); animation-delay: calc(1.7s * var(--t)); }
+.pour i:nth-child(3) { background: var(--rose); animation-delay: calc(2.5s * var(--t)); }
+@keyframes fill { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.eyebrow { margin: 0; color: var(--soft); font: 500 13px/1.6 var(--sans); letter-spacing: .32em; animation: up calc(1s * var(--t)) ease-out calc(1.2s * var(--t)) both; }
+.eyebrow[data-empty], .eyebrow:empty { display: none; }
+h1 { margin: 6px 0 0; font: 900 clamp(56px, 9vw, 128px)/1.08 var(--serif); letter-spacing: .18em; overflow-wrap: anywhere; text-shadow: 0 2px 30px rgba(0, 0, 0, .6); animation: up calc(1.4s * var(--t)) cubic-bezier(.2, .7, .2, 1) calc(1.5s * var(--t)) both; }
+.subtitle { max-width: 28em; margin: 14px 0 0; color: var(--soft); font-size: clamp(14px, 1.15vw, 16px); line-height: 1.9; letter-spacing: .06em; text-shadow: 0 1px 8px rgba(0, 0, 0, .8); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; animation: up calc(1s * var(--t)) ease-out calc(2.2s * var(--t)) both; }
+.subtitle[data-empty] { display: none; }
+.menu { display: flex; flex-wrap: wrap; gap: 6px 26px; margin-top: 26px; animation: up calc(1s * var(--t)) ease-out calc(3s * var(--t)) both; }
+.menu button { padding: 8px 2px; border: 0; border-bottom: 1px solid rgba(244, 236, 220, .35); background: none; color: var(--ink); font: 600 clamp(15px, 1.3vw, 18px)/1.4 var(--serif); letter-spacing: .2em; cursor: pointer; transition: color .2s, border-color .2s; }
+.menu button[hidden] { display: none; }
+.menu button.primary { border-bottom: 2px solid var(--saffron); color: #fff7e6; }
+.menu button:hover:not(:disabled), .menu button:focus-visible { border-bottom-color: var(--rose); color: var(--rose); outline: none; }
+.menu button:focus-visible { box-shadow: 0 4px 0 -2px var(--rose); }
+.menu button:disabled { border-bottom-style: dashed; color: rgba(244, 236, 220, .4); cursor: not-allowed; }
+.howto { margin: 18px 0 0; color: var(--saffron); font: 500 13px/1.7 var(--sans); letter-spacing: .08em; text-shadow: 0 1px 6px rgba(0, 0, 0, .8); animation: up calc(1s * var(--t)) ease-out calc(3.3s * var(--t)) both; }
+.howto:empty { display: none; }
+@keyframes up { from { opacity: 0; translate: 0 14px; } to { opacity: 1; translate: 0 0; } }
+@media (max-width: 760px), (max-aspect-ratio: 4/5) {
+  .veil { background: linear-gradient(0deg, color-mix(in srgb, var(--night) 88%, transparent), color-mix(in srgb, var(--night) 50%, transparent) 46%, transparent 72%); }
+  .stage { padding: 20px 20px max(6vh, 26px); }
+  h1 { font-size: clamp(48px, 17vw, 84px); }
+  .menu { flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 18px; }
+  .menu button { min-height: 44px; }
+}
+@media (max-height: 520px) and (min-width: 761px) { h1 { font-size: 52px; } .subtitle { -webkit-line-clamp: 2; } .menu { margin-top: 12px; } .howto { margin-top: 8px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition: none !important; } }
+</style>
+<main class="screen">
+  <img class="cover" data-larch-slot="cover" alt="">
+  <div class="veil" aria-hidden="true"></div>
+  <div class="stage">
+    <section class="block">
+      <div class="pour" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p class="eyebrow" data-larch-param="eyebrow"></p>
+      <h1 data-larch-slot="title"></h1>
+      <p class="subtitle" data-larch-slot="description"></p>
+      <nav class="menu" aria-label="主選單">
+        <button class="primary" data-larch-action="start"><span data-larch-label="start">開始遊戲</span></button>
+        <button data-larch-action="continue"><span data-larch-label="continue">繼續遊戲</span></button>
+        <button data-larch-action="chapters"><span data-larch-label="chapters">選擇章節</span></button>
+        <button data-larch-action="gallery"><span data-larch-label="gallery">CG 收藏</span></button>
+      </nav>
+      <p class="howto" data-larch-param="howto"></p>
+    </section>
+  </div>
+</main>

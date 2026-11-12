@@ -1,0 +1,34 @@
+// 免點試玩：只按「開始遊戲」，之後什麼都不點，要自己從第一張卡播到片尾字卷，再回標題。
+// SPEED=16 node tests/play_auto.mjs（先 python3 src/build.py）。檢查：每張卡的第一句與最後一句依序出現、每個鏡頭的圖有載到、沒有頁面錯誤。
+import { serve, open, sleep, assert, SPEED } from './lib.mjs';
+import { readFileSync } from 'node:fs';
+const P = JSON.parse(readFileSync('dist/project.json', 'utf8'));
+const cards = P.boards[0].nodes.filter(n => n.data.type === 'dialogue' && n.id !== 'hint');
+const MUST = cards.flatMap(n => { const l = n.data.dialogueLines; return [[n.id, l[0].text], [n.id, l[l.length - 1].text]]; });
+const BGS = new Set(cards.flatMap(n => n.data.dialogueLines.map(l => l.background).filter(Boolean)));
+const s = await serve('dist/project.json');
+const ui = await open(s.base, { width: 1600, height: 900 });
+const loaded = new Set(), failed = [];
+ui.page.on('response', r => { const u = new URL(r.url()).pathname; if (u.startsWith('/files/assets/')) (r.status() < 400 ? loaded.add(u) : failed.push(u + ' ' + r.status())); });
+const text = async () => (await Promise.all(ui.page.frames().map(f => f.evaluate(() => document.body.innerText).catch(() => '')))).join(' | ');
+let seen = '', done = false, back = false; const t0 = Date.now();
+try {
+  await ui.clickText('開始遊戲'); await sleep(2000);
+  const end = Date.now() + 80 * 60000 / SPEED + 8 * 60000;   // 片尾字卷是插件卡，不吃 SPEED，照真實秒數捲
+  while (Date.now() < end) {
+    const t = await text(); seen += t;
+    if (/製作名單|幕後/.test(t) && /林亞澤/.test(t)) { done = true; break; }
+    await new Promise(r => setTimeout(r, 80));
+  }
+  let at = 0, miss = [];
+  for (const [id, line] of MUST) { const i = seen.indexOf(line.slice(0, 12), at); if (i < 0) miss.push(id + '：' + line.slice(0, 16)); else at = i; }
+  assert(!miss.length, `每張卡的頭尾句依序出現（缺 ${miss.length}：${miss.slice(0, 5).join('、')}）`);
+  assert(done, '自己播到片尾字卷');
+  console.log('正片約', Math.round((Date.now() - t0) * SPEED / 60000), '分鐘（真實速度）');
+  const notLoaded = [...BGS].filter(u => !loaded.has(u));
+  assert(!notLoaded.length && !failed.length, `鏡頭圖都有載到（${BGS.size} 張；沒載到 ${notLoaded.length}、失敗 ${failed.length}）`);
+  for (let k = 0; k < 400 && !back; k++) { await new Promise(r => setTimeout(r, 1000)); back = /開始遊戲/.test(await text()); }
+  assert(back, '片尾字卷捲完自己回到標題');
+  assert(!ui.errors.length, '沒有頁面錯誤 ' + ui.errors.slice(0, 3).join(' / '));
+} catch (e) { console.error(e.message, '\n畫面：', (await text()).slice(-300)); process.exitCode = 1; }
+finally { await ui.close(); s.kill(); }

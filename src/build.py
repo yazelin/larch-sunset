@@ -1,155 +1,133 @@
-"""組出 dist/project.json：骨架＋RPG地圖＋劇情卡＋配音演出。"""
-import json, pathlib, shutil
-import cards, variables, art, mapkit
-import map_bar, map_storage, map_bedroom, memory
+"""組出 dist/project.json：第五版（2026-11），單線、純劇情卡、一個結局（設計 design/重製.md）。
+canon/劇本.md 的每個 `##` 是一張對話卡，照劇本順序串起來；〔圖〕標記的那一句換背景，不放立繪。全程自動播放、沒有選項、不配音。
+python3 src/build.py
+"""
+import json, os, pathlib, shutil, sys
+sys.path.insert(0, os.path.dirname(__file__))
+import script, cards
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
+R = ROOT = pathlib.Path(__file__).resolve().parent.parent
 PROJECT_ID = 'project-8cb1ab7e-891c-46b4-bd38-df29060e5717'
+A = '/files/assets/'
+TEXT_MS = 55
+AUTO = {'enabled': True, 'mode': 'delay', 'delayMs': 2000}
+HINT = ['這是一部從頭到尾會自己播放的小說，大約四十分鐘。', '戴上耳機，不用點滑鼠，看到最後。想快一點，點一下畫面。']
+NAME = '晚霞'
+DESCRIPTION = ('巷子裡一間只有七張高腳椅的小酒吧。調酒師安雅和加班到深夜的沈淮，從一個暴雨夜的第一杯〈破曉〉開始，'
+               '鬥嘴、吵架、一起把店撐起來，過了三年。她走後的第七天，他回到店裡，翻開她從不讓人看的小筆記本。'
+               '單線劇情、一個結局，全程自動播放。')
+# 配樂：每張卡用哪一首（assets/bgm/<名>.mp3）。同一首連續的卡不重設，曲子不會從頭重播；'' 是安靜
+TRACK_BY_PREFIX = [('open', 'days'), ('return', 'seventh'), ('rain', 'dawn'), ('weeks', 'dawn'), ('clinic', 'alone'), ('lesson', 'days'),
+                   ('confess', 'dawn'), ('together', 'days'), ('quit_1', 'alone'), ('quit_2', 'alone'), ('quit_3', 'days'), ('home', 'days'),
+                   ('dusk', 'days'), ('almost', 'alone'), ('roof', 'sunset'), ('winter_1', 'alone'), ('winter_2', 'alone'), ('winter_3', 'winter'),
+                   ('last', 'winter'), ('farewell_1', 'winter'), ('farewell_2', ''), ('farewell_3', 'seventh'), ('notebook', 'seventh'),
+                   ('flash_1', 'days'), ('flash_2', 'sunset'), ('door', 'seventh'), ('sunset_1', ''), ('sunset_2', ''), ('sunset_3', 'sunset'),
+                   ('evening', 'main')]
+SPEAKER = {'念': '{}的筆記', '心': '{}（心）'}
+LINE_SFX = {('door_1', 0): '/sfx/knock.mp3'}   # 逐句音效（Larch 內建音效庫）：頭七那晚的敲門聲。內建庫只有短的雨聲、風聲，環境音交給配樂
+GALLERY = []   # (圖名, 標題)：CG 定稿後再填
 
 
-def load_skeleton():
-    return json.loads((ROOT / 'skeleton/project.json').read_text(encoding='utf-8'))
+def track(cid):
+    return next((t for p, t in TRACK_BY_PREFIX if cid.startswith(p)), None)
 
 
-def rpg_database(a):
-    def actor(id, name, walk, portrait, role='party'):
-        return {
-            'id': id,
-            'name': name,
-            'title': '',
-            'profile': '',
-            'role': role,
-            'walk': mapkit.walker(a[walk]),
-            'portrait': a[portrait],
-            'join': 'stay' if id == 'shen' else 'later',
-            'kit': 'none',
-            'rig': '',
-            'joinVariable': ''
-        }
-    return {
-        'version': 1,
-        'heroId': 'shen',
-        'leadSwitch': False,
-        'actors': [
-            actor('shen', '沈淮', 'walk-shen', 'p-shen'),
-            actor('anya', '安雅', 'walk-anya', 'p-anya'),
-            actor('anya-spirit', '安雅（靈魂）', 'walk-anya-spirit', 'p-anya-spirit')
-        ]
-    }
+def music(name):
+    return A + f'bgm/{name}.mp3' if name and (R / f'assets/bgm/{name}.mp3').exists() else ''
+
+
+def shot_url(shot):
+    return A + f'art/cg/{shot}.webp' if (R / f'assets/art/cg/{shot}.webp').exists() else ''
+
+
+def title_of(cid):
+    return script.WHEN[cid].replace('，', '・')[:24] or cid
+
+
+def story_card(cid, bg_carry, bgm=''):
+    """一張劇本卡 → 一張對話卡；〔圖〕標記的那一句換背景。回傳 (卡, 這張卡結束時的背景)。"""
+    lines, bgs, bg = [], [], bg_carry
+    for i, (name, tag, text) in enumerate(script.L[cid]):
+        url = shot_url(script.SHOTS.get((cid, i), ''))
+        if url:
+            bg = url
+        lines.append((SPEAKER[tag].format(name) if tag else name, text)); bgs.append(url)
+    card = cards.dialogue(cid, title_of(cid), lines, bg=next((b for b in bgs if b), bg_carry) or '', bgm=bgm or None)
+    for dst, b in zip(card['data']['dialogueLines'], bgs):
+        if b:
+            dst['background'] = b
+    for (c, i), u in LINE_SFX.items():
+        if c == cid:
+            card['data']['dialogueLines'][i]['sfxUrl'] = u
+    ops = [{'id': f'cgop-{cid}-{sh}', 'mode': 'unlock', 'url': shot_url(sh)} for (c, _), sh in script.SHOTS.items()
+           if c == cid and sh in {k for k, _ in GALLERY} and shot_url(sh)]
+    if ops:
+        card['data']['cgOps'] = ops
+    card['data'].update(stage={'actors': []}, characterLayers=[], autoAdvance=dict(AUTO))
+    return card, bg
+
+
+def credits_card(bg):
+    content = (R / 'src/credits.txt').read_text(encoding='utf-8').strip()
+    return {'id': 'credits', 'type': 'story', 'position': {'x': 0, 'y': 0}, 'data': {
+        'type': 'plugin', 'title': '製作名單', 'text': '', 'voiceMode': 'off', 'stage': {'actors': []}, 'characterLayers': [], 'background': bg,
+        'pluginId': 'credits-roll', 'pluginCardId': 'roll', 'pluginVersion': '1.0.0', 'pluginName': '片尾字卷', 'pluginCardName': '片尾字卷',
+        'pluginIcon': 'scroll', 'pluginColor': '#8a6d2a', 'pluginPresentation': 'fullscreen', 'pluginFrame': {'showTitle': False, 'showButton': False},
+        'pluginSkippable': True, 'pluginReadVars': [], 'pluginWriteVars': [], 'pluginAssets': [], 'platforms': ['web'],
+        'pluginHtml': (R / 'src/plugin/credits_roll_card.html').read_text(encoding='utf-8'),
+        'pluginValues': {'content': content, 'speed': 16, 'autoContinue': True, 'endHold': 8, 'continueLabel': '回到標題', 'bgColor': '#0b0a10',
+                         'bgOpacity': 0.8, 'textColor': '#f3ead8', 'accentColor': '#d9a441', 'font': 'serif'},
+        **({'bgm': music('theme'), 'bgmVolume': 0.7, 'bgmLoop': False} if music('theme') else {})}}
 
 
 def build():
-    p = load_skeleton()
-    p['boards'][0]['description'] = '頭七的吧檯、香料儲藏間、我們的房間，四段穿插的回憶，兩個結局。'   # 市集的章節說明從這裡抄（2026-10-18）
-    # 角色資料照 design/重寫.md 定稿（2026-10-17 作者要修：舊背景寫「研發三年毒劑」、聲線誤設成沈淮的、立繪在 R2）
-    anya = p['characters'][0]
-    anya.update({
-        'role': '女主角，調酒師，酒吧的主人',
-        'backstory': '三年前的暴雨夜，替淋濕的沈淮調了一杯〈破曉〉。四個月後確診味覺中樞進行性壞死，沒有告訴任何人，開始教他調酒。'
-                     '想為兩人調一杯〈晚霞〉，還沒調成，舌頭先不行了。',
-        'secrets': '確診後瞞了沈淮快三年；說是偏頭痛的藥，其實是神經止痛藥。',
-        'personality': '溫暖、愛笑、在吧檯後面說了算，會主動伸手，什麼都自己扛。',
-        'speakingStyle': '短句，笑著管人；說到自己的事就停住，改問「甜嗎？」。',
-        'voiceName': 'Chinese (Mandarin)_Soft_Girl',
-        'portraitUrl': '/files/assets/art/p_anya.webp',
-        'expressions': [
-            {'id': 'expression-6ea37c5d-3e7d-4999-b045-d34380b7d823', 'kind': 'expression', 'name': '微笑', 'emotion': 'smile', 'imageUrl': '/files/assets/art/p_anya.webp'},
-            {'id': 'expression-56bd4e18-9e8d-4e0d-83fd-909c4388ffbc', 'kind': 'expression', 'name': '頭七', 'emotion': 'spirit', 'imageUrl': '/files/assets/art/p_anya_spirit.webp'},
-        ],
-    })
-    if not any(c.get('name') == '沈淮' for c in p['characters']):
-        p['characters'].append({
-            'id': 'character-3f6c2a9e-8b41-4d27-9c5e-1a7d4b2e6f80', 'name': '沈淮', 'slug': '沈淮',
-            'role': '男主角，安雅教出來的調酒師',
-            'backstory': '三年前淋著暴雨走進她的酒吧，之後每天坐到兩點十七分才走。她教他調酒，第二年起兩人一起顧店。',
-            'secrets': '', 'personality': '安靜、怕苦，話不多，記得她說過的每一句。',
-            'speakingStyle': '低聲、慢，第一人稱回想時很克制。',
-            'voiceName': 'Chinese (Mandarin)_Gentle_Youth', 'voiceProvider': 'minimax',
-            'portraitUrl': '/files/assets/art/p_shen.webp', 'expressions': [],
-        })
+    p = json.loads((R / 'skeleton/project.json').read_text(encoding='utf-8'))
+    p = p.get('project', p)
     board = p['boards'][0]
     board['nodes'], board['edges'] = [], []
     p['nodes'], p['edges'] = board['nodes'], board['edges']
-    p['variables'] = variables.project_variables()
-
-    a = art.paths()
-    v = art.VOICES
-
-    # RPG 系統插件設定
-    p['settings'].setdefault('plugins', {})
-    p['settings']['plugins']['larch-rpg-system'] = {
-        'enabled': True,
-        'settings': {
-            'database': json.dumps(rpg_database(a), ensure_ascii=False)
-        }
-    }
-
-    # 封面與 CG 收藏庫
-    p['settings']['titleCoverImage'] = a['cover']
-    p['settings']['projectThumbnail'] = a['cover']
-    p['settings'].setdefault('titleScreen', {})['bgm'] = a['bgm-bar']
-    p['settings']['cgGallerySource'] = 'picked'
-    p['settings']['cgGalleryItems'] = [
-        {'url': a['cover'], 'title': '晚霞是舌尖最後的刺痛'},
-        {'url': a['cg-mem1'], 'title': '破曉'},
-        {'url': a['cg-mem2'], 'title': '只借你'},
-        {'url': a['cg-mem3'], 'title': '甜嗎'},
-        {'url': a['cg-mem3b'], 'title': '還差一點'},
-        {'url': a['cg-mem4'], 'title': '有風就好'},
-        {'url': a['cg-cocktail'], 'title': '晚霞'},
-        {'url': a['cg-ending-burn'], 'title': '共赴晚霞'},
-        {'url': a['cg-ending-cold'], 'title': '冷卻的餘溫'},
-        {'url': a['bg-bar'], 'title': '頭七的吧檯'},
-        {'url': a['bg-storage'], 'title': '香料儲藏間'},
-        {'url': a['bg-bedroom'], 'title': '我們的房間'}
-    ]
-
-    # UI 主題風格搭配：暗夜暖橙酒吧風
-    p['settings']['menuUi'] = {
-        'preset': 'night',
-        'accent': '#ff7b39',
-        'title': '晚霞是舌尖最後的刺痛',
-        'eyebrow': '調酒師的記憶收納',
-        'buttons': ['bag', 'save', 'load', 'title']
-    }
-    p['settings']['battleUi'] = {
-        'preset': 'night',
-        'panel': '#1e1b18',
-        'accent': '#ff7b39'
-    }
-
+    p['name'], p['description'] = NAME, DESCRIPTION
+    cover = A + 'art/cover.webp'
+    board.update(name='晚霞', thumbnail=cover, description='從第一年春天的暴雨夜，到她走後的第七天。')
+    p['variables'] = []
+    s = p['settings']
+    s['plugins'] = {**{k: ({**v, 'enabled': False} if k == 'larch-inventory' else v) for k, v in s.get('plugins', {}).items()}, 'credits-roll': {'enabled': True}}
+    s.update(showRpgHud=False, textSpeed=TEXT_MS, stageFit='contain', titleCoverImage=cover, projectThumbnail=cover,
+             cgGalleryEnabled=bool(GALLERY), cgGallerySource='picked',
+             cgGalleryItems=[{'url': cover, 'title': NAME}] + [{'url': shot_url(k), 'title': t, 'locked': True} for k, t in GALLERY if shot_url(k)])
+    p['projectThumbnail'] = cover
+    s.setdefault('titleScreen', {})['bgm'] = music('main') or s.get('titleScreen', {}).get('bgm', '')
+    ci = s.setdefault('customInterfaces', {})   # 作品專屬介面（ui/）：標題與對話框；線上要另外用 Larch 介面工具寫進去
+    for k in ('title', 'dialogue'):
+        ci[k] = {'html': (R / f'ui/{k}.html').read_text(encoding='utf-8'), 'enabled': True}
     N = board['nodes'].append
-    L = lambda x, y: cards.link(board, x, y)
-
-    # 2. 地圖卡：深夜吧檯、香料儲藏間、臥室梳妝台
-    N(map_bar.build_bar(a))
-    N(map_storage.build_storage(a))
-    N(map_bedroom.build_bedroom(a))
-
-
-    # 3. 劇情卡片：序幕、便條、回憶、病歷、遺言、抉擇與兩個結局都在 memory.py（design/重寫.md）
-    memory.build(board, a)
-    # 兩個結局的最後一張停在畫面上，不要自己跳走（2026-10-19 作者在《雨幕》提醒的「無下一張時停留在此卡片」）
-    ends = [n for n in board['nodes'] if n['id'] in ('ending_burn_4', 'ending_cold_3')]
-    assert len(ends) == 2, [n['id'] for n in ends]
-    for n in ends:
-        n['data']['stayOnCard'] = True
-    print('地圖內心話轉成配音卡：', memory.voice_map_lines(board))
-
-
-    (ROOT / 'dist').mkdir(exist_ok=True)
-    out_file = ROOT / 'dist/project.json'
-    out_file.write_text(json.dumps(p, ensure_ascii=False, indent=2), encoding='utf-8')
-
-    # 同步 assets 目錄至 dist/assets 供本機 serve.py /files/assets/... 直供
-    dst = ROOT / 'dist/assets'
-    shutil.rmtree(dst, ignore_errors=True)
-    if (ROOT / 'assets').exists():
-        shutil.copytree(ROOT / 'assets', dst)
-
-    nodes_count = len(board['nodes'])
-    edges_count = len(board['edges'])
-    print(f'Build finished! Output: {out_file} ({nodes_count} nodes, {edges_count} edges)')
+    hint = cards.dialogue('hint', '開始之前', [('旁白', t) for t in HINT], bg=cover)
+    hint['data'].update(start=True, autoAdvance=dict(AUTO), stage={'actors': []}, characterLayers=[])
+    N(hint)
+    prev, ptrack, bg = 'hint', None, ''
+    for cid in script.ORDER:
+        t = track(cid)
+        url = music(t) if t and t != ptrack else ''
+        c, bg = story_card(cid, bg, bgm=url)
+        if t == '' and ptrack:   # 安靜的卡：停掉上一首
+            c['data'].update(bgm='', bgmVolume=0, bgmLoop=False)
+        ptrack = t if (url or t == '') else ptrack
+        N(c); cards.link(board, prev, cid); prev = cid
+    N(credits_card(bg)); cards.link(board, prev, 'credits')
+    (R / 'dist').mkdir(exist_ok=True)
+    out = R / 'dist/project.json'
+    out.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding='utf-8')
+    shutil.rmtree(R / 'dist/assets', ignore_errors=True)
+    (R / 'dist/assets').mkdir()
+    for sub in ('art/cg', 'bgm', 'sfx'):
+        if (R / 'assets' / sub).exists():
+            shutil.copytree(R / 'assets' / sub, R / 'dist/assets' / sub)
+    (R / 'dist/assets/art').mkdir(parents=True, exist_ok=True)
+    shutil.copy(R / 'assets/art/cover.webp', R / 'dist/assets/art/cover.webp')
+    ids = {n['id'] for n in board['nodes']}
+    assert not [e for e in board['edges'] if e['source'] not in ids or e['target'] not in ids]
+    missing = sorted({sh for sh in script.SHOTS.values() if not shot_url(sh)})
+    print(f'Build finished! {out}（{len(board["nodes"])} 張卡、{len(board["edges"])} 條線；還沒有圖的鏡頭 {len(missing)} 個）')
     return p
 
 
