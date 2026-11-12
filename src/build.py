@@ -4,7 +4,7 @@ python3 src/build.py
 """
 import json, os, pathlib, shutil, sys
 sys.path.insert(0, os.path.dirname(__file__))
-import script, cards
+import script, cards, labels
 
 R = ROOT = pathlib.Path(__file__).resolve().parent.parent
 PROJECT_ID = 'project-8cb1ab7e-891c-46b4-bd38-df29060e5717'
@@ -48,13 +48,29 @@ def shot_url(shot):
     return A + f'art/cg/{shot}.webp' if (R / f'assets/art/cg/{shot}.webp').exists() else ''
 
 
+def when(cid):
+    """這張卡的時間標示：(模式, 主, 副)。頭七是「現在」；頭七第一次出現之後、尾聲之前的其他時間都是「回憶」。"""
+    seg = script.WHEN[cid].split('，'); main, sub = seg[0], seg[1] if len(seg) > 1 else ''
+    if main.startswith('頭七'):
+        return '現在', '頭七', main[2:]
+    order = script.ORDER; i = order.index(cid)
+    seen_now = any(script.WHEN[c].startswith('頭七') for c in order[:i])
+    later_now = any(script.WHEN[c].startswith('頭七') for c in order[i:])
+    return ('回憶' if seen_now and later_now else ''), main, sub
+
+
+def lab(shot, cid):
+    """壓上這張卡時間標示的 CG 網址。"""
+    return A + labels.label(R / f'assets/art/cg/{shot}.webp', *when(cid)) if shot and (R / f'assets/art/cg/{shot}.webp').exists() else ''
+
+
 def title_of(cid):
     return script.WHEN[cid].replace('，', '・')[:24] or cid
 
 
-def story_card(cid, bg_carry, bgm=''):
-    """一張劇本卡 → 一張對話卡；〔圖〕標記的那一句換背景。回傳 (卡, 這張卡結束時的背景)。"""
-    lines, bgs, bg = [], [], bg_carry
+def story_card(cid, carry, prev, bgm=''):
+    """一張劇本卡 → 一張對話卡。carry 是上一張卡結束時的鏡頭名；prev 是上一張卡的代號。回傳 (卡, 這張卡結束時的鏡頭名)。
+    每張圖左上角壓這張卡的時間標示；時間換了（或進出回憶）時，第一句先出整頁字卡，第二句才出圖。"""
     raw = [f'{n}（{g}）：{x}' if g else f'{n}：{x}' for n, g, x in script.L[cid]]
     at = {}
     for (c, i), sh in script.SHOTS.items():
@@ -63,24 +79,29 @@ def story_card(cid, bg_carry, bgm=''):
     for (c, anchor), sh in EXTRA_SHOTS.items():
         if c == cid:
             at[next(k for k, l in enumerate(raw) if l.startswith(anchor))] = sh
+    w, pw = when(cid), when(prev) if prev else None
+    new_time = pw is None or w[0] != pw[0] or (w[0] != '現在' and w[1] != pw[1])
+    lines, bgs, shot = [], [], carry
     for i, (name, tag, text) in enumerate(script.L[cid]):
-        url = shot_url(at.get(i, ''))
-        if url:
-            bg = url
+        url = ''
+        if i in at and (R / f'assets/art/cg/{at[i]}.webp').exists():
+            shot = at[i]; url = lab(shot, cid)
         lines.append((SPEAKER[tag].format(name) if tag else name, text)); bgs.append(url)
-    card = cards.dialogue(cid, title_of(cid), lines, bg=bgs[0] or bg_carry or '', bgm=bgm or None)
+    if not bgs[0]:
+        bgs[0] = lab(carry, cid)   # 沿用上一張卡的圖，標示換成這張卡的
+    if new_time and len(bgs) > 1:
+        first = bgs[0]; bgs[0] = A + labels.title(*w)
+        if not bgs[1]:
+            bgs[1] = first
+    card = cards.dialogue(cid, title_of(cid), lines, bg=bgs[0] or '', bgm=bgm or None)
     for dst, b in zip(card['data']['dialogueLines'], bgs):
         if b:
             dst['background'] = b
     for (c, i), u in LINE_SFX.items():
         if c == cid:
             card['data']['dialogueLines'][i]['sfxUrl'] = u
-    ops = [{'id': f'cgop-{cid}-{sh}', 'mode': 'unlock', 'url': shot_url(sh)} for (c, _), sh in script.SHOTS.items()
-           if c == cid and sh in {k for k, _ in GALLERY} and shot_url(sh)]
-    if ops:
-        card['data']['cgOps'] = ops
     card['data'].update(stage={'actors': []}, characterLayers=[])
-    return card, bg
+    return card, shot
 
 
 def credits_card(bg):
@@ -117,11 +138,12 @@ def build():
     for k in ('title', 'dialogue'):
         ci[k] = {'html': (R / f'ui/{k}.html').read_text(encoding='utf-8'), 'enabled': True}
     N = board['nodes'].append
+    shutil.rmtree(labels.OUT, ignore_errors=True)   # 時間標示圖每次重產
     prev, ptrack, bg = None, None, ''
     for cid in script.ORDER:
         t = track(cid)
         url = music(t) if t and t != ptrack else ''
-        c, bg = story_card(cid, bg, bgm=url)
+        c, bg = story_card(cid, bg, prev, bgm=url)
         if t == '' and ptrack:   # 安靜的卡：停掉上一首
             c['data'].update(bgm='', bgmVolume=0, bgmLoop=False)
         ptrack = t if (url or t == '') else ptrack
@@ -130,13 +152,13 @@ def build():
         else:
             cards.link(board, prev, cid)
         N(c); prev = cid
-    N(credits_card(bg)); cards.link(board, prev, 'credits')
+    N(credits_card(shot_url(bg))); cards.link(board, prev, 'credits')
     (R / 'dist').mkdir(exist_ok=True)
     out = R / 'dist/project.json'
     out.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding='utf-8')
     shutil.rmtree(R / 'dist/assets', ignore_errors=True)
     (R / 'dist/assets').mkdir()
-    for sub in ('art/cg', 'bgm', 'sfx'):
+    for sub in ('art/cg', 'art/lab', 'bgm', 'sfx'):
         if (R / 'assets' / sub).exists():
             shutil.copytree(R / 'assets' / sub, R / 'dist/assets' / sub)
     (R / 'dist/assets/art').mkdir(parents=True, exist_ok=True)
