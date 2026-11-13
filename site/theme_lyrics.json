@@ -1,5 +1,5 @@
 {
- "_說明": "片尾主題曲的逐句歌詞。t 是那一句開始的秒數（Whisper 逐字時間與 Gemini 聽寫交叉定的，逐句、不是逐字）。en 是照成品聽寫的英文；zh 是中文歌詞版（獨立作詞，歌裡沒有唱）。site/build_mv.py 讀這份產生 docs/theme.html 與 docs/music/theme.lrc。",
+ "_說明": "片尾主題曲的逐句歌詞。t 是那一句開始的秒數（Whisper 逐字時間與 Gemini 聽寫交叉定的，逐句、不是逐字）。en 是照成品聽寫的英文；zh 是中文歌詞版（獨立作詞，歌裡沒有唱）。site/build_mv.py 讀這份產生 docs/theme.html 與 docs/music/theme.lrc。 key=true 的是重點句（甜嗎、記得吃飯、還是甜的、最後一句），中文會放大變金色。",
  "audio": "https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/theme.mp3",
  "lines": [
   {
@@ -55,7 +55,8 @@
   {
    "t": 77.3,
    "en": "Take a little sip, is it sweet?",
-   "zh": "喝一小口　妳問我甜嗎"
+   "zh": "喝一小口　妳問我甜嗎",
+   "key": true
   },
   {
    "t": 84.4,
@@ -85,7 +86,8 @@
   {
    "t": 117.2,
    "en": "She told me always remember to eat",
-   "zh": "妳跟我說　記得吃飯"
+   "zh": "妳跟我說　記得吃飯",
+   "key": true
   },
   {
    "t": 123.4,
@@ -105,7 +107,8 @@
   {
    "t": 142.6,
    "en": "It is still sweet, I whisper to you",
-   "zh": "還是甜的　我小聲跟妳說"
+   "zh": "還是甜的　我小聲跟妳說",
+   "key": true
   },
   {
    "t": 147.8,
@@ -120,7 +123,8 @@
   {
    "t": 158.7,
    "en": "I'm tender and grateful, though you are now gone",
-   "zh": "妳不在了　我的心柔軟　也感激著"
+   "zh": "妳不在了　我的心柔軟　也感激著",
+   "key": true
   }
  ]
 }
