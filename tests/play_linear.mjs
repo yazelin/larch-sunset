@@ -16,9 +16,11 @@ try {
   await ui.clickText('開始遊戲'); await sleep(2000);
   const end = Date.now() + 80 * 60000 / SPEED + 8 * 60000;   // 片尾字卷是插件卡，不吃 SPEED，照真實秒數捲
   while (Date.now() < end) {
-    const t = await text(); seen += t;
-    await new Promise(r => setTimeout(r, 120));
-    if ((await text()) !== t) continue;   // 字還在打就先不點，等整句出來再往下，短句才不會被翻過去
+    let t = await text(); seen += t;
+    for (let k = 0; k < 4; k++) {   // 字還在打就先不點，最多等四拍讓整句出來，短句才不會被翻過去
+      await new Promise(r => setTimeout(r, 120));
+      const t2 = await text(); seen += t2; if (t2 === t) break; t = t2;
+    }
     if (!/林亞澤/.test(t)) await ui.advance().catch(() => {});
     if (/製作名單|幕後/.test(t) && /林亞澤/.test(t)) { done = true; break; }
     await new Promise(r => setTimeout(r, 120));
