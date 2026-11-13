@@ -60,8 +60,17 @@ def when(cid):
 
 
 def lab(shot, cid):
-    """壓上這張卡時間標示的 CG 網址。"""
-    return A + labels.label(R / f'assets/art/cg/{shot}.webp', *when(cid)) if shot and (R / f'assets/art/cg/{shot}.webp').exists() else ''
+    """這張卡用的 CG 網址。時間標示不壓進圖裡，由常駐 UI（when_hud）照卡片代號顯示。"""
+    return shot_url(shot) if shot else ''
+
+
+def when_hud():
+    """左上角的時間標示，以及回憶卡畫面外圍的暖白柔邊：Larch 常駐 UI（整個畫面、不攔點擊），換卡時照卡片代號換（規格見 larch_plugin_spec「遊戲常駐 UI」）。"""
+    table = json.dumps({c: list(when(c)) for c in script.ORDER}, ensure_ascii=False)
+    html = (R / 'src/plugin/when_hud.html').read_text(encoding='utf-8').replace('/*WHEN*/{}/*END*/', table)
+    return {'enabled': True, 'playback': {'version': '1.0.0', 'permissions': ['player:ui'], 'defaults': {}, 'huds': [
+        {'id': 'when', 'title': '時間標示', 'fullscreen': True,
+         'interactive': False, 'readVariables': [], 'writeVariables': [], 'html': html}]}}
 
 
 def title_of(cid):
@@ -70,7 +79,7 @@ def title_of(cid):
 
 def story_card(cid, carry, prev, bgm=''):
     """一張劇本卡 → 一張對話卡。carry 是上一張卡結束時的鏡頭名；prev 是上一張卡的代號。回傳 (卡, 這張卡結束時的鏡頭名)。
-    每張圖左上角壓這張卡的時間標示；時間換了（或進出回憶）時，第一句先出整頁字卡，第二句才出圖。"""
+    時間換了（或進出回憶）時，第一句先出整頁字卡，第二句才出圖。"""
     raw = [f'{n}（{g}）：{x}' if g else f'{n}：{x}' for n, g, x in script.L[cid]]
     at = {}
     for (c, i), sh in script.SHOTS.items():
@@ -88,7 +97,7 @@ def story_card(cid, carry, prev, bgm=''):
             shot = at[i]; url = lab(shot, cid)
         lines.append((SPEAKER[tag].format(name) if tag else name, text)); bgs.append(url)
     if not bgs[0]:
-        bgs[0] = lab(carry, cid)   # 沿用上一張卡的圖，標示換成這張卡的
+        bgs[0] = lab(carry, cid)   # 沿用上一張卡的圖
     if new_time and len(bgs) > 1:
         first = bgs[0]; bgs[0] = A + labels.title(*w)
         if not bgs[1]:
@@ -128,7 +137,7 @@ def build():
     board.update(name='晚霞', thumbnail=cover, description='從第一年春天的暴雨夜，到她走後的第七天。')
     p['variables'] = []
     s = p['settings']
-    s['plugins'] = {**{k: ({**v, 'enabled': False} if k in ('larch-inventory', 'larch-rpg-system') else v) for k, v in s.get('plugins', {}).items()}, 'credits-roll': {'enabled': True}}
+    s['plugins'] = {**{k: ({**v, 'enabled': False} if k in ('larch-inventory', 'larch-rpg-system') else v) for k, v in s.get('plugins', {}).items()}, 'credits-roll': {'enabled': True}, 'sunset-when': when_hud()}
     s.update(showRpgHud=False, textSpeed=TEXT_MS, stageFit='contain', titleCoverImage=cover, projectThumbnail=cover,
              cgGalleryEnabled=bool(GALLERY), cgGallerySource='picked',
              cgGalleryItems=[{'url': cover, 'title': NAME}] + [{'url': shot_url(k), 'title': t, 'locked': True} for k, t in GALLERY if shot_url(k)])

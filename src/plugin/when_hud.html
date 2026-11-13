@@ -1,0 +1,56 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: transparent; overflow: hidden; }
+  html, body { height: 100%; }
+  body { font-size: clamp(11px, 1.5vw, 26px); }
+  /* 回憶：畫面外圍一圈暖白柔邊，四角再亮一點；下緣留給對話框所以最淡 */
+  .fx { position: fixed; inset: 0; opacity: 0; transition: opacity 1.2s ease; pointer-events: none;
+    background:
+      radial-gradient(ellipse 75% 70% at 50% 46%, rgba(255, 240, 214, 0) 62%, rgba(255, 238, 210, .2) 84%, rgba(255, 240, 216, .46) 100%),
+      linear-gradient(to bottom, rgba(255, 236, 205, .3), rgba(255, 236, 205, 0) 13%),
+      linear-gradient(to right, rgba(255, 236, 205, .26), rgba(255, 236, 205, 0) 9%, rgba(255, 236, 205, 0) 91%, rgba(255, 236, 205, .26)); }
+  .fx.on { opacity: 1; }
+  .fx i { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 244, 222, .5), rgba(255, 244, 222, 0) 70%); animation: drift 14s ease-in-out infinite alternate; }
+  .fx.paused i { animation-play-state: paused; }
+  @keyframes drift { from { transform: translate(0, 0); opacity: .35; } to { transform: translate(1.2vw, -1.6vh); opacity: .9; } }
+  .when { position: fixed; left: clamp(10px, 2vw, 36px); top: clamp(10px, 2vw, 34px); }
+  .when { display: inline-flex; align-items: center; gap: .62em; height: 2.9em; padding: 0 .8em; box-sizing: border-box; border-radius: .25em;
+    background: rgba(14, 10, 20, .68); color: #f6efe2; white-space: nowrap; opacity: 0; transition: opacity .5s ease;
+    font-family: "Noto Serif TC", "Noto Serif CJK TC", "Source Han Serif TC", "Songti TC", PMingLiU, serif; }
+  .when.on { opacity: 1; }
+  .bar { width: .3em; height: 2em; background: linear-gradient(to top, #b3243f 0 33.3%, #dba53f 33.3% 66.6%, #eaa9b6 66.6%); }
+  .mode { font-size: 1em; font-weight: 600; }
+  .mode[data-m="回憶"] { color: #f1d9a6; }
+  .mode[data-m="現在"] { color: #c6d6ec; }
+  .main { font-size: 1.54em; font-weight: 600; }
+  .sub { font-size: 1em; color: #d6ccbe; margin-left: .2em; }
+  .mode:empty, .sub:empty { display: none; }
+  @media (prefers-reduced-motion: reduce) { .when, .fx { transition-duration: .01ms; } .fx i { animation: none; } }
+</style></head>
+<body><div class="fx" id="fx">
+<i style="left:2vw;top:16vh;width:9vw;height:9vw"></i><i style="left:8vw;top:70vh;width:6vw;height:6vw;animation-delay:-5s"></i>
+<i style="right:3vw;top:8vh;width:11vw;height:11vw;animation-delay:-9s"></i><i style="right:9vw;top:58vh;width:5vw;height:5vw;animation-delay:-3s"></i>
+<i style="left:30vw;top:-3vh;width:8vw;height:8vw;animation-delay:-11s"></i></div>
+<div class="when" id="w"><span class="bar"></span><span class="mode" id="m"></span><span class="main" id="a"></span><span class="sub" id="s"></span></div>
+<script>
+  var WHEN = /*WHEN*/{}/*END*/, now = '', timer = 0;
+  var fx = document.getElementById('fx'), w = document.getElementById('w'), m = document.getElementById('m'), a = document.getElementById('a'), s = document.getElementById('s');
+  function fill(v) { m.textContent = v[0]; m.dataset.m = v[0]; a.textContent = v[1]; s.textContent = v[2]; w.classList.add('on'); }
+  function show(id) {
+    var v = WHEN[id];
+    fx.classList.toggle('on', !!v && v[0] === '回憶');
+    var key = v ? v.join('|') : '';
+    if (key === now) return;
+    now = key; clearTimeout(timer);
+    if (!w.classList.contains('on')) { if (v) fill(v); return; }
+    w.classList.remove('on');
+    if (v) timer = setTimeout(function () { fill(v); }, 350);
+  }
+  addEventListener('message', function (e) {
+    if (e.source !== parent) return;
+    var d = e.data;
+    if (d && (d.type === 'larch:hud:init' || d.type === 'larch:hud:update')) { fx.classList.toggle('paused', d.active === false); show(d.cardId); }
+  });
+  parent.postMessage({ type: 'larch:ready' }, '*');
+</script></body></html>

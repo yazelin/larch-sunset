@@ -3,13 +3,6 @@
  "name": "晚霞",
  "edges": [
   {
-   "id": "hint--open_1",
-   "source": "hint",
-   "target": "open_1",
-   "sourceHandle": "right",
-   "targetHandle": "left"
-  },
-  {
    "id": "open_1--open_2",
    "source": "open_1",
    "target": "open_2",
@@ -728,47 +721,10 @@
  ],
  "nodes": [
   {
-   "id": "hint",
-   "type": "story",
-   "position": {
-    "x": 360,
-    "y": 0
-   },
-   "data": {
-    "type": "dialogue",
-    "title": "開始之前",
-    "speaker": "旁白",
-    "text": "這是一部從頭到尾會自己播放的小說，大約四十分鐘。",
-    "dialogueLines": [
-     {
-      "id": "hint-l0",
-      "speaker": "旁白",
-      "text": "這是一部從頭到尾會自己播放的小說，大約四十分鐘。"
-     },
-     {
-      "id": "hint-l1",
-      "speaker": "旁白",
-      "text": "戴上耳機，不用點滑鼠，看到最後。想快一點，點一下畫面。"
-     }
-    ],
-    "stage": {
-     "actors": []
-    },
-    "background": "/files/assets/art/cover.webp",
-    "start": true,
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    },
-    "characterLayers": []
-   }
-  },
-  {
    "id": "open_1",
    "type": "story",
    "position": {
-    "x": 720,
+    "x": 360,
     "y": 0
    },
    "data": {
@@ -781,12 +737,13 @@
       "id": "open_1-l0",
       "speaker": "旁白",
       "text": "第二年夏天的週五夜，店裡七張高腳椅坐滿了，阿忠的啤酒瓶旁又多了一只空杯。",
-      "background": "/files/assets/art/cg/open_busy.webp"
+      "background": "/files/assets/art/lab/title-87b73dc075.webp"
      },
      {
       "id": "open_1-l1",
       "speaker": "安雅",
-      "text": "沈淮，那瓶白酒幫我拿。"
+      "text": "沈淮，那瓶白酒幫我拿。",
+      "background": "/files/assets/art/cg/open_busy.webp"
      },
      {
       "id": "open_1-l2",
@@ -872,23 +829,19 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/open_busy.webp",
+    "background": "/files/assets/art/lab/title-87b73dc075.webp",
     "bgm": "/files/assets/bgm/days.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
     "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "start": true
    }
   },
   {
    "id": "open_2",
    "type": "story",
    "position": {
-    "x": 1080,
+    "x": 720,
     "y": 0
    },
    "data": {
@@ -900,7 +853,8 @@
      {
       "id": "open_2-l0",
       "speaker": "旁白",
-      "text": "同一個週五夜，過了十二點，客人還沒散，安雅從沈淮身後擠過去拿杯子。"
+      "text": "同一個週五夜，過了十二點，客人還沒散，安雅從沈淮身後擠過去拿杯子。",
+      "background": "/files/assets/art/cg/open_busy.webp"
      },
      {
       "id": "open_2-l1",
@@ -955,7 +909,7 @@
      {
       "id": "open_2-l11",
       "speaker": "旁白",
-      "text": "她又碰了碰他的手肘，拿起吧匙，把氣泡白酒慢慢疊在杯底的洛神花糖漿上。",
+      "text": "她用肩膀撞了他一下，拿起吧匙，把氣泡白酒慢慢疊在杯底的洛神花糖漿上。",
       "background": "/files/assets/art/cg/open_laugh.webp"
      },
      {
@@ -993,19 +947,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/open_busy.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "return",
    "type": "story",
    "position": {
-    "x": 1440,
+    "x": 1080,
     "y": 0
    },
    "data": {
@@ -1018,12 +967,13 @@
       "id": "return-l0",
       "speaker": "旁白",
       "text": "頭七深夜，同一間店的燈箱沒亮，沈淮推門進來，只開了吧檯上方的一盞燈。",
-      "background": "/files/assets/art/cg/return_closed.webp"
+      "background": "/files/assets/art/lab/title-3f3ca2f97e.webp"
      },
      {
       "id": "return-l1",
       "speaker": "沈淮",
-      "text": "安雅，我回來了。"
+      "text": "安雅，我回來了。",
+      "background": "/files/assets/art/cg/return_closed.webp"
      },
      {
       "id": "return-l2",
@@ -1094,23 +1044,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/return_closed.webp",
+    "background": "/files/assets/art/lab/title-3f3ca2f97e.webp",
     "bgm": "/files/assets/bgm/seventh.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "return_2",
    "type": "story",
    "position": {
-    "x": 1800,
+    "x": 1440,
     "y": 0
    },
    "data": {
@@ -1133,7 +1078,7 @@
      {
       "id": "return_2-l2",
       "speaker": "旁白",
-      "text": "他喝了一口水，嘴唇離開杯緣，杯子還握在手裡。"
+      "text": "他喝了一口水，杯子還握在手裡。"
      },
      {
       "id": "return_2-l3",
@@ -1148,7 +1093,7 @@
      {
       "id": "return_2-l5",
       "speaker": "旁白",
-      "text": "他把杯子放回檯面，拇指擦過嘴角。"
+      "text": "他把杯子放回檯面，用手背抹了一下嘴。"
      },
      {
       "id": "return_2-l6",
@@ -1215,19 +1160,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/return_water.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "rain_1",
    "type": "story",
    "position": {
-    "x": 2160,
+    "x": 1800,
     "y": 0
    },
    "data": {
@@ -1240,12 +1180,13 @@
       "id": "rain_1-l0",
       "speaker": "旁白",
       "text": "第一年春天的暴雨夜，沈淮推開酒吧的門，襯衫袖口還在滴水。",
-      "background": "/files/assets/art/cg/rain_towel.webp"
+      "background": "/files/assets/art/lab/title-b86bad9825.webp"
      },
      {
       "id": "rain_1-l1",
       "speaker": "沈淮",
-      "text": "還有開嗎？"
+      "text": "還有開嗎？",
+      "background": "/files/assets/art/cg/rain_towel.webp"
      },
      {
       "id": "rain_1-l2",
@@ -1260,7 +1201,7 @@
      {
       "id": "rain_1-l4",
       "speaker": "安雅",
-      "text": "先擦乾，再點酒，領帶都能擰出水了。"
+      "text": "先擦一擦再點啦，領帶都能擰出水了。"
      },
      {
       "id": "rain_1-l5",
@@ -1310,7 +1251,7 @@
      {
       "id": "rain_1-l14",
       "speaker": "沈淮",
-      "text": "改圖，門搬了四次，最後改回原來的位置。"
+      "text": "改圖啊，一扇門搬了四次，最後又搬回原來那裡。"
      },
      {
       "id": "rain_1-l15",
@@ -1331,23 +1272,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/rain_towel.webp",
+    "background": "/files/assets/art/lab/title-b86bad9825.webp",
     "bgm": "/files/assets/bgm/dawn.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "rain_2",
    "type": "story",
    "position": {
-    "x": 2520,
+    "x": 2160,
     "y": 0
    },
    "data": {
@@ -1359,7 +1295,8 @@
      {
       "id": "rain_2-l0",
       "speaker": "旁白",
-      "text": "暴雨夜的吧檯前，安雅把一只細長香檳杯拿到沈淮面前。"
+      "text": "暴雨夜的吧檯前，安雅把一只細長香檳杯拿到沈淮面前。",
+      "background": "/files/assets/art/cg/rain_towel.webp"
      },
      {
       "id": "rain_2-l1",
@@ -1452,20 +1389,15 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/rain_towel.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "rain_3",
    "type": "story",
    "position": {
-    "x": 0,
-    "y": 260
+    "x": 2520,
+    "y": 0
    },
    "data": {
     "type": "dialogue",
@@ -1476,7 +1408,8 @@
      {
       "id": "rain_3-l0",
       "speaker": "旁白",
-      "text": "暴雨夜的吧檯前，沈淮拿著下紅上金的酒杯，湊到燈下看。"
+      "text": "暴雨夜的吧檯前，沈淮拿著下紅上金的酒杯，湊到燈下看。",
+      "background": "/files/assets/art/cg/rain_dawn.webp"
      },
      {
       "id": "rain_3-l1",
@@ -1569,19 +1502,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/rain_dawn.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "weeks_1",
    "type": "story",
    "position": {
-    "x": 360,
+    "x": 0,
     "y": 260
    },
    "data": {
@@ -1594,12 +1522,13 @@
       "id": "weeks_1-l0",
       "speaker": "旁白",
       "text": "春末的酒吧，沈淮還了傘，隔兩天又推門進來。",
-      "background": "/files/assets/art/cg/weeks_regular.webp"
+      "background": "/files/assets/art/lab/title-e95fb8cf8d.webp"
      },
      {
       "id": "weeks_1-l1",
       "speaker": "安雅",
-      "text": "今天沒下雨耶。"
+      "text": "今天沒下雨耶。",
+      "background": "/files/assets/art/cg/weeks_regular.webp"
      },
      {
       "id": "weeks_1-l2",
@@ -1685,20 +1614,15 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/weeks_regular.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "background": "/files/assets/art/lab/title-e95fb8cf8d.webp",
+    "characterLayers": []
    }
   },
   {
    "id": "weeks_2",
    "type": "story",
    "position": {
-    "x": 720,
+    "x": 360,
     "y": 260
    },
    "data": {
@@ -1711,12 +1635,13 @@
       "id": "weeks_2-l0",
       "speaker": "旁白",
       "text": "第一年初夏的打烊夜，安雅坐在吧檯前喝水，沈淮把最後一只杯子擦乾。",
-      "background": "/files/assets/art/cg/weeks_water.webp"
+      "background": "/files/assets/art/lab/title-9e932c41d3.webp"
      },
      {
       "id": "weeks_2-l1",
       "speaker": "沈淮",
-      "text": "我再點一杯，妳陪我喝？"
+      "text": "我再點一杯，妳陪我喝？",
+      "background": "/files/assets/art/cg/weeks_water.webp"
      },
      {
       "id": "weeks_2-l2",
@@ -1807,20 +1732,15 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/weeks_water.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "background": "/files/assets/art/lab/title-9e932c41d3.webp",
+    "characterLayers": []
    }
   },
   {
    "id": "clinic_1",
    "type": "story",
    "position": {
-    "x": 1080,
+    "x": 720,
     "y": 260
    },
    "data": {
@@ -1833,17 +1753,18 @@
       "id": "clinic_1-l0",
       "speaker": "旁白",
       "text": "第一年七月的午後，診間裡，安雅和母親並肩坐在醫師面前。",
-      "background": "/files/assets/art/cg/clinic_day.webp"
+      "background": "/files/assets/art/lab/title-684daf2f73.webp"
      },
      {
       "id": "clinic_1-l1",
       "speaker": "醫師",
-      "text": "原來的唾液腺腺樣囊狀癌復發了，沿著神經擴散，這個位置很難再切乾淨。"
+      "text": "之前的唾液腺腺樣囊狀癌又回來了，沿著神經走，這個位置要再開乾淨很難。",
+      "background": "/files/assets/art/cg/clinic_day.webp"
      },
      {
       "id": "clinic_1-l2",
       "speaker": "醫師",
-      "text": "再做放射治療可以討論，要先評估以前照過的範圍。"
+      "text": "要再電療是可以，不過要先看之前照過哪裡。"
      },
      {
       "id": "clinic_1-l3",
@@ -1909,23 +1830,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/clinic_day.webp",
+    "background": "/files/assets/art/lab/title-684daf2f73.webp",
     "bgm": "/files/assets/bgm/alone.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "lesson_1",
    "type": "story",
    "position": {
-    "x": 1440,
+    "x": 1080,
     "y": 260
    },
    "data": {
@@ -1938,12 +1854,13 @@
       "id": "lesson_1-l0",
       "speaker": "旁白",
       "text": "第一年夏末的週六，開店前的吧檯後，安雅扶著沈淮的前臂，攪拌杯裡加了酒和冰。",
-      "background": "/files/assets/art/cg/lesson_hands.webp"
+      "background": "/files/assets/art/lab/title-f7895d958d.webp"
      },
      {
       "id": "lesson_1-l1",
       "speaker": "安雅",
-      "text": "手腕別轉，用手指推，匙背貼著杯壁。"
+      "text": "手腕別轉，用手指推，匙背貼著杯壁。",
+      "background": "/files/assets/art/cg/lesson_hands.webp"
      },
      {
       "id": "lesson_1-l2",
@@ -1993,17 +1910,17 @@
      {
       "id": "lesson_1-l11",
       "speaker": "小葵",
-      "text": "五十五分，少一層扣五分。"
+      "text": "欸，兩層變一層了。"
      },
      {
       "id": "lesson_1-l12",
       "speaker": "沈淮",
-      "text": "上禮拜也算進來？"
+      "text": "我有眼睛。"
      },
      {
       "id": "lesson_1-l13",
       "speaker": "安雅",
-      "text": "先別跟她吵，手給我。"
+      "text": "好啦，手給我。"
      },
      {
       "id": "lesson_1-l14",
@@ -2029,23 +1946,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/lesson_hands.webp",
+    "background": "/files/assets/art/lab/title-f7895d958d.webp",
     "bgm": "/files/assets/bgm/days.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "confess_1",
    "type": "story",
    "position": {
-    "x": 1800,
+    "x": 1440,
     "y": 260
    },
    "data": {
@@ -2153,19 +2065,14 @@
     "bgm": "/files/assets/bgm/dawn.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "confess_2",
    "type": "story",
    "position": {
-    "x": 2160,
+    "x": 1800,
     "y": 260
    },
    "data": {
@@ -2177,7 +2084,8 @@
      {
       "id": "confess_2-l0",
       "speaker": "旁白",
-      "text": "夏末的打烊夜，吧檯邊，安雅站到沈淮面前，朝他伸出手。"
+      "text": "夏末的打烊夜，吧檯邊，安雅站到沈淮面前，朝他伸出手。",
+      "background": "/files/assets/art/cg/confess_words.webp"
      },
      {
       "id": "confess_2-l1",
@@ -2270,19 +2178,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/confess_words.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "together_1",
    "type": "story",
    "position": {
-    "x": 2520,
+    "x": 2160,
     "y": 260
    },
    "data": {
@@ -2295,12 +2198,13 @@
       "id": "together_1-l0",
       "speaker": "旁白",
       "text": "第一年秋天的週末夜，店裡七張椅子坐滿了，沈淮才坐下，安雅就把冰桶推到他面前。",
-      "background": "/files/assets/art/cg/together_hands.webp"
+      "background": "/files/assets/art/lab/title-609dc73fdc.webp"
      },
      {
       "id": "together_1-l1",
       "speaker": "安雅",
-      "text": "沈淮，冰塊快沒了。"
+      "text": "沈淮，冰塊快沒了。",
+      "background": "/files/assets/art/cg/together_hands.webp"
      },
      {
       "id": "together_1-l2",
@@ -2386,24 +2290,19 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/together_hands.webp",
+    "background": "/files/assets/art/lab/title-609dc73fdc.webp",
     "bgm": "/files/assets/bgm/days.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "quit_1",
    "type": "story",
    "position": {
-    "x": 0,
-    "y": 520
+    "x": 2520,
+    "y": 260
    },
    "data": {
     "type": "dialogue",
@@ -2415,12 +2314,13 @@
       "id": "quit_1-l0",
       "speaker": "旁白",
       "text": "第二年春天，打烊後的店裡，沈淮擦完最後一排杯子，沒有拿起外套。",
-      "background": "/files/assets/art/cg/quit_proposal.webp"
+      "background": "/files/assets/art/lab/title-bcac76ad57.webp"
      },
      {
       "id": "quit_1-l1",
       "speaker": "沈淮",
-      "text": "月底那個案子交完，我想提離職。"
+      "text": "月底那個案子交完，我想提離職。",
+      "background": "/files/assets/art/cg/quit_proposal.webp"
      },
      {
       "id": "quit_1-l2",
@@ -2501,23 +2401,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/quit_proposal.webp",
+    "background": "/files/assets/art/lab/title-bcac76ad57.webp",
     "bgm": "/files/assets/bgm/alone.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "quit_2",
    "type": "story",
    "position": {
-    "x": 360,
+    "x": 0,
     "y": 520
    },
    "data": {
@@ -2529,12 +2424,13 @@
      {
       "id": "quit_2-l0",
       "speaker": "旁白",
-      "text": "第二年春天，同一個打烊夜，店裡的水龍頭還開著，沈淮伸手關掉。"
+      "text": "第二年春天，同一個打烊夜，店裡的水龍頭還開著，沈淮伸手關掉。",
+      "background": "/files/assets/art/cg/quit_proposal.webp"
      },
      {
       "id": "quit_2-l1",
       "speaker": "沈淮",
-      "text": "我想自己把一杯酒做完，端給客人，我喜歡做這個。"
+      "text": "我想自己把酒做好，端出去給客人。我是真的喜歡做這個。"
      },
      {
       "id": "quit_2-l2",
@@ -2622,19 +2518,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/quit_proposal.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "quit_3",
    "type": "story",
    "position": {
-    "x": 720,
+    "x": 360,
     "y": 520
    },
    "data": {
@@ -2652,7 +2543,7 @@
      {
       "id": "quit_3-l1",
       "speaker": "旁白",
-      "text": "他把外套掛回椅背，解開袖扣，走進吧檯。"
+      "text": "他把外套掛回椅背，走進吧檯。"
      },
      {
       "id": "quit_3-l2",
@@ -2696,41 +2587,56 @@
      },
      {
       "id": "quit_3-l10",
-      "speaker": "安雅",
-      "text": "你調的酒可以賣，早就可以了。"
+      "speaker": "沈淮",
+      "text": "那妳昨天到底在氣什麼？"
      },
      {
       "id": "quit_3-l11",
-      "speaker": "沈淮",
-      "text": "下次先把我的話聽完，我想換工作，想很久了。"
+      "speaker": "安雅",
+      "text": "我怕你哪天後悔。薪水少一半，每天關在這七張椅子後面。"
      },
      {
       "id": "quit_3-l12",
-      "speaker": "安雅",
-      "text": "好，先做半年。薪水的事，吃完飯再算。"
+      "speaker": "沈淮",
+      "text": "會不會後悔，我做了才知道。我想換工作，想很久了。"
      },
      {
       "id": "quit_3-l13",
-      "speaker": "沈淮",
-      "text": "我昨天也不該摔門。"
+      "speaker": "安雅（心）",
+      "text": "趕不走欸。好啦，留著就留著，能多久算多久。"
      },
      {
       "id": "quit_3-l14",
       "speaker": "安雅",
-      "text": "門沒壞，轉過去。"
+      "text": "你調的酒可以賣，早就可以了。先做半年，做不下去要老實講。"
      },
      {
       "id": "quit_3-l15",
-      "speaker": "旁白",
-      "text": "她繞到他身後，把圍裙的帶子拉緊，打了個結。"
+      "speaker": "沈淮",
+      "text": "妳也是，嫌我礙事要老實講。"
      },
      {
       "id": "quit_3-l16",
       "speaker": "沈淮",
-      "text": "留兩個給我，我還沒吃。"
+      "text": "我昨天也不該摔門。"
      },
      {
       "id": "quit_3-l17",
+      "speaker": "安雅",
+      "text": "門沒壞，轉過去。"
+     },
+     {
+      "id": "quit_3-l18",
+      "speaker": "旁白",
+      "text": "她繞到他身後，把圍裙的帶子拉緊，打了個結。"
+     },
+     {
+      "id": "quit_3-l19",
+      "speaker": "沈淮",
+      "text": "留兩個給我，我還沒吃。"
+     },
+     {
+      "id": "quit_3-l20",
       "speaker": "旁白",
       "text": "她把煎餃推到兩人中間，拿筷子替他夾了兩個，才坐到他旁邊。"
      }
@@ -2742,19 +2648,14 @@
     "bgm": "/files/assets/bgm/days.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "home_1",
    "type": "story",
    "position": {
-    "x": 1080,
+    "x": 720,
     "y": 520
    },
    "data": {
@@ -2767,12 +2668,13 @@
       "id": "home_1-l0",
       "speaker": "旁白",
       "text": "第二年初夏，沈淮離職後搬進店樓上，第三天早上七點，床頭的鬧鐘又響了。",
-      "background": "/files/assets/art/cg/home_fridge.webp"
+      "background": "/files/assets/art/lab/title-ab8e958bd5.webp"
      },
      {
       "id": "home_1-l1",
       "speaker": "安雅",
-      "text": "沈淮，關掉。"
+      "text": "沈淮，關掉。",
+      "background": "/files/assets/art/cg/home_fridge.webp"
      },
      {
       "id": "home_1-l2",
@@ -2858,20 +2760,15 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/home_fridge.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "background": "/files/assets/art/lab/title-ab8e958bd5.webp",
+    "characterLayers": []
    }
   },
   {
    "id": "home_2",
    "type": "story",
    "position": {
-    "x": 1440,
+    "x": 1080,
     "y": 520
    },
    "data": {
@@ -2884,12 +2781,13 @@
       "id": "home_2-l0",
       "speaker": "旁白",
       "text": "第二年夏天的傍晚，安雅的母親第一次上樓吃飯，沈淮把第三道菜端上桌。",
-      "background": "/files/assets/art/cg/home_mother.webp"
+      "background": "/files/assets/art/lab/title-908ab2c027.webp"
      },
      {
       "id": "home_2-l1",
       "speaker": "安雅的母親",
-      "text": "就你們兩個，平常也煮這麼多？"
+      "text": "就你們兩個，平常也煮這麼多？",
+      "background": "/files/assets/art/cg/home_mother.webp"
      },
      {
       "id": "home_2-l2",
@@ -2975,20 +2873,15 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/home_mother.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "background": "/files/assets/art/lab/title-908ab2c027.webp",
+    "characterLayers": []
    }
   },
   {
    "id": "dusk_1",
    "type": "story",
    "position": {
-    "x": 1800,
+    "x": 1440,
     "y": 520
    },
    "data": {
@@ -3001,12 +2894,13 @@
       "id": "dusk_1-l0",
       "speaker": "旁白",
       "text": "第二年夏末，打烊後的吧檯上，安雅開了一瓶貴腐甜白酒，沈淮拿起洗好的量酒器。",
-      "background": "/files/assets/art/cg/dusk_recipe.webp"
+      "background": "/files/assets/art/lab/title-d6a45bf043.webp"
      },
      {
       "id": "dusk_1-l1",
       "speaker": "沈淮",
-      "text": "妳那瓶貴腐終於肯開了。"
+      "text": "妳那瓶貴腐終於肯開了。",
+      "background": "/files/assets/art/cg/dusk_recipe.webp"
      },
      {
       "id": "dusk_1-l2",
@@ -3092,20 +2986,15 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/dusk_recipe.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "background": "/files/assets/art/lab/title-d6a45bf043.webp",
+    "characterLayers": []
    }
   },
   {
    "id": "dusk_2",
    "type": "story",
    "position": {
-    "x": 2160,
+    "x": 1800,
     "y": 520
    },
    "data": {
@@ -3205,19 +3094,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/dusk_midnight.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "almost_1",
    "type": "story",
    "position": {
-    "x": 2520,
+    "x": 2160,
     "y": 520
    },
    "data": {
@@ -3230,12 +3114,13 @@
       "id": "almost_1-l0",
       "speaker": "旁白",
       "text": "第二年秋天，打烊後的店裡，沈淮穿好外套，安雅還在試新一批的洛神花糖漿。",
-      "background": "/files/assets/art/cg/almost_return.webp"
+      "background": "/files/assets/art/lab/title-6df1e613ab.webp"
      },
      {
       "id": "almost_1-l1",
       "speaker": "沈淮",
-      "text": "要不要餛飩？我還吃得下。"
+      "text": "要不要餛飩？我還吃得下。",
+      "background": "/files/assets/art/cg/almost_return.webp"
      },
      {
       "id": "almost_1-l2",
@@ -3321,41 +3206,36 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/almost_return.webp",
+    "background": "/files/assets/art/lab/title-6df1e613ab.webp",
     "bgm": "/files/assets/bgm/alone.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "almost_2",
    "type": "story",
    "position": {
-    "x": 0,
-    "y": 780
+    "x": 2520,
+    "y": 520
    },
    "data": {
     "type": "dialogue",
     "title": "第二年秋天・同一個打烊夜・吧檯前",
     "speaker": "旁白",
-    "text": "回診單還攤在吧檯上，第二年秋天的同一個打烊夜，沈淮站在原處，安雅把水杯放下。",
+    "text": "第二年秋天，同一個打烊夜，回診單還攤在吧檯上，安雅把水杯放下。",
     "dialogueLines": [
      {
       "id": "almost_2-l0",
       "speaker": "旁白",
-      "text": "回診單還攤在吧檯上，第二年秋天的同一個打烊夜，沈淮站在原處，安雅把水杯放下。",
+      "text": "第二年秋天，同一個打烊夜，回診單還攤在吧檯上，安雅把水杯放下。",
       "background": "/files/assets/art/cg/almost_answer.webp"
      },
      {
       "id": "almost_2-l1",
       "speaker": "安雅",
-      "text": "以前電療的地方又發炎，醫生要再看一下，就這樣。"
+      "text": "就以前電療那邊發炎啦，醫生說要再看一下。"
      },
      {
       "id": "almost_2-l2",
@@ -3442,19 +3322,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/almost_answer.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "roof_1",
    "type": "story",
    "position": {
-    "x": 360,
+    "x": 0,
     "y": 780
    },
    "data": {
@@ -3467,12 +3342,13 @@
       "id": "roof_1-l0",
       "speaker": "旁白",
       "text": "第三年秋天的公休日傍晚，沈淮把酒瓶和糖漿搬上頂樓，安雅替他扶著杯子。",
-      "background": "/files/assets/art/cg/roof_dawn.webp"
+      "background": "/files/assets/art/lab/title-8d90a5b1ce.webp"
      },
      {
       "id": "roof_1-l1",
       "speaker": "安雅",
-      "text": "說好上來休息，你連吧匙都帶。"
+      "text": "說好上來休息，你連吧匙都帶。",
+      "background": "/files/assets/art/cg/roof_dawn.webp"
      },
      {
       "id": "roof_1-l2",
@@ -3558,23 +3434,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/roof_dawn.webp",
+    "background": "/files/assets/art/lab/title-8d90a5b1ce.webp",
     "bgm": "/files/assets/bgm/sunset.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "roof_2",
    "type": "story",
    "position": {
-    "x": 720,
+    "x": 360,
     "y": 780
    },
    "data": {
@@ -3586,7 +3457,8 @@
      {
       "id": "roof_2-l0",
       "speaker": "旁白",
-      "text": "第三年秋天的公休日傍晚，頂樓矮牆上還留著半杯〈破曉〉，安雅拉著沈淮離開牆邊。"
+      "text": "第三年秋天的公休日傍晚，頂樓矮牆上還留著半杯〈破曉〉，安雅拉著沈淮離開牆邊。",
+      "background": "/files/assets/art/cg/roof_dawn.webp"
      },
      {
       "id": "roof_2-l1",
@@ -3657,7 +3529,7 @@
      {
       "id": "roof_2-l14",
       "speaker": "沈淮",
-      "text": "妳早點說啊，店又不會跑掉。"
+      "text": "妳早點說啊，哪天公休都可以上來。"
      },
      {
       "id": "roof_2-l15",
@@ -3679,19 +3551,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/roof_dawn.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "winter_1",
    "type": "story",
    "position": {
-    "x": 1080,
+    "x": 720,
     "y": 780
    },
    "data": {
@@ -3704,12 +3571,13 @@
       "id": "winter_1-l0",
       "speaker": "旁白",
       "text": "第三年冬天的一個打烊夜，樓上的房間裡，沈淮抱著被子站在床邊，安雅坐在床沿。",
-      "background": "/files/assets/art/cg/winter_tell.webp"
+      "background": "/files/assets/art/lab/title-7d352aafa6.webp"
      },
      {
       "id": "winter_1-l1",
       "speaker": "沈淮",
-      "text": "今晚別再整條捲走，我昨天半夜在找外套。"
+      "text": "今晚別再整條捲走，我昨天半夜在找外套。",
+      "background": "/files/assets/art/cg/winter_tell.webp"
      },
      {
       "id": "winter_1-l2",
@@ -3795,23 +3663,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/winter_tell.webp",
+    "background": "/files/assets/art/lab/title-7d352aafa6.webp",
     "bgm": "/files/assets/bgm/alone.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "winter_2",
    "type": "story",
    "position": {
-    "x": 1440,
+    "x": 1080,
     "y": 780
    },
    "data": {
@@ -3823,7 +3686,8 @@
      {
       "id": "winter_2-l0",
       "speaker": "旁白",
-      "text": "第三年冬夜，樓上的房間只開著床頭燈，沈淮站在床尾，安雅扶著床沿。"
+      "text": "第三年冬夜，樓上的房間只開著床頭燈，沈淮站在床尾，安雅扶著床沿。",
+      "background": "/files/assets/art/cg/winter_tell.webp"
      },
      {
       "id": "winter_2-l1",
@@ -3916,19 +3780,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/winter_tell.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "winter_3",
    "type": "story",
    "position": {
-    "x": 1800,
+    "x": 1440,
     "y": 780
    },
    "data": {
@@ -3956,7 +3815,7 @@
      {
       "id": "winter_3-l3",
       "speaker": "旁白",
-      "text": "裝滿的水杯放回她伸手碰得到的位置，分裝藥盒挪到旁邊。"
+      "text": "他把水裝滿放回床頭，藥盒也挪過去。"
      },
      {
       "id": "winter_3-l4",
@@ -3980,16 +3839,46 @@
      },
      {
       "id": "winter_3-l8",
-      "speaker": "安雅（心）",
-      "text": "還肯讓我勾。"
+      "speaker": "沈淮",
+      "text": "我在樓下坐了一個晚上。"
      },
      {
       "id": "winter_3-l9",
+      "speaker": "沈淮",
+      "text": "一直想妳都自己一個人去聽報告。"
+     },
+     {
+      "id": "winter_3-l10",
+      "speaker": "安雅",
+      "text": "對不起。"
+     },
+     {
+      "id": "winter_3-l11",
+      "speaker": "沈淮",
+      "text": "以後回診我跟妳去，痛也要講。"
+     },
+     {
+      "id": "winter_3-l12",
+      "speaker": "安雅",
+      "text": "好，都跟你講。"
+     },
+     {
+      "id": "winter_3-l13",
+      "speaker": "沈淮",
+      "text": "我還是很氣喔。"
+     },
+     {
+      "id": "winter_3-l14",
+      "speaker": "安雅",
+      "text": "好啦，你要氣就氣，手先不要放。"
+     },
+     {
+      "id": "winter_3-l15",
       "speaker": "旁白",
       "text": "她往他這邊挪，額頭碰到他的肩，他抬起另一隻手，覆上兩人勾著的手。"
      },
      {
-      "id": "winter_3-l10",
+      "id": "winter_3-l16",
       "speaker": "旁白",
       "text": "窗外的巷子有人在拉鐵門，他們坐著，水杯還是滿的。"
      }
@@ -4001,19 +3890,14 @@
     "bgm": "/files/assets/bgm/winter.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "last_1",
    "type": "story",
    "position": {
-    "x": 2160,
+    "x": 1800,
     "y": 780
    },
    "data": {
@@ -4026,12 +3910,13 @@
       "id": "last_1-l0",
       "speaker": "旁白",
       "text": "最後幾個月，傍晚開店時，沈淮送安寧醫師到門口，安雅在吧檯的客人那側坐下。",
-      "background": "/files/assets/art/cg/last_regulars.webp"
+      "background": "/files/assets/art/lab/title-61c1833301.webp"
      },
      {
       "id": "last_1-l1",
       "speaker": "旁白",
-      "text": "阿忠從門外搬進一箱啤酒，放到吧檯後，開了一瓶拿在手上。"
+      "text": "阿忠從門外搬進一箱啤酒，放到吧檯後，開了一瓶拿在手上。",
+      "background": "/files/assets/art/cg/last_regulars.webp"
      },
      {
       "id": "last_1-l2",
@@ -4117,20 +4002,15 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/last_regulars.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "background": "/files/assets/art/lab/title-61c1833301.webp",
+    "characterLayers": []
    }
   },
   {
    "id": "last_2",
    "type": "story",
    "position": {
-    "x": 2520,
+    "x": 2160,
     "y": 780
    },
    "data": {
@@ -4163,12 +4043,12 @@
      {
       "id": "last_2-l4",
       "speaker": "沈淮",
-      "text": "先甜一下，後面全是檸檬，吞下去喉嚨這裡還酸。"
+      "text": "一開始甜的，後面都是檸檬，吞下去喉嚨還會酸。"
      },
      {
       "id": "last_2-l5",
       "speaker": "小葵",
-      "text": "八十分，光聽就扣二十。"
+      "text": "你講得我牙齒都酸了。"
      },
      {
       "id": "last_2-l6",
@@ -4178,7 +4058,7 @@
      {
       "id": "last_2-l7",
       "speaker": "安雅",
-      "text": "先加半個吧匙糖漿，別跟她吵分數。"
+      "text": "先加半個吧匙糖漿試試。"
      },
      {
       "id": "last_2-l8",
@@ -4235,20 +4115,15 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/last_taste.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "farewell_1",
    "type": "story",
    "position": {
-    "x": 0,
-    "y": 1040
+    "x": 2520,
+    "y": 780
    },
    "data": {
     "type": "dialogue",
@@ -4260,12 +4135,13 @@
       "id": "farewell_1-l0",
       "speaker": "旁白",
       "text": "午後兩點多，樓上的房間開著窗，沈淮拿著剛洗好的襯衫進來。",
-      "background": "/files/assets/art/cg/farewell_room.webp"
+      "background": "/files/assets/art/lab/title-2691d70c9f.webp"
      },
      {
       "id": "farewell_1-l1",
       "speaker": "安雅",
-      "text": "那件我的，放這邊。"
+      "text": "那件我的，放這邊。",
+      "background": "/files/assets/art/cg/farewell_room.webp"
      },
      {
       "id": "farewell_1-l2",
@@ -4351,20 +4227,15 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/farewell_room.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "background": "/files/assets/art/lab/title-2691d70c9f.webp",
+    "characterLayers": []
    }
   },
   {
    "id": "farewell_2",
    "type": "story",
    "position": {
-    "x": 360,
+    "x": 0,
     "y": 1040
    },
    "data": {
@@ -4377,12 +4248,13 @@
       "id": "farewell_2-l0",
       "speaker": "旁白",
       "text": "安雅走後的幾天，殯儀館的桌前，她母親把文件逐張轉正，沈淮站在她身旁。",
-      "background": "/files/assets/art/cg/farewell_mother.webp"
+      "background": "/files/assets/art/lab/title-5aacd991eb.webp"
      },
      {
       "id": "farewell_2-l1",
       "speaker": "安雅的母親",
-      "text": "這幾張你幫我拿好，戶政那邊還要用。"
+      "text": "這幾張你幫我拿好，戶政那邊還要用。",
+      "background": "/files/assets/art/cg/farewell_mother.webp"
      },
      {
       "id": "farewell_2-l2",
@@ -4468,13 +4340,8 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/farewell_mother.webp",
+    "background": "/files/assets/art/lab/title-5aacd991eb.webp",
     "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    },
     "bgm": "",
     "bgmVolume": 0,
     "bgmLoop": false
@@ -4484,7 +4351,7 @@
    "id": "farewell_3",
    "type": "story",
    "position": {
-    "x": 720,
+    "x": 360,
     "y": 1040
    },
    "data": {
@@ -4497,12 +4364,13 @@
       "id": "farewell_3-l0",
       "speaker": "旁白",
       "text": "頭七當晚，樓上的房間亮著燈，沈淮把最後一疊衣服放進櫃子。",
-      "background": "/files/assets/art/cg/farewell_bed.webp"
+      "background": "/files/assets/art/lab/title-af18be53eb.webp"
      },
      {
       "id": "farewell_3-l1",
       "speaker": "沈淮",
-      "text": "衣服收好了，妳媽明天不用再跑樓上。"
+      "text": "衣服收好了，妳媽明天不用再跑樓上。",
+      "background": "/files/assets/art/cg/farewell_bed.webp"
      },
      {
       "id": "farewell_3-l2",
@@ -4569,23 +4437,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/farewell_bed.webp",
+    "background": "/files/assets/art/lab/title-af18be53eb.webp",
     "bgm": "/files/assets/bgm/seventh.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "notebook_1",
    "type": "story",
    "position": {
-    "x": 1080,
+    "x": 720,
     "y": 1040
    },
    "data": {
@@ -4658,7 +4521,7 @@
      {
       "id": "notebook_1-l12",
       "speaker": "沈淮",
-      "text": "左邊……妳後來一直按的，也是左邊耳朵下面。"
+      "text": "左邊……妳後來不是一直按左邊耳朵下面？"
      },
      {
       "id": "notebook_1-l13",
@@ -4673,26 +4536,21 @@
      {
       "id": "notebook_1-l15",
       "speaker": "旁白",
-      "text": "他的手停在頁角，窗上的雨水一滴接著一滴往下流。"
+      "text": "他的手壓著頁角，窗上的雨水一滴接著一滴往下流。"
      }
     ],
     "stage": {
      "actors": []
     },
     "background": "/files/assets/art/cg/notebook_open.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "notebook_2",
    "type": "story",
    "position": {
-    "x": 1440,
+    "x": 1080,
     "y": 1040
    },
    "data": {
@@ -4797,19 +4655,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/notebook_august.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "flash_1",
    "type": "story",
    "position": {
-    "x": 1800,
+    "x": 1440,
     "y": 1040
    },
    "data": {
@@ -4822,12 +4675,13 @@
       "id": "flash_1-l0",
       "speaker": "旁白",
       "text": "第二年夏天，打烊後的吧檯，安雅把試味的酒吐進小杯。",
-      "background": "/files/assets/art/cg/flash_syrup.webp"
+      "background": "/files/assets/art/lab/title-15300b9443.webp"
      },
      {
       "id": "flash_1-l1",
       "speaker": "安雅（心）",
-      "text": "今天連檸檬的酸都沒了。"
+      "text": "今天連檸檬的酸都沒了。",
+      "background": "/files/assets/art/cg/flash_syrup.webp"
      },
      {
       "id": "flash_1-l2",
@@ -4872,7 +4726,7 @@
      {
       "id": "flash_1-l10",
       "speaker": "旁白",
-      "text": "他笑了一聲，又喝一口，接著伸手拿水。"
+      "text": "他皺著臉又喝一口，接著伸手拿水。"
      },
      {
       "id": "flash_1-l11",
@@ -4887,7 +4741,7 @@
      {
       "id": "flash_1-l13",
       "speaker": "安雅",
-      "text": "好了，放著，水在你右邊。"
+      "text": "有那麼誇張喔，喝水啦。"
      },
      {
       "id": "flash_1-l14",
@@ -4913,23 +4767,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/flash_syrup.webp",
+    "background": "/files/assets/art/lab/title-15300b9443.webp",
     "bgm": "/files/assets/bgm/days.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "notebook_3",
    "type": "story",
    "position": {
-    "x": 2160,
+    "x": 1800,
     "y": 1040
    },
    "data": {
@@ -4942,12 +4791,13 @@
       "id": "notebook_3-l0",
       "speaker": "旁白",
       "text": "頭七深夜，沈淮在吧檯後翻到第三年秋天，頁首寫著公休日的日期。",
-      "background": "/files/assets/art/cg/notebook_autumn.webp"
+      "background": "/files/assets/art/lab/title-3f3ca2f97e.webp"
      },
      {
       "id": "notebook_3-l1",
       "speaker": "安雅的筆記",
-      "text": "自己試：無。胡椒：還有一點刺。他說沒有亂加。"
+      "text": "自己試：無。胡椒：還有一點刺。他說沒有亂加。",
+      "background": "/files/assets/art/cg/notebook_autumn.webp"
      },
      {
       "id": "notebook_3-l2",
@@ -4981,8 +4831,8 @@
      },
      {
       "id": "notebook_3-l8",
-      "speaker": "沈淮（心）",
-      "text": "她那時候已經嚐不到了。"
+      "speaker": "沈淮",
+      "text": "妳那時候……就嚐不到了。"
      },
      {
       "id": "notebook_3-l9",
@@ -5027,29 +4877,24 @@
      {
       "id": "notebook_3-l17",
       "speaker": "旁白",
-      "text": "他用袖口擦了一下眼睛，手臂還擋在臉前。"
+      "text": "他把臉埋進手臂，很久沒有抬起來。"
      }
     ],
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/notebook_autumn.webp",
+    "background": "/files/assets/art/lab/title-3f3ca2f97e.webp",
     "bgm": "/files/assets/bgm/seventh.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "flash_2",
    "type": "story",
    "position": {
-    "x": 2520,
+    "x": 2160,
     "y": 1040
    },
    "data": {
@@ -5062,12 +4907,13 @@
       "id": "flash_2-l0",
       "speaker": "旁白",
       "text": "第三年秋天，公休日傍晚的頂樓，安雅坐在矮牆旁看沈淮調〈破曉〉。",
-      "background": "/files/assets/art/cg/flash_roof.webp"
+      "background": "/files/assets/art/lab/title-7814f0ce47.webp"
      },
      {
       "id": "flash_2-l1",
       "speaker": "沈淮",
-      "text": "妳先別看我，我會倒太多。"
+      "text": "妳先別看我，我會倒太多。",
+      "background": "/files/assets/art/cg/flash_roof.webp"
      },
      {
       "id": "flash_2-l2",
@@ -5148,24 +4994,19 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/flash_roof.webp",
+    "background": "/files/assets/art/lab/title-7814f0ce47.webp",
     "bgm": "/files/assets/bgm/sunset.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "notebook_4",
    "type": "story",
    "position": {
-    "x": 0,
-    "y": 1300
+    "x": 2520,
+    "y": 1040
    },
    "data": {
     "type": "dialogue",
@@ -5177,12 +5018,13 @@
       "id": "notebook_4-l0",
       "speaker": "旁白",
       "text": "筆記翻到最後幾個月，幾個日期下面都只有一兩行字，頭七的吧檯上，吊燈照著紙面。",
-      "background": "/files/assets/art/cg/notebook_last.webp"
+      "background": "/files/assets/art/lab/title-3f3ca2f97e.webp"
      },
      {
       "id": "notebook_4-l1",
       "speaker": "安雅的筆記",
-      "text": "今天沒下樓，他又忙到半夜才吃，問了還說不餓。"
+      "text": "今天沒下樓，他又忙到半夜才吃，問了還說不餓。",
+      "background": "/files/assets/art/cg/notebook_last.webp"
      },
      {
       "id": "notebook_4-l2",
@@ -5268,23 +5110,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/notebook_last.webp",
+    "background": "/files/assets/art/lab/title-3f3ca2f97e.webp",
     "bgm": "/files/assets/bgm/seventh.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "door_1",
    "type": "story",
    "position": {
-    "x": 360,
+    "x": 0,
     "y": 1300
    },
    "data": {
@@ -5368,7 +5205,7 @@
      {
       "id": "door_1-l14",
       "speaker": "沈淮（心）",
-      "text": "讓她回去，別再有人來了。"
+      "text": "叫她回去啦，不要再有人來了。"
      },
      {
       "id": "door_1-l15",
@@ -5390,19 +5227,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/door_closed.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "door_2",
    "type": "story",
    "position": {
-    "x": 720,
+    "x": 360,
     "y": 1300
    },
    "data": {
@@ -5507,19 +5339,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/door_meal.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "sunset_1",
    "type": "story",
    "position": {
-    "x": 1080,
+    "x": 720,
     "y": 1300
    },
    "data": {
@@ -5587,7 +5414,7 @@
      {
       "id": "sunset_1-l11",
       "speaker": "沈淮",
-      "text": "三層都有了。"
+      "text": "妳看，這次沒混在一起。"
      },
      {
       "id": "sunset_1-l12",
@@ -5620,11 +5447,6 @@
     },
     "background": "/files/assets/art/cg/sunset_layers.webp",
     "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    },
     "bgm": "",
     "bgmVolume": 0,
     "bgmLoop": false
@@ -5634,7 +5456,7 @@
    "id": "sunset_2",
    "type": "story",
    "position": {
-    "x": 1440,
+    "x": 1080,
     "y": 1300
    },
    "data": {
@@ -5662,7 +5484,7 @@
      {
       "id": "sunset_2-l3",
       "speaker": "沈淮",
-      "text": "這裡有甜白酒，還有糖漿。"
+      "text": "糖漿我明明沒少放。"
      },
      {
       "id": "sunset_2-l4",
@@ -5734,19 +5556,14 @@
      "actors": []
     },
     "background": "/files/assets/art/cg/sunset_gold.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "sunset_3",
    "type": "story",
    "position": {
-    "x": 1800,
+    "x": 1440,
     "y": 1300
    },
    "data": {
@@ -5758,7 +5575,8 @@
      {
       "id": "sunset_3-l0",
       "speaker": "旁白",
-      "text": "頭七深夜，沈淮站在吧檯後，從有粉紅胡椒的那側喝下杯底的酒。"
+      "text": "頭七深夜，沈淮站在吧檯後，從有粉紅胡椒的那側喝下杯底的酒。",
+      "background": "/files/assets/art/cg/sunset_gold.webp"
      },
      {
       "id": "sunset_3-l1",
@@ -5798,7 +5616,7 @@
      {
       "id": "sunset_3-l8",
       "speaker": "沈淮",
-      "text": "安雅，吞下去還是甜的。"
+      "text": "安雅，喝完了，還是甜的。"
      },
      {
       "id": "sunset_3-l9",
@@ -5864,19 +5682,14 @@
     "bgm": "/files/assets/bgm/sunset.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "evening_1",
    "type": "story",
    "position": {
-    "x": 2160,
+    "x": 1800,
     "y": 1300
    },
    "data": {
@@ -5889,12 +5702,13 @@
       "id": "evening_1-l0",
       "speaker": "旁白",
       "text": "幾個禮拜後的傍晚，小酒吧重新開門，阿忠坐回最靠門的老位置。",
-      "background": "/files/assets/art/cg/evening_bar.webp"
+      "background": "/files/assets/art/lab/title-34d4118d41.webp"
      },
      {
       "id": "evening_1-l1",
       "speaker": "阿忠",
-      "text": "啊你是放假放上癮喔，我都快改喝茶了。"
+      "text": "啊你是放假放上癮喔，我都快改喝茶了。",
+      "background": "/files/assets/art/cg/evening_bar.webp"
      },
      {
       "id": "evening_1-l2",
@@ -5980,23 +5794,18 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/evening_bar.webp",
+    "background": "/files/assets/art/lab/title-34d4118d41.webp",
     "bgm": "/files/assets/bgm/main.mp3",
     "bgmVolume": 0.5,
     "bgmLoop": true,
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "characterLayers": []
    }
   },
   {
    "id": "evening_2",
    "type": "story",
    "position": {
-    "x": 2520,
+    "x": 2160,
     "y": 1300
    },
    "data": {
@@ -6009,12 +5818,13 @@
       "id": "evening_2-l0",
       "speaker": "旁白",
       "text": "又一個傍晚，開店前，沈淮在頂樓矮牆邊站了一會。",
-      "background": "/files/assets/art/cg/evening_roof.webp"
+      "background": "/files/assets/art/lab/title-242416ca66.webp"
      },
      {
       "id": "evening_2-l1",
       "speaker": "旁白",
-      "text": "西邊的雲底透著粉紅，靠近屋頂的天還留著一截紅。"
+      "text": "西邊的雲底透著粉紅，靠近屋頂的天還留著一截紅。",
+      "background": "/files/assets/art/cg/evening_roof.webp"
      },
      {
       "id": "evening_2-l2",
@@ -6101,13 +5911,8 @@
     "stage": {
      "actors": []
     },
-    "background": "/files/assets/art/cg/evening_roof.webp",
-    "characterLayers": [],
-    "autoAdvance": {
-     "enabled": true,
-     "mode": "delay",
-     "delayMs": 2000
-    }
+    "background": "/files/assets/art/lab/title-242416ca66.webp",
+    "characterLayers": []
    }
   },
   {
@@ -6172,13 +5977,6 @@
    "mode": "story",
    "name": "晚霞",
    "edges": [
-    {
-     "id": "hint--open_1",
-     "source": "hint",
-     "target": "open_1",
-     "sourceHandle": "right",
-     "targetHandle": "left"
-    },
     {
      "id": "open_1--open_2",
      "source": "open_1",
@@ -6504,47 +6302,10 @@
    ],
    "nodes": [
     {
-     "id": "hint",
-     "type": "story",
-     "position": {
-      "x": 360,
-      "y": 0
-     },
-     "data": {
-      "type": "dialogue",
-      "title": "開始之前",
-      "speaker": "旁白",
-      "text": "這是一部從頭到尾會自己播放的小說，大約四十分鐘。",
-      "dialogueLines": [
-       {
-        "id": "hint-l0",
-        "speaker": "旁白",
-        "text": "這是一部從頭到尾會自己播放的小說，大約四十分鐘。"
-       },
-       {
-        "id": "hint-l1",
-        "speaker": "旁白",
-        "text": "戴上耳機，不用點滑鼠，看到最後。想快一點，點一下畫面。"
-       }
-      ],
-      "stage": {
-       "actors": []
-      },
-      "background": "/files/assets/art/cover.webp",
-      "start": true,
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      },
-      "characterLayers": []
-     }
-    },
-    {
      "id": "open_1",
      "type": "story",
      "position": {
-      "x": 720,
+      "x": 360,
       "y": 0
      },
      "data": {
@@ -6557,12 +6318,13 @@
         "id": "open_1-l0",
         "speaker": "旁白",
         "text": "第二年夏天的週五夜，店裡七張高腳椅坐滿了，阿忠的啤酒瓶旁又多了一只空杯。",
-        "background": "/files/assets/art/cg/open_busy.webp"
+        "background": "/files/assets/art/lab/title-87b73dc075.webp"
        },
        {
         "id": "open_1-l1",
         "speaker": "安雅",
-        "text": "沈淮，那瓶白酒幫我拿。"
+        "text": "沈淮，那瓶白酒幫我拿。",
+        "background": "/files/assets/art/cg/open_busy.webp"
        },
        {
         "id": "open_1-l2",
@@ -6648,23 +6410,19 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/open_busy.webp",
+      "background": "/files/assets/art/lab/title-87b73dc075.webp",
       "bgm": "/files/assets/bgm/days.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
       "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "start": true
      }
     },
     {
      "id": "open_2",
      "type": "story",
      "position": {
-      "x": 1080,
+      "x": 720,
       "y": 0
      },
      "data": {
@@ -6676,7 +6434,8 @@
        {
         "id": "open_2-l0",
         "speaker": "旁白",
-        "text": "同一個週五夜，過了十二點，客人還沒散，安雅從沈淮身後擠過去拿杯子。"
+        "text": "同一個週五夜，過了十二點，客人還沒散，安雅從沈淮身後擠過去拿杯子。",
+        "background": "/files/assets/art/cg/open_busy.webp"
        },
        {
         "id": "open_2-l1",
@@ -6731,7 +6490,7 @@
        {
         "id": "open_2-l11",
         "speaker": "旁白",
-        "text": "她又碰了碰他的手肘，拿起吧匙，把氣泡白酒慢慢疊在杯底的洛神花糖漿上。",
+        "text": "她用肩膀撞了他一下，拿起吧匙，把氣泡白酒慢慢疊在杯底的洛神花糖漿上。",
         "background": "/files/assets/art/cg/open_laugh.webp"
        },
        {
@@ -6769,19 +6528,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/open_busy.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "return",
      "type": "story",
      "position": {
-      "x": 1440,
+      "x": 1080,
       "y": 0
      },
      "data": {
@@ -6794,12 +6548,13 @@
         "id": "return-l0",
         "speaker": "旁白",
         "text": "頭七深夜，同一間店的燈箱沒亮，沈淮推門進來，只開了吧檯上方的一盞燈。",
-        "background": "/files/assets/art/cg/return_closed.webp"
+        "background": "/files/assets/art/lab/title-3f3ca2f97e.webp"
        },
        {
         "id": "return-l1",
         "speaker": "沈淮",
-        "text": "安雅，我回來了。"
+        "text": "安雅，我回來了。",
+        "background": "/files/assets/art/cg/return_closed.webp"
        },
        {
         "id": "return-l2",
@@ -6870,23 +6625,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/return_closed.webp",
+      "background": "/files/assets/art/lab/title-3f3ca2f97e.webp",
       "bgm": "/files/assets/bgm/seventh.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "return_2",
      "type": "story",
      "position": {
-      "x": 1800,
+      "x": 1440,
       "y": 0
      },
      "data": {
@@ -6909,7 +6659,7 @@
        {
         "id": "return_2-l2",
         "speaker": "旁白",
-        "text": "他喝了一口水，嘴唇離開杯緣，杯子還握在手裡。"
+        "text": "他喝了一口水，杯子還握在手裡。"
        },
        {
         "id": "return_2-l3",
@@ -6924,7 +6674,7 @@
        {
         "id": "return_2-l5",
         "speaker": "旁白",
-        "text": "他把杯子放回檯面，拇指擦過嘴角。"
+        "text": "他把杯子放回檯面，用手背抹了一下嘴。"
        },
        {
         "id": "return_2-l6",
@@ -6991,19 +6741,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/return_water.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "rain_1",
      "type": "story",
      "position": {
-      "x": 2160,
+      "x": 1800,
       "y": 0
      },
      "data": {
@@ -7016,12 +6761,13 @@
         "id": "rain_1-l0",
         "speaker": "旁白",
         "text": "第一年春天的暴雨夜，沈淮推開酒吧的門，襯衫袖口還在滴水。",
-        "background": "/files/assets/art/cg/rain_towel.webp"
+        "background": "/files/assets/art/lab/title-b86bad9825.webp"
        },
        {
         "id": "rain_1-l1",
         "speaker": "沈淮",
-        "text": "還有開嗎？"
+        "text": "還有開嗎？",
+        "background": "/files/assets/art/cg/rain_towel.webp"
        },
        {
         "id": "rain_1-l2",
@@ -7036,7 +6782,7 @@
        {
         "id": "rain_1-l4",
         "speaker": "安雅",
-        "text": "先擦乾，再點酒，領帶都能擰出水了。"
+        "text": "先擦一擦再點啦，領帶都能擰出水了。"
        },
        {
         "id": "rain_1-l5",
@@ -7086,7 +6832,7 @@
        {
         "id": "rain_1-l14",
         "speaker": "沈淮",
-        "text": "改圖，門搬了四次，最後改回原來的位置。"
+        "text": "改圖啊，一扇門搬了四次，最後又搬回原來那裡。"
        },
        {
         "id": "rain_1-l15",
@@ -7107,23 +6853,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/rain_towel.webp",
+      "background": "/files/assets/art/lab/title-b86bad9825.webp",
       "bgm": "/files/assets/bgm/dawn.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "rain_2",
      "type": "story",
      "position": {
-      "x": 2520,
+      "x": 2160,
       "y": 0
      },
      "data": {
@@ -7135,7 +6876,8 @@
        {
         "id": "rain_2-l0",
         "speaker": "旁白",
-        "text": "暴雨夜的吧檯前，安雅把一只細長香檳杯拿到沈淮面前。"
+        "text": "暴雨夜的吧檯前，安雅把一只細長香檳杯拿到沈淮面前。",
+        "background": "/files/assets/art/cg/rain_towel.webp"
        },
        {
         "id": "rain_2-l1",
@@ -7228,20 +6970,15 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/rain_towel.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "rain_3",
      "type": "story",
      "position": {
-      "x": 0,
-      "y": 260
+      "x": 2520,
+      "y": 0
      },
      "data": {
       "type": "dialogue",
@@ -7252,7 +6989,8 @@
        {
         "id": "rain_3-l0",
         "speaker": "旁白",
-        "text": "暴雨夜的吧檯前，沈淮拿著下紅上金的酒杯，湊到燈下看。"
+        "text": "暴雨夜的吧檯前，沈淮拿著下紅上金的酒杯，湊到燈下看。",
+        "background": "/files/assets/art/cg/rain_dawn.webp"
        },
        {
         "id": "rain_3-l1",
@@ -7345,19 +7083,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/rain_dawn.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "weeks_1",
      "type": "story",
      "position": {
-      "x": 360,
+      "x": 0,
       "y": 260
      },
      "data": {
@@ -7370,12 +7103,13 @@
         "id": "weeks_1-l0",
         "speaker": "旁白",
         "text": "春末的酒吧，沈淮還了傘，隔兩天又推門進來。",
-        "background": "/files/assets/art/cg/weeks_regular.webp"
+        "background": "/files/assets/art/lab/title-e95fb8cf8d.webp"
        },
        {
         "id": "weeks_1-l1",
         "speaker": "安雅",
-        "text": "今天沒下雨耶。"
+        "text": "今天沒下雨耶。",
+        "background": "/files/assets/art/cg/weeks_regular.webp"
        },
        {
         "id": "weeks_1-l2",
@@ -7461,20 +7195,15 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/weeks_regular.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "background": "/files/assets/art/lab/title-e95fb8cf8d.webp",
+      "characterLayers": []
      }
     },
     {
      "id": "weeks_2",
      "type": "story",
      "position": {
-      "x": 720,
+      "x": 360,
       "y": 260
      },
      "data": {
@@ -7487,12 +7216,13 @@
         "id": "weeks_2-l0",
         "speaker": "旁白",
         "text": "第一年初夏的打烊夜，安雅坐在吧檯前喝水，沈淮把最後一只杯子擦乾。",
-        "background": "/files/assets/art/cg/weeks_water.webp"
+        "background": "/files/assets/art/lab/title-9e932c41d3.webp"
        },
        {
         "id": "weeks_2-l1",
         "speaker": "沈淮",
-        "text": "我再點一杯，妳陪我喝？"
+        "text": "我再點一杯，妳陪我喝？",
+        "background": "/files/assets/art/cg/weeks_water.webp"
        },
        {
         "id": "weeks_2-l2",
@@ -7583,20 +7313,15 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/weeks_water.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "background": "/files/assets/art/lab/title-9e932c41d3.webp",
+      "characterLayers": []
      }
     },
     {
      "id": "clinic_1",
      "type": "story",
      "position": {
-      "x": 1080,
+      "x": 720,
       "y": 260
      },
      "data": {
@@ -7609,17 +7334,18 @@
         "id": "clinic_1-l0",
         "speaker": "旁白",
         "text": "第一年七月的午後，診間裡，安雅和母親並肩坐在醫師面前。",
-        "background": "/files/assets/art/cg/clinic_day.webp"
+        "background": "/files/assets/art/lab/title-684daf2f73.webp"
        },
        {
         "id": "clinic_1-l1",
         "speaker": "醫師",
-        "text": "原來的唾液腺腺樣囊狀癌復發了，沿著神經擴散，這個位置很難再切乾淨。"
+        "text": "之前的唾液腺腺樣囊狀癌又回來了，沿著神經走，這個位置要再開乾淨很難。",
+        "background": "/files/assets/art/cg/clinic_day.webp"
        },
        {
         "id": "clinic_1-l2",
         "speaker": "醫師",
-        "text": "再做放射治療可以討論，要先評估以前照過的範圍。"
+        "text": "要再電療是可以，不過要先看之前照過哪裡。"
        },
        {
         "id": "clinic_1-l3",
@@ -7685,23 +7411,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/clinic_day.webp",
+      "background": "/files/assets/art/lab/title-684daf2f73.webp",
       "bgm": "/files/assets/bgm/alone.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "lesson_1",
      "type": "story",
      "position": {
-      "x": 1440,
+      "x": 1080,
       "y": 260
      },
      "data": {
@@ -7714,12 +7435,13 @@
         "id": "lesson_1-l0",
         "speaker": "旁白",
         "text": "第一年夏末的週六，開店前的吧檯後，安雅扶著沈淮的前臂，攪拌杯裡加了酒和冰。",
-        "background": "/files/assets/art/cg/lesson_hands.webp"
+        "background": "/files/assets/art/lab/title-f7895d958d.webp"
        },
        {
         "id": "lesson_1-l1",
         "speaker": "安雅",
-        "text": "手腕別轉，用手指推，匙背貼著杯壁。"
+        "text": "手腕別轉，用手指推，匙背貼著杯壁。",
+        "background": "/files/assets/art/cg/lesson_hands.webp"
        },
        {
         "id": "lesson_1-l2",
@@ -7769,17 +7491,17 @@
        {
         "id": "lesson_1-l11",
         "speaker": "小葵",
-        "text": "五十五分，少一層扣五分。"
+        "text": "欸，兩層變一層了。"
        },
        {
         "id": "lesson_1-l12",
         "speaker": "沈淮",
-        "text": "上禮拜也算進來？"
+        "text": "我有眼睛。"
        },
        {
         "id": "lesson_1-l13",
         "speaker": "安雅",
-        "text": "先別跟她吵，手給我。"
+        "text": "好啦，手給我。"
        },
        {
         "id": "lesson_1-l14",
@@ -7805,23 +7527,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/lesson_hands.webp",
+      "background": "/files/assets/art/lab/title-f7895d958d.webp",
       "bgm": "/files/assets/bgm/days.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "confess_1",
      "type": "story",
      "position": {
-      "x": 1800,
+      "x": 1440,
       "y": 260
      },
      "data": {
@@ -7929,19 +7646,14 @@
       "bgm": "/files/assets/bgm/dawn.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "confess_2",
      "type": "story",
      "position": {
-      "x": 2160,
+      "x": 1800,
       "y": 260
      },
      "data": {
@@ -7953,7 +7665,8 @@
        {
         "id": "confess_2-l0",
         "speaker": "旁白",
-        "text": "夏末的打烊夜，吧檯邊，安雅站到沈淮面前，朝他伸出手。"
+        "text": "夏末的打烊夜，吧檯邊，安雅站到沈淮面前，朝他伸出手。",
+        "background": "/files/assets/art/cg/confess_words.webp"
        },
        {
         "id": "confess_2-l1",
@@ -8046,19 +7759,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/confess_words.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "together_1",
      "type": "story",
      "position": {
-      "x": 2520,
+      "x": 2160,
       "y": 260
      },
      "data": {
@@ -8071,12 +7779,13 @@
         "id": "together_1-l0",
         "speaker": "旁白",
         "text": "第一年秋天的週末夜，店裡七張椅子坐滿了，沈淮才坐下，安雅就把冰桶推到他面前。",
-        "background": "/files/assets/art/cg/together_hands.webp"
+        "background": "/files/assets/art/lab/title-609dc73fdc.webp"
        },
        {
         "id": "together_1-l1",
         "speaker": "安雅",
-        "text": "沈淮，冰塊快沒了。"
+        "text": "沈淮，冰塊快沒了。",
+        "background": "/files/assets/art/cg/together_hands.webp"
        },
        {
         "id": "together_1-l2",
@@ -8162,24 +7871,19 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/together_hands.webp",
+      "background": "/files/assets/art/lab/title-609dc73fdc.webp",
       "bgm": "/files/assets/bgm/days.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "quit_1",
      "type": "story",
      "position": {
-      "x": 0,
-      "y": 520
+      "x": 2520,
+      "y": 260
      },
      "data": {
       "type": "dialogue",
@@ -8191,12 +7895,13 @@
         "id": "quit_1-l0",
         "speaker": "旁白",
         "text": "第二年春天，打烊後的店裡，沈淮擦完最後一排杯子，沒有拿起外套。",
-        "background": "/files/assets/art/cg/quit_proposal.webp"
+        "background": "/files/assets/art/lab/title-bcac76ad57.webp"
        },
        {
         "id": "quit_1-l1",
         "speaker": "沈淮",
-        "text": "月底那個案子交完，我想提離職。"
+        "text": "月底那個案子交完，我想提離職。",
+        "background": "/files/assets/art/cg/quit_proposal.webp"
        },
        {
         "id": "quit_1-l2",
@@ -8277,23 +7982,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/quit_proposal.webp",
+      "background": "/files/assets/art/lab/title-bcac76ad57.webp",
       "bgm": "/files/assets/bgm/alone.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "quit_2",
      "type": "story",
      "position": {
-      "x": 360,
+      "x": 0,
       "y": 520
      },
      "data": {
@@ -8305,12 +8005,13 @@
        {
         "id": "quit_2-l0",
         "speaker": "旁白",
-        "text": "第二年春天，同一個打烊夜，店裡的水龍頭還開著，沈淮伸手關掉。"
+        "text": "第二年春天，同一個打烊夜，店裡的水龍頭還開著，沈淮伸手關掉。",
+        "background": "/files/assets/art/cg/quit_proposal.webp"
        },
        {
         "id": "quit_2-l1",
         "speaker": "沈淮",
-        "text": "我想自己把一杯酒做完，端給客人，我喜歡做這個。"
+        "text": "我想自己把酒做好，端出去給客人。我是真的喜歡做這個。"
        },
        {
         "id": "quit_2-l2",
@@ -8398,19 +8099,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/quit_proposal.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "quit_3",
      "type": "story",
      "position": {
-      "x": 720,
+      "x": 360,
       "y": 520
      },
      "data": {
@@ -8428,7 +8124,7 @@
        {
         "id": "quit_3-l1",
         "speaker": "旁白",
-        "text": "他把外套掛回椅背，解開袖扣，走進吧檯。"
+        "text": "他把外套掛回椅背，走進吧檯。"
        },
        {
         "id": "quit_3-l2",
@@ -8472,41 +8168,56 @@
        },
        {
         "id": "quit_3-l10",
-        "speaker": "安雅",
-        "text": "你調的酒可以賣，早就可以了。"
+        "speaker": "沈淮",
+        "text": "那妳昨天到底在氣什麼？"
        },
        {
         "id": "quit_3-l11",
-        "speaker": "沈淮",
-        "text": "下次先把我的話聽完，我想換工作，想很久了。"
+        "speaker": "安雅",
+        "text": "我怕你哪天後悔。薪水少一半，每天關在這七張椅子後面。"
        },
        {
         "id": "quit_3-l12",
-        "speaker": "安雅",
-        "text": "好，先做半年。薪水的事，吃完飯再算。"
+        "speaker": "沈淮",
+        "text": "會不會後悔，我做了才知道。我想換工作，想很久了。"
        },
        {
         "id": "quit_3-l13",
-        "speaker": "沈淮",
-        "text": "我昨天也不該摔門。"
+        "speaker": "安雅（心）",
+        "text": "趕不走欸。好啦，留著就留著，能多久算多久。"
        },
        {
         "id": "quit_3-l14",
         "speaker": "安雅",
-        "text": "門沒壞，轉過去。"
+        "text": "你調的酒可以賣，早就可以了。先做半年，做不下去要老實講。"
        },
        {
         "id": "quit_3-l15",
-        "speaker": "旁白",
-        "text": "她繞到他身後，把圍裙的帶子拉緊，打了個結。"
+        "speaker": "沈淮",
+        "text": "妳也是，嫌我礙事要老實講。"
        },
        {
         "id": "quit_3-l16",
         "speaker": "沈淮",
-        "text": "留兩個給我，我還沒吃。"
+        "text": "我昨天也不該摔門。"
        },
        {
         "id": "quit_3-l17",
+        "speaker": "安雅",
+        "text": "門沒壞，轉過去。"
+       },
+       {
+        "id": "quit_3-l18",
+        "speaker": "旁白",
+        "text": "她繞到他身後，把圍裙的帶子拉緊，打了個結。"
+       },
+       {
+        "id": "quit_3-l19",
+        "speaker": "沈淮",
+        "text": "留兩個給我，我還沒吃。"
+       },
+       {
+        "id": "quit_3-l20",
         "speaker": "旁白",
         "text": "她把煎餃推到兩人中間，拿筷子替他夾了兩個，才坐到他旁邊。"
        }
@@ -8518,19 +8229,14 @@
       "bgm": "/files/assets/bgm/days.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "home_1",
      "type": "story",
      "position": {
-      "x": 1080,
+      "x": 720,
       "y": 520
      },
      "data": {
@@ -8543,12 +8249,13 @@
         "id": "home_1-l0",
         "speaker": "旁白",
         "text": "第二年初夏，沈淮離職後搬進店樓上，第三天早上七點，床頭的鬧鐘又響了。",
-        "background": "/files/assets/art/cg/home_fridge.webp"
+        "background": "/files/assets/art/lab/title-ab8e958bd5.webp"
        },
        {
         "id": "home_1-l1",
         "speaker": "安雅",
-        "text": "沈淮，關掉。"
+        "text": "沈淮，關掉。",
+        "background": "/files/assets/art/cg/home_fridge.webp"
        },
        {
         "id": "home_1-l2",
@@ -8634,20 +8341,15 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/home_fridge.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "background": "/files/assets/art/lab/title-ab8e958bd5.webp",
+      "characterLayers": []
      }
     },
     {
      "id": "home_2",
      "type": "story",
      "position": {
-      "x": 1440,
+      "x": 1080,
       "y": 520
      },
      "data": {
@@ -8660,12 +8362,13 @@
         "id": "home_2-l0",
         "speaker": "旁白",
         "text": "第二年夏天的傍晚，安雅的母親第一次上樓吃飯，沈淮把第三道菜端上桌。",
-        "background": "/files/assets/art/cg/home_mother.webp"
+        "background": "/files/assets/art/lab/title-908ab2c027.webp"
        },
        {
         "id": "home_2-l1",
         "speaker": "安雅的母親",
-        "text": "就你們兩個，平常也煮這麼多？"
+        "text": "就你們兩個，平常也煮這麼多？",
+        "background": "/files/assets/art/cg/home_mother.webp"
        },
        {
         "id": "home_2-l2",
@@ -8751,20 +8454,15 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/home_mother.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "background": "/files/assets/art/lab/title-908ab2c027.webp",
+      "characterLayers": []
      }
     },
     {
      "id": "dusk_1",
      "type": "story",
      "position": {
-      "x": 1800,
+      "x": 1440,
       "y": 520
      },
      "data": {
@@ -8777,12 +8475,13 @@
         "id": "dusk_1-l0",
         "speaker": "旁白",
         "text": "第二年夏末，打烊後的吧檯上，安雅開了一瓶貴腐甜白酒，沈淮拿起洗好的量酒器。",
-        "background": "/files/assets/art/cg/dusk_recipe.webp"
+        "background": "/files/assets/art/lab/title-d6a45bf043.webp"
        },
        {
         "id": "dusk_1-l1",
         "speaker": "沈淮",
-        "text": "妳那瓶貴腐終於肯開了。"
+        "text": "妳那瓶貴腐終於肯開了。",
+        "background": "/files/assets/art/cg/dusk_recipe.webp"
        },
        {
         "id": "dusk_1-l2",
@@ -8868,20 +8567,15 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/dusk_recipe.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "background": "/files/assets/art/lab/title-d6a45bf043.webp",
+      "characterLayers": []
      }
     },
     {
      "id": "dusk_2",
      "type": "story",
      "position": {
-      "x": 2160,
+      "x": 1800,
       "y": 520
      },
      "data": {
@@ -8981,19 +8675,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/dusk_midnight.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "almost_1",
      "type": "story",
      "position": {
-      "x": 2520,
+      "x": 2160,
       "y": 520
      },
      "data": {
@@ -9006,12 +8695,13 @@
         "id": "almost_1-l0",
         "speaker": "旁白",
         "text": "第二年秋天，打烊後的店裡，沈淮穿好外套，安雅還在試新一批的洛神花糖漿。",
-        "background": "/files/assets/art/cg/almost_return.webp"
+        "background": "/files/assets/art/lab/title-6df1e613ab.webp"
        },
        {
         "id": "almost_1-l1",
         "speaker": "沈淮",
-        "text": "要不要餛飩？我還吃得下。"
+        "text": "要不要餛飩？我還吃得下。",
+        "background": "/files/assets/art/cg/almost_return.webp"
        },
        {
         "id": "almost_1-l2",
@@ -9097,41 +8787,36 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/almost_return.webp",
+      "background": "/files/assets/art/lab/title-6df1e613ab.webp",
       "bgm": "/files/assets/bgm/alone.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "almost_2",
      "type": "story",
      "position": {
-      "x": 0,
-      "y": 780
+      "x": 2520,
+      "y": 520
      },
      "data": {
       "type": "dialogue",
       "title": "第二年秋天・同一個打烊夜・吧檯前",
       "speaker": "旁白",
-      "text": "回診單還攤在吧檯上，第二年秋天的同一個打烊夜，沈淮站在原處，安雅把水杯放下。",
+      "text": "第二年秋天，同一個打烊夜，回診單還攤在吧檯上，安雅把水杯放下。",
       "dialogueLines": [
        {
         "id": "almost_2-l0",
         "speaker": "旁白",
-        "text": "回診單還攤在吧檯上，第二年秋天的同一個打烊夜，沈淮站在原處，安雅把水杯放下。",
+        "text": "第二年秋天，同一個打烊夜，回診單還攤在吧檯上，安雅把水杯放下。",
         "background": "/files/assets/art/cg/almost_answer.webp"
        },
        {
         "id": "almost_2-l1",
         "speaker": "安雅",
-        "text": "以前電療的地方又發炎，醫生要再看一下，就這樣。"
+        "text": "就以前電療那邊發炎啦，醫生說要再看一下。"
        },
        {
         "id": "almost_2-l2",
@@ -9218,19 +8903,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/almost_answer.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "roof_1",
      "type": "story",
      "position": {
-      "x": 360,
+      "x": 0,
       "y": 780
      },
      "data": {
@@ -9243,12 +8923,13 @@
         "id": "roof_1-l0",
         "speaker": "旁白",
         "text": "第三年秋天的公休日傍晚，沈淮把酒瓶和糖漿搬上頂樓，安雅替他扶著杯子。",
-        "background": "/files/assets/art/cg/roof_dawn.webp"
+        "background": "/files/assets/art/lab/title-8d90a5b1ce.webp"
        },
        {
         "id": "roof_1-l1",
         "speaker": "安雅",
-        "text": "說好上來休息，你連吧匙都帶。"
+        "text": "說好上來休息，你連吧匙都帶。",
+        "background": "/files/assets/art/cg/roof_dawn.webp"
        },
        {
         "id": "roof_1-l2",
@@ -9334,23 +9015,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/roof_dawn.webp",
+      "background": "/files/assets/art/lab/title-8d90a5b1ce.webp",
       "bgm": "/files/assets/bgm/sunset.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "roof_2",
      "type": "story",
      "position": {
-      "x": 720,
+      "x": 360,
       "y": 780
      },
      "data": {
@@ -9362,7 +9038,8 @@
        {
         "id": "roof_2-l0",
         "speaker": "旁白",
-        "text": "第三年秋天的公休日傍晚，頂樓矮牆上還留著半杯〈破曉〉，安雅拉著沈淮離開牆邊。"
+        "text": "第三年秋天的公休日傍晚，頂樓矮牆上還留著半杯〈破曉〉，安雅拉著沈淮離開牆邊。",
+        "background": "/files/assets/art/cg/roof_dawn.webp"
        },
        {
         "id": "roof_2-l1",
@@ -9433,7 +9110,7 @@
        {
         "id": "roof_2-l14",
         "speaker": "沈淮",
-        "text": "妳早點說啊，店又不會跑掉。"
+        "text": "妳早點說啊，哪天公休都可以上來。"
        },
        {
         "id": "roof_2-l15",
@@ -9455,19 +9132,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/roof_dawn.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "winter_1",
      "type": "story",
      "position": {
-      "x": 1080,
+      "x": 720,
       "y": 780
      },
      "data": {
@@ -9480,12 +9152,13 @@
         "id": "winter_1-l0",
         "speaker": "旁白",
         "text": "第三年冬天的一個打烊夜，樓上的房間裡，沈淮抱著被子站在床邊，安雅坐在床沿。",
-        "background": "/files/assets/art/cg/winter_tell.webp"
+        "background": "/files/assets/art/lab/title-7d352aafa6.webp"
        },
        {
         "id": "winter_1-l1",
         "speaker": "沈淮",
-        "text": "今晚別再整條捲走，我昨天半夜在找外套。"
+        "text": "今晚別再整條捲走，我昨天半夜在找外套。",
+        "background": "/files/assets/art/cg/winter_tell.webp"
        },
        {
         "id": "winter_1-l2",
@@ -9571,23 +9244,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/winter_tell.webp",
+      "background": "/files/assets/art/lab/title-7d352aafa6.webp",
       "bgm": "/files/assets/bgm/alone.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "winter_2",
      "type": "story",
      "position": {
-      "x": 1440,
+      "x": 1080,
       "y": 780
      },
      "data": {
@@ -9599,7 +9267,8 @@
        {
         "id": "winter_2-l0",
         "speaker": "旁白",
-        "text": "第三年冬夜，樓上的房間只開著床頭燈，沈淮站在床尾，安雅扶著床沿。"
+        "text": "第三年冬夜，樓上的房間只開著床頭燈，沈淮站在床尾，安雅扶著床沿。",
+        "background": "/files/assets/art/cg/winter_tell.webp"
        },
        {
         "id": "winter_2-l1",
@@ -9692,19 +9361,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/winter_tell.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "winter_3",
      "type": "story",
      "position": {
-      "x": 1800,
+      "x": 1440,
       "y": 780
      },
      "data": {
@@ -9732,7 +9396,7 @@
        {
         "id": "winter_3-l3",
         "speaker": "旁白",
-        "text": "裝滿的水杯放回她伸手碰得到的位置，分裝藥盒挪到旁邊。"
+        "text": "他把水裝滿放回床頭，藥盒也挪過去。"
        },
        {
         "id": "winter_3-l4",
@@ -9756,16 +9420,46 @@
        },
        {
         "id": "winter_3-l8",
-        "speaker": "安雅（心）",
-        "text": "還肯讓我勾。"
+        "speaker": "沈淮",
+        "text": "我在樓下坐了一個晚上。"
        },
        {
         "id": "winter_3-l9",
+        "speaker": "沈淮",
+        "text": "一直想妳都自己一個人去聽報告。"
+       },
+       {
+        "id": "winter_3-l10",
+        "speaker": "安雅",
+        "text": "對不起。"
+       },
+       {
+        "id": "winter_3-l11",
+        "speaker": "沈淮",
+        "text": "以後回診我跟妳去，痛也要講。"
+       },
+       {
+        "id": "winter_3-l12",
+        "speaker": "安雅",
+        "text": "好，都跟你講。"
+       },
+       {
+        "id": "winter_3-l13",
+        "speaker": "沈淮",
+        "text": "我還是很氣喔。"
+       },
+       {
+        "id": "winter_3-l14",
+        "speaker": "安雅",
+        "text": "好啦，你要氣就氣，手先不要放。"
+       },
+       {
+        "id": "winter_3-l15",
         "speaker": "旁白",
         "text": "她往他這邊挪，額頭碰到他的肩，他抬起另一隻手，覆上兩人勾著的手。"
        },
        {
-        "id": "winter_3-l10",
+        "id": "winter_3-l16",
         "speaker": "旁白",
         "text": "窗外的巷子有人在拉鐵門，他們坐著，水杯還是滿的。"
        }
@@ -9777,19 +9471,14 @@
       "bgm": "/files/assets/bgm/winter.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "last_1",
      "type": "story",
      "position": {
-      "x": 2160,
+      "x": 1800,
       "y": 780
      },
      "data": {
@@ -9802,12 +9491,13 @@
         "id": "last_1-l0",
         "speaker": "旁白",
         "text": "最後幾個月，傍晚開店時，沈淮送安寧醫師到門口，安雅在吧檯的客人那側坐下。",
-        "background": "/files/assets/art/cg/last_regulars.webp"
+        "background": "/files/assets/art/lab/title-61c1833301.webp"
        },
        {
         "id": "last_1-l1",
         "speaker": "旁白",
-        "text": "阿忠從門外搬進一箱啤酒，放到吧檯後，開了一瓶拿在手上。"
+        "text": "阿忠從門外搬進一箱啤酒，放到吧檯後，開了一瓶拿在手上。",
+        "background": "/files/assets/art/cg/last_regulars.webp"
        },
        {
         "id": "last_1-l2",
@@ -9893,20 +9583,15 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/last_regulars.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "background": "/files/assets/art/lab/title-61c1833301.webp",
+      "characterLayers": []
      }
     },
     {
      "id": "last_2",
      "type": "story",
      "position": {
-      "x": 2520,
+      "x": 2160,
       "y": 780
      },
      "data": {
@@ -9939,12 +9624,12 @@
        {
         "id": "last_2-l4",
         "speaker": "沈淮",
-        "text": "先甜一下，後面全是檸檬，吞下去喉嚨這裡還酸。"
+        "text": "一開始甜的，後面都是檸檬，吞下去喉嚨還會酸。"
        },
        {
         "id": "last_2-l5",
         "speaker": "小葵",
-        "text": "八十分，光聽就扣二十。"
+        "text": "你講得我牙齒都酸了。"
        },
        {
         "id": "last_2-l6",
@@ -9954,7 +9639,7 @@
        {
         "id": "last_2-l7",
         "speaker": "安雅",
-        "text": "先加半個吧匙糖漿，別跟她吵分數。"
+        "text": "先加半個吧匙糖漿試試。"
        },
        {
         "id": "last_2-l8",
@@ -10011,20 +9696,15 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/last_taste.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "farewell_1",
      "type": "story",
      "position": {
-      "x": 0,
-      "y": 1040
+      "x": 2520,
+      "y": 780
      },
      "data": {
       "type": "dialogue",
@@ -10036,12 +9716,13 @@
         "id": "farewell_1-l0",
         "speaker": "旁白",
         "text": "午後兩點多，樓上的房間開著窗，沈淮拿著剛洗好的襯衫進來。",
-        "background": "/files/assets/art/cg/farewell_room.webp"
+        "background": "/files/assets/art/lab/title-2691d70c9f.webp"
        },
        {
         "id": "farewell_1-l1",
         "speaker": "安雅",
-        "text": "那件我的，放這邊。"
+        "text": "那件我的，放這邊。",
+        "background": "/files/assets/art/cg/farewell_room.webp"
        },
        {
         "id": "farewell_1-l2",
@@ -10127,20 +9808,15 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/farewell_room.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "background": "/files/assets/art/lab/title-2691d70c9f.webp",
+      "characterLayers": []
      }
     },
     {
      "id": "farewell_2",
      "type": "story",
      "position": {
-      "x": 360,
+      "x": 0,
       "y": 1040
      },
      "data": {
@@ -10153,12 +9829,13 @@
         "id": "farewell_2-l0",
         "speaker": "旁白",
         "text": "安雅走後的幾天，殯儀館的桌前，她母親把文件逐張轉正，沈淮站在她身旁。",
-        "background": "/files/assets/art/cg/farewell_mother.webp"
+        "background": "/files/assets/art/lab/title-5aacd991eb.webp"
        },
        {
         "id": "farewell_2-l1",
         "speaker": "安雅的母親",
-        "text": "這幾張你幫我拿好，戶政那邊還要用。"
+        "text": "這幾張你幫我拿好，戶政那邊還要用。",
+        "background": "/files/assets/art/cg/farewell_mother.webp"
        },
        {
         "id": "farewell_2-l2",
@@ -10244,13 +9921,8 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/farewell_mother.webp",
+      "background": "/files/assets/art/lab/title-5aacd991eb.webp",
       "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      },
       "bgm": "",
       "bgmVolume": 0,
       "bgmLoop": false
@@ -10260,7 +9932,7 @@
      "id": "farewell_3",
      "type": "story",
      "position": {
-      "x": 720,
+      "x": 360,
       "y": 1040
      },
      "data": {
@@ -10273,12 +9945,13 @@
         "id": "farewell_3-l0",
         "speaker": "旁白",
         "text": "頭七當晚，樓上的房間亮著燈，沈淮把最後一疊衣服放進櫃子。",
-        "background": "/files/assets/art/cg/farewell_bed.webp"
+        "background": "/files/assets/art/lab/title-af18be53eb.webp"
        },
        {
         "id": "farewell_3-l1",
         "speaker": "沈淮",
-        "text": "衣服收好了，妳媽明天不用再跑樓上。"
+        "text": "衣服收好了，妳媽明天不用再跑樓上。",
+        "background": "/files/assets/art/cg/farewell_bed.webp"
        },
        {
         "id": "farewell_3-l2",
@@ -10345,23 +10018,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/farewell_bed.webp",
+      "background": "/files/assets/art/lab/title-af18be53eb.webp",
       "bgm": "/files/assets/bgm/seventh.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "notebook_1",
      "type": "story",
      "position": {
-      "x": 1080,
+      "x": 720,
       "y": 1040
      },
      "data": {
@@ -10434,7 +10102,7 @@
        {
         "id": "notebook_1-l12",
         "speaker": "沈淮",
-        "text": "左邊……妳後來一直按的，也是左邊耳朵下面。"
+        "text": "左邊……妳後來不是一直按左邊耳朵下面？"
        },
        {
         "id": "notebook_1-l13",
@@ -10449,26 +10117,21 @@
        {
         "id": "notebook_1-l15",
         "speaker": "旁白",
-        "text": "他的手停在頁角，窗上的雨水一滴接著一滴往下流。"
+        "text": "他的手壓著頁角，窗上的雨水一滴接著一滴往下流。"
        }
       ],
       "stage": {
        "actors": []
       },
       "background": "/files/assets/art/cg/notebook_open.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "notebook_2",
      "type": "story",
      "position": {
-      "x": 1440,
+      "x": 1080,
       "y": 1040
      },
      "data": {
@@ -10573,19 +10236,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/notebook_august.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "flash_1",
      "type": "story",
      "position": {
-      "x": 1800,
+      "x": 1440,
       "y": 1040
      },
      "data": {
@@ -10598,12 +10256,13 @@
         "id": "flash_1-l0",
         "speaker": "旁白",
         "text": "第二年夏天，打烊後的吧檯，安雅把試味的酒吐進小杯。",
-        "background": "/files/assets/art/cg/flash_syrup.webp"
+        "background": "/files/assets/art/lab/title-15300b9443.webp"
        },
        {
         "id": "flash_1-l1",
         "speaker": "安雅（心）",
-        "text": "今天連檸檬的酸都沒了。"
+        "text": "今天連檸檬的酸都沒了。",
+        "background": "/files/assets/art/cg/flash_syrup.webp"
        },
        {
         "id": "flash_1-l2",
@@ -10648,7 +10307,7 @@
        {
         "id": "flash_1-l10",
         "speaker": "旁白",
-        "text": "他笑了一聲，又喝一口，接著伸手拿水。"
+        "text": "他皺著臉又喝一口，接著伸手拿水。"
        },
        {
         "id": "flash_1-l11",
@@ -10663,7 +10322,7 @@
        {
         "id": "flash_1-l13",
         "speaker": "安雅",
-        "text": "好了，放著，水在你右邊。"
+        "text": "有那麼誇張喔，喝水啦。"
        },
        {
         "id": "flash_1-l14",
@@ -10689,23 +10348,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/flash_syrup.webp",
+      "background": "/files/assets/art/lab/title-15300b9443.webp",
       "bgm": "/files/assets/bgm/days.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "notebook_3",
      "type": "story",
      "position": {
-      "x": 2160,
+      "x": 1800,
       "y": 1040
      },
      "data": {
@@ -10718,12 +10372,13 @@
         "id": "notebook_3-l0",
         "speaker": "旁白",
         "text": "頭七深夜，沈淮在吧檯後翻到第三年秋天，頁首寫著公休日的日期。",
-        "background": "/files/assets/art/cg/notebook_autumn.webp"
+        "background": "/files/assets/art/lab/title-3f3ca2f97e.webp"
        },
        {
         "id": "notebook_3-l1",
         "speaker": "安雅的筆記",
-        "text": "自己試：無。胡椒：還有一點刺。他說沒有亂加。"
+        "text": "自己試：無。胡椒：還有一點刺。他說沒有亂加。",
+        "background": "/files/assets/art/cg/notebook_autumn.webp"
        },
        {
         "id": "notebook_3-l2",
@@ -10757,8 +10412,8 @@
        },
        {
         "id": "notebook_3-l8",
-        "speaker": "沈淮（心）",
-        "text": "她那時候已經嚐不到了。"
+        "speaker": "沈淮",
+        "text": "妳那時候……就嚐不到了。"
        },
        {
         "id": "notebook_3-l9",
@@ -10803,29 +10458,24 @@
        {
         "id": "notebook_3-l17",
         "speaker": "旁白",
-        "text": "他用袖口擦了一下眼睛，手臂還擋在臉前。"
+        "text": "他把臉埋進手臂，很久沒有抬起來。"
        }
       ],
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/notebook_autumn.webp",
+      "background": "/files/assets/art/lab/title-3f3ca2f97e.webp",
       "bgm": "/files/assets/bgm/seventh.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "flash_2",
      "type": "story",
      "position": {
-      "x": 2520,
+      "x": 2160,
       "y": 1040
      },
      "data": {
@@ -10838,12 +10488,13 @@
         "id": "flash_2-l0",
         "speaker": "旁白",
         "text": "第三年秋天，公休日傍晚的頂樓，安雅坐在矮牆旁看沈淮調〈破曉〉。",
-        "background": "/files/assets/art/cg/flash_roof.webp"
+        "background": "/files/assets/art/lab/title-7814f0ce47.webp"
        },
        {
         "id": "flash_2-l1",
         "speaker": "沈淮",
-        "text": "妳先別看我，我會倒太多。"
+        "text": "妳先別看我，我會倒太多。",
+        "background": "/files/assets/art/cg/flash_roof.webp"
        },
        {
         "id": "flash_2-l2",
@@ -10924,24 +10575,19 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/flash_roof.webp",
+      "background": "/files/assets/art/lab/title-7814f0ce47.webp",
       "bgm": "/files/assets/bgm/sunset.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "notebook_4",
      "type": "story",
      "position": {
-      "x": 0,
-      "y": 1300
+      "x": 2520,
+      "y": 1040
      },
      "data": {
       "type": "dialogue",
@@ -10953,12 +10599,13 @@
         "id": "notebook_4-l0",
         "speaker": "旁白",
         "text": "筆記翻到最後幾個月，幾個日期下面都只有一兩行字，頭七的吧檯上，吊燈照著紙面。",
-        "background": "/files/assets/art/cg/notebook_last.webp"
+        "background": "/files/assets/art/lab/title-3f3ca2f97e.webp"
        },
        {
         "id": "notebook_4-l1",
         "speaker": "安雅的筆記",
-        "text": "今天沒下樓，他又忙到半夜才吃，問了還說不餓。"
+        "text": "今天沒下樓，他又忙到半夜才吃，問了還說不餓。",
+        "background": "/files/assets/art/cg/notebook_last.webp"
        },
        {
         "id": "notebook_4-l2",
@@ -11044,23 +10691,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/notebook_last.webp",
+      "background": "/files/assets/art/lab/title-3f3ca2f97e.webp",
       "bgm": "/files/assets/bgm/seventh.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "door_1",
      "type": "story",
      "position": {
-      "x": 360,
+      "x": 0,
       "y": 1300
      },
      "data": {
@@ -11144,7 +10786,7 @@
        {
         "id": "door_1-l14",
         "speaker": "沈淮（心）",
-        "text": "讓她回去，別再有人來了。"
+        "text": "叫她回去啦，不要再有人來了。"
        },
        {
         "id": "door_1-l15",
@@ -11166,19 +10808,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/door_closed.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "door_2",
      "type": "story",
      "position": {
-      "x": 720,
+      "x": 360,
       "y": 1300
      },
      "data": {
@@ -11283,19 +10920,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/door_meal.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "sunset_1",
      "type": "story",
      "position": {
-      "x": 1080,
+      "x": 720,
       "y": 1300
      },
      "data": {
@@ -11363,7 +10995,7 @@
        {
         "id": "sunset_1-l11",
         "speaker": "沈淮",
-        "text": "三層都有了。"
+        "text": "妳看，這次沒混在一起。"
        },
        {
         "id": "sunset_1-l12",
@@ -11396,11 +11028,6 @@
       },
       "background": "/files/assets/art/cg/sunset_layers.webp",
       "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      },
       "bgm": "",
       "bgmVolume": 0,
       "bgmLoop": false
@@ -11410,7 +11037,7 @@
      "id": "sunset_2",
      "type": "story",
      "position": {
-      "x": 1440,
+      "x": 1080,
       "y": 1300
      },
      "data": {
@@ -11438,7 +11065,7 @@
        {
         "id": "sunset_2-l3",
         "speaker": "沈淮",
-        "text": "這裡有甜白酒，還有糖漿。"
+        "text": "糖漿我明明沒少放。"
        },
        {
         "id": "sunset_2-l4",
@@ -11510,19 +11137,14 @@
        "actors": []
       },
       "background": "/files/assets/art/cg/sunset_gold.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "sunset_3",
      "type": "story",
      "position": {
-      "x": 1800,
+      "x": 1440,
       "y": 1300
      },
      "data": {
@@ -11534,7 +11156,8 @@
        {
         "id": "sunset_3-l0",
         "speaker": "旁白",
-        "text": "頭七深夜，沈淮站在吧檯後，從有粉紅胡椒的那側喝下杯底的酒。"
+        "text": "頭七深夜，沈淮站在吧檯後，從有粉紅胡椒的那側喝下杯底的酒。",
+        "background": "/files/assets/art/cg/sunset_gold.webp"
        },
        {
         "id": "sunset_3-l1",
@@ -11574,7 +11197,7 @@
        {
         "id": "sunset_3-l8",
         "speaker": "沈淮",
-        "text": "安雅，吞下去還是甜的。"
+        "text": "安雅，喝完了，還是甜的。"
        },
        {
         "id": "sunset_3-l9",
@@ -11640,19 +11263,14 @@
       "bgm": "/files/assets/bgm/sunset.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "evening_1",
      "type": "story",
      "position": {
-      "x": 2160,
+      "x": 1800,
       "y": 1300
      },
      "data": {
@@ -11665,12 +11283,13 @@
         "id": "evening_1-l0",
         "speaker": "旁白",
         "text": "幾個禮拜後的傍晚，小酒吧重新開門，阿忠坐回最靠門的老位置。",
-        "background": "/files/assets/art/cg/evening_bar.webp"
+        "background": "/files/assets/art/lab/title-34d4118d41.webp"
        },
        {
         "id": "evening_1-l1",
         "speaker": "阿忠",
-        "text": "啊你是放假放上癮喔，我都快改喝茶了。"
+        "text": "啊你是放假放上癮喔，我都快改喝茶了。",
+        "background": "/files/assets/art/cg/evening_bar.webp"
        },
        {
         "id": "evening_1-l2",
@@ -11756,23 +11375,18 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/evening_bar.webp",
+      "background": "/files/assets/art/lab/title-34d4118d41.webp",
       "bgm": "/files/assets/bgm/main.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true,
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "characterLayers": []
      }
     },
     {
      "id": "evening_2",
      "type": "story",
      "position": {
-      "x": 2520,
+      "x": 2160,
       "y": 1300
      },
      "data": {
@@ -11785,12 +11399,13 @@
         "id": "evening_2-l0",
         "speaker": "旁白",
         "text": "又一個傍晚，開店前，沈淮在頂樓矮牆邊站了一會。",
-        "background": "/files/assets/art/cg/evening_roof.webp"
+        "background": "/files/assets/art/lab/title-242416ca66.webp"
        },
        {
         "id": "evening_2-l1",
         "speaker": "旁白",
-        "text": "西邊的雲底透著粉紅，靠近屋頂的天還留著一截紅。"
+        "text": "西邊的雲底透著粉紅，靠近屋頂的天還留著一截紅。",
+        "background": "/files/assets/art/cg/evening_roof.webp"
        },
        {
         "id": "evening_2-l2",
@@ -11877,13 +11492,8 @@
       "stage": {
        "actors": []
       },
-      "background": "/files/assets/art/cg/evening_roof.webp",
-      "characterLayers": [],
-      "autoAdvance": {
-       "enabled": true,
-       "mode": "delay",
-       "delayMs": 2000
-      }
+      "background": "/files/assets/art/lab/title-242416ca66.webp",
+      "characterLayers": []
      }
     },
     {
@@ -11979,6 +11589,27 @@
    },
    "credits-roll": {
     "enabled": true
+   },
+   "sunset-when": {
+    "enabled": true,
+    "playback": {
+     "version": "1.0.0",
+     "permissions": [
+      "player:ui"
+     ],
+     "defaults": {},
+     "huds": [
+      {
+       "id": "when",
+       "title": "時間標示",
+       "fullscreen": true,
+       "interactive": false,
+       "readVariables": [],
+       "writeVariables": [],
+       "html": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<style>\n  html, body { margin: 0; background: transparent; overflow: hidden; }\n  html, body { height: 100%; }\n  body { font-size: clamp(11px, 1.5vw, 26px); }\n  /* 回憶：畫面外圍一圈暖白柔邊，四角再亮一點；下緣留給對話框所以最淡 */\n  .fx { position: fixed; inset: 0; opacity: 0; transition: opacity 1.2s ease; pointer-events: none;\n    background:\n      radial-gradient(ellipse 75% 70% at 50% 46%, rgba(255, 240, 214, 0) 62%, rgba(255, 238, 210, .2) 84%, rgba(255, 240, 216, .46) 100%),\n      linear-gradient(to bottom, rgba(255, 236, 205, .3), rgba(255, 236, 205, 0) 13%),\n      linear-gradient(to right, rgba(255, 236, 205, .26), rgba(255, 236, 205, 0) 9%, rgba(255, 236, 205, 0) 91%, rgba(255, 236, 205, .26)); }\n  .fx.on { opacity: 1; }\n  .fx i { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 244, 222, .5), rgba(255, 244, 222, 0) 70%); animation: drift 14s ease-in-out infinite alternate; }\n  .fx.paused i { animation-play-state: paused; }\n  @keyframes drift { from { transform: translate(0, 0); opacity: .35; } to { transform: translate(1.2vw, -1.6vh); opacity: .9; } }\n  .when { position: fixed; left: clamp(10px, 2vw, 36px); top: clamp(10px, 2vw, 34px); }\n  .when { display: inline-flex; align-items: center; gap: .62em; height: 2.9em; padding: 0 .8em; box-sizing: border-box; border-radius: .25em;\n    background: rgba(14, 10, 20, .68); color: #f6efe2; white-space: nowrap; opacity: 0; transition: opacity .5s ease;\n    font-family: \"Noto Serif TC\", \"Noto Serif CJK TC\", \"Source Han Serif TC\", \"Songti TC\", PMingLiU, serif; }\n  .when.on { opacity: 1; }\n  .bar { width: .3em; height: 2em; background: linear-gradient(to top, #b3243f 0 33.3%, #dba53f 33.3% 66.6%, #eaa9b6 66.6%); }\n  .mode { font-size: 1em; font-weight: 600; }\n  .mode[data-m=\"回憶\"] { color: #f1d9a6; }\n  .mode[data-m=\"現在\"] { color: #c6d6ec; }\n  .main { font-size: 1.54em; font-weight: 600; }\n  .sub { font-size: 1em; color: #d6ccbe; margin-left: .2em; }\n  .mode:empty, .sub:empty { display: none; }\n  @media (prefers-reduced-motion: reduce) { .when, .fx { transition-duration: .01ms; } .fx i { animation: none; } }\n</style></head>\n<body><div class=\"fx\" id=\"fx\">\n<i style=\"left:2vw;top:16vh;width:9vw;height:9vw\"></i><i style=\"left:8vw;top:70vh;width:6vw;height:6vw;animation-delay:-5s\"></i>\n<i style=\"right:3vw;top:8vh;width:11vw;height:11vw;animation-delay:-9s\"></i><i style=\"right:9vw;top:58vh;width:5vw;height:5vw;animation-delay:-3s\"></i>\n<i style=\"left:30vw;top:-3vh;width:8vw;height:8vw;animation-delay:-11s\"></i></div>\n<div class=\"when\" id=\"w\"><span class=\"bar\"></span><span class=\"mode\" id=\"m\"></span><span class=\"main\" id=\"a\"></span><span class=\"sub\" id=\"s\"></span></div>\n<script>\n  var WHEN = {\"open_1\": [\"\", \"第二年夏天\", \"週五夜\"], \"open_2\": [\"\", \"第二年夏天\", \"同一個週五夜\"], \"return\": [\"現在\", \"頭七\", \"深夜\"], \"return_2\": [\"現在\", \"頭七\", \"深夜\"], \"rain_1\": [\"回憶\", \"第一年春天\", \"暴雨夜\"], \"rain_2\": [\"回憶\", \"第一年春天\", \"暴雨夜\"], \"rain_3\": [\"回憶\", \"第一年春天\", \"暴雨夜\"], \"weeks_1\": [\"回憶\", \"第一年春末\", \"幾個禮拜裡的深夜\"], \"weeks_2\": [\"回憶\", \"第一年初夏\", \"打烊後\"], \"clinic_1\": [\"回憶\", \"第一年七月\", \"午後\"], \"lesson_1\": [\"回憶\", \"第一年夏末\", \"兩個週六的午後\"], \"confess_1\": [\"回憶\", \"第一年夏末\", \"分層課當晚\"], \"confess_2\": [\"回憶\", \"第一年夏末\", \"同一個打烊夜\"], \"together_1\": [\"回憶\", \"第一年秋天\", \"週末夜\"], \"quit_1\": [\"回憶\", \"第二年春天\", \"打烊後\"], \"quit_2\": [\"回憶\", \"第二年春天\", \"同一個打烊夜\"], \"quit_3\": [\"回憶\", \"第二年春天\", \"隔天下午\"], \"home_1\": [\"回憶\", \"第二年初夏\", \"搬來第三天\"], \"home_2\": [\"回憶\", \"第二年夏天\", \"傍晚\"], \"dusk_1\": [\"回憶\", \"第二年夏末\", \"打烊後\"], \"dusk_2\": [\"回憶\", \"第二年夏末\", \"凌晨兩點\"], \"almost_1\": [\"回憶\", \"第二年秋天\", \"打烊後\"], \"almost_2\": [\"回憶\", \"第二年秋天\", \"同一個打烊夜\"], \"roof_1\": [\"回憶\", \"第三年秋天\", \"公休日傍晚\"], \"roof_2\": [\"回憶\", \"第三年秋天\", \"公休日傍晚\"], \"winter_1\": [\"回憶\", \"第三年冬天\", \"打烊後\"], \"winter_2\": [\"回憶\", \"第三年冬天\", \"同一個深夜\"], \"winter_3\": [\"回憶\", \"第三年冬天\", \"天剛亮\"], \"last_1\": [\"回憶\", \"最後幾個月\", \"傍晚開店時\"], \"last_2\": [\"回憶\", \"最後幾個月\", \"一個打烊夜\"], \"farewell_1\": [\"回憶\", \"她走的那天\", \"午後\"], \"farewell_2\": [\"回憶\", \"安雅走後的幾天\", \"白天\"], \"farewell_3\": [\"現在\", \"頭七\", \"當晚\"], \"notebook_1\": [\"現在\", \"頭七\", \"深夜\"], \"notebook_2\": [\"現在\", \"頭七\", \"深夜\"], \"flash_1\": [\"回憶\", \"第二年夏天\", \"打烊後的吧檯\"], \"notebook_3\": [\"現在\", \"頭七\", \"深夜\"], \"flash_2\": [\"回憶\", \"第三年秋天\", \"公休日傍晚的頂樓\"], \"notebook_4\": [\"現在\", \"頭七\", \"深夜\"], \"door_1\": [\"現在\", \"頭七\", \"深夜\"], \"door_2\": [\"現在\", \"頭七\", \"深夜\"], \"sunset_1\": [\"現在\", \"頭七\", \"深夜\"], \"sunset_2\": [\"現在\", \"頭七\", \"深夜\"], \"sunset_3\": [\"現在\", \"頭七\", \"深夜\"], \"evening_1\": [\"\", \"幾個禮拜後\", \"傍晚\"], \"evening_2\": [\"\", \"又一個傍晚\", \"開店前\"]}, now = '', timer = 0;\n  var fx = document.getElementById('fx'), w = document.getElementById('w'), m = document.getElementById('m'), a = document.getElementById('a'), s = document.getElementById('s');\n  function fill(v) { m.textContent = v[0]; m.dataset.m = v[0]; a.textContent = v[1]; s.textContent = v[2]; w.classList.add('on'); }\n  function show(id) {\n    var v = WHEN[id];\n    fx.classList.toggle('on', !!v && v[0] === '回憶');\n    var key = v ? v.join('|') : '';\n    if (key === now) return;\n    now = key; clearTimeout(timer);\n    if (!w.classList.contains('on')) { if (v) fill(v); return; }\n    w.classList.remove('on');\n    if (v) timer = setTimeout(function () { fill(v); }, 350);\n  }\n  addEventListener('message', function (e) {\n    if (e.source !== parent) return;\n    var d = e.data;\n    if (d && (d.type === 'larch:hud:init' || d.type === 'larch:hud:update')) { fx.classList.toggle('paused', d.active === false); show(d.cardId); }\n  });\n  parent.postMessage({ type: 'larch:ready' }, '*');\n</script></body></html>\n"
+      }
+     ]
+    }
    }
   },
   "textSpeed": 55,
@@ -12052,7 +11683,7 @@
   },
   "customInterfaces": {
    "title": {
-    "html": "<script type=\"application/larch-params\">\n{\n  \"eyebrow\": { \"type\": \"text\", \"label\": \"標題上方小字\", \"labelEn\": \"Eyebrow\", \"default\": \"巷子裡，七張高腳椅\", \"maxLength\": 40 },\n  \"howto\": { \"type\": \"text\", \"label\": \"選單下方的說明（空白＝不顯示）\", \"labelEn\": \"How to play\", \"default\": \"按下「開始遊戲」後全程自動播放。戴上耳機，不用點滑鼠。\", \"maxLength\": 60 },\n  \"veil\": { \"type\": \"range\", \"label\": \"左側暗幕濃度\", \"labelEn\": \"Left veil\", \"min\": 30, \"max\": 90, \"step\": 5, \"unit\": \"%\", \"default\": 70 },\n  \"intro\": { \"type\": \"select\", \"label\": \"入場動畫\", \"labelEn\": \"Entrance\", \"options\": [{ \"value\": \"full\", \"label\": \"完整\", \"labelEn\": \"Full\" }, { \"value\": \"off\", \"label\": \"關閉\", \"labelEn\": \"Off\" }], \"default\": \"full\" }\n}\n</script>\n<style>\n/* 晚霞標題畫面：封面滿版，左下角一條三層的細長酒柱（紅、金、粉紅，照〈晚霞〉由下往上疊）陪著作品名，沒有卡片。 */\n:root { --night: #130e18; --ink: #f4ecdc; --soft: #cdbfae; --roselle: #b3243f; --saffron: #dba53f; --rose: #eaa9b6;\n  --serif: \"Noto Serif TC\", \"Songti TC\", \"Source Han Serif TC\", \"PMingLiU\", Georgia, serif; --sans: \"Noto Sans TC\", \"PingFang TC\", \"Microsoft JhengHei\", system-ui, sans-serif;\n  --skin-veil: 70%; --t: 1; }\nhtml[data-skin-intro=\"off\"] { --t: 0; }\n* { box-sizing: border-box; }\nhtml, body { height: 100%; margin: 0; overflow: hidden; background: var(--night); }\nbody { color: var(--ink); font-family: var(--serif); }\n.screen { position: fixed; inset: 0; overflow: hidden; isolation: isolate; }\n.cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: clear calc(2.6s * var(--t)) cubic-bezier(.2, .7, .2, 1) both; }\n.cover:not([src]) { display: none; }\n@keyframes clear { from { filter: brightness(.3) saturate(.6); } to { filter: none; } }\n.veil { position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--night) var(--skin-veil), transparent), color-mix(in srgb, var(--night) calc(var(--skin-veil) * .55), transparent) 38%, transparent 68%), linear-gradient(0deg, color-mix(in srgb, var(--night) 55%, transparent), transparent 42%); }\n.stage { position: absolute; inset: 0; display: grid; align-items: end; justify-items: start; padding: clamp(24px, 6vh, 72px) clamp(24px, 6vw, 96px); }\n.block { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(18px, 2vw, 30px); max-width: min(560px, 100%); }\n/* 酒柱：三層由下往上依序倒滿 */\n.pour { grid-row: 1 / span 5; width: 10px; align-self: stretch; display: flex; flex-direction: column-reverse; border-radius: 5px 5px 2px 2px; overflow: hidden; background: rgba(244, 236, 220, .12); box-shadow: 0 0 18px rgba(219, 165, 63, .25); }\n.pour i { flex: 1; transform-origin: bottom; animation: fill calc(.9s * var(--t)) cubic-bezier(.3, .7, .2, 1) both; }\n.pour i:nth-child(1) { background: var(--roselle); animation-delay: calc(.9s * var(--t)); }\n.pour i:nth-child(2) { background: var(--saffron); animation-delay: calc(1.7s * var(--t)); }\n.pour i:nth-child(3) { background: var(--rose); animation-delay: calc(2.5s * var(--t)); }\n@keyframes fill { from { transform: scaleY(0); } to { transform: scaleY(1); } }\n.eyebrow { margin: 0; color: var(--soft); font: 500 13px/1.6 var(--sans); letter-spacing: .32em; animation: up calc(1s * var(--t)) ease-out calc(1.2s * var(--t)) both; }\n.eyebrow[data-empty], .eyebrow:empty { display: none; }\nh1 { margin: 6px 0 0; font: 900 clamp(56px, 9vw, 128px)/1.08 var(--serif); letter-spacing: .18em; overflow-wrap: anywhere; text-shadow: 0 2px 30px rgba(0, 0, 0, .6); animation: up calc(1.4s * var(--t)) cubic-bezier(.2, .7, .2, 1) calc(1.5s * var(--t)) both; }\n.subtitle { max-width: 28em; margin: 14px 0 0; color: var(--soft); font-size: clamp(14px, 1.15vw, 16px); line-height: 1.9; letter-spacing: .06em; text-shadow: 0 1px 8px rgba(0, 0, 0, .8); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; animation: up calc(1s * var(--t)) ease-out calc(2.2s * var(--t)) both; }\n.subtitle[data-empty] { display: none; }\n.menu { display: flex; flex-wrap: wrap; gap: 6px 26px; margin-top: 26px; animation: up calc(1s * var(--t)) ease-out calc(3s * var(--t)) both; }\n.menu button { padding: 8px 2px; border: 0; border-bottom: 1px solid rgba(244, 236, 220, .35); background: none; color: var(--ink); font: 600 clamp(15px, 1.3vw, 18px)/1.4 var(--serif); letter-spacing: .2em; cursor: pointer; transition: color .2s, border-color .2s; }\n.menu button[hidden] { display: none; }\n.menu button.primary { border-bottom: 2px solid var(--saffron); color: #fff7e6; }\n.menu button:hover:not(:disabled), .menu button:focus-visible { border-bottom-color: var(--rose); color: var(--rose); outline: none; }\n.menu button:focus-visible { box-shadow: 0 4px 0 -2px var(--rose); }\n.menu button:disabled { border-bottom-style: dashed; color: rgba(244, 236, 220, .4); cursor: not-allowed; }\n.howto { margin: 18px 0 0; color: var(--saffron); font: 500 13px/1.7 var(--sans); letter-spacing: .08em; text-shadow: 0 1px 6px rgba(0, 0, 0, .8); animation: up calc(1s * var(--t)) ease-out calc(3.3s * var(--t)) both; }\n.howto:empty { display: none; }\n@keyframes up { from { opacity: 0; translate: 0 14px; } to { opacity: 1; translate: 0 0; } }\n@media (max-width: 760px), (max-aspect-ratio: 4/5) {\n  .veil { background: linear-gradient(0deg, color-mix(in srgb, var(--night) 88%, transparent), color-mix(in srgb, var(--night) 50%, transparent) 46%, transparent 72%); }\n  .stage { padding: 20px 20px max(6vh, 26px); }\n  h1 { font-size: clamp(48px, 17vw, 84px); }\n  .menu { flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 18px; }\n  .menu button { min-height: 44px; }\n}\n@media (max-height: 520px) and (min-width: 761px) { h1 { font-size: 52px; } .subtitle { -webkit-line-clamp: 2; } .menu { margin-top: 12px; } .howto { margin-top: 8px; } }\n@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition: none !important; } }\n</style>\n<main class=\"screen\">\n  <img class=\"cover\" data-larch-slot=\"cover\" alt=\"\">\n  <div class=\"veil\" aria-hidden=\"true\"></div>\n  <div class=\"stage\">\n    <section class=\"block\">\n      <div class=\"pour\" aria-hidden=\"true\"><i></i><i></i><i></i></div>\n      <p class=\"eyebrow\" data-larch-param=\"eyebrow\"></p>\n      <h1 data-larch-slot=\"title\"></h1>\n      <p class=\"subtitle\" data-larch-slot=\"description\"></p>\n      <nav class=\"menu\" aria-label=\"主選單\">\n        <button class=\"primary\" data-larch-action=\"start\"><span data-larch-label=\"start\">開始遊戲</span></button>\n        <button data-larch-action=\"continue\"><span data-larch-label=\"continue\">繼續遊戲</span></button>\n        <button data-larch-action=\"chapters\"><span data-larch-label=\"chapters\">選擇章節</span></button>\n        <button data-larch-action=\"gallery\"><span data-larch-label=\"gallery\">CG 收藏</span></button>\n      </nav>\n      <p class=\"howto\" data-larch-param=\"howto\"></p>\n    </section>\n  </div>\n</main>\n",
+    "html": "<script type=\"application/larch-params\">\n{\n  \"eyebrow\": { \"type\": \"text\", \"label\": \"標題上方小字\", \"labelEn\": \"Eyebrow\", \"default\": \"巷子裡，七張高腳椅\", \"maxLength\": 40 },\n  \"howto\": { \"type\": \"text\", \"label\": \"選單下方的說明（空白＝不顯示）\", \"labelEn\": \"How to play\", \"default\": \"配樂是為這部作品寫的，建議戴上耳機。\", \"maxLength\": 60 },\n  \"veil\": { \"type\": \"range\", \"label\": \"左側暗幕濃度\", \"labelEn\": \"Left veil\", \"min\": 30, \"max\": 90, \"step\": 5, \"unit\": \"%\", \"default\": 70 },\n  \"intro\": { \"type\": \"select\", \"label\": \"入場動畫\", \"labelEn\": \"Entrance\", \"options\": [{ \"value\": \"full\", \"label\": \"完整\", \"labelEn\": \"Full\" }, { \"value\": \"off\", \"label\": \"關閉\", \"labelEn\": \"Off\" }], \"default\": \"full\" }\n}\n</script>\n<style>\n/* 晚霞標題畫面：封面滿版，左下角一條三層的細長酒柱（紅、金、粉紅，照〈晚霞〉由下往上疊）陪著作品名，沒有卡片。 */\n:root { --night: #130e18; --ink: #f4ecdc; --soft: #cdbfae; --roselle: #b3243f; --saffron: #dba53f; --rose: #eaa9b6;\n  --serif: \"Noto Serif TC\", \"Songti TC\", \"Source Han Serif TC\", \"PMingLiU\", Georgia, serif; --sans: \"Noto Sans TC\", \"PingFang TC\", \"Microsoft JhengHei\", system-ui, sans-serif;\n  --skin-veil: 70%; --t: 1; }\nhtml[data-skin-intro=\"off\"] { --t: 0; }\n* { box-sizing: border-box; }\nhtml, body { height: 100%; margin: 0; overflow: hidden; background: var(--night); }\nbody { color: var(--ink); font-family: var(--serif); }\n.screen { position: fixed; inset: 0; overflow: hidden; isolation: isolate; }\n.cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: clear calc(2.6s * var(--t)) cubic-bezier(.2, .7, .2, 1) both; }\n.cover:not([src]) { display: none; }\n@keyframes clear { from { filter: brightness(.3) saturate(.6); } to { filter: none; } }\n.veil { position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--night) var(--skin-veil), transparent), color-mix(in srgb, var(--night) calc(var(--skin-veil) * .55), transparent) 38%, transparent 68%), linear-gradient(0deg, color-mix(in srgb, var(--night) 55%, transparent), transparent 42%); }\n.stage { position: absolute; inset: 0; display: grid; align-items: end; justify-items: start; padding: clamp(24px, 6vh, 72px) clamp(24px, 6vw, 96px); }\n.block { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(18px, 2vw, 30px); max-width: min(560px, 100%); }\n/* 酒柱：三層由下往上依序倒滿 */\n.pour { grid-row: 1 / span 5; width: 10px; align-self: stretch; display: flex; flex-direction: column-reverse; border-radius: 5px 5px 2px 2px; overflow: hidden; background: rgba(244, 236, 220, .12); box-shadow: 0 0 18px rgba(219, 165, 63, .25); }\n.pour i { flex: 1; transform-origin: bottom; animation: fill calc(.9s * var(--t)) cubic-bezier(.3, .7, .2, 1) both; }\n.pour i:nth-child(1) { background: var(--roselle); animation-delay: calc(.9s * var(--t)); }\n.pour i:nth-child(2) { background: var(--saffron); animation-delay: calc(1.7s * var(--t)); }\n.pour i:nth-child(3) { background: var(--rose); animation-delay: calc(2.5s * var(--t)); }\n@keyframes fill { from { transform: scaleY(0); } to { transform: scaleY(1); } }\n.eyebrow { margin: 0; color: var(--soft); font: 500 13px/1.6 var(--sans); letter-spacing: .32em; animation: up calc(1s * var(--t)) ease-out calc(1.2s * var(--t)) both; }\n.eyebrow[data-empty], .eyebrow:empty { display: none; }\nh1 { margin: 6px 0 0; font: 900 clamp(56px, 9vw, 128px)/1.08 var(--serif); letter-spacing: .18em; overflow-wrap: anywhere; text-shadow: 0 2px 30px rgba(0, 0, 0, .6); animation: up calc(1.4s * var(--t)) cubic-bezier(.2, .7, .2, 1) calc(1.5s * var(--t)) both; }\n.subtitle { max-width: 28em; margin: 14px 0 0; color: var(--soft); font-size: clamp(14px, 1.15vw, 16px); line-height: 1.9; letter-spacing: .06em; text-shadow: 0 1px 8px rgba(0, 0, 0, .8); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; animation: up calc(1s * var(--t)) ease-out calc(2.2s * var(--t)) both; }\n.subtitle[data-empty] { display: none; }\n.menu { display: flex; flex-wrap: wrap; gap: 6px 26px; margin-top: 26px; animation: up calc(1s * var(--t)) ease-out calc(3s * var(--t)) both; }\n.menu button { padding: 8px 2px; border: 0; border-bottom: 1px solid rgba(244, 236, 220, .35); background: none; color: var(--ink); font: 600 clamp(15px, 1.3vw, 18px)/1.4 var(--serif); letter-spacing: .2em; cursor: pointer; transition: color .2s, border-color .2s; }\n.menu button[hidden] { display: none; }\n.menu button.primary { border-bottom: 2px solid var(--saffron); color: #fff7e6; }\n.menu button:hover:not(:disabled), .menu button:focus-visible { border-bottom-color: var(--rose); color: var(--rose); outline: none; }\n.menu button:focus-visible { box-shadow: 0 4px 0 -2px var(--rose); }\n.menu button:disabled { border-bottom-style: dashed; color: rgba(244, 236, 220, .4); cursor: not-allowed; }\n.howto { margin: 18px 0 0; color: var(--saffron); font: 500 13px/1.7 var(--sans); letter-spacing: .08em; text-shadow: 0 1px 6px rgba(0, 0, 0, .8); animation: up calc(1s * var(--t)) ease-out calc(3.3s * var(--t)) both; }\n.howto:empty { display: none; }\n@keyframes up { from { opacity: 0; translate: 0 14px; } to { opacity: 1; translate: 0 0; } }\n@media (max-width: 760px), (max-aspect-ratio: 4/5) {\n  .veil { background: linear-gradient(0deg, color-mix(in srgb, var(--night) 88%, transparent), color-mix(in srgb, var(--night) 50%, transparent) 46%, transparent 72%); }\n  .stage { padding: 20px 20px max(6vh, 26px); }\n  h1 { font-size: clamp(48px, 17vw, 84px); }\n  .menu { flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 18px; }\n  .menu button { min-height: 44px; }\n}\n@media (max-height: 520px) and (min-width: 761px) { h1 { font-size: 52px; } .subtitle { -webkit-line-clamp: 2; } .menu { margin-top: 12px; } .howto { margin-top: 8px; } }\n@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition: none !important; } }\n</style>\n<main class=\"screen\">\n  <img class=\"cover\" data-larch-slot=\"cover\" alt=\"\">\n  <div class=\"veil\" aria-hidden=\"true\"></div>\n  <div class=\"stage\">\n    <section class=\"block\">\n      <div class=\"pour\" aria-hidden=\"true\"><i></i><i></i><i></i></div>\n      <p class=\"eyebrow\" data-larch-param=\"eyebrow\"></p>\n      <h1 data-larch-slot=\"title\"></h1>\n      <p class=\"subtitle\" data-larch-slot=\"description\"></p>\n      <nav class=\"menu\" aria-label=\"主選單\">\n        <button class=\"primary\" data-larch-action=\"start\"><span data-larch-label=\"start\">開始遊戲</span></button>\n        <button data-larch-action=\"continue\"><span data-larch-label=\"continue\">繼續遊戲</span></button>\n        <button data-larch-action=\"chapters\"><span data-larch-label=\"chapters\">選擇章節</span></button>\n        <button data-larch-action=\"gallery\"><span data-larch-label=\"gallery\">CG 收藏</span></button>\n      </nav>\n      <p class=\"howto\" data-larch-param=\"howto\"></p>\n    </section>\n  </div>\n</main>\n",
     "enabled": true
    },
    "dialogue": {
@@ -12116,7 +11747,7 @@
    "voiceProvider": "minimax"
   }
  ],
- "description": "巷子裡一間只有七張高腳椅的小酒吧。調酒師安雅和加班到深夜的沈淮，從一個暴雨夜的第一杯〈破曉〉開始，鬥嘴、吵架、一起把店撐起來，過了三年。她走後的第七天，他回到店裡，翻開她從不讓人看的小筆記本。單線劇情、一個結局，全程自動播放。",
+ "description": "巷子裡一間只有七張高腳椅的小酒吧。調酒師安雅和加班到深夜的沈淮，從一個暴雨夜的第一杯〈破曉〉開始，鬥嘴、吵架、一起把店撐起來，過了三年。她走後的第七天，他回到店裡，翻開她從不讓人看的小筆記本。單線劇情、一個結局。",
  "activeBoardId": "board-project-8cb1ab7e-891c-46b4-bd38-df29060e5717-main",
  "schemaVersion": 1,
  "projectThumbnail": "/files/assets/art/cover.webp"

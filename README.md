@@ -2,7 +2,7 @@
 
 Larch 視覺小說。巷子裡一間只有七張高腳椅的小酒吧，調酒師安雅和加班到深夜的沈淮，從一個暴雨夜的第一杯〈破曉〉開始，鬥嘴、吵架、一起把店撐起來，過了三年。她走後的第七天，他回到店裡，翻開她從不讓人看的小筆記本。
 
-**2026-11 起是重製版**：單線、純劇情卡、一個結局、全程自動播放、不配音（設計 `design/重製.md`）。舊版《晚霞是舌尖最後的刺痛》（RPG 地圖、兩個結局）的劇本與程式留在 git 歷史；`src/build_v2_maps.py`、`src/push_v2.py`、`src/map_*.py`、`src/memory.py`、`art/` 底下第五版以前的腳本是舊版的，重製版的建置不再使用。
+**2026-11 起是重製版**：單線、純劇情卡、一個結局、不配音，預設由玩家自己點（要自動播的人按播放器的「自動」）（設計 `design/重製.md`）。舊版《晚霞是舌尖最後的刺痛》（RPG 地圖、兩個結局）的劇本與程式留在 git 歷史；`src/build_v2_maps.py`、`src/push_v2.py`、`src/map_*.py`、`src/memory.py`、`art/` 底下第五版以前的腳本是舊版的，重製版的建置不再使用。
 
 - 公開站：`docs/index.html`（兩杯酒的做法、她的病、結局為什麼改寫、參考資料）
 
@@ -17,7 +17,7 @@ Larch 視覺小說。巷子裡一間只有七張高腳椅的小酒吧，調酒�
 | `src/` | `script.py` 讀劇本、`build.py` 組成 `dist/project.json`、`push.py` 推上 Larch、`credits.txt` 片尾名單、`plugin/` 片尾字卷插件 |
 | `art/v5/` | 第五版素材產線：`ref/` 定錨（角色、空景、兩杯酒）、`shots.py` 分鏡與產圖、`bgm.py` 配樂、`theme.py` 主題曲 |
 | `assets/` | 正式素材：`art/cg/` 鏡頭圖、`bgm/` 配樂與主題曲 |
-| `tests/` | `play_auto.mjs` 免點試玩 |
+| `tests/` | `play_linear.mjs` 整部一路點到片尾、`online_check.mjs` 線上預覽檢查、`hud_shots.mjs` 與 `vp_shots.mjs` 各種視窗的截圖 |
 
 ## 指令
 
@@ -31,7 +31,8 @@ Larch 視覺小說。巷子裡一間只有七張高腳椅的小酒吧，調酒�
     python3 art/v5/bgm.py [名字…]                  # 配樂（gemini-web，代聽驗收）
     python3 art/v5/theme.py 3                      # 主題曲候選
     python3 src/build.py                           # 產出 dist/project.json
-    SPEED=16 node tests/play_auto.mjs              # 只按「開始遊戲」，要自己播到片尾再回標題
+    SPEED=16 node tests/play_linear.mjs            # 從標題一路點到片尾再回標題
+    node tests/hud_shots.mjs [卡,卡…]              # 直接跳到指定卡，截時間標示與回憶柔邊（桌機、超寬、手機）
     python3 src/push.py "這次改了什麼"              # 推上 Larch（素材走 jsDelivr 孤兒 tag，要先 commit 並 git push）
 
 `tests/` 需要本機預覽器 `~/larch-preview` 與 Playwright。產圖與配樂要連自架服務，金鑰從環境變數與本機設定檔讀，不放進 repo。
