@@ -2,7 +2,7 @@
 import { open, sleep } from './lib.mjs';
 import { mkdirSync } from 'node:fs';
 mkdirSync('art/check', { recursive: true });
-const STOP = { open_1: '妳手上那瓶', return: '七張高腳椅都空著', rain_1: '先把領帶解開' };   // 各卡第三句
+const STOP = { return: '人家說頭七妳會回來', rain_1: '先把領帶解開' };   // 各卡第三句
 for (const [name, opt] of [['desk', { width: 1600, height: 900 }], ['wide', { width: 2560, height: 1080 }], ['phone', { mobile: true }]]) {
   const ui = await open(process.argv[2], opt);
   await sleep(6000); await ui.clickText('開始遊戲'); await sleep(9000);

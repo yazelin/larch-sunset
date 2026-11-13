@@ -3,7 +3,7 @@ import { serve, open, sleep } from './lib.mjs';
 import { mkdirSync } from 'node:fs';
 mkdirSync('art/check', { recursive: true });
 const s = await serve('dist/project.json');
-const CARDS = (process.argv[2] || 'open_1,return,rain_2').split(',');
+const CARDS = (process.argv[2] || 'return,rain_2,open_1').split(',');
 try {
   for (const [name, opt] of [['desk', { width: 1600, height: 900 }], ['wide', { width: 2560, height: 1080 }], ['phone', { mobile: true }]]) {
     for (const c of CARDS) {
