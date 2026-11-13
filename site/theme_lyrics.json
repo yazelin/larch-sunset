@@ -1,0 +1,126 @@
+{
+ "_說明": "片尾主題曲的逐句歌詞。t 是那一句開始的秒數（Whisper 逐字時間與 Gemini 聽寫交叉定的，逐句、不是逐字）。en 是照成品聽寫的英文；zh 是中文歌詞版（獨立作詞，歌裡沒有唱）。site/build_mv.py 讀這份產生 docs/theme.html 與 docs/music/theme.lrc。",
+ "audio": "https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/theme.mp3",
+ "lines": [
+  {
+   "t": 13.6,
+   "en": "Tucked away inside a tiny bar",
+   "zh": "巷子裡　躲著一間小酒吧"
+  },
+  {
+   "t": 19.0,
+   "en": "Seven wooden stools against the dark",
+   "zh": "七張高腳椅　排在暗暗的燈下"
+  },
+  {
+   "t": 26.5,
+   "en": "Rain was falling in the narrow street",
+   "zh": "那一晚　窄巷裡下著雨"
+  },
+  {
+   "t": 32.0,
+   "en": "Whispered through the glass so soft and sweet",
+   "zh": "雨隔著玻璃　像在輕聲細語"
+  },
+  {
+   "t": 39.5,
+   "en": "I pour it slow, there is saffron in my glass",
+   "zh": "我慢慢地倒　杯子裡有番紅花"
+  },
+  {
+   "t": 47.8,
+   "en": "The sunset glows, memories that cannot pass",
+   "zh": "晚霞亮起來　忘不掉妳說的話"
+  },
+  {
+   "t": 55.4,
+   "en": "Hibiscus red is at the base",
+   "zh": "洛神的紅　沉在杯底"
+  },
+  {
+   "t": 59.4,
+   "en": "Recalling every line of your face",
+   "zh": "想起妳的臉　一點都沒忘記"
+  },
+  {
+   "t": 65.3,
+   "en": "She wrote everything by her own hand",
+   "zh": "每一杯　妳都親手寫下來"
+  },
+  {
+   "t": 71.2,
+   "en": "Flavors that her tongue could not command",
+   "zh": "酒的味道　妳舌頭嚐不出來"
+  },
+  {
+   "t": 77.3,
+   "en": "Take a little sip, is it sweet?",
+   "zh": "喝一小口　妳問我甜嗎"
+  },
+  {
+   "t": 84.4,
+   "en": "Asking me each time we would meet",
+   "zh": "每一次見面　妳都問這句話"
+  },
+  {
+   "t": 90.8,
+   "en": "I pour it slow, there is saffron in my glass",
+   "zh": "我慢慢地倒　杯子裡有番紅花"
+  },
+  {
+   "t": 98.9,
+   "en": "The sunset glows, memories that cannot pass",
+   "zh": "晚霞亮起來　忘不掉妳說的話"
+  },
+  {
+   "t": 106.4,
+   "en": "A layer of pink right on top",
+   "zh": "最上面　浮著一層粉紅"
+  },
+  {
+   "t": 111.0,
+   "en": "Hoping that this moment won't stop",
+   "zh": "真希望時間　停在這一分鐘"
+  },
+  {
+   "t": 117.2,
+   "en": "She told me always remember to eat",
+   "zh": "妳跟我說　記得吃飯"
+  },
+  {
+   "t": 123.4,
+   "en": "So I keep living on my own two feet",
+   "zh": "所以我一個人　好好過每一天"
+  },
+  {
+   "t": 129.6,
+   "en": "Stings for a moment when it hits my tongue",
+   "zh": "碰到舌頭　先刺了一下"
+  },
+  {
+   "t": 135.9,
+   "en": "But then it is sweet, just like when we were young",
+   "zh": "然後就甜了　像剛認識妳那年"
+  },
+  {
+   "t": 142.6,
+   "en": "It is still sweet, I whisper to you",
+   "zh": "還是甜的　我小聲跟妳說"
+  },
+  {
+   "t": 147.8,
+   "en": "As dusk paints the room in a dark shade of blue",
+   "zh": "天快黑了　店裡一片深藍色"
+  },
+  {
+   "t": 154.2,
+   "en": "The bar is still open, the light is still on",
+   "zh": "店還開著　燈也還亮著"
+  },
+  {
+   "t": 158.7,
+   "en": "I'm tender and grateful, though you are now gone",
+   "zh": "妳不在了　我的心柔軟　也感激著"
+  }
+ ]
+}
