@@ -9,55 +9,99 @@
 <meta name="theme-color" content="#120d16">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+TC:wght@500;700&family=Noto+Serif+TC:wght@500;700&display=swap">
-<style>:root{color-scheme:dark;--bg:#120d16;--ink:#f6efe2;--acc:#f2c46d;--serif:"Noto Serif TC","Songti TC","PMingLiU",serif;--latin:"Cormorant Garamond","Noto Serif TC",Georgia,serif}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap">
+<style>:root{color-scheme:dark;--bg:#120d16;--ink:#f6efe2;--acc:#f2c46d;--rose:#eaa9b6;--pour:0;--amp:0;--bar:0px;
+  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;--latin:"Cormorant Garamond","Noto Serif TC",Georgia,serif;--hand:"LXGW WenKai TC","Noto Serif TC","Kaiti TC",serif}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 html{color-scheme:dark}
 body{background:var(--bg);color:var(--ink);overflow:hidden;font-family:var(--serif);-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
-/* 畫面：兩層交叉淡化，每一鏡自己的推鏡方向（JS 用 Web Animations 推） */
+@media (min-aspect-ratio:3/2){:root{--bar:6.5vh}}
+/* 畫面：兩層交叉淡化，每一鏡自己的推鏡方向（JS 用 Web Animations 推）；換鏡時帶一點柔焦 */
 .film{position:fixed;inset:0;overflow:hidden;background:var(--bg)}
-.film i{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;will-change:opacity,transform}
-.film i.on{opacity:1}
-.shade{position:fixed;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(18,13,22,.25) 0%,rgba(18,13,22,0) 30%,rgba(18,13,22,0) 55%,rgba(18,13,22,.72) 100%)}
+.film i{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;filter:blur(7px) brightness(1.12);transition:opacity 2.2s ease,filter 2.6s ease;will-change:opacity,transform}
+.film i.on{opacity:1;filter:none}
+/* 色調：回憶的畫面邊緣一圈暖白柔邊（跟遊戲裡的回憶效果同一個做法），頭七那晚偏冷 */
+.tone{position:fixed;inset:0;pointer-events:none;opacity:0;transition:opacity 2.4s ease}
+.tone.warm{box-shadow:inset 0 0 16vw 2vw rgba(255,238,212,.3);background:radial-gradient(ellipse at 50% 42%,rgba(255,226,180,.06),rgba(255,226,180,0) 60%)}
+.tone.cold{background:linear-gradient(180deg,rgba(40,58,96,.2),rgba(18,20,40,.3))}
+[data-tone="warm"] .tone.warm,[data-tone="cold"] .tone.cold{opacity:1}
+.shade{position:fixed;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(18,13,22,.3) 0%,rgba(18,13,22,0) 26%,rgba(18,13,22,0) 50%,rgba(18,13,22,.78) 100%)}
+/* 副歌的「倒酒」：紅、金、粉紅三層光從畫面底部疊上來，高度跟著 --pour */
+.wash{position:fixed;left:0;right:0;bottom:0;height:62vh;pointer-events:none;mix-blend-mode:screen;opacity:calc(var(--pour)*.85);
+  transform-origin:50% 100%;transform:scaleY(calc(.25 + var(--pour)*.75));
+  background:linear-gradient(0deg,rgba(176,36,63,.62) 0%,rgba(176,36,63,.4) 22%,rgba(232,170,70,.36) 44%,rgba(240,189,92,.26) 58%,rgba(244,166,180,.24) 76%,rgba(244,166,180,0) 100%);
+  -webkit-mask-image:linear-gradient(0deg,#000 0,#000 55%,transparent 100%);mask-image:linear-gradient(0deg,#000 0,#000 55%,transparent 100%)}
+/* 跟著音量呼吸的暖光 */
+.glow{position:fixed;inset:0;pointer-events:none;mix-blend-mode:screen;opacity:calc(.05 + var(--amp)*.42);
+  background:radial-gradient(ellipse 70% 46% at 50% 100%,rgba(242,196,109,.5),rgba(242,196,109,0) 70%)}
 /* width/height 不能省：canvas 沒給 CSS 尺寸就用屬性尺寸排版，dpr 2 的手機會放大兩倍貼在左上角 */
 #fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
-/* 歌詞：一次一句，英文在上、中文在下，放在下緣 */
-.lyric{position:fixed;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:max(10vh,72px);height:6.2em;pointer-events:none;text-align:center}
-.lyric p{position:absolute;left:0;right:0;bottom:0;margin:0;text-shadow:0 0 18px rgba(0,0,0,.9),0 1px 3px rgba(0,0,0,.9);opacity:0;transform:translateY(8px);transition:opacity 1.1s ease,transform 1.1s ease}
-.lyric p.on{opacity:1;transform:none}
-.lyric .en{display:block;font:500 clamp(1.25rem,3vw,2.3rem)/1.3 var(--latin);letter-spacing:.02em}
-.lyric .zh{display:block;margin-top:.35em;font-weight:500;font-size:clamp(.95rem,1.9vw,1.4rem);line-height:1.5;letter-spacing:.14em;color:#ffe3c9}
+.grain{position:fixed;inset:-60%;pointer-events:none;opacity:.075;mix-blend-mode:overlay;background-size:160px 160px;animation:grain .9s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}17%{transform:translate(-4%,3%)}34%{transform:translate(3%,-5%)}51%{transform:translate(-6%,-2%)}68%{transform:translate(5%,4%)}85%{transform:translate(-2%,6%)}100%{transform:translate(0,0)}}
+/* 寬螢幕上下各一條黑邊 */
+.bars::before,.bars::after{content:"";position:fixed;left:0;right:0;height:var(--bar);background:#07050a;pointer-events:none}
+.bars::before{top:0}.bars::after{bottom:0}
+/* 前奏的片名 */
+.intro{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:1.1vh;pointer-events:none;opacity:0;transform:translateY(10px);transition:opacity 2.4s ease,transform 3s ease;text-shadow:0 0 24px rgba(0,0,0,.85)}
+.intro-on .intro{opacity:1;transform:none}
+.intro small{font:700 clamp(10px,1vw,14px)/1 "Noto Sans TC",system-ui,sans-serif;letter-spacing:.5em;text-indent:.5em;color:var(--rose)}
+.intro b{font:900 clamp(3rem,9vw,7.5rem)/1.15 var(--serif);letter-spacing:.22em;text-indent:.22em;text-shadow:0 0 50px rgba(242,196,109,.45),0 0 24px rgba(0,0,0,.8)}
+.intro i{display:block;width:clamp(120px,16vw,240px);height:3px;background:linear-gradient(90deg,#b3243f 0 33.3%,#dba53f 33.3% 66.6%,#eaa9b6 66.6%)}
+.intro span{font:500 clamp(.85rem,1.5vw,1.25rem)/1.6 var(--hand);letter-spacing:.3em;text-indent:.3em;color:#ffe3c9}
+/* 歌詞：一次一句，放在下緣。英文照唱到的字一個一個浮出來，中文用手寫感的字跟著分段出現 */
+.lyric{position:fixed;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(var(--bar) + max(5.5vh,40px));height:7em;pointer-events:none;text-align:center}
+.lyric p{position:absolute;left:0;right:0;bottom:0;margin:0;text-shadow:0 0 18px rgba(0,0,0,.92),0 1px 3px rgba(0,0,0,.9);opacity:0;transition:opacity 1.2s ease}
+.lyric p.on{opacity:1}
+.lyric .en{display:block;font:500 clamp(1.3rem,3.1vw,2.6rem)/1.28 var(--latin);letter-spacing:.02em}
+.lyric .zh{display:block;margin-top:.4em;font:400 clamp(1rem,2.1vw,1.7rem)/1.5 var(--hand);letter-spacing:.16em;color:#ffe3c9}
+.lyric .w,.lyric .z{display:inline-block;opacity:0;transform:translateY(.4em);filter:blur(5px);transition:opacity .7s ease,transform .9s cubic-bezier(.2,.7,.2,1),filter .9s ease}
+.lyric .z{white-space:pre;transition-duration:1.1s,1.3s,1.3s}
+.lyric .w.lit,.lyric .z.lit{opacity:1;transform:none;filter:none}
+.lyric p.chorus .en{font-size:clamp(1.45rem,3.5vw,3rem);text-shadow:0 0 26px rgba(242,196,109,.5),0 0 18px rgba(0,0,0,.9),0 1px 3px rgba(0,0,0,.9)}
+.lyric p.key .zh{color:var(--acc);font-size:clamp(1.15rem,2.5vw,2.05rem);text-shadow:0 0 22px rgba(242,196,109,.55),0 0 18px rgba(0,0,0,.92)}
 .prog{position:fixed;left:0;bottom:0;height:2px;width:0;background:var(--acc);opacity:.7;pointer-events:none}
-.back{position:fixed;left:max(12px,env(safe-area-inset-left,0px));top:10px;display:inline-flex;align-items:center;min-height:44px;padding:0 8px;color:var(--ink);text-decoration:none;font:700 14px/1 "Noto Sans TC",system-ui,sans-serif;letter-spacing:.12em;text-shadow:0 1px 6px rgba(0,0,0,.8);opacity:.85}
-.back:hover{opacity:1;color:var(--acc)}
-.embed .back{display:none}
-.start .k{margin:0;font:700 12px/1 "Noto Sans TC",system-ui,sans-serif;letter-spacing:.34em;color:#eaa9b6}
-.black{position:fixed;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity 2.5s ease}
+.black{position:fixed;inset:0;background:#07050a;opacity:0;pointer-events:none;transition:opacity 2.6s ease}
 .black.on{opacity:1}
+/* 結尾：黑幕上浮出她最後那句話 */
+.endcard{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:2.4vh;pointer-events:none;opacity:0;transition:opacity 2.8s ease 1.6s}
+.end-on .endcard{opacity:1}
+.endcard b{font:400 clamp(1.8rem,5vw,3.6rem)/1.3 var(--hand);letter-spacing:.3em;text-indent:.3em;color:#ffe3c9;text-shadow:0 0 30px rgba(242,196,109,.35)}
+.endcard i{display:block;width:clamp(90px,10vw,150px);height:2px;background:linear-gradient(90deg,#b3243f 0 33.3%,#dba53f 33.3% 66.6%,#eaa9b6 66.6%)}
+.endcard span{font:500 clamp(.8rem,1.3vw,1.05rem)/1.6 var(--serif);letter-spacing:.34em;text-indent:.34em;color:#b9aca0}
 .start{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:18px;background:radial-gradient(ellipse at center,rgba(18,13,22,.55),rgba(18,13,22,.92));transition:opacity .8s}
 .start.gone{opacity:0;pointer-events:none}
+.start .k{margin:0;font:700 12px/1 "Noto Sans TC",system-ui,sans-serif;letter-spacing:.34em;color:var(--rose)}
 .start .t{margin:0;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;letter-spacing:.3em;text-indent:.3em}
 .start .s{margin:0;font-size:.9rem;color:#b9aca0;letter-spacing:.12em}
 .go{display:flex;align-items:center;gap:12px;padding:16px 34px;border-radius:999px;background:var(--acc);color:#24160b;font-size:1.25rem;font-weight:700;letter-spacing:.2em;box-shadow:0 0 40px rgba(242,196,109,.45)}
 .go svg{width:26px;height:26px;fill:currentColor}
-.next,.again{position:fixed;right:16px;bottom:16px;padding:10px 20px;border:1px solid rgba(242,196,109,.55);border-radius:6px;background:rgba(18,13,22,.6);color:#f6efe2;font-size:.95rem;letter-spacing:.15em;opacity:.75;transition:opacity .3s}
+.next,.again{position:fixed;right:16px;bottom:calc(var(--bar) + 16px);padding:10px 20px;border:1px solid rgba(242,196,109,.55);border-radius:6px;background:rgba(18,13,22,.6);color:#f6efe2;font-size:.95rem;letter-spacing:.15em;opacity:.75;transition:opacity .3s}
 .next:hover,.again:hover{opacity:1}
-.again{right:auto;left:50%;bottom:45vh;transform:translateX(-50%)}
+.again{right:auto;left:50%;bottom:22vh;transform:translateX(-50%)}
 .next[hidden],.again[hidden]{display:none}
-.sign{position:fixed;left:16px;bottom:12px;margin:0;font-size:.75rem;color:rgba(185,172,160,.6);letter-spacing:.1em}
-.embed .sign{display:none}
-@media (prefers-reduced-motion:reduce){.film i,.lyric p,.black{transition:none}.lyric p{transform:none}}
+.back{position:fixed;left:max(12px,env(safe-area-inset-left,0px));top:calc(var(--bar) + 6px);display:inline-flex;align-items:center;min-height:44px;padding:0 8px;color:var(--ink);text-decoration:none;font:700 14px/1 "Noto Sans TC",system-ui,sans-serif;letter-spacing:.12em;text-shadow:0 1px 6px rgba(0,0,0,.8);opacity:.85}
+.back:hover{opacity:1;color:var(--acc)}
+.sign{position:fixed;left:16px;bottom:calc(var(--bar) + 10px);margin:0;font-size:.75rem;color:rgba(185,172,160,.6);letter-spacing:.1em}
+.embed .sign,.embed .back,.rec .sign,.rec .back,.rec .prog,.rec .start,.rec .next,.rec .again{display:none}
+@media (prefers-reduced-motion:reduce){.film i,.lyric p,.black,.tone,.intro,.endcard{transition:none}.film i{filter:none}.lyric .w,.lyric .z{transition:none;transform:none;filter:none}.grain{animation:none}.intro{transform:none}}
 </style>
 </head>
 <body>
 <div class="film" aria-hidden="true"><i id="fA"></i><i id="fB"></i></div>
+<div class="tone warm" aria-hidden="true"></div><div class="tone cold" aria-hidden="true"></div>
 <div class="shade" aria-hidden="true"></div>
+<div class="wash" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
 <canvas id="fx" aria-hidden="true"></canvas>
+<div class="grain" id="grain" aria-hidden="true"></div>
+<div class="intro" aria-hidden="true"><small>ENDING THEME</small><b>晚霞</b><i></i><span>片尾主題曲</span></div>
 <div class="lyric" aria-live="off"><p id="lA"></p><p id="lB"></p></div>
+<div class="bars" aria-hidden="true"></div>
 <div class="prog" id="prog" aria-hidden="true"></div>
 <div class="black" id="black" aria-hidden="true"></div>
+<div class="endcard" aria-hidden="true"><b>記得吃飯。</b><i></i><span>晚霞</span></div>
 <div class="start" id="start">
   <p class="k">片尾主題曲</p>
   <p class="t" id="stitle">晚霞</p>
@@ -69,27 +113,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 <button type="button" id="again" class="again" hidden>再看一次</button>
 <p class="sign" id="sign">晚霞 · 林亞澤</p>
 <script>
-const MV = {"theme": {"title": "晚霞", "dur": 167.98, "audio": "https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/theme.mp3", "shots": [{"t0": 0.0, "cg": "front_night", "move": "in", "blank": true, "t1": 13.6, "img": "img/mv/front_night.webp"}, {"t0": 13.6, "cg": "rain_towel", "move": "out", "blank": false, "t1": 26.5, "img": "img/mv/rain_towel.webp"}, {"t0": 26.5, "cg": "rain_umbrella", "move": "right", "blank": false, "t1": 32.0, "img": "img/mv/rain_umbrella.webp"}, {"t0": 32.0, "cg": "rain_dawn", "move": "in", "blank": false, "t1": 39.5, "img": "img/mv/rain_dawn.webp"}, {"t0": 39.5, "cg": "dusk_recipe", "move": "out", "blank": false, "t1": 47.8, "img": "img/mv/dusk_recipe.webp"}, {"t0": 47.8, "cg": "roof_dawn", "move": "in", "blank": false, "t1": 55.4, "img": "img/mv/roof_dawn.webp"}, {"t0": 55.4, "cg": "lesson_hands", "move": "left", "blank": false, "t1": 59.4, "img": "img/mv/lesson_hands.webp"}, {"t0": 59.4, "cg": "confess_kiss", "move": "in", "blank": false, "t1": 65.3, "img": "img/mv/confess_kiss.webp"}, {"t0": 65.3, "cg": "notebook_open", "move": "in", "blank": false, "t1": 71.2, "img": "img/mv/notebook_open.webp"}, {"t0": 71.2, "cg": "notebook_august", "move": "right", "blank": false, "t1": 77.3, "img": "img/mv/notebook_august.webp"}, {"t0": 77.3, "cg": "flash_syrup", "move": "in", "blank": false, "t1": 84.4, "img": "img/mv/flash_syrup.webp"}, {"t0": 84.4, "cg": "dusk_midnight", "move": "out", "blank": false, "t1": 90.8, "img": "img/mv/dusk_midnight.webp"}, {"t0": 90.8, "cg": "open_laugh", "move": "left", "blank": false, "t1": 98.9, "img": "img/mv/open_laugh.webp"}, {"t0": 98.9, "cg": "roof_dance", "move": "in", "blank": false, "t1": 106.4, "img": "img/mv/roof_dance.webp"}, {"t0": 106.4, "cg": "together_hands", "move": "right", "blank": false, "t1": 111.0, "img": "img/mv/together_hands.webp"}, {"t0": 111.0, "cg": "winter_finger", "move": "in", "blank": false, "t1": 117.2, "img": "img/mv/winter_finger.webp"}, {"t0": 117.2, "cg": "farewell_room", "move": "in", "blank": false, "t1": 123.4, "img": "img/mv/farewell_room.webp"}, {"t0": 123.4, "cg": "door_meal", "move": "out", "blank": false, "t1": 129.6, "img": "img/mv/door_meal.webp"}, {"t0": 129.6, "cg": "sunset_gold", "move": "in", "blank": false, "t1": 135.9, "img": "img/mv/sunset_gold.webp"}, {"t0": 135.9, "cg": "sunset_meal", "move": "out", "blank": false, "t1": 142.6, "img": "img/mv/sunset_meal.webp"}, {"t0": 142.6, "cg": "evening_roof", "move": "in", "blank": false, "t1": 154.2, "img": "img/mv/evening_roof.webp"}, {"t0": 154.2, "cg": "evening_bar", "move": "out", "blank": false, "t1": 167.98, "img": "img/mv/evening_bar.webp"}], "lines": [{"t": 13.6, "en": "Tucked away inside a tiny bar", "zh": "巷子裡　躲著一間小酒吧"}, {"t": 19.0, "en": "Seven wooden stools against the dark", "zh": "七張高腳椅　排在暗暗的燈下"}, {"t": 26.5, "en": "Rain was falling in the narrow street", "zh": "那一晚　窄巷裡下著雨"}, {"t": 32.0, "en": "Whispered through the glass so soft and sweet", "zh": "雨隔著玻璃　像在輕聲細語"}, {"t": 39.5, "en": "I pour it slow, there is saffron in my glass", "zh": "我慢慢地倒　杯子裡有番紅花"}, {"t": 47.8, "en": "The sunset glows, memories that cannot pass", "zh": "晚霞亮起來　忘不掉妳說的話"}, {"t": 55.4, "en": "Hibiscus red is at the base", "zh": "洛神的紅　沉在杯底"}, {"t": 59.4, "en": "Recalling every line of your face", "zh": "想起妳的臉　一點都沒忘記"}, {"t": 65.3, "en": "She wrote everything by her own hand", "zh": "每一杯　妳都親手寫下來"}, {"t": 71.2, "en": "Flavors that her tongue could not command", "zh": "酒的味道　妳舌頭嚐不出來"}, {"t": 77.3, "en": "Take a little sip, is it sweet?", "zh": "喝一小口　妳問我甜嗎"}, {"t": 84.4, "en": "Asking me each time we would meet", "zh": "每一次見面　妳都問這句話"}, {"t": 90.8, "en": "I pour it slow, there is saffron in my glass", "zh": "我慢慢地倒　杯子裡有番紅花"}, {"t": 98.9, "en": "The sunset glows, memories that cannot pass", "zh": "晚霞亮起來　忘不掉妳說的話"}, {"t": 106.4, "en": "A layer of pink right on top", "zh": "最上面　浮著一層粉紅"}, {"t": 111.0, "en": "Hoping that this moment won't stop", "zh": "真希望時間　停在這一分鐘"}, {"t": 117.2, "en": "She told me always remember to eat", "zh": "妳跟我說　記得吃飯"}, {"t": 123.4, "en": "So I keep living on my own two feet", "zh": "所以我一個人　好好過每一天"}, {"t": 129.6, "en": "Stings for a moment when it hits my tongue", "zh": "碰到舌頭　先刺了一下"}, {"t": 135.9, "en": "But then it is sweet, just like when we were young", "zh": "然後就甜了　像剛認識妳那年"}, {"t": 142.6, "en": "It is still sweet, I whisper to you", "zh": "還是甜的　我小聲跟妳說"}, {"t": 147.8, "en": "As dusk paints the room in a dark shade of blue", "zh": "天快黑了　店裡一片深藍色"}, {"t": 154.2, "en": "The bar is still open, the light is still on", "zh": "店還開著　燈也還亮著"}, {"t": 158.7, "en": "I'm tender and grateful, though you are now gone", "zh": "妳不在了　我的心柔軟　也感激著"}]}};
-/* 《晚霞》片尾主題曲 MV（照《餘燼》site/mv.js 改）。MV 由 site/build_mv.py 從 site/mv_storyboard.json 與 site/theme_lyrics.json 注入。
-   網址參數：embed=1（嵌進遊戲：不顯示署名與返回連結、右下「繼續」）。
-   播完或按「繼續」送 {type:'larch:mv:done', song} 給父層；載入時送 {type:'larch:mv:ready', song}。 */
+const MV = {"theme": {"title": "晚霞", "dur": 167.98, "fade": 166.34, "hz": 20, "audio": "https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/theme.mp3", "shots": [{"t0": 0.0, "cg": "front_night", "move": "in", "blank": true, "tone": "cold", "rain": true, "t1": 13.6, "img": "img/mv/front_night.webp"}, {"t0": 13.6, "cg": "rain_towel", "move": "out", "blank": false, "tone": "warm", "rain": true, "t1": 26.5, "img": "img/mv/rain_towel.webp"}, {"t0": 26.5, "cg": "rain_umbrella", "move": "right", "blank": false, "tone": "warm", "rain": true, "t1": 32.0, "img": "img/mv/rain_umbrella.webp"}, {"t0": 32.0, "cg": "rain_dawn", "move": "in", "blank": false, "tone": "warm", "rain": true, "t1": 39.5, "img": "img/mv/rain_dawn.webp"}, {"t0": 39.5, "cg": "dusk_recipe", "move": "out", "blank": false, "tone": "warm", "rain": false, "t1": 47.8, "img": "img/mv/dusk_recipe.webp"}, {"t0": 47.8, "cg": "roof_dawn", "move": "in", "blank": false, "tone": "warm", "rain": false, "t1": 55.4, "img": "img/mv/roof_dawn.webp"}, {"t0": 55.4, "cg": "lesson_hands", "move": "left", "blank": false, "tone": "warm", "rain": false, "t1": 59.4, "img": "img/mv/lesson_hands.webp"}, {"t0": 59.4, "cg": "confess_kiss", "move": "in", "blank": false, "tone": "warm", "rain": false, "t1": 65.3, "img": "img/mv/confess_kiss.webp"}, {"t0": 65.3, "cg": "notebook_open", "move": "in", "blank": false, "tone": "cold", "rain": false, "t1": 71.2, "img": "img/mv/notebook_open.webp"}, {"t0": 71.2, "cg": "notebook_august", "move": "right", "blank": false, "tone": "cold", "rain": false, "t1": 77.3, "img": "img/mv/notebook_august.webp"}, {"t0": 77.3, "cg": "flash_syrup", "move": "in", "blank": false, "tone": "warm", "rain": false, "t1": 84.4, "img": "img/mv/flash_syrup.webp"}, {"t0": 84.4, "cg": "dusk_midnight", "move": "out", "blank": false, "tone": "warm", "rain": false, "t1": 90.8, "img": "img/mv/dusk_midnight.webp"}, {"t0": 90.8, "cg": "open_laugh", "move": "left", "blank": false, "tone": "warm", "rain": false, "t1": 98.9, "img": "img/mv/open_laugh.webp"}, {"t0": 98.9, "cg": "roof_dance", "move": "in", "blank": false, "tone": "warm", "rain": false, "t1": 106.4, "img": "img/mv/roof_dance.webp"}, {"t0": 106.4, "cg": "together_hands", "move": "right", "blank": false, "tone": "warm", "rain": false, "t1": 111.0, "img": "img/mv/together_hands.webp"}, {"t0": 111.0, "cg": "winter_finger", "move": "in", "blank": false, "tone": "warm", "rain": false, "t1": 117.2, "img": "img/mv/winter_finger.webp"}, {"t0": 117.2, "cg": "farewell_room", "move": "in", "blank": false, "tone": "warm", "rain": false, "t1": 123.4, "img": "img/mv/farewell_room.webp"}, {"t0": 123.4, "cg": "door_meal", "move": "out", "blank": false, "tone": "cold", "rain": false, "t1": 129.6, "img": "img/mv/door_meal.webp"}, {"t0": 129.6, "cg": "sunset_gold", "move": "in", "blank": false, "tone": "cold", "rain": false, "t1": 135.9, "img": "img/mv/sunset_gold.webp"}, {"t0": 135.9, "cg": "sunset_meal", "move": "out", "blank": false, "tone": "cold", "rain": false, "t1": 142.6, "img": "img/mv/sunset_meal.webp"}, {"t0": 142.6, "cg": "evening_roof", "move": "in", "blank": false, "tone": "now", "rain": false, "t1": 154.2, "img": "img/mv/evening_roof.webp"}, {"t0": 154.2, "cg": "evening_bar", "move": "out", "blank": false, "tone": "now", "rain": false, "t1": 167.98, "img": "img/mv/evening_bar.webp"}], "lines": [{"t": 13.6, "en": "Tucked away inside a tiny bar", "zh": "巷子裡　躲著一間小酒吧", "sec": "verse", "nth": 0, "key": false, "w": [["Tucked", 13.6], ["away", 15.0], ["inside", 15.36], ["a", 16.4], ["tiny", 16.74], ["bar", 17.26]], "z": [["巷子裡", 13.85], ["　躲著一間小酒吧", 16.4]]}, {"t": 19.0, "en": "Seven wooden stools against the dark", "zh": "七張高腳椅　排在暗暗的燈下", "sec": "verse", "nth": 1, "key": false, "w": [["Seven", 19.0], ["wooden", 21.3], ["stools", 22.0], ["against", 22.82], ["the", 23.4], ["dark", 23.84]], "z": [["七張高腳椅", 19.25], ["　排在暗暗的燈下", 22.82]]}, {"t": 26.5, "en": "Rain was falling in the narrow street", "zh": "那一晚　窄巷裡下著雨", "sec": "verse", "nth": 2, "key": false, "w": [["Rain", 26.5], ["was", 27.52], ["falling", 27.86], ["in", 28.42], ["the", 29.24], ["narrow", 29.54], ["street", 29.96]], "z": [["那一晚", 26.75], ["　窄巷裡下著雨", 28.42]]}, {"t": 32.0, "en": "Whispered through the glass so soft and sweet", "zh": "雨隔著玻璃　像在輕聲細語", "sec": "verse", "nth": 3, "key": false, "w": [["Whispered", 32.0], ["through", 34.14], ["the", 34.64], ["glass", 34.98], ["so", 35.44], ["soft", 35.94], ["and", 36.36], ["sweet", 36.88]], "z": [["雨隔著玻璃", 32.25], ["　像在輕聲細語", 35.44]]}, {"t": 39.5, "en": "I pour it slow, there is saffron in my glass", "zh": "我慢慢地倒　杯子裡有番紅花", "sec": "chorus", "nth": 0, "key": false, "w": [["I", 39.5], ["pour", 40.5], ["it", 41.48], ["slow,", 41.98], ["there", 43.24], ["is", 43.54], ["saffron", 43.9], ["in", 44.76], ["my", 45.12], ["glass", 45.88]], "z": [["我慢慢地倒", 39.75], ["　杯子裡有番紅花", 43.54]]}, {"t": 47.8, "en": "The sunset glows, memories that cannot pass", "zh": "晚霞亮起來　忘不掉妳說的話", "sec": "chorus", "nth": 1, "key": false, "w": [["The", 47.8], ["sunset", 48.62], ["glows,", 49.62], ["memories", 53.04], ["that", 53.7], ["cannot", 54.22], ["pass", 54.7]], "z": [["晚霞亮起來", 48.05], ["　忘不掉妳說的話", 53.04]]}, {"t": 55.4, "en": "Hibiscus red is at the base", "zh": "洛神的紅　沉在杯底", "sec": "chorus", "nth": 2, "key": false, "w": [["Hibiscus", 55.4], ["red", 56.8], ["is", 57.36], ["at", 57.76], ["the", 58.08], ["base", 58.46]], "z": [["洛神的紅", 55.65], ["　沉在杯底", 57.76]]}, {"t": 59.4, "en": "Recalling every line of your face", "zh": "想起妳的臉　一點都沒忘記", "sec": "chorus", "nth": 3, "key": false, "w": [["Recalling", 59.4], ["every", 60.46], ["line", 61.28], ["of", 61.9], ["your", 62.26], ["face", 62.82]], "z": [["想起妳的臉", 59.65], ["　一點都沒忘記", 61.9]]}, {"t": 65.3, "en": "She wrote everything by her own hand", "zh": "每一杯　妳都親手寫下來", "sec": "verse", "nth": 0, "key": false, "w": [["She", 65.3], ["wrote", 65.8], ["everything", 66.14], ["by", 67.04], ["her", 67.66], ["own", 68.12], ["hand", 68.44]], "z": [["每一杯", 65.55], ["　妳都親手寫下來", 67.04]]}, {"t": 71.2, "en": "Flavors that her tongue could not command", "zh": "酒的味道　妳舌頭嚐不出來", "sec": "verse", "nth": 1, "key": false, "w": [["Flavors", 71.2], ["that", 72.34], ["her", 72.78], ["tongue", 73.12], ["could", 73.7], ["not", 74.14], ["command", 74.46]], "z": [["酒的味道", 71.45], ["　妳舌頭嚐不出來", 73.12]]}, {"t": 77.3, "en": "Take a little sip, is it sweet?", "zh": "喝一小口　妳問我甜嗎", "sec": "verse", "nth": 2, "key": true, "w": [["Take", 77.3], ["a", 77.94], ["little", 78.58], ["sip,", 79.0], ["is", 79.92], ["it", 80.54], ["sweet?", 80.94]], "z": [["喝一小口", 77.55], ["　妳問我甜嗎", 79.0]]}, {"t": 84.4, "en": "Asking me each time we would meet", "zh": "每一次見面　妳都問這句話", "sec": "verse", "nth": 3, "key": false, "w": [["Asking", 84.4], ["me", 85.28], ["each", 85.7], ["time", 86.18], ["we", 86.82], ["would", 87.1], ["meet", 87.42]], "z": [["每一次見面", 84.65], ["　妳都問這句話", 86.18]]}, {"t": 90.8, "en": "I pour it slow, there is saffron in my glass", "zh": "我慢慢地倒　杯子裡有番紅花", "sec": "chorus", "nth": 0, "key": false, "w": [["I", 90.8], ["pour", 91.6], ["it", 92.52], ["slow,", 93.1], ["there", 94.06], ["is", 94.56], ["saffron", 94.94], ["in", 95.74], ["my", 96.08], ["glass", 96.92]], "z": [["我慢慢地倒", 91.05], ["　杯子裡有番紅花", 94.56]]}, {"t": 98.9, "en": "The sunset glows, memories that cannot pass", "zh": "晚霞亮起來　忘不掉妳說的話", "sec": "chorus", "nth": 1, "key": false, "w": [["The", 98.9], ["sunset", 99.7], ["glows,", 100.72], ["memories", 104.18], ["that", 104.82], ["cannot", 105.3], ["pass", 105.82]], "z": [["晚霞亮起來", 99.15], ["　忘不掉妳說的話", 104.18]]}, {"t": 106.4, "en": "A layer of pink right on top", "zh": "最上面　浮著一層粉紅", "sec": "chorus", "nth": 2, "key": false, "w": [["A", 106.4], ["layer", 106.96], ["of", 107.44], ["pink", 107.94], ["right", 108.46], ["on", 108.96], ["top", 109.56]], "z": [["最上面", 106.65], ["　浮著一層粉紅", 107.94]]}, {"t": 111.0, "en": "Hoping that this moment won't stop", "zh": "真希望時間　停在這一分鐘", "sec": "chorus", "nth": 3, "key": false, "w": [["Hoping", 111.0], ["that", 111.8], ["this", 112.18], ["moment", 112.6], ["won't", 113.28], ["stop", 116.6]], "z": [["真希望時間", 111.25], ["　停在這一分鐘", 112.6]]}, {"t": 117.2, "en": "She told me always remember to eat", "zh": "妳跟我說　記得吃飯", "sec": "verse", "nth": 0, "key": true, "w": [["She", 117.2], ["told", 117.74], ["me", 118.14], ["always", 118.78], ["remember", 119.74], ["to", 121.14], ["eat", 121.96]], "z": [["妳跟我說", 117.45], ["　記得吃飯", 118.78]]}, {"t": 123.4, "en": "So I keep living on my own two feet", "zh": "所以我一個人　好好過每一天", "sec": "verse", "nth": 1, "key": false, "w": [["So", 123.4], ["I", 124.08], ["keep", 124.52], ["living", 124.84], ["on", 125.68], ["my", 126.24], ["own", 126.76], ["two", 127.34], ["feet", 128.2]], "z": [["所以我一個人", 123.65], ["　好好過每一天", 125.68]]}, {"t": 129.6, "en": "Stings for a moment when it hits my tongue", "zh": "碰到舌頭　先刺了一下", "sec": "verse", "nth": 2, "key": false, "w": [["Stings", 129.6], ["for", 130.38], ["a", 131.02], ["moment", 131.22], ["when", 131.94], ["it", 132.56], ["hits", 133.1], ["my", 133.64], ["tongue", 134.48]], "z": [["碰到舌頭", 129.85], ["　先刺了一下", 131.94]]}, {"t": 135.9, "en": "But then it is sweet, just like when we were young", "zh": "然後就甜了　像剛認識妳那年", "sec": "verse", "nth": 3, "key": false, "w": [["But", 135.9], ["then", 136.6], ["it", 136.92], ["is", 137.2], ["sweet,", 137.66], ["just", 138.48], ["like", 138.74], ["when", 139.12], ["we", 139.54], ["were", 140.12], ["young", 140.72]], "z": [["然後就甜了", 136.15], ["　像剛認識妳那年", 138.48]]}, {"t": 142.6, "en": "It is still sweet, I whisper to you", "zh": "還是甜的　我小聲跟妳說", "sec": "outro", "nth": 0, "key": true, "w": [["It", 142.6], ["is", 143.18], ["still", 143.6], ["sweet,", 143.94], ["I", 145.1], ["whisper", 145.6], ["to", 146.6], ["you", 147.02]], "z": [["還是甜的", 142.85], ["　我小聲跟妳說", 145.1]]}, {"t": 147.8, "en": "As dusk paints the room in a dark shade of blue", "zh": "天快黑了　店裡一片深藍色", "sec": "outro", "nth": 1, "key": false, "w": [["As", 147.8], ["dusk", 148.46], ["paints", 149.1], ["the", 149.6], ["room", 150.18], ["in", 150.54], ["a", 151.42], ["dark", 151.64], ["shade", 152.16], ["of", 152.86], ["blue", 153.3]], "z": [["天快黑了", 148.05], ["　店裡一片深藍色", 150.54]]}, {"t": 154.2, "en": "The bar is still open, the light is still on", "zh": "店還開著　燈也還亮著", "sec": "outro", "nth": 2, "key": false, "w": [["The", 154.2], ["bar", 154.84], ["is", 155.26], ["still", 155.62], ["open,", 156.08], ["the", 156.98], ["light", 157.18], ["is", 157.4], ["still", 157.74], ["on", 158.18]], "z": [["店還開著", 154.45], ["　燈也還亮著", 156.98]]}, {"t": 158.7, "en": "I'm tender and grateful, though you are now gone", "zh": "妳不在了　我的心柔軟　也感激著", "sec": "outro", "nth": 3, "key": true, "w": [["I'm", 158.7], ["tender", 158.98], ["and", 159.62], ["grateful,", 160.14], ["though", 161.2], ["you", 161.56], ["are", 162.2], ["now", 162.66], ["gone", 163.54]], "z": [["妳不在了", 158.95], ["　我的心柔軟", 160.14], ["　也感激著", 162.2]]}], "env": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.02, 0.05, 0.16, 0.27, 0.33, 0.49, 0.51, 0.51, 0.5, 0.48, 0.45, 0.42, 0.38, 0.36, 0.34, 0.31, 0.28, 0.26, 0.24, 0.22, 0.2, 0.3, 0.29, 0.28, 0.27, 0.26, 0.29, 0.39, 0.43, 0.42, 0.4, 0.57, 0.78, 0.81, 0.9, 0.87, 0.85, 0.84, 0.79, 0.73, 0.68, 0.63, 0.58, 0.54, 0.62, 0.74, 0.75, 0.74, 0.71, 0.68, 0.64, 0.59, 0.58, 0.57, 0.55, 0.53, 0.5, 0.47, 0.44, 0.41, 0.39, 0.38, 0.36, 0.35, 0.45, 0.45, 0.43, 0.41, 0.39, 0.51, 0.51, 0.5, 0.49, 0.47, 0.44, 0.41, 0.39, 0.39, 0.41, 0.41, 0.39, 0.36, 0.33, 0.3, 0.28, 0.26, 0.28, 0.27, 0.26, 0.25, 0.23, 0.22, 0.2, 0.19, 0.17, 0.16, 0.15, 0.14, 0.14, 0.13, 0.13, 0.13, 0.12, 0.12, 0.13, 0.12, 0.12, 0.12, 0.11, 0.11, 0.1, 0.09, 0.09, 0.08, 0.08, 0.07, 0.07, 0.07, 0.06, 0.06, 0.06, 0.06, 0.05, 0.07, 0.2, 0.32, 0.35, 0.38, 0.42, 0.41, 0.4, 0.4, 0.38, 0.48, 0.48, 0.48, 0.47, 0.46, 0.43, 0.4, 0.38, 0.36, 0.35, 0.34, 0.33, 0.32, 0.31, 0.31, 0.29, 0.28, 0.27, 0.27, 0.26, 0.25, 0.24, 0.32, 0.32, 0.32, 0.32, 0.31, 0.53, 0.63, 0.61, 0.58, 0.54, 0.55, 0.68, 0.74, 0.72, 0.68, 0.66, 0.62, 0.59, 0.68, 0.67, 0.65, 0.63, 0.6, 0.57, 0.53, 0.5, 0.49, 0.47, 0.45, 0.43, 0.41, 0.39, 0.37, 0.36, 0.36, 0.35, 0.35, 0.34, 0.33, 0.33, 0.32, 0.32, 0.45, 0.48, 0.48, 0.47, 0.51, 0.5, 0.51, 0.5, 0.52, 0.53, 0.52, 0.51, 0.49, 0.48, 0.45, 0.42, 0.46, 0.46, 0.46, 0.46, 0.45, 0.45, 0.44, 0.47, 0.47, 0.47, 0.47, 0.46, 0.53, 0.51, 0.49, 0.48, 0.55, 0.59, 0.58, 0.57, 0.56, 0.54, 0.53, 0.51, 0.49, 0.48, 0.46, 0.46, 0.44, 0.43, 0.41, 0.52, 0.6, 0.59, 0.59, 0.56, 0.54, 0.52, 0.49, 0.47, 0.45, 0.43, 0.41, 0.4, 0.38, 0.36, 0.38, 0.41, 0.57, 0.6, 0.63, 0.62, 0.62, 0.6, 0.58, 0.57, 0.56, 0.54, 0.52, 0.5, 0.48, 0.46, 0.45, 0.44, 0.54, 0.53, 0.52, 0.5, 0.47, 0.44, 0.42, 0.63, 0.64, 0.62, 0.6, 0.66, 0.75, 0.82, 0.91, 0.91, 0.95, 0.93, 0.91, 0.88, 0.85, 0.83, 0.8, 0.78, 0.76, 0.73, 0.69, 0.63, 0.59, 0.54, 0.53, 0.61, 0.64, 0.63, 0.63, 0.64, 0.62, 0.59, 0.58, 0.55, 0.52, 0.49, 0.45, 0.43, 0.39, 0.38, 0.36, 0.34, 0.52, 0.57, 0.56, 0.56, 0.55, 0.55, 0.59, 0.61, 0.65, 0.65, 0.64, 0.62, 0.56, 0.51, 0.5, 0.52, 0.52, 0.55, 0.53, 0.51, 0.5, 0.47, 0.45, 0.42, 0.45, 0.45, 0.44, 0.43, 0.43, 0.41, 0.4, 0.39, 0.38, 0.37, 0.36, 0.36, 0.35, 0.35, 0.34, 0.33, 0.32, 0.32, 0.31, 0.3, 0.29, 0.29, 0.28, 0.28, 0.27, 0.27, 0.28, 0.28, 0.27, 0.27, 0.26, 0.29, 0.39, 0.4, 0.41, 0.42, 0.48, 0.46, 0.45, 0.44, 0.62, 0.65, 0.64, 0.62, 0.59, 0.56, 0.53, 0.49, 0.5, 0.5, 0.48, 0.46, 0.42, 0.39, 0.36, 0.33, 0.34, 0.44, 0.52, 0.62, 0.74, 0.81, 0.88, 0.86, 0.88, 0.86, 0.88, 0.88, 0.91, 0.9, 0.9, 0.86, 0.82, 0.88, 0.87, 0.86, 0.82, 0.83, 0.81, 0.79, 0.75, 0.68, 0.63, 0.59, 0.54, 0.5, 0.54, 0.54, 0.53, 0.55, 0.59, 0.57, 0.55, 0.52, 0.49, 0.46, 0.42, 0.4, 0.37, 0.34, 0.32, 0.3, 0.29, 0.28, 0.26, 0.26, 0.53, 0.61, 0.62, 0.6, 0.55, 0.51, 0.47, 0.45, 0.44, 0.42, 0.4, 0.41, 0.47, 0.49, 0.49, 0.49, 0.51, 0.51, 0.48, 0.45, 0.44, 0.41, 0.4, 0.42, 0.42, 0.41, 0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.34, 0.34, 0.34, 0.33, 0.33, 0.32, 0.31, 0.38, 0.38, 0.4, 0.44, 0.53, 0.53, 0.52, 0.63, 0.68, 0.67, 0.65, 0.71, 0.78, 0.78, 0.77, 0.8, 0.79, 0.77, 0.77, 0.75, 0.73, 0.72, 0.7, 0.77, 0.76, 0.76, 0.74, 0.78, 0.77, 0.76, 0.73, 0.71, 0.69, 0.68, 0.69, 0.67, 0.67, 0.66, 0.63, 0.67, 0.75, 0.72, 0.7, 0.7, 0.69, 0.77, 0.81, 0.84, 0.83, 0.8, 0.78, 0.76, 0.73, 0.71, 0.68, 0.72, 0.79, 0.88, 0.93, 0.93, 0.93, 0.92, 0.89, 0.86, 0.86, 0.85, 0.82, 0.81, 0.78, 0.77, 0.74, 0.72, 0.71, 0.73, 0.71, 0.7, 0.67, 0.65, 0.63, 0.63, 0.7, 0.69, 0.68, 0.67, 0.66, 0.66, 0.63, 0.59, 0.63, 0.79, 0.81, 0.79, 0.77, 0.77, 0.76, 0.75, 0.72, 0.68, 0.65, 0.61, 0.57, 0.53, 0.5, 0.49, 0.48, 0.48, 0.51, 0.49, 0.47, 0.46, 0.44, 0.42, 0.4, 0.38, 0.36, 0.34, 0.32, 0.31, 0.29, 0.28, 0.26, 0.25, 0.23, 0.22, 0.22, 0.21, 0.2, 0.19, 0.18, 0.17, 0.16, 0.15, 0.15, 0.14, 0.13, 0.19, 0.38, 0.59, 0.7, 0.7, 0.7, 0.69, 0.66, 0.63, 0.62, 0.71, 0.72, 0.7, 0.67, 0.65, 0.64, 0.61, 0.59, 0.58, 0.57, 0.56, 0.55, 0.52, 0.5, 0.46, 0.43, 0.41, 0.39, 0.37, 0.36, 0.35, 0.34, 0.32, 0.52, 0.63, 0.62, 0.62, 0.58, 0.54, 0.5, 0.47, 0.57, 0.77, 0.76, 0.75, 0.74, 0.73, 0.71, 0.68, 0.66, 0.68, 0.67, 0.69, 0.71, 0.71, 0.72, 0.68, 0.65, 0.6, 0.56, 0.52, 0.49, 0.48, 0.48, 0.5, 0.53, 0.52, 0.5, 0.47, 0.44, 0.41, 0.38, 0.36, 0.34, 0.33, 0.33, 0.32, 0.32, 0.31, 0.3, 0.28, 0.28, 0.28, 0.32, 0.39, 0.42, 0.46, 0.45, 0.42, 0.39, 0.38, 0.44, 0.5, 0.58, 0.55, 0.5, 0.45, 0.41, 0.38, 0.35, 0.34, 0.41, 0.44, 0.43, 0.4, 0.4, 0.39, 0.38, 0.38, 0.36, 0.35, 0.33, 0.32, 0.31, 0.29, 0.28, 0.26, 0.25, 0.24, 0.22, 0.2, 0.19, 0.17, 0.16, 0.15, 0.18, 0.21, 0.2, 0.2, 0.33, 0.67, 0.82, 0.85, 0.89, 0.92, 0.91, 0.89, 0.88, 0.93, 0.92, 0.9, 0.89, 0.85, 0.83, 0.82, 0.8, 0.9, 0.9, 0.87, 0.85, 0.84, 0.87, 0.93, 0.97, 0.98, 0.99, 1.0, 0.99, 0.98, 0.97, 0.96, 0.95, 0.95, 0.94, 0.94, 0.93, 0.92, 0.91, 0.9, 0.89, 0.95, 0.93, 0.92, 0.9, 0.89, 0.86, 0.84, 0.83, 0.92, 0.93, 0.92, 0.92, 0.93, 0.91, 0.9, 0.89, 0.88, 0.91, 0.91, 0.93, 0.92, 0.9, 0.86, 0.83, 0.8, 0.75, 0.73, 0.72, 0.69, 0.71, 0.74, 0.74, 0.77, 0.85, 0.93, 0.96, 0.97, 0.96, 0.96, 0.95, 0.97, 0.95, 0.93, 0.9, 0.9, 0.9, 0.88, 0.87, 0.86, 0.86, 0.85, 0.85, 0.83, 0.82, 0.8, 0.8, 0.9, 0.92, 0.9, 0.89, 0.87, 0.86, 0.85, 0.84, 0.92, 0.89, 0.86, 0.83, 0.8, 0.8, 0.76, 0.74, 0.87, 0.86, 0.84, 0.83, 0.83, 0.81, 0.77, 0.72, 0.71, 0.7, 0.7, 0.68, 0.66, 0.65, 0.65, 0.64, 0.73, 0.73, 0.72, 0.72, 0.71, 0.69, 0.66, 0.63, 0.64, 0.64, 0.64, 0.64, 0.65, 0.65, 0.65, 0.64, 0.73, 0.85, 0.86, 0.85, 0.84, 0.87, 0.85, 0.83, 0.92, 0.96, 0.96, 0.95, 0.94, 0.94, 0.93, 0.92, 0.96, 0.93, 0.91, 0.9, 0.9, 0.92, 0.92, 0.9, 0.95, 0.93, 0.91, 0.89, 0.87, 0.85, 0.83, 0.81, 0.9, 0.9, 0.88, 0.85, 0.83, 0.8, 0.78, 0.75, 0.74, 0.71, 0.7, 0.68, 0.66, 0.64, 0.62, 0.6, 0.7, 0.78, 0.78, 0.76, 0.73, 0.69, 0.65, 0.61, 0.8, 0.81, 0.8, 0.78, 0.77, 0.74, 0.72, 0.71, 0.85, 0.93, 0.92, 0.96, 0.98, 0.98, 0.97, 0.96, 0.95, 0.91, 0.89, 0.86, 0.91, 0.9, 0.89, 0.87, 0.85, 0.83, 0.81, 0.78, 0.75, 0.73, 0.71, 0.69, 0.85, 0.91, 0.89, 0.88, 0.87, 0.86, 0.85, 0.84, 0.92, 0.89, 0.87, 0.86, 0.83, 0.83, 0.81, 0.78, 0.76, 0.73, 0.7, 0.68, 0.65, 0.62, 0.59, 0.57, 0.65, 0.76, 0.76, 0.76, 0.79, 0.79, 0.78, 0.76, 0.82, 0.82, 0.82, 0.82, 0.8, 0.78, 0.8, 0.77, 0.89, 0.94, 0.92, 0.9, 0.88, 0.85, 0.82, 0.8, 0.77, 0.76, 0.75, 0.73, 0.72, 0.71, 0.71, 0.72, 0.79, 0.8, 0.8, 0.78, 0.78, 0.78, 0.78, 0.78, 0.88, 0.87, 0.86, 0.86, 0.86, 0.85, 0.84, 0.82, 0.91, 0.86, 0.83, 0.79, 0.76, 0.73, 0.69, 0.68, 0.67, 0.65, 0.64, 0.61, 0.58, 0.56, 0.53, 0.54, 0.71, 0.7, 0.7, 0.69, 0.7, 0.74, 0.74, 0.71, 0.67, 0.64, 0.6, 0.57, 0.64, 0.7, 0.74, 0.83, 0.89, 0.88, 0.87, 0.86, 0.84, 0.84, 0.82, 0.81, 0.8, 0.79, 0.77, 0.74, 0.74, 0.72, 0.71, 0.71, 0.74, 0.84, 0.83, 0.82, 0.8, 0.78, 0.75, 0.74, 0.87, 0.84, 0.83, 0.81, 0.78, 0.81, 0.8, 0.8, 0.9, 0.95, 0.94, 0.93, 0.92, 0.91, 0.93, 0.94, 0.93, 0.93, 0.91, 0.9, 0.88, 0.88, 0.84, 0.79, 0.78, 0.83, 0.83, 0.83, 0.86, 0.86, 0.85, 0.82, 0.8, 0.78, 0.76, 0.74, 0.72, 0.7, 0.68, 0.62, 0.65, 0.81, 0.82, 0.81, 0.8, 0.78, 0.77, 0.75, 0.74, 0.73, 0.72, 0.71, 0.69, 0.68, 0.67, 0.65, 0.64, 0.63, 0.62, 0.61, 0.6, 0.6, 0.58, 0.57, 0.72, 0.73, 0.7, 0.68, 0.66, 0.65, 0.62, 0.61, 0.72, 0.81, 0.79, 0.78, 0.78, 0.77, 0.77, 0.74, 0.74, 0.72, 0.71, 0.69, 0.68, 0.69, 0.68, 0.67, 0.79, 0.81, 0.81, 0.79, 0.75, 0.74, 0.72, 0.7, 0.69, 0.69, 0.68, 0.68, 0.67, 0.66, 0.65, 0.64, 0.78, 0.82, 0.81, 0.8, 0.78, 0.78, 0.76, 0.75, 0.74, 0.73, 0.72, 0.7, 0.69, 0.68, 0.66, 0.65, 0.64, 0.63, 0.64, 0.64, 0.62, 0.61, 0.6, 0.59, 0.58, 0.57, 0.57, 0.57, 0.65, 0.7, 0.7, 0.69, 0.7, 0.69, 0.68, 0.66, 0.65, 0.64, 0.63, 0.62, 0.61, 0.6, 0.58, 0.57, 0.56, 0.56, 0.55, 0.55, 0.55, 0.54, 0.53, 0.52, 0.51, 0.51, 0.48, 0.46, 0.44, 0.41, 0.4, 0.4, 0.58, 0.63, 0.62, 0.65, 0.64, 0.64, 0.62, 0.61, 0.6, 0.59, 0.58, 0.58, 0.57, 0.56, 0.56, 0.56, 0.56, 0.58, 0.57, 0.57, 0.57, 0.56, 0.56, 0.62, 0.8, 0.8, 0.8, 0.8, 0.81, 0.82, 0.8, 0.87, 0.93, 0.94, 0.93, 0.93, 0.92, 0.9, 0.87, 0.87, 0.87, 0.85, 0.83, 0.81, 0.79, 0.79, 0.77, 0.81, 0.81, 0.79, 0.77, 0.75, 0.73, 0.71, 0.69, 0.69, 0.67, 0.67, 0.66, 0.66, 0.66, 0.64, 0.62, 0.74, 0.79, 0.78, 0.76, 0.75, 0.75, 0.73, 0.72, 0.71, 0.71, 0.7, 0.7, 0.68, 0.65, 0.65, 0.64, 0.64, 0.62, 0.62, 0.61, 0.6, 0.59, 0.57, 0.57, 0.72, 0.7, 0.67, 0.65, 0.62, 0.59, 0.57, 0.52, 0.69, 0.82, 0.79, 0.77, 0.75, 0.72, 0.7, 0.68, 0.67, 0.66, 0.65, 0.64, 0.63, 0.62, 0.58, 0.55, 0.72, 0.71, 0.71, 0.7, 0.69, 0.68, 0.66, 0.64, 0.65, 0.65, 0.63, 0.61, 0.59, 0.58, 0.56, 0.54, 0.77, 0.76, 0.75, 0.72, 0.7, 0.67, 0.66, 0.63, 0.61, 0.6, 0.59, 0.57, 0.56, 0.54, 0.53, 0.51, 0.54, 0.61, 0.6, 0.59, 0.59, 0.6, 0.6, 0.61, 0.79, 0.81, 0.8, 0.8, 0.79, 0.76, 0.72, 0.76, 0.79, 0.9, 0.93, 0.92, 0.9, 0.87, 0.85, 0.82, 0.79, 0.77, 0.74, 0.72, 0.7, 0.72, 0.71, 0.77, 0.83, 0.82, 0.8, 0.78, 0.76, 0.75, 0.73, 0.71, 0.69, 0.67, 0.64, 0.61, 0.6, 0.58, 0.57, 0.56, 0.78, 0.77, 0.76, 0.74, 0.72, 0.69, 0.66, 0.63, 0.62, 0.73, 0.73, 0.72, 0.73, 0.7, 0.69, 0.68, 0.66, 0.65, 0.64, 0.62, 0.61, 0.59, 0.56, 0.55, 0.72, 0.7, 0.68, 0.65, 0.63, 0.6, 0.58, 0.55, 0.72, 0.69, 0.67, 0.64, 0.61, 0.58, 0.55, 0.52, 0.5, 0.48, 0.45, 0.41, 0.38, 0.35, 0.33, 0.37, 0.6, 0.72, 0.71, 0.7, 0.7, 0.69, 0.67, 0.66, 0.66, 0.65, 0.64, 0.63, 0.63, 0.68, 0.67, 0.66, 0.65, 0.8, 0.86, 0.85, 0.82, 0.81, 0.79, 0.78, 0.75, 0.73, 0.71, 0.69, 0.67, 0.66, 0.64, 0.63, 0.62, 0.72, 0.83, 0.83, 0.8, 0.85, 0.85, 0.83, 0.82, 0.91, 0.95, 0.92, 0.9, 0.87, 0.85, 0.8, 0.8, 0.82, 0.87, 0.89, 0.88, 0.88, 0.88, 0.86, 0.85, 0.83, 0.81, 0.79, 0.77, 0.75, 0.73, 0.71, 0.82, 0.81, 0.78, 0.75, 0.71, 0.67, 0.63, 0.59, 0.57, 0.62, 0.68, 0.67, 0.67, 0.65, 0.67, 0.69, 0.78, 0.87, 0.86, 0.84, 0.82, 0.8, 0.77, 0.74, 0.72, 0.71, 0.69, 0.67, 0.66, 0.66, 0.65, 0.64, 0.64, 0.68, 0.66, 0.65, 0.64, 0.63, 0.62, 0.6, 0.8, 0.79, 0.76, 0.73, 0.7, 0.68, 0.65, 0.61, 0.77, 0.77, 0.76, 0.75, 0.75, 0.74, 0.72, 0.71, 0.71, 0.71, 0.7, 0.68, 0.68, 0.66, 0.62, 0.57, 0.67, 0.83, 0.81, 0.8, 0.79, 0.78, 0.78, 0.77, 0.76, 0.75, 0.73, 0.71, 0.7, 0.68, 0.67, 0.64, 0.65, 0.78, 0.79, 0.79, 0.78, 0.77, 0.76, 0.75, 0.75, 0.73, 0.72, 0.72, 0.7, 0.69, 0.69, 0.68, 0.7, 0.77, 0.77, 0.78, 0.78, 0.78, 0.76, 0.74, 0.73, 0.87, 0.86, 0.88, 0.86, 0.86, 0.86, 0.84, 0.83, 0.92, 0.93, 0.92, 0.91, 0.89, 0.89, 0.87, 0.85, 0.81, 0.78, 0.76, 0.73, 0.7, 0.71, 0.7, 0.7, 0.83, 0.81, 0.79, 0.77, 0.75, 0.72, 0.7, 0.69, 0.66, 0.65, 0.64, 0.62, 0.61, 0.6, 0.57, 0.54, 0.77, 0.76, 0.75, 0.74, 0.74, 0.73, 0.72, 0.73, 0.75, 0.74, 0.74, 0.71, 0.71, 0.7, 0.69, 0.68, 0.69, 0.68, 0.67, 0.66, 0.66, 0.64, 0.63, 0.59, 0.74, 0.73, 0.73, 0.71, 0.66, 0.61, 0.57, 0.53, 0.74, 0.73, 0.71, 0.71, 0.69, 0.67, 0.66, 0.63, 0.62, 0.62, 0.61, 0.59, 0.6, 0.67, 0.66, 0.63, 0.63, 0.79, 0.86, 0.86, 0.85, 0.92, 0.91, 0.91, 0.89, 0.9, 0.9, 0.88, 0.86, 0.85, 0.82, 0.8, 0.77, 0.89, 0.87, 0.85, 0.81, 0.78, 0.76, 0.72, 0.7, 0.68, 0.67, 0.69, 0.67, 0.66, 0.64, 0.63, 0.61, 0.6, 0.59, 0.58, 0.58, 0.57, 0.56, 0.56, 0.55, 0.76, 0.88, 0.88, 0.88, 0.88, 0.88, 0.85, 0.83, 0.83, 0.84, 0.86, 0.88, 0.9, 0.9, 0.9, 0.89, 0.88, 0.89, 0.88, 0.88, 0.87, 0.87, 0.86, 0.93, 0.93, 0.92, 0.89, 0.86, 0.82, 0.8, 0.8, 0.79, 0.81, 0.88, 0.9, 0.9, 0.92, 0.91, 0.91, 0.93, 0.96, 0.96, 0.95, 0.92, 0.88, 0.84, 0.8, 0.76, 0.73, 0.71, 0.68, 0.67, 0.65, 0.63, 0.61, 0.6, 0.65, 0.7, 0.69, 0.73, 0.78, 0.78, 0.77, 0.83, 0.89, 0.89, 0.88, 0.82, 0.77, 0.72, 0.68, 0.69, 0.83, 0.9, 0.93, 0.92, 0.93, 0.91, 0.88, 0.84, 0.83, 0.82, 0.81, 0.81, 0.8, 0.79, 0.77, 0.76, 0.88, 0.87, 0.86, 0.84, 0.82, 0.79, 0.78, 0.76, 0.75, 0.73, 0.72, 0.72, 0.71, 0.7, 0.7, 0.69, 0.79, 0.86, 0.84, 0.82, 0.81, 0.79, 0.78, 0.77, 0.76, 0.79, 0.84, 0.83, 0.82, 0.82, 0.83, 0.82, 0.82, 0.86, 0.83, 0.81, 0.8, 0.79, 0.77, 0.76, 0.83, 0.85, 0.84, 0.82, 0.78, 0.74, 0.7, 0.66, 0.75, 0.81, 0.81, 0.81, 0.8, 0.78, 0.77, 0.74, 0.73, 0.71, 0.69, 0.68, 0.67, 0.67, 0.66, 0.65, 0.76, 0.74, 0.72, 0.7, 0.69, 0.68, 0.66, 0.65, 0.64, 0.78, 0.79, 0.78, 0.77, 0.8, 0.78, 0.77, 0.87, 0.88, 0.88, 0.91, 0.9, 0.9, 0.89, 0.88, 0.87, 0.83, 0.81, 0.77, 0.76, 0.85, 0.89, 0.89, 0.87, 0.87, 0.86, 0.83, 0.79, 0.76, 0.74, 0.71, 0.79, 0.87, 0.88, 0.86, 0.85, 0.83, 0.81, 0.79, 0.9, 0.95, 0.95, 0.94, 0.93, 0.92, 0.92, 0.91, 0.91, 0.9, 0.89, 0.88, 0.88, 0.87, 0.86, 0.84, 0.86, 0.93, 0.93, 0.91, 0.89, 0.88, 0.87, 0.85, 0.83, 0.8, 0.78, 0.75, 0.73, 0.71, 0.69, 0.66, 0.7, 0.77, 0.77, 0.76, 0.75, 0.74, 0.72, 0.71, 0.7, 0.68, 0.67, 0.66, 0.64, 0.63, 0.63, 0.62, 0.67, 0.81, 0.83, 0.83, 0.81, 0.79, 0.77, 0.76, 0.81, 0.87, 0.88, 0.89, 0.87, 0.86, 0.85, 0.83, 0.82, 0.91, 0.89, 0.87, 0.85, 0.82, 0.79, 0.76, 0.74, 0.79, 0.83, 0.82, 0.8, 0.78, 0.75, 0.73, 0.82, 0.89, 0.94, 0.92, 0.89, 0.87, 0.86, 0.85, 0.82, 0.81, 0.79, 0.77, 0.74, 0.78, 0.81, 0.84, 0.83, 0.91, 0.91, 0.89, 0.85, 0.82, 0.78, 0.75, 0.73, 0.72, 0.71, 0.69, 0.67, 0.67, 0.65, 0.64, 0.66, 0.78, 0.78, 0.77, 0.76, 0.75, 0.74, 0.79, 0.9, 0.95, 0.96, 0.96, 0.94, 0.92, 0.89, 0.85, 0.84, 0.9, 0.95, 0.95, 0.94, 0.93, 0.93, 0.9, 0.9, 0.9, 0.89, 0.86, 0.83, 0.8, 0.78, 0.74, 0.73, 0.85, 0.92, 0.95, 0.96, 0.96, 0.95, 0.94, 0.91, 0.89, 0.86, 0.83, 0.8, 0.77, 0.74, 0.7, 0.65, 0.76, 0.82, 0.81, 0.81, 0.79, 0.77, 0.75, 0.72, 0.7, 0.68, 0.66, 0.64, 0.63, 0.6, 0.59, 0.57, 0.57, 0.59, 0.57, 0.54, 0.52, 0.5, 0.47, 0.53, 0.68, 0.71, 0.7, 0.67, 0.64, 0.6, 0.58, 0.57, 0.78, 0.86, 0.86, 0.84, 0.83, 0.81, 0.78, 0.75, 0.76, 0.75, 0.74, 0.73, 0.72, 0.71, 0.7, 0.78, 0.83, 0.82, 0.8, 0.79, 0.78, 0.76, 0.73, 0.7, 0.75, 0.75, 0.74, 0.7, 0.7, 0.68, 0.67, 0.84, 0.9, 0.89, 0.88, 0.86, 0.84, 0.82, 0.79, 0.76, 0.75, 0.74, 0.72, 0.72, 0.7, 0.67, 0.65, 0.76, 0.75, 0.75, 0.73, 0.72, 0.7, 0.69, 0.67, 0.77, 0.76, 0.77, 0.76, 0.76, 0.8, 0.79, 0.79, 0.89, 0.92, 0.91, 0.9, 0.9, 0.88, 0.86, 0.84, 0.84, 0.86, 0.86, 0.86, 0.86, 0.85, 0.84, 0.92, 0.96, 0.95, 0.93, 0.91, 0.88, 0.85, 0.84, 0.91, 0.91, 0.9, 0.89, 0.9, 0.89, 0.88, 0.91, 0.96, 0.96, 0.95, 0.95, 0.98, 0.97, 0.95, 0.94, 0.93, 0.91, 0.89, 0.91, 0.91, 0.9, 0.88, 0.94, 0.93, 0.9, 0.87, 0.94, 0.94, 0.9, 0.87, 0.87, 0.85, 0.82, 0.8, 0.8, 0.79, 0.78, 0.86, 0.92, 0.9, 0.87, 0.92, 0.93, 0.93, 0.92, 0.95, 0.97, 0.95, 0.92, 0.96, 0.96, 0.95, 0.92, 0.96, 0.95, 0.92, 0.92, 0.92, 0.93, 0.95, 0.93, 0.91, 0.9, 0.87, 0.89, 0.94, 0.93, 0.93, 0.93, 0.92, 0.9, 0.87, 0.86, 0.84, 0.82, 0.8, 0.77, 0.76, 0.75, 0.72, 0.71, 0.69, 0.69, 0.67, 0.67, 0.65, 0.63, 0.6, 0.67, 0.67, 0.66, 0.65, 0.64, 0.62, 0.65, 0.63, 0.74, 0.86, 0.93, 0.93, 0.92, 0.9, 0.88, 0.86, 0.85, 0.84, 0.82, 0.8, 0.79, 0.79, 0.8, 0.81, 0.88, 0.94, 0.92, 0.9, 0.87, 0.82, 0.76, 0.71, 0.71, 0.7, 0.71, 0.7, 0.73, 0.74, 0.72, 0.7, 0.83, 0.85, 0.84, 0.83, 0.81, 0.8, 0.78, 0.76, 0.75, 0.73, 0.73, 0.77, 0.76, 0.77, 0.75, 0.74, 0.72, 0.72, 0.7, 0.67, 0.66, 0.64, 0.62, 0.67, 0.73, 0.72, 0.69, 0.66, 0.66, 0.64, 0.63, 0.72, 0.79, 0.77, 0.74, 0.72, 0.69, 0.67, 0.64, 0.7, 0.85, 0.86, 0.85, 0.84, 0.82, 0.81, 0.8, 0.84, 0.89, 0.9, 0.9, 0.89, 0.87, 0.84, 0.81, 0.79, 0.78, 0.77, 0.75, 0.73, 0.73, 0.73, 0.77, 0.89, 0.89, 0.87, 0.86, 0.85, 0.84, 0.82, 0.79, 0.78, 0.78, 0.77, 0.76, 0.74, 0.72, 0.7, 0.69, 0.68, 0.67, 0.66, 0.65, 0.63, 0.65, 0.64, 0.77, 0.77, 0.79, 0.77, 0.75, 0.75, 0.74, 0.72, 0.81, 0.86, 0.85, 0.87, 0.86, 0.85, 0.85, 0.84, 0.83, 0.81, 0.81, 0.8, 0.79, 0.78, 0.75, 0.72, 0.78, 0.83, 0.82, 0.81, 0.81, 0.79, 0.78, 0.75, 0.75, 0.75, 0.74, 0.73, 0.7, 0.69, 0.67, 0.66, 0.78, 0.77, 0.77, 0.76, 0.76, 0.75, 0.75, 0.74, 0.73, 0.73, 0.72, 0.72, 0.76, 0.8, 0.79, 0.78, 0.78, 0.77, 0.76, 0.74, 0.73, 0.72, 0.69, 0.7, 0.79, 0.78, 0.76, 0.72, 0.71, 0.7, 0.68, 0.73, 0.73, 0.72, 0.7, 0.68, 0.79, 0.78, 0.75, 0.72, 0.82, 0.82, 0.81, 0.88, 0.88, 0.86, 0.8, 0.79, 0.85, 0.87, 0.87, 0.9, 0.94, 0.93, 0.91, 0.89, 0.92, 0.92, 0.9, 0.9, 0.89, 0.9, 0.88, 0.94, 0.94, 0.92, 0.91, 0.89, 0.88, 0.86, 0.84, 0.82, 0.81, 0.8, 0.77, 0.74, 0.71, 0.69, 0.66, 0.64, 0.66, 0.65, 0.63, 0.6, 0.6, 0.6, 0.64, 0.77, 0.82, 0.81, 0.79, 0.79, 0.77, 0.75, 0.74, 0.85, 0.93, 0.92, 0.92, 0.9, 0.88, 0.87, 0.87, 0.89, 0.92, 0.9, 0.89, 0.86, 0.83, 0.8, 0.75, 0.82, 0.85, 0.88, 0.88, 0.87, 0.87, 0.86, 0.85, 0.84, 0.83, 0.81, 0.8, 0.79, 0.76, 0.73, 0.71, 0.86, 0.9, 0.92, 0.92, 0.91, 0.9, 0.88, 0.87, 0.86, 0.84, 0.83, 0.82, 0.82, 0.82, 0.81, 0.8, 0.8, 0.8, 0.79, 0.78, 0.77, 0.75, 0.73, 0.72, 0.83, 0.81, 0.77, 0.74, 0.72, 0.69, 0.67, 0.65, 0.8, 0.8, 0.78, 0.77, 0.75, 0.72, 0.69, 0.66, 0.82, 0.84, 0.83, 0.82, 0.81, 0.8, 0.78, 0.77, 0.82, 0.88, 0.87, 0.85, 0.83, 0.82, 0.79, 0.77, 0.75, 0.73, 0.7, 0.68, 0.65, 0.62, 0.63, 0.68, 0.8, 0.8, 0.8, 0.8, 0.8, 0.78, 0.76, 0.72, 0.69, 0.66, 0.63, 0.61, 0.59, 0.57, 0.56, 0.54, 0.53, 0.56, 0.55, 0.54, 0.53, 0.52, 0.51, 0.65, 0.68, 0.67, 0.68, 0.66, 0.64, 0.65, 0.64, 0.7, 0.75, 0.74, 0.73, 0.71, 0.7, 0.69, 0.67, 0.66, 0.66, 0.66, 0.65, 0.65, 0.64, 0.63, 0.63, 0.67, 0.68, 0.67, 0.65, 0.64, 0.63, 0.62, 0.66, 0.76, 0.76, 0.74, 0.71, 0.79, 0.76, 0.73, 0.76, 0.78, 0.76, 0.75, 0.73, 0.71, 0.7, 0.69, 0.66, 0.64, 0.62, 0.61, 0.59, 0.57, 0.56, 0.54, 0.53, 0.52, 0.5, 0.49, 0.48, 0.47, 0.46, 0.44, 0.43, 0.43, 0.43, 0.45, 0.44, 0.45, 0.44, 0.44, 0.53, 0.57, 0.57, 0.54, 0.53, 0.5, 0.49, 0.46, 0.45, 0.43, 0.42, 0.41, 0.41, 0.44, 0.43, 0.44, 0.44, 0.43, 0.43, 0.43, 0.42, 0.41, 0.39, 0.37, 0.36, 0.35, 0.34, 0.34, 0.33, 0.32, 0.3, 0.29, 0.27, 0.26, 0.25, 0.26, 0.26, 0.27, 0.27, 0.27, 0.25, 0.23, 0.23, 0.22, 0.2, 0.19, 0.17, 0.16, 0.14, 0.14, 0.21, 0.22, 0.21, 0.21, 0.2, 0.19, 0.25, 0.29, 0.36, 0.36, 0.4, 0.4, 0.39, 0.39, 0.45, 0.45, 0.45, 0.44, 0.42, 0.39, 0.36, 0.34, 0.32, 0.33, 0.33, 0.32, 0.31, 0.34, 0.33, 0.32, 0.47, 0.47, 0.47, 0.46, 0.46, 0.44, 0.42, 0.4, 0.39, 0.37, 0.35, 0.34, 0.32, 0.31, 0.29, 0.31, 0.3, 0.29, 0.27, 0.26, 0.24, 0.23, 0.21, 0.22, 0.21, 0.2, 0.18, 0.17, 0.15, 0.14, 0.29, 0.3, 0.29, 0.28, 0.26, 0.25, 0.24, 0.25, 0.28, 0.28, 0.27, 0.26, 0.25, 0.24, 0.23, 0.31, 0.45, 0.48, 0.48, 0.45, 0.41, 0.38, 0.35, 0.33, 0.31, 0.29, 0.28, 0.28, 0.28, 0.28, 0.37, 0.55, 0.58, 0.58, 0.58, 0.56, 0.55, 0.55, 0.56, 0.55, 0.56, 0.56, 0.55, 0.55, 0.53, 0.5, 0.49, 0.59, 0.59, 0.59, 0.58, 0.56, 0.55, 0.54, 0.53, 0.52, 0.51, 0.5, 0.49, 0.48, 0.48, 0.5, 0.55, 0.55, 0.54, 0.53, 0.52, 0.51, 0.51, 0.56, 0.56, 0.56, 0.56, 0.55, 0.52, 0.51, 0.49, 0.51, 0.54, 0.53, 0.53, 0.52, 0.51, 0.48, 0.45, 0.43, 0.4, 0.38, 0.37, 0.37, 0.36, 0.38, 0.39, 0.43, 0.46, 0.46, 0.46, 0.45, 0.45, 0.44, 0.45, 0.53, 0.57, 0.58, 0.56, 0.54, 0.53, 0.51, 0.51, 0.51, 0.57, 0.56, 0.58, 0.57, 0.56, 0.56, 0.55, 0.54, 0.53, 0.53, 0.52, 0.51, 0.5, 0.5, 0.5, 0.51, 0.51, 0.5, 0.5, 0.48, 0.46, 0.51, 0.5, 0.5, 0.48, 0.48, 0.5, 0.5, 0.49, 0.5, 0.5, 0.62, 0.64, 0.66, 0.65, 0.65, 0.65, 0.66, 0.65, 0.64, 0.63, 0.62, 0.6, 0.57, 0.56, 0.54, 0.58, 0.61, 0.61, 0.62, 0.61, 0.61, 0.6, 0.68, 0.7, 0.7, 0.69, 0.68, 0.67, 0.64, 0.61, 0.58, 0.67, 0.72, 0.73, 0.71, 0.69, 0.67, 0.65, 0.63, 0.6, 0.59, 0.56, 0.55, 0.54, 0.53, 0.52, 0.55, 0.59, 0.64, 0.64, 0.62, 0.61, 0.59, 0.57, 0.57, 0.57, 0.57, 0.57, 0.56, 0.56, 0.56, 0.56, 0.54, 0.54, 0.64, 0.68, 0.68, 0.67, 0.66, 0.64, 0.62, 0.61, 0.6, 0.59, 0.57, 0.56, 0.55, 0.54, 0.53, 0.52, 0.51, 0.49, 0.49, 0.49, 0.55, 0.56, 0.57, 0.58, 0.57, 0.56, 0.55, 0.55, 0.58, 0.62, 0.61, 0.6, 0.6, 0.61, 0.6, 0.57, 0.54, 0.51, 0.48, 0.46, 0.46, 0.45, 0.56, 0.58, 0.6, 0.6, 0.59, 0.57, 0.55, 0.54, 0.52, 0.51, 0.5, 0.49, 0.48, 0.46, 0.46, 0.44, 0.43, 0.43, 0.42, 0.41, 0.4, 0.4, 0.39, 0.39, 0.39, 0.38, 0.38, 0.4, 0.39, 0.38, 0.38, 0.38, 0.38, 0.39, 0.39, 0.39, 0.41, 0.4, 0.4, 0.39, 0.38, 0.37, 0.37, 0.36, 0.36, 0.35, 0.35, 0.34, 0.34, 0.33, 0.33, 0.33, 0.32, 0.32, 0.32, 0.34, 0.34, 0.34, 0.34, 0.33, 0.33, 0.32, 0.32, 0.31, 0.3, 0.29, 0.28, 0.28, 0.27, 0.26, 0.26, 0.26, 0.27, 0.28, 0.28, 0.27, 0.27, 0.26, 0.25, 0.25, 0.24, 0.24, 0.23, 0.23, 0.22, 0.22, 0.21, 0.2, 0.2, 0.19, 0.18, 0.18, 0.17, 0.16, 0.15, 0.14, 0.13, 0.12, 0.1, 0.1, 0.09, 0.08, 0.07, 0.07, 0.06, 0.05, 0.05, 0.04, 0.04, 0.04, 0.03, 0.03, 0.03, 0.03, 0.02, 0.02, 0.02, 0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}};
+/* 《晚霞》片尾主題曲 MV（底子照《餘燼》site/mv.js，動效另做）。資料由 site/build_mv.py 注入：
+   MV.theme = { dur, audio, shots:[{t0,t1,cg,img,move,blank,tone,rain}], lines:[{t,en,zh,sec,key,w:[[字,秒]],z:[[段,秒]]}], env:[0..1 每 50 毫秒] }
+   網址參數：embed=1（嵌進遊戲：不顯示署名與返回連結、右下「繼續」）、rec=1（錄影用：不顯示任何按鈕與進度線）。
+   播完或按「繼續」送 {type:'larch:mv:done'} 給父層；載入時送 {type:'larch:mv:ready'}。
+   錄影時由外部注入 window.__makeAudio（照虛擬時間走的假音軌），頁面其餘邏輯不變。 */
 const Q = new URLSearchParams(location.search);
 const KEY = 'theme';
 const SONG = MV[KEY];
 const EMBED = Q.get('embed') === '1';
+const REC = Q.get('rec') === '1';
 const reduced = matchMedia('(prefers-reduced-motion:reduce)').matches;
 const lowEnd = matchMedia('(pointer:coarse)').matches || (navigator.hardwareConcurrency || 4) <= 4;
 const $ = id => document.getElementById(id);
+const root = document.documentElement;
 if (EMBED) document.body.classList.add('embed');
-$('stitle').textContent = SONG.title;
+if (REC) document.body.classList.add('rec');
 const tell = type => { if (window.parent !== window) try { parent.postMessage({ type, song: KEY }, '*'); } catch (_) {} };
 tell('larch:mv:ready');
 
-const au = new Audio(); au.preload = 'auto'; au.src = SONG.audio;
+const au = window.__makeAudio ? window.__makeAudio(SONG) : new Audio();
+if (!window.__makeAudio) { au.preload = 'auto'; au.src = SONG.audio; }
 SONG.shots.forEach(s => { const im = new Image(); im.src = s.img; });
-const lines = SONG.lines;   // [{t, en, zh}]，建置時就注入，不另外抓檔
+const lines = SONG.lines, ENV = SONG.env, LAST = lines[lines.length - 1];
 
-/* ── 畫面：一鏡一張，交叉淡化，推鏡方向照分鏡表 ── */
+/* ── 畫面：一鏡一張，交叉淡化，推鏡方向照分鏡表；回憶偏暖、頭七偏冷 ── */
 const MOVES = {
   in: ['scale(1.02)', 'scale(1.13)'], out: ['scale(1.13)', 'scale(1.02)'],
   left: ['translateX(2.5%) scale(1.09)', 'translateX(-2.5%) scale(1.09)'], right: ['translateX(-2.5%) scale(1.09)', 'translateX(2.5%) scale(1.09)'],
@@ -100,58 +149,90 @@ function showShot(i) {
   const s = SONG.shots[i], nxt = front === 'fA' ? 'fB' : 'fA', n = $(nxt), f = $(front);
   n.style.backgroundImage = `url("${s.img}")`;
   n.getAnimations().forEach(a => a.cancel());
-  if (!reduced) n.animate([{ transform: MOVES[s.move][0] }, { transform: MOVES[s.move][1] }], { duration: (s.t1 - s.t0 + 2) * 1000, easing: 'linear', fill: 'forwards' });
+  if (!reduced) n.animate([{ transform: MOVES[s.move][0] }, { transform: MOVES[s.move][1] }], { duration: (s.t1 - s.t0 + 3) * 1000, easing: 'linear', fill: 'forwards' });
   else n.style.transform = 'scale(1.04)';
   n.classList.add('on'); f.classList.remove('on'); front = nxt;
-  document.body.dataset.shot = s.cg;
+  document.body.dataset.shot = s.cg; document.body.dataset.tone = s.tone;
 }
-/* ── 歌詞：一次一句，兩層交替淡入；留白那一鏡不上字 ── */
-let lyr = -2, lfront = 'lA';
-function showLine(ln) {
+
+/* ── 歌詞：一次一句。英文照唱到的字一個一個浮出來，中文跟著分段出現 ── */
+let lyr = -2, lfront = 'lA', curWords = [];
+function span(cls, text, t) { const e = document.createElement('span'); e.className = cls; e.textContent = text; e._t = t; return e; }
+function showLine(k) {
   const nxt = lfront === 'lA' ? 'lB' : 'lA';
-  $(lfront).classList.remove('on');
-  if (ln) {
-    const p = $(nxt); p.textContent = '';
-    const e = document.createElement('span'); e.className = 'en'; e.lang = 'en'; e.textContent = ln.en;
-    const z = document.createElement('span'); z.className = 'zh'; z.textContent = ln.zh;
-    p.append(e, z); p.classList.add('on'); lfront = nxt;
-  }
+  $(lfront).classList.remove('on'); curWords = [];
+  if (k < 0) return;
+  const ln = lines[k], p = $(nxt); p.textContent = ''; p.className = (ln.key ? 'key ' : '') + ln.sec;
+  const e = document.createElement('span'); e.className = 'en'; e.lang = 'en';
+  ln.w.forEach((w, i) => { const s = span('w', w[0], w[1]); e.append(s); if (i < ln.w.length - 1) e.append(' '); curWords.push(s); });
+  const z = document.createElement('span'); z.className = 'zh';
+  ln.z.forEach(g => { const s = span('z', g[0], g[1]); z.append(s); curWords.push(s); });
+  p.append(e, z); p.classList.add('on'); lfront = nxt;
 }
-function frame() {
+let pour = 0, amp = 0;
+function frame(dt) {
   const t = au.currentTime;
   let i = 0; while (i + 1 < SONG.shots.length && SONG.shots[i + 1].t0 <= t) i++;
   showShot(i);
   let k = -1; while (k + 1 < lines.length && lines[k + 1].t <= t) k++;
-  const blank = SONG.shots[i].blank;
-  const key = blank ? -1 : k;
-  if (key !== lyr) { lyr = key; showLine(key >= 0 ? lines[key] : null); }
-  $('prog').style.width = (Math.min(1, t / SONG.dur) * 100).toFixed(2) + '%';
+  if (k === lines.length - 1 && t > SONG.fade) k = -1;          // 最後一句唱完，字跟著畫面一起暗下去
+  const key = SONG.shots[i].blank ? -1 : k;
+  if (key !== lyr) { lyr = key; showLine(key); }
+  for (const s of curWords) if (!s._on && t >= s._t) { s._on = true; s.classList.add('lit'); }
   document.body.dataset.line = key;
-  if (SONG.dur - t < 3 && !au.paused) $('black').classList.add('on');
+  document.body.classList.toggle('intro-on', t > 1.4 && t < SONG.shots[1].t0 - 2.2);
+  /* 副歌：畫面底部像倒酒，紅、金、粉紅一層一層疊上來；副歌結束慢慢退掉 */
+  const chorus = key >= 0 && lines[key].sec === 'chorus';
+  const target = chorus ? Math.min(1, (t - lines[key - lines[key].nth].t) / 7 + .12) : 0;
+  pour += (target - pour) * Math.min(1, dt * (target > pour ? 1.6 : .7));
+  root.style.setProperty('--pour', pour.toFixed(3));
+  const e = ENV[Math.min(ENV.length - 1, Math.max(0, Math.floor(t * SONG.hz)))] || 0;
+  amp += (e - amp) * Math.min(1, dt * 6);
+  root.style.setProperty('--amp', amp.toFixed(3));
+  $('prog').style.width = (Math.min(1, t / SONG.dur) * 100).toFixed(2) + '%';
+  if (t >= SONG.fade && !au.paused) { $('black').classList.add('on'); document.body.classList.add('end-on'); }
 }
 
-/* ── 氣泡：像氣泡酒，數量少、慢慢往上飄 ── */
+/* ── 顆粒：一張雜訊圖鋪滿，位置跳動 ── */
+{ const c = document.createElement('canvas'); c.width = c.height = 160; const x = c.getContext('2d'), d = x.createImageData(160, 160);
+  for (let i = 0; i < d.data.length; i += 4) { const v = 90 + Math.random() * 165; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; }
+  x.putImageData(d, 0, 0); $('grain').style.backgroundImage = `url(${c.toDataURL()})`; }
+
+/* ── 雨絲與氣泡：雨夜那幾鏡下雨，其他時候是氣泡酒的氣泡，跟著音量多一點、亮一點 ── */
 const fx = $('fx'), g = fx.getContext('2d');
 let W = 0, H = 0;
 function resize() { const d = Math.min(devicePixelRatio || 1, 1.5); W = innerWidth; H = innerHeight; fx.width = Math.round(W * d); fx.height = Math.round(H * d); g.setTransform(d, 0, 0, d, 0, 0); }
 addEventListener('resize', resize); resize();
 const spr = document.createElement('canvas'); spr.width = spr.height = 32;
-{ const c = spr.getContext('2d'), gr = c.createRadialGradient(16, 16, 0, 16, 16, 16); gr.addColorStop(0, 'rgba(255,244,222,.9)'); gr.addColorStop(.35, 'rgba(242,196,109,.45)'); gr.addColorStop(1, 'rgba(234,169,182,0)'); c.fillStyle = gr; c.fillRect(0, 0, 32, 32); }
-const bits = [], MAX = lowEnd ? 10 : 22;
-let prev = performance.now();
+{ const c = spr.getContext('2d'), gr = c.createRadialGradient(16, 16, 0, 16, 16, 16); gr.addColorStop(0, 'rgba(255,244,222,.95)'); gr.addColorStop(.35, 'rgba(242,196,109,.45)'); gr.addColorStop(1, 'rgba(234,169,182,0)'); c.fillStyle = gr; c.fillRect(0, 0, 32, 32); }
+const bits = [], drops = [], MAXB = lowEnd ? 14 : 34, MAXD = lowEnd ? 40 : 110;
+let prev = performance.now(), rainLv = 0;
 function tick(now) {
   const dt = Math.min((now - prev) / 1000, .05); prev = now;
-  if (!au.paused) frame();
+  if (!au.paused) frame(dt);
   if (!reduced) {
     g.clearRect(0, 0, W, H);
-    const sp = au.paused ? .3 : 1;
-    if (bits.length < MAX && Math.random() < dt * 2.2 * sp) bits.push({ x: Math.random() * W, y: H + 10, vy: -(18 + Math.random() * 30), s: 2 + Math.random() * 4, ph: Math.random() * 6.3, life: 9 + Math.random() * 5, age: 0 });
+    const sp = au.paused ? .3 : 1, s0 = SONG.shots[Math.max(0, shot)];
+    rainLv += ((s0 && s0.rain ? 1 : 0) - rainLv) * Math.min(1, dt * .8);
+    /* 雨 */
+    if (rainLv > .02) {
+      while (drops.length < MAXD * rainLv) drops.push({ x: Math.random() * (W + 200) - 100, y: Math.random() * H, l: 14 + Math.random() * 26, v: 900 + Math.random() * 700, a: .05 + Math.random() * .13 });
+      g.lineWidth = 1; g.lineCap = 'round';
+      for (let i = drops.length - 1; i >= 0; i--) {
+        const d = drops[i]; d.y += d.v * dt * sp; d.x -= d.v * .16 * dt * sp;
+        if (d.y > H + 30) { if (drops.length > MAXD * rainLv) { drops.splice(i, 1); continue; } d.y = -30; d.x = Math.random() * (W + 200) - 60; }
+        g.strokeStyle = `rgba(200,215,240,${(d.a * rainLv).toFixed(3)})`; g.beginPath(); g.moveTo(d.x, d.y); g.lineTo(d.x + d.l * .16, d.y - d.l); g.stroke();
+      }
+    } else drops.length = 0;
+    /* 氣泡 */
+    const lv = (1 - rainLv) * (.45 + amp * 1.1);
+    if (bits.length < MAXB && Math.random() < dt * 3.4 * sp * lv) bits.push({ x: Math.random() * W, y: H + 10, vy: -(22 + Math.random() * 38), s: 1.6 + Math.random() * 4.2, ph: Math.random() * 6.3, life: 8 + Math.random() * 6, age: 0 });
     g.globalCompositeOperation = 'lighter';
     for (let i = bits.length - 1; i >= 0; i--) {
       const p = bits[i]; p.age += dt * sp; p.ph += dt * sp;
       if (p.age > p.life || p.y < -20) { bits.splice(i, 1); continue; }
-      p.y += p.vy * dt * sp; p.x += Math.sin(p.ph) * 10 * dt * sp;
-      g.globalAlpha = .38 * Math.min(1, p.age / .8) * Math.min(1, (p.life - p.age) / 1.5);
+      p.y += p.vy * dt * sp; p.x += Math.sin(p.ph) * 9 * dt * sp;
+      g.globalAlpha = (.3 + amp * .35) * Math.min(1, p.age / .8) * Math.min(1, (p.life - p.age) / 1.5) * (1 - rainLv * .8);
       const s = p.s * 2.4; g.drawImage(spr, p.x - s / 2, p.y - s / 2, s, s);
     }
     g.globalAlpha = 1; g.globalCompositeOperation = 'source-over';
@@ -163,13 +244,13 @@ showShot(0);
 
 /* ── 播放、繼續、結束 ── */
 let done = false;
-function finish() { if (done) return; done = true; tell('larch:mv:done'); if (!EMBED) $('again').hidden = false; }
+function finish() { if (done) return; done = true; tell('larch:mv:done'); if (!EMBED && !REC) $('again').hidden = false; }
 $('go').onclick = () => {
   au.play().then(() => { $('start').classList.add('gone'); if (EMBED) $('next').hidden = false; }).catch(() => { $('sub').textContent = '音樂載入不了，請再按一次'; });
 };
 $('next').onclick = () => { au.pause(); finish(); };
-$('again').onclick = () => { done = false; $('again').hidden = true; $('black').classList.remove('on'); au.currentTime = 0; shot = -1; lyr = -2; au.play(); };
-au.onended = () => { $('black').classList.add('on'); finish(); };
+$('again').onclick = () => { done = false; $('again').hidden = true; $('black').classList.remove('on'); document.body.classList.remove('end-on'); au.currentTime = 0; shot = -1; lyr = -2; pour = 0; au.play(); };
+au.onended = () => { $('black').classList.add('on'); document.body.classList.add('end-on'); finish(); };
 addEventListener('keydown', e => {
   if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); if ($('start').classList.contains('gone')) { au.paused ? au.play() : au.pause(); } else $('go').click(); }
   else if (['Backspace', 'BrowserBack'].includes(e.key) || (e.altKey && e.key.startsWith('Arrow'))) e.preventDefault();   // 按鍵不能把畫面帶離這頁
