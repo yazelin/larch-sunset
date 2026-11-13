@@ -687,7 +687,7 @@
    },
    "data": {
     "type": "dialogue",
-    "title": "頭七深夜・同一間店",
+    "title": "頭七深夜・巷子裡的店",
     "speaker": "旁白",
     "text": "慶安宮後面這條巷子，過了十二點就沒有人走。",
     "dialogueLines": [
@@ -731,17 +731,17 @@
      {
       "id": "return-l7",
       "speaker": "旁白",
-      "text": "他把一個信封放在燈下。信封上有兩行他的字：阿姨收，下面是貨運行的電話。鑰匙從鑰匙圈上拆下來，放進去。"
+      "text": "他把一個信封放在燈下，上面寫著阿姨收。"
      },
      {
       "id": "return-l8",
-      "speaker": "沈淮",
-      "text": "房東明天上午來點交。鑰匙留給妳媽。"
+      "speaker": "旁白",
+      "text": "鑰匙從鑰匙圈上拆下來，放進去。"
      },
      {
       "id": "return-l9",
       "speaker": "沈淮",
-      "text": "酒商那邊結清了。老闆問我下個月還叫不叫貨，我說不知道。"
+      "text": "房東明天上午來點交。鑰匙留給妳媽。"
      },
      {
       "id": "return-l10",
@@ -822,30 +822,35 @@
      {
       "id": "return_2-l5",
       "speaker": "沈淮",
-      "text": "樓上我那兩箱，貼好我爸媽家的地址了。她還問我明天要搬去哪。"
+      "text": "樓上我那兩箱，貼好我爸媽家的地址了。貨運的電話寫在信封背面。"
      },
      {
       "id": "return_2-l6",
       "speaker": "沈淮",
-      "text": "明天以後，我還沒想。"
+      "text": "她還問我明天要搬去哪。"
      },
      {
       "id": "return_2-l7",
-      "speaker": "旁白",
-      "text": "他繞進吧檯，拉開收銀機下面的小抽屜。掌心大的筆記本還在。"
+      "speaker": "沈淮",
+      "text": "明天以後，我還沒想。"
      },
      {
       "id": "return_2-l8",
+      "speaker": "旁白",
+      "text": "他從外套口袋拿出一本掌心大的筆記本。收她床頭的時候找到的，壓在枕頭下面。"
+     },
+     {
+      "id": "return_2-l9",
       "speaker": "沈淮",
       "text": "每次問妳在寫什麼，妳都叫我去洗杯子。"
      },
      {
-      "id": "return_2-l9",
+      "id": "return_2-l10",
       "speaker": "旁白",
-      "text": "他拿著筆記本坐回椅子上。雨打在玻璃上，一陣比一陣大。"
+      "text": "他把筆記本放在吧檯上。雨打在玻璃上，一陣比一陣大。"
      },
      {
-      "id": "return_2-l10",
+      "id": "return_2-l11",
       "speaker": "沈淮",
       "text": "第一次來，我連傘都沒帶。"
      }
@@ -1247,7 +1252,7 @@
      {
       "id": "weeks_1-l8",
       "speaker": "阿忠",
-      "text": "喝啊。我又沒要走。"
+      "text": "喝啊。我又沒要走。我機車行就在巷口，鐵門拉下來走三步。"
      },
      {
       "id": "weeks_1-l9",
@@ -1435,7 +1440,7 @@
      {
       "id": "weeks_2-l10",
       "speaker": "沈淮",
-      "text": "所以去年店才沒開。"
+      "text": "所以去年店才沒開。傘我早就還了，妳都沒講。"
      },
      {
       "id": "weeks_2-l11",
@@ -1475,7 +1480,7 @@
      {
       "id": "weeks_2-l18",
       "speaker": "沈淮",
-      "text": "我剛剛還一直叫妳喝酒。"
+      "text": "我剛剛還叫妳陪我喝。"
      },
      {
       "id": "weeks_2-l19",
@@ -1638,35 +1643,45 @@
      {
       "id": "clinic_1-l26",
       "speaker": "安雅",
-      "text": "媽，今天這個，先不要跟沈淮說。"
+      "text": "媽，今天這個，先不要跟別人說。"
      },
      {
       "id": "clinic_1-l27",
       "speaker": "安雅的母親",
-      "text": "下次叫他陪妳來。"
+      "text": "那個每天來坐到兩點的呢？"
      },
      {
       "id": "clinic_1-l28",
       "speaker": "安雅",
-      "text": "妳先陪我，好不好？"
+      "text": "……他也不要。"
      },
      {
       "id": "clinic_1-l29",
-      "speaker": "旁白",
-      "text": "母親握住她的手腕，沒有答應，也沒有放。安雅用另一隻手拿出手機。"
+      "speaker": "安雅的母親",
+      "text": "那下次誰陪妳來？"
      },
      {
       "id": "clinic_1-l30",
       "speaker": "安雅",
-      "text": "喂，沈淮？今天公休，你要不要來幫我搬酒？"
+      "text": "妳陪我，好不好？"
      },
      {
       "id": "clinic_1-l31",
       "speaker": "旁白",
-      "text": "母親把單子摺起來，收進提袋裡。"
+      "text": "母親握住她的手腕，沒有答應，也沒有放。安雅用另一隻手拿出手機。"
      },
      {
       "id": "clinic_1-l32",
+      "speaker": "安雅",
+      "text": "喂，沈淮？今天公休，你要不要來幫我搬酒？"
+     },
+     {
+      "id": "clinic_1-l33",
+      "speaker": "旁白",
+      "text": "母親把單子摺起來，收進提袋裡。"
+     },
+     {
+      "id": "clinic_1-l34",
       "speaker": "安雅",
       "text": "那六點。晚餐等你來再吃。"
      }
@@ -1692,102 +1707,107 @@
     "type": "dialogue",
     "title": "第一年夏末・週六午後・開店前的吧檯",
     "speaker": "旁白",
-    "text": "上禮拜他學攪拌，冰塊撞得整間店都聽得到。這禮拜換分層。",
+    "text": "小葵在巷口的補習班顧櫃檯，這個月第三次在開店前就坐進來。",
     "dialogueLines": [
      {
       "id": "lesson_1-l0",
       "speaker": "旁白",
-      "text": "上禮拜他學攪拌，冰塊撞得整間店都聽得到。這禮拜換分層。",
+      "text": "小葵在巷口的補習班顧櫃檯，這個月第三次在開店前就坐進來。",
       "background": "/files/assets/art/lab/title-6145bd77d7.webp"
      },
      {
       "id": "lesson_1-l1",
       "speaker": "旁白",
-      "text": "他倒得太快。金色和紅色混在一起，變成一杯橘的。",
+      "text": "上禮拜他學攪拌，冰塊撞得整間店都聽得到。這禮拜換分層。",
       "background": "/files/assets/art/cg/lesson_hands.webp"
      },
      {
       "id": "lesson_1-l2",
+      "speaker": "旁白",
+      "text": "他倒得太快。金色和紅色混在一起，變成一杯橘的。"
+     },
+     {
+      "id": "lesson_1-l3",
       "speaker": "小葵",
       "text": "兩層變一層了。六十分。"
      },
      {
-      "id": "lesson_1-l3",
+      "id": "lesson_1-l4",
       "speaker": "沈淮",
       "text": "我有眼睛。"
      },
      {
-      "id": "lesson_1-l4",
+      "id": "lesson_1-l5",
       "speaker": "安雅",
       "text": "好啦，手給我。"
      },
      {
-      "id": "lesson_1-l5",
+      "id": "lesson_1-l6",
       "speaker": "旁白",
       "text": "她的手蓋住他握瓶子的手。"
      },
      {
-      "id": "lesson_1-l6",
+      "id": "lesson_1-l7",
       "speaker": "安雅",
       "text": "酒面上來，吧匙跟著提。小力一點。"
      },
      {
-      "id": "lesson_1-l7",
+      "id": "lesson_1-l8",
       "speaker": "旁白",
       "text": "金色慢慢疊在紅色上面。"
      },
      {
-      "id": "lesson_1-l8",
+      "id": "lesson_1-l9",
       "speaker": "小葵",
       "text": "七十。可以喝了嗎？"
      },
      {
-      "id": "lesson_1-l9",
+      "id": "lesson_1-l10",
       "speaker": "安雅",
       "text": "等一下。糖漿是新煮的，我還沒試。"
      },
      {
-      "id": "lesson_1-l10",
+      "id": "lesson_1-l11",
       "speaker": "旁白",
       "text": "她沾了一點，含著。又沾了一次，含得更久。"
      },
      {
-      "id": "lesson_1-l11",
+      "id": "lesson_1-l12",
       "speaker": "小葵",
       "text": "安雅姊？"
      },
      {
-      "id": "lesson_1-l12",
+      "id": "lesson_1-l13",
       "speaker": "安雅",
       "text": "沈淮，你喝。"
      },
      {
-      "id": "lesson_1-l13",
+      "id": "lesson_1-l14",
       "speaker": "沈淮",
       "text": "妳不是都自己試？"
      },
      {
-      "id": "lesson_1-l14",
+      "id": "lesson_1-l15",
       "speaker": "安雅",
       "text": "今天換你。喝了跟我講。"
      },
      {
-      "id": "lesson_1-l15",
+      "id": "lesson_1-l16",
       "speaker": "沈淮",
       "text": "甜的。洛神有出來，後面有一點酸。"
      },
      {
-      "id": "lesson_1-l16",
+      "id": "lesson_1-l17",
       "speaker": "旁白",
       "text": "她點了頭，翻開一本掌心大的本子，寫了兩行。"
      },
      {
-      "id": "lesson_1-l17",
+      "id": "lesson_1-l18",
       "speaker": "沈淮",
       "text": "妳寫什麼？"
      },
      {
-      "id": "lesson_1-l18",
+      "id": "lesson_1-l19",
       "speaker": "安雅",
       "text": "寫你攪得好吵。去洗杯子。"
      }
@@ -1879,7 +1899,7 @@
      {
       "id": "confess_1-l12",
       "speaker": "旁白",
-      "text": "她不笑了。她看著他，抹布擰到滴水。"
+      "text": "她不笑了。她看著他，兩隻手在圍裙上擦。"
      },
      {
       "id": "confess_1-l13",
@@ -2066,7 +2086,7 @@
      {
       "id": "quit_2-l2",
       "speaker": "沈淮",
-      "text": "我畫六年，沒有人跟我說過再一張。"
+      "text": "我畫圖畫六年，業主只會說再改。"
      },
      {
       "id": "quit_2-l3",
@@ -2179,7 +2199,7 @@
      {
       "id": "quit_3-l2",
       "speaker": "旁白",
-      "text": "他捲起袖子，洗昨晚留在水槽裡的杯子。她昨天一只都沒洗。"
+      "text": "他捲起袖子，洗昨晚留在水槽裡的杯子。"
      },
      {
       "id": "quit_3-l3",
@@ -2364,77 +2384,57 @@
      },
      {
       "id": "open_1-l6",
-      "speaker": "阿忠",
-      "text": "阿淮，以前當客人多好命，現在站到腳痠了齁。"
+      "speaker": "安雅",
+      "text": "小葵，妳先把手機放下，酒都放多久了。"
      },
      {
       "id": "open_1-l7",
-      "speaker": "沈淮",
-      "text": "以前坐外面我也在洗杯子，差在哪。"
-     },
-     {
-      "id": "open_1-l8",
-      "speaker": "安雅",
-      "text": "差在現在不用付酒錢。"
-     },
-     {
-      "id": "open_1-l9",
-      "speaker": "小葵",
-      "text": "欸，那我也要洗。"
-     },
-     {
-      "id": "open_1-l10",
-      "speaker": "安雅",
-      "text": "妳先把手機放下，酒都放多久了。"
-     },
-     {
-      "id": "open_1-l11",
       "speaker": "旁白",
       "text": "小葵拍完才喝，皺了一下鼻子。"
      },
      {
-      "id": "open_1-l12",
+      "id": "open_1-l8",
       "speaker": "小葵",
-      "text": "八十五分。太甜扣五分。安雅姊，妳自己喝有那麼甜嗎？"
+      "text": "八十五分。太甜，扣十五。安雅姊，妳自己喝有那麼甜嗎？"
      },
      {
-      "id": "open_1-l13",
+      "id": "open_1-l9",
       "speaker": "安雅",
       "text": "沈淮，你講。"
      },
      {
-      "id": "open_1-l14",
+      "id": "open_1-l10",
       "speaker": "沈淮",
-      "text": "前面甜，後面有酸。扣三分就好。"
+      "text": "前面甜，後面有酸。扣十分就好。"
      },
      {
-      "id": "open_1-l15",
+      "id": "open_1-l11",
       "speaker": "小葵",
-      "text": "你又不是我。我們主任今天又叫我假日去發傳單，我心情不好，扣五分。"
+      "text": "你又不是我。主任叫我禮拜天去發傳單，我心情不好，扣十五。"
      },
      {
-      "id": "open_1-l16",
+      "id": "open_1-l12",
       "speaker": "旁白",
       "text": "過了十二點，沒有人要走。吧檯後面只站得下一個半人，安雅要拿杯子，得從沈淮背後擠過去。",
       "background": "/files/assets/art/cg/open_laugh.webp"
      },
      {
-      "id": "open_1-l17",
+      "id": "open_1-l13",
       "speaker": "安雅",
       "text": "借過，站進去一點。"
      },
      {
-      "id": "open_1-l18",
+      "id": "open_1-l14",
       "speaker": "沈淮",
       "text": "再進去我就進水槽了。"
      },
      {
-      "id": "open_1-l19",
+      "id": "open_1-l15",
       "speaker": "旁白",
       "text": "她撞了他肩膀一下，動作沒停。一杯〈破曉〉疊好了，推到他面前。"
      },
      {
-      "id": "open_1-l20",
+      "id": "open_1-l16",
       "speaker": "安雅",
       "text": "這杯你的。喝完再收。"
      }
@@ -2941,7 +2941,7 @@
      {
       "id": "almost_2-l2",
       "speaker": "旁白",
-      "text": "他把藥名一個字一個字打進手機裡查。止痛的。消炎的。保護胃的。"
+      "text": "他把藥名一個字一個字打進手機裡查。止痛的。消炎的。顧胃的。"
      },
      {
       "id": "almost_2-l3",
@@ -3335,26 +3335,21 @@
      },
      {
       "id": "winter_1-l15",
-      "speaker": "旁白",
-      "text": "他記得那天的晚餐。"
-     },
-     {
-      "id": "winter_1-l16",
       "speaker": "沈淮",
       "text": "那時候有沒有得治？"
      },
      {
-      "id": "winter_1-l17",
+      "id": "winter_1-l16",
       "speaker": "安雅",
       "text": "有。我說不要。"
      },
      {
-      "id": "winter_1-l18",
+      "id": "winter_1-l17",
       "speaker": "沈淮",
       "text": "……妳說不要。"
      },
      {
-      "id": "winter_1-l19",
+      "id": "winter_1-l18",
       "speaker": "安雅",
       "text": "你小聲一點。我聽得到。"
      }
@@ -3401,146 +3396,151 @@
      {
       "id": "winter_2-l3",
       "speaker": "沈淮",
-      "text": "那我要算什麼？妳按耳朵下面，我問，妳說發炎。回診單掉出來，我問，妳說補看一項。"
+      "text": "那我要算什麼？回診單我問過。耳朵下面我也問過。妳都說發炎，我就信了。"
      },
      {
       "id": "winter_2-l4",
-      "speaker": "沈淮",
-      "text": "那包藥我一個字一個字查過。止痛的，消炎的，顧胃的。妳說發炎，我就信了。"
-     },
-     {
-      "id": "winter_2-l5",
       "speaker": "旁白",
       "text": "她去拉他的袖口。他往後退了一步。"
      },
      {
-      "id": "winter_2-l6",
+      "id": "winter_2-l5",
       "speaker": "安雅",
       "text": "講了，你每天早上起來第一句，就是問我今天哪裡痛。"
      },
      {
-      "id": "winter_2-l7",
+      "id": "winter_2-l6",
       "speaker": "安雅",
-      "text": "我想要你問我的是餛飩要不要多一份青菜。"
+      "text": "我只想聽你問，餛飩青菜要不要多一點。"
      },
      {
-      "id": "winter_2-l8",
+      "id": "winter_2-l7",
       "speaker": "沈淮",
       "text": "所以我要辭職那天，妳一直叫我回去上班。"
      },
      {
-      "id": "winter_2-l9",
+      "id": "winter_2-l8",
       "speaker": "旁白",
       "text": "她沒有抬頭。"
      },
      {
-      "id": "winter_2-l10",
+      "id": "winter_2-l9",
       "speaker": "沈淮",
       "text": "是不是？"
      },
      {
-      "id": "winter_2-l11",
+      "id": "winter_2-l10",
       "speaker": "安雅",
       "text": "我不想你以後後悔。"
      },
      {
-      "id": "winter_2-l12",
+      "id": "winter_2-l11",
       "speaker": "沈淮",
       "text": "我後不後悔，妳有問過我嗎？"
      },
      {
-      "id": "winter_2-l13",
+      "id": "winter_2-l12",
       "speaker": "沈淮",
       "text": "要不要治，妳有問過我嗎？"
      },
      {
+      "id": "winter_2-l13",
+      "speaker": "安雅",
+      "text": "那時候你還只是客人。"
+     },
+     {
       "id": "winter_2-l14",
-      "speaker": "旁白",
-      "text": "她張了嘴，又閉上。"
+      "speaker": "沈淮",
+      "text": "那後來呢？"
      },
      {
       "id": "winter_2-l15",
+      "speaker": "旁白",
+      "text": "她沒有接。"
+     },
+     {
+      "id": "winter_2-l16",
       "speaker": "沈淮",
       "text": "還有誰知道？阿忠？小葵？"
      },
      {
-      "id": "winter_2-l16",
+      "id": "winter_2-l17",
       "speaker": "安雅",
       "text": "只有我媽。"
      },
      {
-      "id": "winter_2-l17",
+      "id": "winter_2-l18",
       "speaker": "沈淮",
       "text": "妳媽。"
      },
      {
-      "id": "winter_2-l18",
+      "id": "winter_2-l19",
       "speaker": "沈淮",
       "text": "她每次來，一直往我碗裡夾菜。我還跟她說阿姨夠了。"
      },
      {
-      "id": "winter_2-l19",
+      "id": "winter_2-l20",
       "speaker": "安雅",
       "text": "沈淮……"
      },
      {
-      "id": "winter_2-l20",
+      "id": "winter_2-l21",
       "speaker": "沈淮",
       "text": "妳一個人決定，一個人去聽。那我睡在妳旁邊是幹嘛的？"
      },
      {
-      "id": "winter_2-l21",
+      "id": "winter_2-l22",
       "speaker": "安雅",
       "text": "我也會怕好不好！你一直問、一直問！"
      },
      {
-      "id": "winter_2-l22",
+      "id": "winter_2-l23",
       "speaker": "旁白",
       "text": "她喊完就咳了起來，咳到直不起腰。他往前一步，想拍她的背，最後握著拳頭站在那裡。"
      },
      {
-      "id": "winter_2-l23",
+      "id": "winter_2-l24",
       "speaker": "旁白",
       "text": "咳停了。房間裡只有她喘氣的聲音。"
      },
      {
-      "id": "winter_2-l24",
+      "id": "winter_2-l25",
       "speaker": "沈淮",
       "text": "……還有多久？"
      },
      {
-      "id": "winter_2-l25",
+      "id": "winter_2-l26",
       "speaker": "安雅",
       "text": "醫生沒有講。我也沒有問。"
      },
      {
-      "id": "winter_2-l26",
+      "id": "winter_2-l27",
       "speaker": "安雅",
       "text": "沈淮，你先坐。"
      },
      {
-      "id": "winter_2-l27",
+      "id": "winter_2-l28",
       "speaker": "沈淮",
       "text": "我現在坐不住。",
       "background": "/files/assets/art/cg/winter_door.webp"
      },
      {
-      "id": "winter_2-l28",
+      "id": "winter_2-l29",
       "speaker": "安雅",
       "text": "外套穿著，樓下冷。"
      },
      {
-      "id": "winter_2-l29",
+      "id": "winter_2-l30",
       "speaker": "旁白",
       "text": "外套留在椅背上。門輕輕帶上。"
      },
      {
-      "id": "winter_2-l30",
+      "id": "winter_2-l31",
       "speaker": "旁白",
       "text": "樓下的吧檯沒有開燈。他坐在最靠門的那張椅子上，低著頭。冰箱的聲音停了又響。"
      },
      {
-      "id": "winter_2-l31",
+      "id": "winter_2-l32",
       "speaker": "旁白",
       "text": "天亮了，他還坐在那裡。"
      }
@@ -3690,7 +3690,7 @@
      {
       "id": "last_1-l8",
       "speaker": "小葵",
-      "text": "那我洗杯子有算嗎？我們主任說我接電話都沒這麼認真。"
+      "text": "那我洗杯子有算嗎？我在公司都沒這麼勤勞。"
      },
      {
       "id": "last_1-l9",
@@ -3710,7 +3710,7 @@
      {
       "id": "last_1-l12",
       "speaker": "沈淮",
-      "text": "醫師剛剛才講，不要自己下樓。"
+      "text": "醫生剛剛才講，不要自己下樓。"
      },
      {
       "id": "last_1-l13",
@@ -4185,7 +4185,7 @@
      {
       "id": "farewell_2-l19",
       "speaker": "安雅的母親",
-      "text": "你先不要收她的衣服。……那件外套先放著。"
+      "text": "衣服你先不要收。"
      },
      {
       "id": "farewell_2-l20",
@@ -4331,12 +4331,7 @@
      {
       "id": "notebook_1-l21",
       "speaker": "安雅的筆記",
-      "text": "他今天坐到兩點。問他甜不甜，他只會講甜的甜。可是他講的我信。"
-     },
-     {
-      "id": "notebook_1-l22",
-      "speaker": "旁白",
-      "text": "他的拇指壓在那一行上，壓到紙凹下去。"
+      "text": "他今天坐到兩點。問他甜不甜，他只會講甜的甜。"
      }
     ],
     "stage": {
@@ -4390,116 +4385,111 @@
      },
      {
       "id": "notebook_2-l5",
-      "speaker": "旁白",
-      "text": "他把本子湊近燈。她自己的那一行只有一個「淡」，下一行又是他的名字。"
-     },
-     {
-      "id": "notebook_2-l6",
       "speaker": "安雅的筆記",
       "text": "十月。醫生第三次問。又說店不能關。"
      },
      {
-      "id": "notebook_2-l7",
+      "id": "notebook_2-l6",
       "speaker": "安雅的筆記",
       "text": "晚上這鍋沈淮試的。我沒碰，照樣出了。"
      },
      {
-      "id": "notebook_2-l8",
+      "id": "notebook_2-l7",
       "speaker": "旁白",
       "text": "底下還有一行，字擠在頁邊。"
      },
      {
-      "id": "notebook_2-l9",
+      "id": "notebook_2-l8",
       "speaker": "安雅的筆記",
       "text": "想到上次就不想去。先這樣。"
      },
      {
-      "id": "notebook_2-l10",
+      "id": "notebook_2-l9",
       "speaker": "旁白",
-      "text": "沈淮的拇指壓在頁角，過了一會才翻。"
+      "text": "沈淮過了一會才翻。"
      },
      {
-      "id": "notebook_2-l11",
+      "id": "notebook_2-l10",
       "speaker": "安雅的筆記",
       "text": "十一月。他鼻塞，每一杯都說一樣。今晚不試新的。"
      },
      {
-      "id": "notebook_2-l12",
+      "id": "notebook_2-l11",
       "speaker": "安雅的筆記",
       "text": "氣他。氣一個鼻塞的人。"
      },
      {
-      "id": "notebook_2-l13",
+      "id": "notebook_2-l12",
       "speaker": "安雅的筆記",
       "text": "他吃什麼都說好吃。今天又想拿走他的碗。"
      },
      {
-      "id": "notebook_2-l14",
+      "id": "notebook_2-l13",
       "speaker": "安雅的筆記",
       "text": "三月。他要辭職。跟他說不缺洗杯子的。亂講的。"
      },
      {
-      "id": "notebook_2-l15",
+      "id": "notebook_2-l14",
       "speaker": "安雅的筆記",
       "text": "他不在，這鍋不敢出。"
      },
      {
-      "id": "notebook_2-l16",
-      "speaker": "沈淮",
-      "text": "所以才讓我留下？"
-     },
-     {
-      "id": "notebook_2-l17",
+      "id": "notebook_2-l15",
       "speaker": "安雅的筆記",
-      "text": "圍裙給他了。以後店裡剩他一個，這些都要會。"
+      "text": "圍裙給他了。分層、試糖漿、對帳，一樣一樣教。要快一點。"
      },
      {
-      "id": "notebook_2-l18",
+      "id": "notebook_2-l16",
       "speaker": "旁白",
       "text": "他把本子闔起來，推到吧檯另一頭。冰箱的壓縮機停了。"
      },
      {
-      "id": "notebook_2-l19",
+      "id": "notebook_2-l17",
       "speaker": "沈淮",
       "text": "我以為是我們兩個要開。"
      },
      {
-      "id": "notebook_2-l20",
+      "id": "notebook_2-l18",
       "speaker": "旁白",
       "text": "他拿起外套，走到門口。門現在往外開。他握著門把，沒有壓下去。"
      },
      {
-      "id": "notebook_2-l21",
+      "id": "notebook_2-l19",
       "speaker": "旁白",
       "text": "雨水從門縫滲進來，在鞋邊積了一小灘。"
      },
      {
-      "id": "notebook_2-l22",
+      "id": "notebook_2-l20",
       "speaker": "沈淮",
       "text": "那張回診單，我有撿到。"
      },
      {
-      "id": "notebook_2-l23",
+      "id": "notebook_2-l21",
       "speaker": "沈淮",
       "text": "藥袋我也查了。"
      },
      {
-      "id": "notebook_2-l24",
+      "id": "notebook_2-l22",
       "speaker": "沈淮",
       "text": "我還跟妳說，好。"
      },
      {
-      "id": "notebook_2-l25",
+      "id": "notebook_2-l23",
       "speaker": "旁白",
-      "text": "他回到吧檯，把本子拉回面前，往前翻。「他攪得好吵」後面有一頁，他剛才翻太快，上面沒有試味的紀錄。"
+      "text": "他回到吧檯，把本子拉回面前，往前找。他在找一個日子。"
      },
      {
-      "id": "notebook_2-l26",
+      "id": "notebook_2-l24",
+      "speaker": "旁白",
+      "text": "「他攪得好吵」後面那一頁，沒有試味的紀錄。"
+     },
+     {
+      "id": "notebook_2-l25",
       "speaker": "安雅的筆記",
       "text": "他今天說喜歡我。今天的糖漿忘了試。"
      },
      {
-      "id": "notebook_2-l27",
+      "id": "notebook_2-l26",
       "speaker": "旁白",
       "text": "他看著那一行，沒有再翻。"
      }
@@ -4558,7 +4548,7 @@
      {
       "id": "notebook_3-l6",
       "speaker": "沈淮",
-      "text": "天又還沒黑，我幹嘛一直催妳下樓。"
+      "text": "天又還沒黑，我幹嘛催妳下樓。"
      },
      {
       "id": "notebook_3-l7",
@@ -4635,7 +4625,7 @@
      {
       "id": "notebook_4-l9",
       "speaker": "安雅的筆記",
-      "text": "前年試到一半，中間那層我試不出來了，就一直放著。"
+      "text": "中間那層，試不出來。先放著。"
      },
      {
       "id": "notebook_4-l10",
@@ -5266,7 +5256,7 @@
      {
       "id": "evening_1-l17",
       "speaker": "小葵",
-      "text": "五分是安雅姊的。她那杯我沒喝到。"
+      "text": "……不知道。就覺得不能給滿。"
      },
      {
       "id": "evening_1-l18",
@@ -5327,7 +5317,7 @@
      {
       "id": "evening_2-l4",
       "speaker": "旁白",
-      "text": "他走進吧檯，拿起那支金色的吧匙。門鈴又響了一聲。",
+      "text": "他走進吧檯，拿起那支金色的吧匙。有人推門。",
       "background": "/files/assets/art/cg/evening_bar.webp"
      },
      {
@@ -5696,7 +5686,7 @@
      },
      "data": {
       "type": "dialogue",
-      "title": "頭七深夜・同一間店",
+      "title": "頭七深夜・巷子裡的店",
       "speaker": "旁白",
       "text": "慶安宮後面這條巷子，過了十二點就沒有人走。",
       "dialogueLines": [
@@ -5740,17 +5730,17 @@
        {
         "id": "return-l7",
         "speaker": "旁白",
-        "text": "他把一個信封放在燈下。信封上有兩行他的字：阿姨收，下面是貨運行的電話。鑰匙從鑰匙圈上拆下來，放進去。"
+        "text": "他把一個信封放在燈下，上面寫著阿姨收。"
        },
        {
         "id": "return-l8",
-        "speaker": "沈淮",
-        "text": "房東明天上午來點交。鑰匙留給妳媽。"
+        "speaker": "旁白",
+        "text": "鑰匙從鑰匙圈上拆下來，放進去。"
        },
        {
         "id": "return-l9",
         "speaker": "沈淮",
-        "text": "酒商那邊結清了。老闆問我下個月還叫不叫貨，我說不知道。"
+        "text": "房東明天上午來點交。鑰匙留給妳媽。"
        },
        {
         "id": "return-l10",
@@ -5831,30 +5821,35 @@
        {
         "id": "return_2-l5",
         "speaker": "沈淮",
-        "text": "樓上我那兩箱，貼好我爸媽家的地址了。她還問我明天要搬去哪。"
+        "text": "樓上我那兩箱，貼好我爸媽家的地址了。貨運的電話寫在信封背面。"
        },
        {
         "id": "return_2-l6",
         "speaker": "沈淮",
-        "text": "明天以後，我還沒想。"
+        "text": "她還問我明天要搬去哪。"
        },
        {
         "id": "return_2-l7",
-        "speaker": "旁白",
-        "text": "他繞進吧檯，拉開收銀機下面的小抽屜。掌心大的筆記本還在。"
+        "speaker": "沈淮",
+        "text": "明天以後，我還沒想。"
        },
        {
         "id": "return_2-l8",
+        "speaker": "旁白",
+        "text": "他從外套口袋拿出一本掌心大的筆記本。收她床頭的時候找到的，壓在枕頭下面。"
+       },
+       {
+        "id": "return_2-l9",
         "speaker": "沈淮",
         "text": "每次問妳在寫什麼，妳都叫我去洗杯子。"
        },
        {
-        "id": "return_2-l9",
+        "id": "return_2-l10",
         "speaker": "旁白",
-        "text": "他拿著筆記本坐回椅子上。雨打在玻璃上，一陣比一陣大。"
+        "text": "他把筆記本放在吧檯上。雨打在玻璃上，一陣比一陣大。"
        },
        {
-        "id": "return_2-l10",
+        "id": "return_2-l11",
         "speaker": "沈淮",
         "text": "第一次來，我連傘都沒帶。"
        }
@@ -6256,7 +6251,7 @@
        {
         "id": "weeks_1-l8",
         "speaker": "阿忠",
-        "text": "喝啊。我又沒要走。"
+        "text": "喝啊。我又沒要走。我機車行就在巷口，鐵門拉下來走三步。"
        },
        {
         "id": "weeks_1-l9",
@@ -6444,7 +6439,7 @@
        {
         "id": "weeks_2-l10",
         "speaker": "沈淮",
-        "text": "所以去年店才沒開。"
+        "text": "所以去年店才沒開。傘我早就還了，妳都沒講。"
        },
        {
         "id": "weeks_2-l11",
@@ -6484,7 +6479,7 @@
        {
         "id": "weeks_2-l18",
         "speaker": "沈淮",
-        "text": "我剛剛還一直叫妳喝酒。"
+        "text": "我剛剛還叫妳陪我喝。"
        },
        {
         "id": "weeks_2-l19",
@@ -6647,35 +6642,45 @@
        {
         "id": "clinic_1-l26",
         "speaker": "安雅",
-        "text": "媽，今天這個，先不要跟沈淮說。"
+        "text": "媽，今天這個，先不要跟別人說。"
        },
        {
         "id": "clinic_1-l27",
         "speaker": "安雅的母親",
-        "text": "下次叫他陪妳來。"
+        "text": "那個每天來坐到兩點的呢？"
        },
        {
         "id": "clinic_1-l28",
         "speaker": "安雅",
-        "text": "妳先陪我，好不好？"
+        "text": "……他也不要。"
        },
        {
         "id": "clinic_1-l29",
-        "speaker": "旁白",
-        "text": "母親握住她的手腕，沒有答應，也沒有放。安雅用另一隻手拿出手機。"
+        "speaker": "安雅的母親",
+        "text": "那下次誰陪妳來？"
        },
        {
         "id": "clinic_1-l30",
         "speaker": "安雅",
-        "text": "喂，沈淮？今天公休，你要不要來幫我搬酒？"
+        "text": "妳陪我，好不好？"
        },
        {
         "id": "clinic_1-l31",
         "speaker": "旁白",
-        "text": "母親把單子摺起來，收進提袋裡。"
+        "text": "母親握住她的手腕，沒有答應，也沒有放。安雅用另一隻手拿出手機。"
        },
        {
         "id": "clinic_1-l32",
+        "speaker": "安雅",
+        "text": "喂，沈淮？今天公休，你要不要來幫我搬酒？"
+       },
+       {
+        "id": "clinic_1-l33",
+        "speaker": "旁白",
+        "text": "母親把單子摺起來，收進提袋裡。"
+       },
+       {
+        "id": "clinic_1-l34",
         "speaker": "安雅",
         "text": "那六點。晚餐等你來再吃。"
        }
@@ -6701,102 +6706,107 @@
       "type": "dialogue",
       "title": "第一年夏末・週六午後・開店前的吧檯",
       "speaker": "旁白",
-      "text": "上禮拜他學攪拌，冰塊撞得整間店都聽得到。這禮拜換分層。",
+      "text": "小葵在巷口的補習班顧櫃檯，這個月第三次在開店前就坐進來。",
       "dialogueLines": [
        {
         "id": "lesson_1-l0",
         "speaker": "旁白",
-        "text": "上禮拜他學攪拌，冰塊撞得整間店都聽得到。這禮拜換分層。",
+        "text": "小葵在巷口的補習班顧櫃檯，這個月第三次在開店前就坐進來。",
         "background": "/files/assets/art/lab/title-6145bd77d7.webp"
        },
        {
         "id": "lesson_1-l1",
         "speaker": "旁白",
-        "text": "他倒得太快。金色和紅色混在一起，變成一杯橘的。",
+        "text": "上禮拜他學攪拌，冰塊撞得整間店都聽得到。這禮拜換分層。",
         "background": "/files/assets/art/cg/lesson_hands.webp"
        },
        {
         "id": "lesson_1-l2",
+        "speaker": "旁白",
+        "text": "他倒得太快。金色和紅色混在一起，變成一杯橘的。"
+       },
+       {
+        "id": "lesson_1-l3",
         "speaker": "小葵",
         "text": "兩層變一層了。六十分。"
        },
        {
-        "id": "lesson_1-l3",
+        "id": "lesson_1-l4",
         "speaker": "沈淮",
         "text": "我有眼睛。"
        },
        {
-        "id": "lesson_1-l4",
+        "id": "lesson_1-l5",
         "speaker": "安雅",
         "text": "好啦，手給我。"
        },
        {
-        "id": "lesson_1-l5",
+        "id": "lesson_1-l6",
         "speaker": "旁白",
         "text": "她的手蓋住他握瓶子的手。"
        },
        {
-        "id": "lesson_1-l6",
+        "id": "lesson_1-l7",
         "speaker": "安雅",
         "text": "酒面上來，吧匙跟著提。小力一點。"
        },
        {
-        "id": "lesson_1-l7",
+        "id": "lesson_1-l8",
         "speaker": "旁白",
         "text": "金色慢慢疊在紅色上面。"
        },
        {
-        "id": "lesson_1-l8",
+        "id": "lesson_1-l9",
         "speaker": "小葵",
         "text": "七十。可以喝了嗎？"
        },
        {
-        "id": "lesson_1-l9",
+        "id": "lesson_1-l10",
         "speaker": "安雅",
         "text": "等一下。糖漿是新煮的，我還沒試。"
        },
        {
-        "id": "lesson_1-l10",
+        "id": "lesson_1-l11",
         "speaker": "旁白",
         "text": "她沾了一點，含著。又沾了一次，含得更久。"
        },
        {
-        "id": "lesson_1-l11",
+        "id": "lesson_1-l12",
         "speaker": "小葵",
         "text": "安雅姊？"
        },
        {
-        "id": "lesson_1-l12",
+        "id": "lesson_1-l13",
         "speaker": "安雅",
         "text": "沈淮，你喝。"
        },
        {
-        "id": "lesson_1-l13",
+        "id": "lesson_1-l14",
         "speaker": "沈淮",
         "text": "妳不是都自己試？"
        },
        {
-        "id": "lesson_1-l14",
+        "id": "lesson_1-l15",
         "speaker": "安雅",
         "text": "今天換你。喝了跟我講。"
        },
        {
-        "id": "lesson_1-l15",
+        "id": "lesson_1-l16",
         "speaker": "沈淮",
         "text": "甜的。洛神有出來，後面有一點酸。"
        },
        {
-        "id": "lesson_1-l16",
+        "id": "lesson_1-l17",
         "speaker": "旁白",
         "text": "她點了頭，翻開一本掌心大的本子，寫了兩行。"
        },
        {
-        "id": "lesson_1-l17",
+        "id": "lesson_1-l18",
         "speaker": "沈淮",
         "text": "妳寫什麼？"
        },
        {
-        "id": "lesson_1-l18",
+        "id": "lesson_1-l19",
         "speaker": "安雅",
         "text": "寫你攪得好吵。去洗杯子。"
        }
@@ -6888,7 +6898,7 @@
        {
         "id": "confess_1-l12",
         "speaker": "旁白",
-        "text": "她不笑了。她看著他，抹布擰到滴水。"
+        "text": "她不笑了。她看著他，兩隻手在圍裙上擦。"
        },
        {
         "id": "confess_1-l13",
@@ -7075,7 +7085,7 @@
        {
         "id": "quit_2-l2",
         "speaker": "沈淮",
-        "text": "我畫六年，沒有人跟我說過再一張。"
+        "text": "我畫圖畫六年，業主只會說再改。"
        },
        {
         "id": "quit_2-l3",
@@ -7188,7 +7198,7 @@
        {
         "id": "quit_3-l2",
         "speaker": "旁白",
-        "text": "他捲起袖子，洗昨晚留在水槽裡的杯子。她昨天一只都沒洗。"
+        "text": "他捲起袖子，洗昨晚留在水槽裡的杯子。"
        },
        {
         "id": "quit_3-l3",
@@ -7373,77 +7383,57 @@
        },
        {
         "id": "open_1-l6",
-        "speaker": "阿忠",
-        "text": "阿淮，以前當客人多好命，現在站到腳痠了齁。"
+        "speaker": "安雅",
+        "text": "小葵，妳先把手機放下，酒都放多久了。"
        },
        {
         "id": "open_1-l7",
-        "speaker": "沈淮",
-        "text": "以前坐外面我也在洗杯子，差在哪。"
-       },
-       {
-        "id": "open_1-l8",
-        "speaker": "安雅",
-        "text": "差在現在不用付酒錢。"
-       },
-       {
-        "id": "open_1-l9",
-        "speaker": "小葵",
-        "text": "欸，那我也要洗。"
-       },
-       {
-        "id": "open_1-l10",
-        "speaker": "安雅",
-        "text": "妳先把手機放下，酒都放多久了。"
-       },
-       {
-        "id": "open_1-l11",
         "speaker": "旁白",
         "text": "小葵拍完才喝，皺了一下鼻子。"
        },
        {
-        "id": "open_1-l12",
+        "id": "open_1-l8",
         "speaker": "小葵",
-        "text": "八十五分。太甜扣五分。安雅姊，妳自己喝有那麼甜嗎？"
+        "text": "八十五分。太甜，扣十五。安雅姊，妳自己喝有那麼甜嗎？"
        },
        {
-        "id": "open_1-l13",
+        "id": "open_1-l9",
         "speaker": "安雅",
         "text": "沈淮，你講。"
        },
        {
-        "id": "open_1-l14",
+        "id": "open_1-l10",
         "speaker": "沈淮",
-        "text": "前面甜，後面有酸。扣三分就好。"
+        "text": "前面甜，後面有酸。扣十分就好。"
        },
        {
-        "id": "open_1-l15",
+        "id": "open_1-l11",
         "speaker": "小葵",
-        "text": "你又不是我。我們主任今天又叫我假日去發傳單，我心情不好，扣五分。"
+        "text": "你又不是我。主任叫我禮拜天去發傳單，我心情不好，扣十五。"
        },
        {
-        "id": "open_1-l16",
+        "id": "open_1-l12",
         "speaker": "旁白",
         "text": "過了十二點，沒有人要走。吧檯後面只站得下一個半人，安雅要拿杯子，得從沈淮背後擠過去。",
         "background": "/files/assets/art/cg/open_laugh.webp"
        },
        {
-        "id": "open_1-l17",
+        "id": "open_1-l13",
         "speaker": "安雅",
         "text": "借過，站進去一點。"
        },
        {
-        "id": "open_1-l18",
+        "id": "open_1-l14",
         "speaker": "沈淮",
         "text": "再進去我就進水槽了。"
        },
        {
-        "id": "open_1-l19",
+        "id": "open_1-l15",
         "speaker": "旁白",
         "text": "她撞了他肩膀一下，動作沒停。一杯〈破曉〉疊好了，推到他面前。"
        },
        {
-        "id": "open_1-l20",
+        "id": "open_1-l16",
         "speaker": "安雅",
         "text": "這杯你的。喝完再收。"
        }
@@ -7950,7 +7940,7 @@
        {
         "id": "almost_2-l2",
         "speaker": "旁白",
-        "text": "他把藥名一個字一個字打進手機裡查。止痛的。消炎的。保護胃的。"
+        "text": "他把藥名一個字一個字打進手機裡查。止痛的。消炎的。顧胃的。"
        },
        {
         "id": "almost_2-l3",
@@ -8344,26 +8334,21 @@
        },
        {
         "id": "winter_1-l15",
-        "speaker": "旁白",
-        "text": "他記得那天的晚餐。"
-       },
-       {
-        "id": "winter_1-l16",
         "speaker": "沈淮",
         "text": "那時候有沒有得治？"
        },
        {
-        "id": "winter_1-l17",
+        "id": "winter_1-l16",
         "speaker": "安雅",
         "text": "有。我說不要。"
        },
        {
-        "id": "winter_1-l18",
+        "id": "winter_1-l17",
         "speaker": "沈淮",
         "text": "……妳說不要。"
        },
        {
-        "id": "winter_1-l19",
+        "id": "winter_1-l18",
         "speaker": "安雅",
         "text": "你小聲一點。我聽得到。"
        }
@@ -8410,146 +8395,151 @@
        {
         "id": "winter_2-l3",
         "speaker": "沈淮",
-        "text": "那我要算什麼？妳按耳朵下面，我問，妳說發炎。回診單掉出來，我問，妳說補看一項。"
+        "text": "那我要算什麼？回診單我問過。耳朵下面我也問過。妳都說發炎，我就信了。"
        },
        {
         "id": "winter_2-l4",
-        "speaker": "沈淮",
-        "text": "那包藥我一個字一個字查過。止痛的，消炎的，顧胃的。妳說發炎，我就信了。"
-       },
-       {
-        "id": "winter_2-l5",
         "speaker": "旁白",
         "text": "她去拉他的袖口。他往後退了一步。"
        },
        {
-        "id": "winter_2-l6",
+        "id": "winter_2-l5",
         "speaker": "安雅",
         "text": "講了，你每天早上起來第一句，就是問我今天哪裡痛。"
        },
        {
-        "id": "winter_2-l7",
+        "id": "winter_2-l6",
         "speaker": "安雅",
-        "text": "我想要你問我的是餛飩要不要多一份青菜。"
+        "text": "我只想聽你問，餛飩青菜要不要多一點。"
        },
        {
-        "id": "winter_2-l8",
+        "id": "winter_2-l7",
         "speaker": "沈淮",
         "text": "所以我要辭職那天，妳一直叫我回去上班。"
        },
        {
-        "id": "winter_2-l9",
+        "id": "winter_2-l8",
         "speaker": "旁白",
         "text": "她沒有抬頭。"
        },
        {
-        "id": "winter_2-l10",
+        "id": "winter_2-l9",
         "speaker": "沈淮",
         "text": "是不是？"
        },
        {
-        "id": "winter_2-l11",
+        "id": "winter_2-l10",
         "speaker": "安雅",
         "text": "我不想你以後後悔。"
        },
        {
-        "id": "winter_2-l12",
+        "id": "winter_2-l11",
         "speaker": "沈淮",
         "text": "我後不後悔，妳有問過我嗎？"
        },
        {
-        "id": "winter_2-l13",
+        "id": "winter_2-l12",
         "speaker": "沈淮",
         "text": "要不要治，妳有問過我嗎？"
        },
        {
+        "id": "winter_2-l13",
+        "speaker": "安雅",
+        "text": "那時候你還只是客人。"
+       },
+       {
         "id": "winter_2-l14",
-        "speaker": "旁白",
-        "text": "她張了嘴，又閉上。"
+        "speaker": "沈淮",
+        "text": "那後來呢？"
        },
        {
         "id": "winter_2-l15",
+        "speaker": "旁白",
+        "text": "她沒有接。"
+       },
+       {
+        "id": "winter_2-l16",
         "speaker": "沈淮",
         "text": "還有誰知道？阿忠？小葵？"
        },
        {
-        "id": "winter_2-l16",
+        "id": "winter_2-l17",
         "speaker": "安雅",
         "text": "只有我媽。"
        },
        {
-        "id": "winter_2-l17",
+        "id": "winter_2-l18",
         "speaker": "沈淮",
         "text": "妳媽。"
        },
        {
-        "id": "winter_2-l18",
+        "id": "winter_2-l19",
         "speaker": "沈淮",
         "text": "她每次來，一直往我碗裡夾菜。我還跟她說阿姨夠了。"
        },
        {
-        "id": "winter_2-l19",
+        "id": "winter_2-l20",
         "speaker": "安雅",
         "text": "沈淮……"
        },
        {
-        "id": "winter_2-l20",
+        "id": "winter_2-l21",
         "speaker": "沈淮",
         "text": "妳一個人決定，一個人去聽。那我睡在妳旁邊是幹嘛的？"
        },
        {
-        "id": "winter_2-l21",
+        "id": "winter_2-l22",
         "speaker": "安雅",
         "text": "我也會怕好不好！你一直問、一直問！"
        },
        {
-        "id": "winter_2-l22",
+        "id": "winter_2-l23",
         "speaker": "旁白",
         "text": "她喊完就咳了起來，咳到直不起腰。他往前一步，想拍她的背，最後握著拳頭站在那裡。"
        },
        {
-        "id": "winter_2-l23",
+        "id": "winter_2-l24",
         "speaker": "旁白",
         "text": "咳停了。房間裡只有她喘氣的聲音。"
        },
        {
-        "id": "winter_2-l24",
+        "id": "winter_2-l25",
         "speaker": "沈淮",
         "text": "……還有多久？"
        },
        {
-        "id": "winter_2-l25",
+        "id": "winter_2-l26",
         "speaker": "安雅",
         "text": "醫生沒有講。我也沒有問。"
        },
        {
-        "id": "winter_2-l26",
+        "id": "winter_2-l27",
         "speaker": "安雅",
         "text": "沈淮，你先坐。"
        },
        {
-        "id": "winter_2-l27",
+        "id": "winter_2-l28",
         "speaker": "沈淮",
         "text": "我現在坐不住。",
         "background": "/files/assets/art/cg/winter_door.webp"
        },
        {
-        "id": "winter_2-l28",
+        "id": "winter_2-l29",
         "speaker": "安雅",
         "text": "外套穿著，樓下冷。"
        },
        {
-        "id": "winter_2-l29",
+        "id": "winter_2-l30",
         "speaker": "旁白",
         "text": "外套留在椅背上。門輕輕帶上。"
        },
        {
-        "id": "winter_2-l30",
+        "id": "winter_2-l31",
         "speaker": "旁白",
         "text": "樓下的吧檯沒有開燈。他坐在最靠門的那張椅子上，低著頭。冰箱的聲音停了又響。"
        },
        {
-        "id": "winter_2-l31",
+        "id": "winter_2-l32",
         "speaker": "旁白",
         "text": "天亮了，他還坐在那裡。"
        }
@@ -8699,7 +8689,7 @@
        {
         "id": "last_1-l8",
         "speaker": "小葵",
-        "text": "那我洗杯子有算嗎？我們主任說我接電話都沒這麼認真。"
+        "text": "那我洗杯子有算嗎？我在公司都沒這麼勤勞。"
        },
        {
         "id": "last_1-l9",
@@ -8719,7 +8709,7 @@
        {
         "id": "last_1-l12",
         "speaker": "沈淮",
-        "text": "醫師剛剛才講，不要自己下樓。"
+        "text": "醫生剛剛才講，不要自己下樓。"
        },
        {
         "id": "last_1-l13",
@@ -9194,7 +9184,7 @@
        {
         "id": "farewell_2-l19",
         "speaker": "安雅的母親",
-        "text": "你先不要收她的衣服。……那件外套先放著。"
+        "text": "衣服你先不要收。"
        },
        {
         "id": "farewell_2-l20",
@@ -9340,12 +9330,7 @@
        {
         "id": "notebook_1-l21",
         "speaker": "安雅的筆記",
-        "text": "他今天坐到兩點。問他甜不甜，他只會講甜的甜。可是他講的我信。"
-       },
-       {
-        "id": "notebook_1-l22",
-        "speaker": "旁白",
-        "text": "他的拇指壓在那一行上，壓到紙凹下去。"
+        "text": "他今天坐到兩點。問他甜不甜，他只會講甜的甜。"
        }
       ],
       "stage": {
@@ -9399,116 +9384,111 @@
        },
        {
         "id": "notebook_2-l5",
-        "speaker": "旁白",
-        "text": "他把本子湊近燈。她自己的那一行只有一個「淡」，下一行又是他的名字。"
-       },
-       {
-        "id": "notebook_2-l6",
         "speaker": "安雅的筆記",
         "text": "十月。醫生第三次問。又說店不能關。"
        },
        {
-        "id": "notebook_2-l7",
+        "id": "notebook_2-l6",
         "speaker": "安雅的筆記",
         "text": "晚上這鍋沈淮試的。我沒碰，照樣出了。"
        },
        {
-        "id": "notebook_2-l8",
+        "id": "notebook_2-l7",
         "speaker": "旁白",
         "text": "底下還有一行，字擠在頁邊。"
        },
        {
-        "id": "notebook_2-l9",
+        "id": "notebook_2-l8",
         "speaker": "安雅的筆記",
         "text": "想到上次就不想去。先這樣。"
        },
        {
-        "id": "notebook_2-l10",
+        "id": "notebook_2-l9",
         "speaker": "旁白",
-        "text": "沈淮的拇指壓在頁角，過了一會才翻。"
+        "text": "沈淮過了一會才翻。"
        },
        {
-        "id": "notebook_2-l11",
+        "id": "notebook_2-l10",
         "speaker": "安雅的筆記",
         "text": "十一月。他鼻塞，每一杯都說一樣。今晚不試新的。"
        },
        {
-        "id": "notebook_2-l12",
+        "id": "notebook_2-l11",
         "speaker": "安雅的筆記",
         "text": "氣他。氣一個鼻塞的人。"
        },
        {
-        "id": "notebook_2-l13",
+        "id": "notebook_2-l12",
         "speaker": "安雅的筆記",
         "text": "他吃什麼都說好吃。今天又想拿走他的碗。"
        },
        {
-        "id": "notebook_2-l14",
+        "id": "notebook_2-l13",
         "speaker": "安雅的筆記",
         "text": "三月。他要辭職。跟他說不缺洗杯子的。亂講的。"
        },
        {
-        "id": "notebook_2-l15",
+        "id": "notebook_2-l14",
         "speaker": "安雅的筆記",
         "text": "他不在，這鍋不敢出。"
        },
        {
-        "id": "notebook_2-l16",
-        "speaker": "沈淮",
-        "text": "所以才讓我留下？"
-       },
-       {
-        "id": "notebook_2-l17",
+        "id": "notebook_2-l15",
         "speaker": "安雅的筆記",
-        "text": "圍裙給他了。以後店裡剩他一個，這些都要會。"
+        "text": "圍裙給他了。分層、試糖漿、對帳，一樣一樣教。要快一點。"
        },
        {
-        "id": "notebook_2-l18",
+        "id": "notebook_2-l16",
         "speaker": "旁白",
         "text": "他把本子闔起來，推到吧檯另一頭。冰箱的壓縮機停了。"
        },
        {
-        "id": "notebook_2-l19",
+        "id": "notebook_2-l17",
         "speaker": "沈淮",
         "text": "我以為是我們兩個要開。"
        },
        {
-        "id": "notebook_2-l20",
+        "id": "notebook_2-l18",
         "speaker": "旁白",
         "text": "他拿起外套，走到門口。門現在往外開。他握著門把，沒有壓下去。"
        },
        {
-        "id": "notebook_2-l21",
+        "id": "notebook_2-l19",
         "speaker": "旁白",
         "text": "雨水從門縫滲進來，在鞋邊積了一小灘。"
        },
        {
-        "id": "notebook_2-l22",
+        "id": "notebook_2-l20",
         "speaker": "沈淮",
         "text": "那張回診單，我有撿到。"
        },
        {
-        "id": "notebook_2-l23",
+        "id": "notebook_2-l21",
         "speaker": "沈淮",
         "text": "藥袋我也查了。"
        },
        {
-        "id": "notebook_2-l24",
+        "id": "notebook_2-l22",
         "speaker": "沈淮",
         "text": "我還跟妳說，好。"
        },
        {
-        "id": "notebook_2-l25",
+        "id": "notebook_2-l23",
         "speaker": "旁白",
-        "text": "他回到吧檯，把本子拉回面前，往前翻。「他攪得好吵」後面有一頁，他剛才翻太快，上面沒有試味的紀錄。"
+        "text": "他回到吧檯，把本子拉回面前，往前找。他在找一個日子。"
        },
        {
-        "id": "notebook_2-l26",
+        "id": "notebook_2-l24",
+        "speaker": "旁白",
+        "text": "「他攪得好吵」後面那一頁，沒有試味的紀錄。"
+       },
+       {
+        "id": "notebook_2-l25",
         "speaker": "安雅的筆記",
         "text": "他今天說喜歡我。今天的糖漿忘了試。"
        },
        {
-        "id": "notebook_2-l27",
+        "id": "notebook_2-l26",
         "speaker": "旁白",
         "text": "他看著那一行，沒有再翻。"
        }
@@ -9567,7 +9547,7 @@
        {
         "id": "notebook_3-l6",
         "speaker": "沈淮",
-        "text": "天又還沒黑，我幹嘛一直催妳下樓。"
+        "text": "天又還沒黑，我幹嘛催妳下樓。"
        },
        {
         "id": "notebook_3-l7",
@@ -9644,7 +9624,7 @@
        {
         "id": "notebook_4-l9",
         "speaker": "安雅的筆記",
-        "text": "前年試到一半，中間那層我試不出來了，就一直放著。"
+        "text": "中間那層，試不出來。先放著。"
        },
        {
         "id": "notebook_4-l10",
@@ -10275,7 +10255,7 @@
        {
         "id": "evening_1-l17",
         "speaker": "小葵",
-        "text": "五分是安雅姊的。她那杯我沒喝到。"
+        "text": "……不知道。就覺得不能給滿。"
        },
        {
         "id": "evening_1-l18",
@@ -10336,7 +10316,7 @@
        {
         "id": "evening_2-l4",
         "speaker": "旁白",
-        "text": "他走進吧檯，拿起那支金色的吧匙。門鈴又響了一聲。",
+        "text": "他走進吧檯，拿起那支金色的吧匙。有人推門。",
         "background": "/files/assets/art/cg/evening_bar.webp"
        },
        {
