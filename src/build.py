@@ -11,9 +11,14 @@ PROJECT_ID = 'project-8cb1ab7e-891c-46b4-bd38-df29060e5717'
 A = '/files/assets/'
 TEXT_MS = 55
 NAME = '晚霞'
-DESCRIPTION = ('巷子裡一間只有七張高腳椅的小酒吧。調酒師安雅和加班到深夜的沈淮，從一個暴雨夜的第一杯〈破曉〉開始，'
-               '鬥嘴、吵架、一起把店撐起來，過了三年。她走後的第七天，他回到店裡，翻開她從不讓人看的小筆記本。'
-               '單線劇情、一個結局。')
+DESCRIPTION = ('基隆慶安宮後面的巷子裡，有一間只有七張高腳椅的小酒吧，叫「回甘」。\n\n'
+               '安雅走後的第七天，沈淮回到店裡，準備把鑰匙交出去。故事從這一晚往回講：三年前的暴雨夜，加班到深夜的他推門進來，'
+               '喝到她調的第一杯〈破曉〉；後來兩個人一起顧店、吵架、和好，她生病，他陪到最後。頭七深夜，他翻開她從不讓人看的小筆記本。\n\n'
+               '單線劇情、一個結局，沒有選項，不配音，全程約三十五分鐘。\n\n'
+               '內容提醒：本作寫到癌症、親人過世，以及主角不想活下去的念頭（沒有任何方法的描寫），結局是他留下來好好吃飯。'
+               '需要找人說話時，衛生福利部安心專線 1925 二十四小時有人接。\n\n'
+               '飲酒過量，有害健康。酒後不開車，安全有保障。未滿十八歲請勿飲酒。\n\n'
+               '文字、美術、配樂由 AI 依作者的方向與審稿製作。')
 # 配樂：每張卡用哪一首（assets/bgm/<名>.mp3）。同一首連續的卡不重設，曲子不會從頭重播；'' 是安靜
 TRACK_BY_PREFIX = [('open', 'days'), ('return', 'seventh'), ('rain', 'dawn'), ('weeks', 'dawn'), ('clinic', 'alone'), ('lesson', 'days'),
                    ('confess', 'dawn'), ('together', 'days'), ('quit_1', 'alone'), ('quit_2', 'alone'), ('quit_3', 'days'), ('home', 'days'),
@@ -132,7 +137,7 @@ def build():
     p['nodes'], p['edges'] = board['nodes'], board['edges']
     p['name'], p['description'] = NAME, DESCRIPTION
     cover = A + 'art/cover.webp'
-    board.update(name='晚霞', thumbnail=cover, description='從第一年春天的暴雨夜，到她走後的第七天。')
+    board.update(name='晚霞', thumbnail=cover, description='從她走後的第七天，回到第一年春天的暴雨夜。')
     p['variables'] = []
     s = p['settings']
     s['plugins'] = {**{k: ({**v, 'enabled': False} if k in ('larch-inventory', 'larch-rpg-system') else v) for k, v in s.get('plugins', {}).items()}, 'credits-roll': {'enabled': True}, 'sunset-when': when_hud()}
