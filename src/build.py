@@ -23,7 +23,7 @@ DESCRIPTION = ('基隆慶安宮後面的巷子裡，有一間只有七張高腳�
 TRACK_BY_PREFIX = [('open', 'days'), ('return', 'seventh'), ('rain', 'dawn'), ('weeks', 'dawn'), ('clinic', 'alone'), ('lesson', 'days'),
                    ('confess', 'dawn'), ('together', 'days'), ('quit_1', 'alone'), ('quit_2', 'alone'), ('quit_3', 'days'), ('home', 'days'),
                    ('dusk', 'days'), ('almost', 'alone'), ('roof', 'sunset'), ('winter_1', 'alone'), ('winter_2', 'alone'), ('winter_3', 'winter'),
-                   ('last', 'winter'), ('farewell_1', 'winter'), ('farewell_2', ''), ('farewell_3', 'seventh'), ('notebook', 'seventh'),
+                   ('last', 'winter'), ('farewell_1', 'winter'), ('farewell_gone', ''), ('farewell_2', ''), ('farewell_3', 'seventh'), ('notebook', 'seventh'),
                    ('flash_1', 'days'), ('flash_2', 'sunset'), ('door', 'seventh'), ('sunset_1', ''), ('sunset_2', ''), ('sunset_3', 'sunset'),
                    ('evening', 'main')]
 SPEAKER = {'念': '{}的筆記', '心': '{}（心）'}
