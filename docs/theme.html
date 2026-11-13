@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>《晚霞》片尾主題曲 · 動態歌詞</title>
+<meta name="description" content="Larch 視覺小說《晚霞》的片尾主題曲，邊聽邊看中英對照的動態歌詞。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap">
+<style>
+:root{--bg:#120d16;--ink:#f6efe2;--muted:#b9aca0;--gold:#f2c46d;--rose:#eaa9b6;--line:rgba(242,196,109,.28);
+  --serif:"Noto Serif TC","Songti TC",serif;--latin:"Cormorant Garamond","Noto Serif TC",Georgia,serif;--sans:"Noto Sans TC",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow:hidden}
+.bg{position:fixed;inset:0;background:#120d16 url(img/evening_roof.webp) 50% 40%/cover no-repeat;transform:scale(1.06);filter:blur(3px) saturate(1.05)}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,13,22,.72) 0%,rgba(18,13,22,.5) 30%,rgba(18,13,22,.62) 62%,rgba(18,13,22,.96) 100%)}
+.top{position:fixed;inset:0 0 auto;z-index:5;display:flex;align-items:center;gap:16px;height:60px;
+  padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px));background:linear-gradient(rgba(18,13,22,.85),rgba(18,13,22,0))}
+.top a{color:var(--ink);text-decoration:none;font:700 14px/1 var(--sans);letter-spacing:.12em;display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+.top a:hover{color:var(--gold)}
+.top span{margin-left:auto;font:500 13px/1 var(--sans);letter-spacing:.2em;color:var(--rose)}
+.stage{position:fixed;inset:60px 0 112px;overflow-y:auto;scrollbar-width:none;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 82%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 82%,transparent 100%)}
+.stage::-webkit-scrollbar{display:none}
+.lines{list-style:none;margin:0 auto;padding:38vh max(20px,env(safe-area-inset-right,0px)) 42vh max(20px,env(safe-area-inset-left,0px));max-width:900px;text-align:center}
+.head{margin:0 0 12vh}
+.head small{display:block;font:700 12px/1 var(--sans);letter-spacing:.34em;color:var(--rose)}
+.head h1{margin:14px 0 8px;font:900 clamp(34px,6vw,60px)/1.2 var(--serif);letter-spacing:.14em;text-shadow:0 0 40px rgba(242,196,109,.35)}
+.head p{margin:0;color:var(--muted);font-size:14.5px}
+.ln{display:block;width:100%;margin:0;padding:15px 8px;border:0;background:none;color:inherit;font:inherit;cursor:pointer;text-align:center;
+  opacity:.34;transform:scale(.9);transition:opacity .5s ease,transform .5s ease}
+.ln:hover{opacity:.6}
+.ln:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.ln .en{display:block;font:500 clamp(21px,3.3vw,36px)/1.3 var(--latin);letter-spacing:.01em;
+  background:linear-gradient(90deg,var(--gold) 0,var(--gold) var(--p,0%),var(--ink) var(--p,0%),var(--ink) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ln .zh{display:block;margin-top:6px;font:500 clamp(14px,1.9vw,19px)/1.6 var(--serif);letter-spacing:.08em;color:var(--muted)}
+.ln.on{opacity:1;transform:scale(1)}
+.ln.on .zh{color:#ffe3c9}
+.ln.done{opacity:.5}
+.gap{height:5vh}
+.bar{position:fixed;inset:auto 0 0;z-index:5;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;
+  padding:16px max(18px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));
+  background:linear-gradient(0deg,rgba(18,13,22,.98) 55%,rgba(18,13,22,0))}
+.bar>div{display:contents}
+.inner{max-width:900px}
+.play{width:56px;height:56px;border-radius:50%;border:1px solid var(--gold);background:rgba(242,196,109,.12);color:var(--gold);cursor:pointer;display:grid;place-items:center}
+.play:hover{background:rgba(242,196,109,.24)}
+.play:focus-visible,.seek:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.play svg{width:22px;height:22px;fill:currentColor}
+.play .pa{display:none}.playing .play .pl{display:none}.playing .play .pa{display:block}
+.seek{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:none;cursor:pointer;margin:0}
+.seek::-webkit-slider-runnable-track{height:3px;background:linear-gradient(90deg,var(--gold) var(--f,0%),rgba(246,239,226,.25) var(--f,0%))}
+.seek::-moz-range-track{height:3px;background:rgba(246,239,226,.25)}
+.seek::-moz-range-progress{height:3px;background:var(--gold)}
+.seek::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--gold);margin-top:-5.5px}
+.seek::-moz-range-thumb{width:14px;height:14px;border:0;border-radius:50%;background:var(--gold)}
+.time{font:500 13px/1 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.foot{margin:10vh 0 0;font-size:13px;line-height:1.8;color:var(--muted)}
+.foot a{color:var(--gold)}
+@media (max-width:560px){.stage{inset:56px 0 104px}.ln{padding:12px 2px}.play{width:50px;height:50px}}
+@media (prefers-reduced-motion:reduce){.ln{transition:none;transform:none}.ln.on{transform:none}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<header class="top"><a href="./#ost">← 回《晚霞》公開站</a><span>ENDING THEME</span></header>
+
+<main class="stage" id="stage">
+  <ol class="lines" id="lines">
+    <li class="head"><small>《晚霞》片尾主題曲</small><h1>晚霞</h1><p>按下面的播放鍵，歌詞會跟著唱到的那一句亮起來。點任何一句可以直接跳過去。</p></li>
+  </ol>
+</main>
+
+<div class="bar" id="bar">
+  <button class="play" id="play" type="button" aria-label="播放">
+    <svg class="pl" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+    <svg class="pa" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5h4.2v15H6zm7.8 0H18v15h-4.2z"/></svg>
+  </button>
+  <input class="seek" id="seek" type="range" min="0" max="167" step="0.1" value="0" aria-label="播放進度">
+  <span class="time" id="time">0:00 / 2:47</span>
+</div>
+<audio id="au" preload="metadata" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/theme.mp3"></audio>
+
+<script>
+// [開始秒數, 英文（照成品聽寫）, 中文翻譯]；0 開頭的空字串代表段落之間的間隔
+var L=[
+[13.6,"Tucked away inside a tiny bar","巷子深處一間小小的酒吧"],
+[19.0,"Seven wooden stools against the dark","七張木頭高腳椅，靠著暗處"],
+[26.5,"Rain was falling in the narrow street","窄巷裡下著雨"],
+[32.0,"Whispered through the glass so soft and sweet","隔著玻璃，雨聲又輕又甜"],
+0,
+[39.5,"I pour it slow, there is saffron in my glass","我慢慢地倒，杯裡有番紅花"],
+[47.8,"The sunset glows, memories that cannot pass","晚霞亮著，有些事過不去"],
+[55.4,"Hibiscus red is at the base","洛神的紅在最底下"],
+[59.4,"Recalling every line of your face","想起妳臉上的每一道線條"],
+0,
+[65.3,"She wrote everything by her own hand","她把每件事都親手寫下來"],
+[71.2,"Flavors that her tongue could not command","那些她的舌頭已經嚐不出的味道"],
+[77.3,"Take a little sip, is it sweet?","喝一小口，甜嗎？"],
+[84.4,"Asking me each time we would meet","每次見面，她都這樣問我"],
+0,
+[90.8,"I pour it slow, there is saffron in my glass","我慢慢地倒，杯裡有番紅花"],
+[98.9,"The sunset glows, memories that cannot pass","晚霞亮著，有些事過不去"],
+[106.4,"A layer of pink right on top","最上面一層粉紅"],
+[111.0,"Hoping that this moment won't stop","希望這一刻不要停"],
+0,
+[117.2,"She told me always remember to eat","她總是叫我記得吃飯"],
+[123.4,"So I keep living on my own two feet","所以我靠自己的兩隻腳活下去"],
+[129.6,"Stings for a moment when it hits my tongue","碰到舌頭的時候刺了一下"],
+[135.9,"But then it is sweet, just like when we were young","然後是甜的，跟我們年輕的時候一樣"],
+0,
+[142.6,"It is still sweet, I whisper to you","還是甜的，我小聲跟妳說"],
+[147.8,"As dusk paints the room in a dark shade of blue","黃昏把房間染成深藍"],
+[154.2,"The bar is still open, the light is still on","店還開著，燈還亮著"],
+[158.7,"I'm tender and grateful, though you are now gone","妳不在了，我的心還是柔軟，也還是感激"]
+];
+var END=166,au=document.getElementById('au'),ol=document.getElementById('lines'),stage=document.getElementById('stage'),
+    bar=document.getElementById('bar'),play=document.getElementById('play'),seek=document.getElementById('seek'),time=document.getElementById('time');
+var rows=[],cur=-1,dragging=false,still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+L.forEach(function(x){
+  var li=document.createElement('li');
+  if(!x){li.className='gap';li.setAttribute('aria-hidden','true');ol.appendChild(li);return;}
+  var b=document.createElement('button');b.type='button';b.className='ln';
+  var e=document.createElement('span');e.className='en';e.lang='en';e.textContent=x[1];
+  var z=document.createElement('span');z.className='zh';z.textContent=x[2];
+  b.appendChild(e);b.appendChild(z);li.appendChild(b);ol.appendChild(li);
+  var r={t:x[0],el:b,en:e};rows.push(r);
+  b.addEventListener('click',function(){au.currentTime=r.t+0.01;au.play().catch(function(){});});
+});
+rows.forEach(function(r,i){r.end=i+1<rows.length?Math.min(rows[i+1].t,r.t+9):END;});
+var foot=document.createElement('li');foot.className='foot';
+foot.innerHTML='這首歌的詞和曲都是 AI 生成的。英文歌詞是照成品聽寫下來的，個別字可能有出入；中文是對照翻譯，歌裡沒有唱。<br><a href="./#ost">回公開站聽其他七首配樂</a>';
+ol.appendChild(foot);
+function fmt(s){s=Math.max(0,Math.floor(s));return Math.floor(s/60)+':'+('0'+s%60).slice(-2);}
+function dur(){return isFinite(au.duration)&&au.duration>0?au.duration:167;}
+function center(el){var y=el.offsetTop+el.offsetHeight/2-stage.clientHeight/2;stage.scrollTo({top:y,behavior:still?'auto':'smooth'});}
+function draw(){
+  var t=au.currentTime,i=-1;
+  for(var k=0;k<rows.length;k++){if(t>=rows[k].t)i=k;else break;}
+  if(i>=0&&t>rows[i].end+1.5&&i===rows.length-1)i=rows.length;   // 唱完最後一句
+  if(i!==cur){
+    rows.forEach(function(r,k){r.el.classList.toggle('on',k===i);r.el.classList.toggle('done',k<i);if(k!==i)r.en.style.setProperty('--p',k<i?'100%':'0%');
+      if(k===i)r.el.setAttribute('aria-current','true');else r.el.removeAttribute('aria-current');});
+    cur=i;if(i>=0&&i<rows.length)center(rows[i].el);
+  }
+  if(i>=0&&i<rows.length){var r=rows[i],p=Math.max(0,Math.min(1,(t-r.t)/(Math.max(1.2,r.end-r.t-0.6))));r.en.style.setProperty('--p',(p*100).toFixed(1)+'%');}
+  if(!dragging){seek.value=t;}
+  seek.style.setProperty('--f',(Math.min(1,(dragging?seek.value:t)/dur())*100).toFixed(2)+'%');
+  time.textContent=fmt(dragging?seek.value:t)+' / '+fmt(dur());
+}
+function loop(){draw();if(!au.paused)requestAnimationFrame(loop);}
+au.addEventListener('loadedmetadata',function(){seek.max=dur().toFixed(1);draw();});
+au.addEventListener('play',function(){bar.classList.add('playing');play.setAttribute('aria-label','暫停');loop();});
+au.addEventListener('pause',function(){bar.classList.remove('playing');play.setAttribute('aria-label','播放');});
+au.addEventListener('seeked',draw);au.addEventListener('timeupdate',function(){if(au.paused)draw();});
+au.addEventListener('ended',function(){draw();});
+play.addEventListener('click',function(){if(au.paused){if(au.ended)au.currentTime=0;au.play().catch(function(){});}else au.pause();});
+seek.addEventListener('input',function(){dragging=true;draw();});
+seek.addEventListener('change',function(){au.currentTime=+seek.value;dragging=false;draw();});
+document.addEventListener('keydown',function(e){if(e.code==='Space'&&e.target===document.body){e.preventDefault();play.click();}});
+draw();
+</script>
+</body>
+</html>
