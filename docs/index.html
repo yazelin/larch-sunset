@@ -27,10 +27,9 @@ a{color:var(--gold);overflow-wrap:anywhere}
 .top nav{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none}
 .top nav a{color:var(--muted);text-decoration:none;font:500 14px/1 var(--sans);white-space:nowrap}
 .top nav a:hover{color:var(--gold)}
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;
-  background:linear-gradient(180deg,#1b1530 0%,#3a2347 30%,#7a3b55 52%,#d9785a 70%,#f2b25f 80%,#120d16 100%)}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 75%,rgba(242,196,109,.25),transparent 55%),linear-gradient(0deg,var(--bg),transparent 30%)}
-.hero .w{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:96px 0 64px}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:#120d16 url(img/roof_dance.webp) 62% 50%/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,13,22,.82) 0%,rgba(18,13,22,.5) 38%,rgba(18,13,22,0) 62%),linear-gradient(0deg,var(--bg) 0%,rgba(18,13,22,0) 34%),linear-gradient(180deg,rgba(18,13,22,.55) 0%,rgba(18,13,22,0) 22%)}
+.hero .w{position:relative;z-index:1;padding:120px 0 88px}
 .badge{display:inline-block;padding:7px 14px;border:1px solid var(--gold);color:var(--gold);font:700 13px/1 var(--sans);letter-spacing:.2em;background:rgba(18,13,22,.5)}
 h1{margin:16px 0 8px;font:900 clamp(56px,9vw,104px)/1.1 var(--serif);letter-spacing:.12em;text-shadow:0 0 40px rgba(242,196,109,.35)}
 .sub{font:500 clamp(16px,1.6vw,19px)/1.6 var(--serif);color:#ffe3c9;letter-spacing:.08em;margin:0}
@@ -40,7 +39,9 @@ h1{margin:16px 0 8px;font:900 clamp(56px,9vw,104px)/1.1 var(--serif);letter-spac
 .btn.main{color:var(--muted);box-shadow:inset 0 0 0 1px var(--line);cursor:default}
 .btn.ghost{color:var(--ink);box-shadow:inset 0 0 0 1px var(--gold)}
 .btn.ghost:hover{background:rgba(242,196,109,.14)}
-.hero svg{width:min(100%,260px);justify-self:center;filter:drop-shadow(0 20px 40px rgba(0,0,0,.45))}
+.still{margin:0 0 34px;position:relative}
+.still img{display:block;width:100%;height:auto;aspect-ratio:2.39/1;object-fit:cover;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.still figcaption{margin-top:10px;font:500 13px/1.6 var(--sans);letter-spacing:.12em;color:var(--muted)}
 section.blk{padding:96px 0 0}
 .tag{font:700 13px/1 var(--sans);letter-spacing:.3em;color:var(--rose)}
 h2{margin:12px 0 26px;font:900 clamp(26px,3.4vw,40px)/1.35 var(--serif);letter-spacing:.03em}
@@ -52,8 +53,9 @@ h3{font:700 21px/1.5 var(--serif);margin:36px 0 8px;color:#ffe3c9}
 .panel p{margin:0 0 .6em}.panel p:last-child{margin:0}
 .note{font-size:14.5px;color:var(--muted)}
 .drinks{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:8px 0 10px}
-.drink{background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);padding:22px;display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:center}
-.drink svg{width:110px}
+.drink{background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.drink img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.drink>div{padding:20px 22px 22px}
 .drink b{display:block;font:900 24px/1.3 var(--serif);letter-spacing:.08em}
 .drink small{display:block;color:var(--rose);font:700 12px/1.5 var(--sans);letter-spacing:.15em;margin-bottom:6px}
 .drink ol{margin:8px 0 0;padding-left:1.2em;font-size:15px;line-height:1.8}
@@ -75,11 +77,11 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
 .footer-icons svg{width:18px;height:18px;fill:currentColor}
 @media (max-width:760px){
   .top nav{display:none}
-  .hero .w{grid-template-columns:1fr;padding-top:84px}
-  .hero svg{width:150px;grid-row:1}
+  .hero{background-size:auto 60svh;background-position:72% 0}
+  .hero::after{background:linear-gradient(0deg,var(--bg) 0%,var(--bg) 42%,rgba(18,13,22,0) 62%),linear-gradient(180deg,rgba(18,13,22,.5) 0%,rgba(18,13,22,0) 14%)}
+  .hero .w{padding:52svh 0 48px}
+  .still img{aspect-ratio:16/9}
   .drinks,.pair{grid-template-columns:1fr}
-  .drink{grid-template-columns:80px 1fr;padding:18px}
-  .drink svg{width:80px}
 }
 </style>
 </head>
@@ -105,24 +107,12 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
       </div>
       <p class="lead" style="font-size:14px;margin-top:18px">單線劇情、一個結局，沒有選項，不配音，約三十五分鐘。</p>
     </div>
-    <svg viewBox="0 0 120 300" role="img" aria-label="一杯晚霞：細長香檳杯裡由下而上是紅、金、粉紅三層">
-      <defs><clipPath id="hf"><path d="M34 18 L86 18 L80 150 Q60 168 40 150 Z"/></clipPath></defs>
-      <g clip-path="url(#hf)">
-        <rect x="0" y="20" width="120" height="44" fill="#f4a6b4"/>
-        <rect x="0" y="64" width="120" height="56" fill="#f0bd5c"/>
-        <rect x="0" y="120" width="120" height="50" fill="#a52a3f"/>
-        <circle cx="52" cy="90" r="1.6" fill="#fff5" /><circle cx="66" cy="70" r="1.3" fill="#fff6"/><circle cx="58" cy="46" r="1.5" fill="#fff6"/><circle cx="70" cy="36" r="1.1" fill="#fff7"/>
-        <circle cx="50" cy="26" r="2" fill="#d9536e"/><circle cx="62" cy="24" r="1.6" fill="#d9536e"/><circle cx="72" cy="27" r="1.8" fill="#d9536e"/>
-      </g>
-      <path d="M34 18 L86 18 L80 150 Q60 168 40 150 Z" fill="none" stroke="#fff8" stroke-width="2"/>
-      <path d="M60 162 L60 268" stroke="#fff8" stroke-width="3"/>
-      <ellipse cx="60" cy="272" rx="30" ry="6" fill="none" stroke="#fff8" stroke-width="2.5"/>
-    </svg>
   </div>
 </section>
 
 <section class="blk" id="story">
   <div class="w prose">
+    <figure class="still"><img src="img/return_closed.webp" alt="頭七深夜，沈淮一個人站在只開一盞燈的吧檯邊，七張高腳椅空著，窗外在下雨" loading="lazy" width="1600" height="900"><figcaption>頭七深夜，停業七天的店</figcaption></figure>
     <span class="tag">STORY</span>
     <h2>頭七那一晚</h2>
     <p>安雅走後第七天的深夜，沈淮第一次推開停業七天的店門。人家說，頭七那一晚她會回家。</p>
@@ -143,25 +133,12 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
 
     <div class="drinks">
       <div class="drink">
-        <svg viewBox="0 0 120 300" role="img" aria-label="破曉：細長香檳杯裡下層紅、上層淡金">
-          <defs><clipPath id="f1"><path d="M34 18 L86 18 L80 150 Q60 168 40 150 Z"/></clipPath></defs>
-          <g clip-path="url(#f1)"><rect x="0" y="20" width="120" height="96" fill="#f3dc9c"/><rect x="0" y="116" width="120" height="54" fill="#a52a3f"/>
-          <circle cx="54" cy="80" r="1.6" fill="#fff8"/><circle cx="66" cy="56" r="1.3" fill="#fff8"/><circle cx="58" cy="34" r="1.5" fill="#fff8"/></g>
-          <path d="M34 18 L86 18 L80 150 Q60 168 40 150 Z" fill="none" stroke="#fff8" stroke-width="2"/>
-          <path d="M33 18 L36 30" stroke="#d9536e" stroke-width="4"/><path d="M87 18 L84 30" stroke="#d9536e" stroke-width="4"/>
-          <path d="M60 162 L60 268" stroke="#fff8" stroke-width="3"/><ellipse cx="60" cy="272" rx="30" ry="6" fill="none" stroke="#fff8" stroke-width="2.5"/>
-        </svg>
+        <img src="img/rain_dawn.webp" alt="暴雨夜，安雅沿著吧匙把氣泡白酒倒進杯裡，杯底是紅的，上面浮著淡金，沈淮坐在對面看" loading="lazy" width="1600" height="900">
         <div><small>初遇那晚 · 兩層</small><b>破曉</b>
           <ol><li>杯底先倒洛神花糖漿。</li><li>氣泡白酒沿倒扣的吧匙背面慢慢倒上去。</li><li>杯口只抹濕外側，沾壓碎的粉紅胡椒。</li></ol></div>
       </div>
       <div class="drink">
-        <svg viewBox="0 0 120 300" role="img" aria-label="晚霞：細長香檳杯裡由下而上是紅、金、粉紅三層">
-          <defs><clipPath id="f2"><path d="M34 18 L86 18 L80 150 Q60 168 40 150 Z"/></clipPath></defs>
-          <g clip-path="url(#f2)"><rect x="0" y="20" width="120" height="44" fill="#f4a6b4"/><rect x="0" y="64" width="120" height="56" fill="#f0bd5c"/><rect x="0" y="120" width="120" height="50" fill="#a52a3f"/>
-          <circle cx="50" cy="26" r="2" fill="#d9536e"/><circle cx="62" cy="24" r="1.6" fill="#d9536e"/><circle cx="72" cy="27" r="1.8" fill="#d9536e"/></g>
-          <path d="M34 18 L86 18 L80 150 Q60 168 40 150 Z" fill="none" stroke="#fff8" stroke-width="2"/>
-          <path d="M60 162 L60 268" stroke="#fff8" stroke-width="3"/><ellipse cx="60" cy="272" rx="30" ry="6" fill="none" stroke="#fff8" stroke-width="2.5"/>
-        </svg>
+        <img src="img/dusk_recipe.webp" alt="打烊後，安雅扶著吧匙疊出紅、金、粉紅三層的〈晚霞〉，沈淮拿著量酒器站在旁邊" loading="lazy" width="1600" height="900">
         <div><small>她想再給兩個人的傍晚 · 三層</small><b>晚霞</b>
           <ol><li>杯底是洛神花糖漿。</li><li>貴腐甜白酒加番紅花糖漿攪勻，沿匙背疊在中間。</li><li>最上面沿匙背浮一層不甜的粉紅氣泡酒，酒面留幾點粉紅胡椒碎。</li></ol></div>
       </div>
@@ -201,6 +178,7 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
 
 <section class="blk" id="illness">
   <div class="w prose">
+    <figure class="still"><img src="img/clinic_day.webp" alt="診間裡，安雅和母親並肩坐著，醫師指著螢幕" loading="lazy" width="1600" height="900"><figcaption>第一年七月，診間</figcaption></figure>
     <span class="tag">ILLNESS</span>
     <h2>她的病</h2>
     <p>舊版的病歷寫著「味覺中樞進行性壞死」，醫學上沒有這個病名。重製版改用一個真實的病：唾液腺腺樣囊狀癌（adenoid cystic carcinoma，簡稱 ACC），沿神經復發。</p>
@@ -221,6 +199,7 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
 
 <section class="blk" id="ending">
   <div class="w prose">
+    <figure class="still"><img src="img/evening_roof.webp" alt="傍晚的頂樓，沈淮一個人靠著矮牆看晚霞" loading="lazy" width="1600" height="900"><figcaption>重新開店之後，開店前的頂樓</figcaption></figure>
     <span class="tag">THE ENDING</span>
     <h2>結局為什麼改寫</h2>
     <p>舊版有兩個結局。作者最喜歡的叫〈共赴晚霞〉：安雅把止痛藥摻進〈晚霞〉，在兩點十七分喝下；頭七那晚，沈淮找到她留下的配方和那罐胡椒，明知有毒，還是調出同一杯喝下去，替她回答最後一次「甜嗎」，跟她一起走。</p>
