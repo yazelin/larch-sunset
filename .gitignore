@@ -20,3 +20,4 @@ art/v5/anchors/
 art/v5/prompts/shot_*.txt
 art/v5/*.log
 !art/v5/ref/*.webp
+site/out/

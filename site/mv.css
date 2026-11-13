@@ -74,3 +74,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .sign{position:fixed;left:16px;bottom:calc(var(--bar) + 10px);margin:0;font-size:.75rem;color:rgba(185,172,160,.6);letter-spacing:.1em}
 .embed .sign,.embed .back,.rec .sign,.rec .back,.rec .prog,.rec .start,.rec .next,.rec .again{display:none}
 @media (prefers-reduced-motion:reduce){.film i,.lyric p,.black,.tone,.intro,.endcard{transition:none}.film i{filter:none}.lyric .w,.lyric .z{transition:none;transform:none;filter:none}.grain{animation:none}.intro{transform:none}}
+/* 錄影（1920×1080）：字放大一級，影片縮小看也讀得到 */
+.rec .lyric{height:9em}
+.rec .lyric .en{font-size:60px}.rec .lyric .zh{font-size:40px}
+.rec .lyric p.chorus .en{font-size:68px}.rec .lyric p.key .zh{font-size:48px}
+.rec .intro b{font-size:170px}.rec .intro small{font-size:18px}.rec .intro span{font-size:30px}.rec .intro i{width:300px;height:4px}
+.rec .endcard b{font-size:84px}.rec .endcard span{font-size:24px}.rec .endcard i{width:180px;height:3px}
