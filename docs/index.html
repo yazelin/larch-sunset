@@ -42,6 +42,16 @@ h1{margin:16px 0 8px;font:900 clamp(56px,9vw,104px)/1.1 var(--serif);letter-spac
 .still{margin:0 0 34px;position:relative}
 .still img{display:block;width:100%;height:auto;aspect-ratio:2.39/1;object-fit:cover;box-shadow:0 30px 60px rgba(0,0,0,.45)}
 .still figcaption{margin-top:10px;font:500 13px/1.6 var(--sans);letter-spacing:.12em;color:var(--muted)}
+.ost{list-style:none;padding:0;margin:18px 0 0;counter-reset:t}
+.prose .ost li{max-width:none}
+.ost li{counter-increment:t;display:grid;grid-template-columns:1fr auto minmax(220px,300px);gap:6px 18px;align-items:center;padding:16px 0;border-top:1px solid var(--line);max-width:none}
+.ost li:last-child{border-bottom:1px solid var(--line)}
+.ost li>div{min-width:0}
+.ost b{display:block;font:700 19px/1.4 var(--serif);letter-spacing:.06em}
+.ost b::before{content:counter(t,decimal-leading-zero);font:700 12px/1 var(--sans);letter-spacing:.15em;color:var(--rose);margin-right:12px;vertical-align:middle}
+.ost span{display:block;font-size:14.5px;line-height:1.7;color:var(--muted)}
+.ost small{font:500 13px/1 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
+.ost audio{width:100%;height:36px;color-scheme:dark}
 section.blk{padding:96px 0 0}
 .tag{font:700 13px/1 var(--sans);letter-spacing:.3em;color:var(--rose)}
 h2{margin:12px 0 26px;font:900 clamp(26px,3.4vw,40px)/1.35 var(--serif);letter-spacing:.03em}
@@ -82,6 +92,8 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
   .hero .w{padding:52svh 0 48px}
   .still img{aspect-ratio:16/9}
   .drinks,.pair{grid-template-columns:1fr}
+  .ost li{grid-template-columns:1fr auto}
+  .ost audio{grid-column:1/-1}
 }
 </style>
 </head>
@@ -89,7 +101,7 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
 <header class="top">
   <b>晚霞</b>
   <nav aria-label="頁內導覽">
-    <a href="#story">故事</a><a href="#drinks">兩杯酒</a><a href="#illness">她的病</a><a href="#ending">結局為什麼改寫</a><a href="#refs">參考資料</a>
+    <a href="#story">故事</a><a href="#drinks">兩杯酒</a><a href="#illness">她的病</a><a href="#ending">結局為什麼改寫</a><a href="#ost">原聲帶</a><a href="#refs">參考資料</a>
   </nav>
 </header>
 
@@ -223,6 +235,24 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
   </div>
 </section>
 
+<section class="blk" id="ost">
+  <div class="w prose">
+    <span class="tag">SOUNDTRACK</span>
+    <h2>原聲帶</h2>
+    <p>全劇八首，鋼琴與大提琴為主，每首都是完整的一首曲子。配樂由 AI 生成，作者定方向、挑版本。按播放就能聽，一次播一首。</p>
+    <ol class="ost">
+      <li><div><b>主題</b><span>標題畫面，還有重新開店之後的尾聲。</span></div><small>2:49</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/main.mp3"></audio></li>
+      <li><div><b>暴雨夜</b><span>他淋濕了走進店裡，喝到第一杯〈破曉〉；後來每天下班都來。</span></div><small>3:01</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/dawn.mp3"></audio></li>
+      <li><div><b>過日子</b><span>教調酒、一起顧店、打烊後試新酒的那些晚上。</span></div><small>3:00</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/days.mp3"></audio></li>
+      <li><div><b>獨自</b><span>診間、吵架、她一個人按著耳朵下面的時候。</span></div><small>2:59</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/alone.mp3"></audio></li>
+      <li><div><b>頂樓</b><span>公休日傍晚，兩個人在頂樓看晚霞；頭七那晚的最後一口也是這首。</span></div><small>3:00</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/sunset.mp3"></audio></li>
+      <li><div><b>最後的冬天</b><span>她把病講出來之後，到最後幾個月。</span></div><small>2:57</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/winter.mp3"></audio></li>
+      <li><div><b>頭七</b><span>他回到停業七天的店，翻開她的筆記本。</span></div><small>2:56</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/seventh.mp3"></audio></li>
+      <li><div><b>片尾主題曲</b><span>片尾字卷用的英文人聲歌。</span></div><small>2:47</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/theme.mp3"></audio></li>
+    </ol>
+  </div>
+</section>
+
 <section class="blk" id="refs">
   <div class="w prose">
     <span class="tag">REFERENCES</span>
@@ -345,5 +375,6 @@ function boot(){var tries=0;(function t(){if(start())return;if(++tries<20)setTim
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
 })();
 </script>
+<script>document.addEventListener('play',function(e){document.querySelectorAll('.ost audio').forEach(function(a){if(a!==e.target)a.pause()})},true);</script>
 </body>
 </html>
