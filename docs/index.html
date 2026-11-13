@@ -52,6 +52,26 @@ h1{margin:16px 0 8px;font:900 clamp(56px,9vw,104px)/1.1 var(--serif);letter-spac
 .ost span{display:block;font-size:14.5px;line-height:1.7;color:var(--muted)}
 .ost small{font:500 13px/1 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
 .ost audio{width:100%;height:36px;color-scheme:dark}
+.cast{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.prose .cast{padding:0}
+.prose .cast li{max-width:none;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+.cast img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.cast div{padding:14px 16px 18px}
+.cast small{display:block;color:var(--rose);font:700 12px/1.5 var(--sans);letter-spacing:.1em}
+.cast b{display:block;font:900 21px/1.4 var(--serif);letter-spacing:.06em;margin:2px 0 6px}
+.cast p{margin:0;font-size:14.5px;line-height:1.8;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.gal button{all:unset;cursor:zoom-in;display:block;position:relative;overflow:hidden}
+.gal button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.gal img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .5s ease}
+.gal button:hover img{transform:scale(1.04)}
+.gal span{position:absolute;inset:auto 0 0;padding:26px 12px 9px;font:500 13px/1.5 var(--sans);letter-spacing:.06em;color:#f6efe2;background:linear-gradient(0deg,rgba(18,13,22,.85),rgba(18,13,22,0))}
+.lb{border:0;padding:0;background:transparent;max-width:min(96vw,1500px);width:100%;color:var(--ink)}
+.lb::backdrop{background:rgba(10,7,13,.92)}
+.lb img{display:block;width:100%;height:auto;max-height:84vh;object-fit:contain}
+.lb p{margin:10px 0 0;text-align:center;font:500 14px/1.6 var(--sans);letter-spacing:.1em;color:var(--muted)}
+.lb button{position:fixed;top:14px;right:16px;min-height:44px;padding:0 16px;background:rgba(18,13,22,.7);color:var(--ink);border:1px solid var(--line);font:700 14px/1 var(--sans);letter-spacing:.1em;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.gal img{transition:none}}
 .embedded .play{display:none}
 section.blk{padding:96px 0 0}
 .tag{font:700 13px/1 var(--sans);letter-spacing:.3em;color:var(--rose)}
@@ -93,6 +113,9 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
   .hero .w{padding:52svh 0 48px}
   .still img{aspect-ratio:16/9}
   .drinks,.pair{grid-template-columns:1fr}
+  .cast{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:1fr 1fr;gap:8px}
+  .gal span{font-size:12px;padding:20px 8px 7px}
   .ost li{grid-template-columns:1fr auto}
   .ost audio{grid-column:1/-1}
 }
@@ -102,7 +125,7 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
 <header class="top">
   <b>晚霞</b>
   <nav aria-label="頁內導覽">
-    <a href="#story">故事</a><a href="#drinks">兩杯酒</a><a href="#illness">她的病</a><a href="#ending">結局為什麼改寫</a><a href="#ost">原聲帶</a><a href="#refs">參考資料</a>
+    <a href="#story">故事</a><a href="#cast">人物</a><a href="#drinks">兩杯酒</a><a href="#illness">她的病</a><a href="#ending">結局為什麼改寫</a><a href="#stills">劇照</a><a href="#ost">原聲帶</a><a href="#refs">參考資料</a>
   </nav>
 </header>
 
@@ -135,6 +158,20 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
     <div class="panel">
       <p>這是 2026 年 10 月版《晚霞是舌尖最後的刺痛》的重製版。舊版是 RPG 地圖加解謎，重製版改成純劇情卡、電影感 CG，劇情、病、調酒、結局都重新查過資料寫過。下面幾節說明查了什麼、改了什麼。</p>
     </div>
+  </div>
+</section>
+
+<section class="blk" id="cast">
+  <div class="w prose">
+    <span class="tag">CAST</span>
+    <h2>人物</h2>
+    <ul class="cast">
+      <li><img src="img/c_anya.webp" alt="安雅在吧檯後面笑" loading="lazy" width="600" height="750"><div><small>調酒師，「回甘」的老闆</small><b>安雅</b><p>一個人租下空了三年的店面，自己刷油漆、自己掛燈箱。愛笑、嘴快，在吧檯後面說了算，難過的事習慣自己扛。每一杯做好都要問一句：「甜嗎？」</p></div></li>
+      <li><img src="img/c_shen.webp" alt="沈淮低頭倒氣泡白酒" loading="lazy" width="600" height="750"><div><small>原本在台北畫建築圖</small><b>沈淮</b><p>常加班到半夜。暴雨夜淋濕了走進店裡，之後每天下班都來，第二年辭職跟她一起顧店。話不多，問他酒是什麼味道，一開始只會說「甜」。</p></div></li>
+      <li><img src="img/c_mother.webp" alt="安雅的母親坐在飯桌旁" loading="lazy" width="600" height="750"><div><small>六十歲上下</small><b>安雅的母親</b><p>每次回診都陪著去。上樓吃飯時一直往沈淮碗裡夾菜。話不多，送飯來的時候會交代：裡面有蛋，不要只吃肉。</p></div></li>
+      <li><img src="img/c_azhong.webp" alt="阿忠拿著啤酒坐在靠門的位置" loading="lazy" width="600" height="750"><div><small>巷口機車行老闆</small><b>阿忠</b><p>每晚拉下鐵門就過來，坐最靠門那張椅子，喝一瓶啤酒。店裡的吧檯是他幫忙搬的。嘴上不饒人，東西壞了都是他修。</p></div></li>
+      <li><img src="img/c_xiaokui.webp" alt="小葵托著臉坐在吧檯前" loading="lazy" width="600" height="750"><div><small>巷口補習班的櫃檯</small><b>小葵</b><p>常在開店前就坐進來。每一杯都要先拍照，喝完打分數，心情不好會多扣幾分。</p></div></li>
+    </ul>
   </div>
 </section>
 
@@ -235,6 +272,29 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
     </div>
   </div>
 </section>
+
+<section class="blk" id="stills">
+  <div class="w prose">
+    <span class="tag">STILLS</span>
+    <h2>劇照</h2>
+    <p>十二張，照劇裡的時間排。點圖可以放大。結局相關的幾張沒有放。</p>
+    <div class="gal">
+      <button type="button" data-src="img/rain_towel.webp" data-cap="第一年春天，暴雨夜"><img src="img/rain_towel.webp" alt="第一年春天，暴雨夜" loading="lazy" width="1600" height="900"><span>第一年春天，暴雨夜</span></button>
+      <button type="button" data-src="img/rain_umbrella.webp" data-cap="那一晚，她借他一把傘"><img src="img/rain_umbrella.webp" alt="那一晚，她借他一把傘" loading="lazy" width="1600" height="900"><span>那一晚，她借他一把傘</span></button>
+      <button type="button" data-src="img/weeks_regular.webp" data-cap="幾個禮拜後，他成了熟客"><img src="img/weeks_regular.webp" alt="幾個禮拜後，他成了熟客" loading="lazy" width="1600" height="900"><span>幾個禮拜後，他成了熟客</span></button>
+      <button type="button" data-src="img/lesson_hands.webp" data-cap="夏末，她教他分層"><img src="img/lesson_hands.webp" alt="夏末，她教他分層" loading="lazy" width="1600" height="900"><span>夏末，她教他分層</span></button>
+      <button type="button" data-src="img/confess_kiss.webp" data-cap="分層課那天晚上"><img src="img/confess_kiss.webp" alt="分層課那天晚上" loading="lazy" width="1600" height="900"><span>分層課那天晚上</span></button>
+      <button type="button" data-src="img/quit_apron.webp" data-cap="第二年春天，吵架的隔天"><img src="img/quit_apron.webp" alt="第二年春天，吵架的隔天" loading="lazy" width="1600" height="900"><span>第二年春天，吵架的隔天</span></button>
+      <button type="button" data-src="img/open_laugh.webp" data-cap="第二年夏天，滿座的週五"><img src="img/open_laugh.webp" alt="第二年夏天，滿座的週五" loading="lazy" width="1600" height="900"><span>第二年夏天，滿座的週五</span></button>
+      <button type="button" data-src="img/home_mother.webp" data-cap="她母親第一次上樓吃飯"><img src="img/home_mother.webp" alt="她母親第一次上樓吃飯" loading="lazy" width="1600" height="900"><span>她母親第一次上樓吃飯</span></button>
+      <button type="button" data-src="img/dusk_midnight.webp" data-cap="試〈晚霞〉試到凌晨兩點"><img src="img/dusk_midnight.webp" alt="試〈晚霞〉試到凌晨兩點" loading="lazy" width="1600" height="900"><span>試〈晚霞〉試到凌晨兩點</span></button>
+      <button type="button" data-src="img/roof_dawn.webp" data-cap="第三年秋天，公休日的頂樓"><img src="img/roof_dawn.webp" alt="第三年秋天，公休日的頂樓" loading="lazy" width="1600" height="900"><span>第三年秋天，公休日的頂樓</span></button>
+      <button type="button" data-src="img/winter_finger.webp" data-cap="第三年冬天，天剛亮"><img src="img/winter_finger.webp" alt="第三年冬天，天剛亮" loading="lazy" width="1600" height="900"><span>第三年冬天，天剛亮</span></button>
+      <button type="button" data-src="img/evening_bar.webp" data-cap="重新開店之後"><img src="img/evening_bar.webp" alt="重新開店之後" loading="lazy" width="1600" height="900"><span>重新開店之後</span></button>
+    </div>
+  </div>
+</section>
+<dialog class="lb" id="lb"><img alt=""><p></p><button type="button" aria-label="關閉">關閉</button></dialog>
 
 <section class="blk" id="ost">
   <div class="w prose">
@@ -377,6 +437,9 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 })();
 </script>
 <script>if(window.self!==window.top)document.documentElement.classList.add('embedded');</script>
+<script>(function(){var d=document.getElementById('lb');if(!d||!d.showModal)return;var im=d.querySelector('img'),p=d.querySelector('p');
+document.querySelectorAll('.gal button').forEach(function(b){b.addEventListener('click',function(){im.src=b.dataset.src;im.alt=b.dataset.cap;p.textContent=b.dataset.cap;d.showModal()})});
+d.addEventListener('click',function(e){if(e.target!==im)d.close()});})();</script>
 <script>document.addEventListener('play',function(e){document.querySelectorAll('.ost audio').forEach(function(a){if(a!==e.target)a.pause()})},true);</script>
 </body>
 </html>
