@@ -41,5 +41,5 @@ if __name__ == '__main__':
     assert sh == {('a', 0): 'a_1', ('a', 1): 'a_2'} and d == {'a_1': '她笑', 'a_2': ''}, (sh, d)
     n = sum(len(v) for v in L.values())
     print(len(ORDER), '張卡', n, '句', len(SHOTS), '個換圖點', sorted({x[0] + (f'（{x[1]}）' if x[1] else '') for v in L.values() for x in v}))
-    assert all((k, 0) in SHOTS for k in ORDER), [k for k in ORDER if (k, 0) not in SHOTS]
+    print('卡片開頭沒標圖、沿用上一張的：', [k for k in ORDER if (k, 0) not in SHOTS])
     print('ok')
