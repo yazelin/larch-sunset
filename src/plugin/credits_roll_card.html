@@ -121,7 +121,18 @@ td{padding:0 12px}td:first-child{color:var(--muted);text-align:right}td:last-chi
 
     const SPEED = Math.max(8, num(values.speed, 46)), HOLD = Math.max(0, num(values.endHold, 2)) * 1000;
     const auto = values.autoContinue !== false && values.autoContinue !== 'false';
-    let pos = innerHeight * 0.5, paused = false, last = 0, dragY = null, done = false;
+    // 開場：片名一開始就在畫面中間偏上、名單已經露出來，前 6 秒捲得比較快，讓人一眼看出字幕在動；
+    // 之後的速度調慢一點，整段總長跟原本（片名從畫面一半起、等速）一樣，才對得上主題曲。
+    // 插件剛載入時視窗高度可能還是 0，所以起點等量得到高度才定。
+    const BOOST = 6;
+    let pos = 0, base = SPEED, t0 = 0, ready = false, paused = false, last = 0, dragY = null, done = false;
+    const init = t => {
+      if (ready || innerHeight < 50) return;
+      const total = (maxPos() - innerHeight * 0.5) / SPEED;
+      pos = innerHeight * 0.7;
+      base = Math.max(6, (maxPos() - pos) / (total + BOOST));
+      t0 = t; ready = true; apply();
+    };
     const maxPos = () => track.scrollHeight + innerHeight * 0.35;
     const apply = () => { track.style.transform = `translate(-50%,${-pos}px)`; };
     const clamp = () => { pos = Math.max(0, Math.min(maxPos(), pos)); };
@@ -140,8 +151,12 @@ td{padding:0 12px}td:first-child{color:var(--muted);text-align:right}td:last-chi
     const tick = t => {
       if (!last) last = t;
       const dt = (t - last) / 1000; last = t;
-      if (!paused && dragY === null) { pos += SPEED * dt; if (pos >= maxPos()) paused = true; clamp(); apply(); }
-      if (pos >= maxPos() && !endedOnce) { endedOnce = true; ended(); }
+      init(t);
+      if (ready && !paused && dragY === null) {
+        const k = 1 + 2 * Math.max(0, 1 - (t - t0) / 1000 / BOOST);
+        pos += base * k * dt; if (pos >= maxPos()) paused = true; clamp(); apply();
+      }
+      if (ready && pos >= maxPos() && !endedOnce) { endedOnce = true; ended(); }
       requestAnimationFrame(tick);
     };
     apply(); requestAnimationFrame(tick);
