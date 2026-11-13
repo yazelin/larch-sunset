@@ -72,6 +72,13 @@ h1{margin:16px 0 8px;font:900 clamp(56px,9vw,104px)/1.1 var(--serif);letter-spac
 .lb p{margin:10px 0 0;text-align:center;font:500 14px/1.6 var(--sans);letter-spacing:.1em;color:var(--muted)}
 .lb button{position:fixed;top:14px;right:16px;min-height:44px;padding:0 16px;background:rgba(18,13,22,.7);color:var(--ink);border:1px solid var(--line);font:700 14px/1 var(--sans);letter-spacing:.1em;cursor:pointer}
 @media (prefers-reduced-motion:reduce){.gal img{transition:none}}
+.lyrics{margin-top:26px}
+.lyrics summary{cursor:pointer;font:700 15px/1.6 var(--sans);letter-spacing:.06em;color:var(--gold)}
+.verses{display:grid;grid-template-columns:1fr 1fr;gap:22px 32px;margin:18px 0 6px}
+.verse p{margin:0;max-width:none}
+.verse p[lang=en]{font:500 15.5px/1.6 var(--serif);color:var(--ink);margin-top:9px}
+.verse p[lang=en]:first-child{margin-top:0}
+.verse p:not([lang]){font-size:14px;line-height:1.6;color:var(--muted)}
 .embedded .play{display:none}
 section.blk{padding:96px 0 0}
 .tag{font:700 13px/1 var(--sans);letter-spacing:.3em;color:var(--rose)}
@@ -114,6 +121,7 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
   .still img{aspect-ratio:16/9}
   .drinks,.pair{grid-template-columns:1fr}
   .cast{grid-template-columns:1fr 1fr}
+  .verses{grid-template-columns:1fr}
   .gal{grid-template-columns:1fr 1fr;gap:8px}
   .gal span{font-size:12px;padding:20px 8px 7px}
   .ost li{grid-template-columns:1fr auto}
@@ -311,6 +319,18 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
       <li><div><b>頭七</b><span>他回到停業七天的店，翻開她的筆記本。</span></div><small>2:56</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/seventh.mp3"></audio></li>
       <li><div><b>片尾主題曲</b><span>片尾字卷用的英文人聲歌。</span></div><small>2:47</small><audio controls preload="none" src="https://cdn.jsdelivr.net/gh/yazelin/larch-sunset@sunset-audio-123cffa5/assets/bgm/theme.mp3"></audio></li>
     </ol>
+    <details class="panel lyrics">
+      <summary>片尾主題曲的歌詞（英文原詞與中文翻譯）</summary>
+      <div class="verses">
+        <div class="verse"><p lang="en">Tucked away inside a tiny bar</p><p>巷子深處一間小小的酒吧</p><p lang="en">Seven wooden stools against the dark</p><p>七張木頭高腳椅，靠著暗處</p><p lang="en">Rain was falling in the narrow street</p><p>窄巷裡下著雨</p><p lang="en">Whispered through the glass so soft and sweet</p><p>隔著玻璃，雨聲又輕又甜</p></div>
+        <div class="verse"><p lang="en">I pour it slow, there is saffron in my glass</p><p>我慢慢地倒，杯裡有番紅花</p><p lang="en">The sunset glows, memories that cannot pass</p><p>晚霞亮著，有些事過不去</p><p lang="en">Hibiscus red is at the base</p><p>洛神的紅在最底下</p><p lang="en">Recalling every line of your face</p><p>想起妳臉上的每一道線條</p></div>
+        <div class="verse"><p lang="en">She wrote everything by her own hand</p><p>她把每件事都親手寫下來</p><p lang="en">Flavors that her tongue could not command</p><p>那些她的舌頭已經嚐不出的味道</p><p lang="en">Take a little sip, is it sweet?</p><p>喝一小口，甜嗎？</p><p lang="en">Asking me each time we would meet</p><p>每次見面，她都這樣問我</p></div>
+        <div class="verse"><p lang="en">I pour it slow, there is saffron in my glass</p><p>我慢慢地倒，杯裡有番紅花</p><p lang="en">The sunset glows, memories that cannot pass</p><p>晚霞亮著，有些事過不去</p><p lang="en">A layer of pink right on top</p><p>最上面一層粉紅</p><p lang="en">Hoping that this moment won't stop</p><p>希望這一刻不要停</p></div>
+        <div class="verse"><p lang="en">She told me always remember to eat</p><p>她總是叫我記得吃飯</p><p lang="en">So I keep living on my own two feet</p><p>所以我靠自己的兩隻腳活下去</p><p lang="en">Stings for a moment when it hits my tongue</p><p>碰到舌頭的時候刺了一下</p><p lang="en">But then it is sweet, just like when we were young</p><p>然後是甜的，跟我們年輕的時候一樣</p></div>
+        <div class="verse"><p lang="en">It is still sweet, I whisper to you</p><p>還是甜的，我小聲跟妳說</p><p lang="en">As dusk paints the room in a dark shade of blue</p><p>黃昏把房間染成深藍</p><p lang="en">The bar is still open, the light is still on</p><p>店還開著，燈還亮著</p><p lang="en">I'm tender and grateful, though you are now gone</p><p>妳不在了，我心裡還是又軟又感謝</p></div>
+      </div>
+      <p class="note">這首歌的詞和曲都是 AI 生成的。英文歌詞是照成品聽寫下來的，個別字可能有出入；中文是對照翻譯，歌裡沒有唱。</p>
+    </details>
   </div>
 </section>
 
