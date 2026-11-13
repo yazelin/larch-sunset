@@ -11,6 +11,7 @@ PROJECT_ID = 'project-8cb1ab7e-891c-46b4-bd38-df29060e5717'
 A = '/files/assets/'
 TEXT_MS = 55
 NAME = '晚霞'
+SITE = 'https://yazelin.github.io/larch-sunset/'   # 公開站：第二章全螢幕內嵌（作者 11-14：照《餘燼》）
 DESCRIPTION = ('基隆慶安宮後面的巷子裡，有一間只有七張高腳椅的小酒吧，叫「回甘」。\n\n'
                '安雅走後的第七天，沈淮回到店裡，準備把鑰匙交出去。故事從這一晚往回講：三年前的暴雨夜，加班到深夜的他推門進來，'
                '喝到她調的第一杯〈破曉〉；後來兩個人一起顧店、吵架、和好，她生病，他陪到最後。頭七深夜，他翻開她從不讓人看的小筆記本。\n\n'
@@ -124,7 +125,7 @@ def credits_card(bg):
         'pluginIcon': 'scroll', 'pluginColor': '#8a6d2a', 'pluginPresentation': 'fullscreen', 'pluginFrame': {'showTitle': False, 'showButton': False},
         'pluginSkippable': True, 'pluginReadVars': [], 'pluginWriteVars': [], 'pluginAssets': [], 'platforms': ['web'],
         'pluginHtml': (R / 'src/plugin/credits_roll_card.html').read_text(encoding='utf-8'),
-        'pluginValues': {'content': content, 'speed': 16, 'autoContinue': True, 'endHold': 8, 'continueLabel': '回到標題', 'bgColor': '#0b0a10',
+        'pluginValues': {'content': content, 'speed': 16, 'autoContinue': True, 'endHold': 8, 'continueLabel': '看公開站', 'bgColor': '#0b0a10',
                          'bgOpacity': 0.8, 'textColor': '#f3ead8', 'accentColor': '#d9a441', 'font': 'serif'},
         **({'bgm': music('theme'), 'bgmVolume': 0.7, 'bgmLoop': False} if music('theme') else {})}}
 
@@ -165,6 +166,22 @@ def build():
             cards.link(board, prev, cid)
         N(c); prev = cid
     N(credits_card(shot_url(bg))); cards.link(board, prev, 'credits')
+    # 第二章＝公開站：片尾字卷捲完跳過去，全螢幕嵌公開站（兩杯酒、她的病、結局為什麼改寫、原聲帶、參考資料），看完按「略過」回標題
+    board['nodes'][-1]['data']['chapterEnd'] = True
+    N({'id': 'to-site', 'type': 'story', 'position': {'x': 0, 'y': 0}, 'data': {
+        'type': 'boardJump', 'title': '第二章・公開站', 'text': '', 'start': False, 'voiceMode': 'off', 'stage': {'actors': []},
+        'jumpNodeId': 'site', 'jumpBoardId': 'board-site', 'characterLayers': []}})
+    cards.link(board, 'credits', 'to-site')
+    shell = ('<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><style>html,body{margin:0;height:100%;background:#120d16}'
+             f'iframe{{width:100%;height:100%;border:0;display:block}}</style><iframe src="{SITE}" allow="fullscreen; autoplay"></iframe>'
+             "<script>parent.postMessage({type:'larch:ready'},'*');</script></html>")
+    p['boards'].append({'id': 'board-site', 'kind': 'story', 'mode': 'story', 'name': '第二章・公開站', 'thumbnail': shot_url('evening_roof'),
+                        'description': '公開站：兩杯酒怎麼調、她的病、結局為什麼改寫、原聲帶、參考資料', 'edges': [], 'nodes': [{
+        'id': 'site', 'type': 'story', 'position': {'x': 100, 'y': 200}, 'data': {
+            'type': 'miniGame', 'start': True, 'title': '第二章・公開站', 'text': '兩杯酒、她的病、結局為什麼改寫、原聲帶與參考資料。看完按「略過」回到標題。', 'voiceMode': 'off',
+            'bgm': '', 'bgmVolume': 0, 'bgmLoop': False,
+            'miniGameHtml': shell, 'miniGameNote': f'薄殼而已，內容在 {SITE}', 'miniGameReadVars': [], 'miniGameSkippable': True,
+            'miniGameWriteVars': [], 'miniGamePresentation': 'fullscreen'}}]})
     (R / 'dist').mkdir(exist_ok=True)
     out = R / 'dist/project.json'
     out.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding='utf-8')

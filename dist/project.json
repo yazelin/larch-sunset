@@ -288,6 +288,13 @@
    "target": "credits",
    "sourceHandle": "right",
    "targetHandle": "left"
+  },
+  {
+   "id": "credits--to-site",
+   "source": "credits",
+   "target": "to-site",
+   "sourceHandle": "right",
+   "targetHandle": "left"
   }
  ],
  "media": [
@@ -5495,7 +5502,7 @@
      "speed": 16,
      "autoContinue": true,
      "endHold": 8,
-     "continueLabel": "回到標題",
+     "continueLabel": "看公開站",
      "bgColor": "#0b0a10",
      "bgOpacity": 0.8,
      "textColor": "#f3ead8",
@@ -5504,7 +5511,29 @@
     },
     "bgm": "/files/assets/bgm/theme.mp3",
     "bgmVolume": 0.7,
-    "bgmLoop": false
+    "bgmLoop": false,
+    "chapterEnd": true
+   }
+  },
+  {
+   "id": "to-site",
+   "type": "story",
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "data": {
+    "type": "boardJump",
+    "title": "第二章・公開站",
+    "text": "",
+    "start": false,
+    "voiceMode": "off",
+    "stage": {
+     "actors": []
+    },
+    "jumpNodeId": "site",
+    "jumpBoardId": "board-site",
+    "characterLayers": []
    }
   }
  ],
@@ -5799,6 +5828,13 @@
      "id": "evening_2--credits",
      "source": "evening_2",
      "target": "credits",
+     "sourceHandle": "right",
+     "targetHandle": "left"
+    },
+    {
+     "id": "credits--to-site",
+     "source": "credits",
+     "target": "to-site",
      "sourceHandle": "right",
      "targetHandle": "left"
     }
@@ -10614,7 +10650,7 @@
        "speed": 16,
        "autoContinue": true,
        "endHold": 8,
-       "continueLabel": "回到標題",
+       "continueLabel": "看公開站",
        "bgColor": "#0b0a10",
        "bgOpacity": 0.8,
        "textColor": "#f3ead8",
@@ -10623,13 +10659,70 @@
       },
       "bgm": "/files/assets/bgm/theme.mp3",
       "bgmVolume": 0.7,
-      "bgmLoop": false
+      "bgmLoop": false,
+      "chapterEnd": true
+     }
+    },
+    {
+     "id": "to-site",
+     "type": "story",
+     "position": {
+      "x": 0,
+      "y": 0
+     },
+     "data": {
+      "type": "boardJump",
+      "title": "第二章・公開站",
+      "text": "",
+      "start": false,
+      "voiceMode": "off",
+      "stage": {
+       "actors": []
+      },
+      "jumpNodeId": "site",
+      "jumpBoardId": "board-site",
+      "characterLayers": []
      }
     }
    ],
    "updatedAt": "2026-09-16T15:54:51.948Z",
    "description": "從她走後的第七天，回到第一年春天的暴雨夜。",
    "thumbnail": "/files/assets/art/cover.webp"
+  },
+  {
+   "id": "board-site",
+   "kind": "story",
+   "mode": "story",
+   "name": "第二章・公開站",
+   "thumbnail": "/files/assets/art/cg/evening_roof.webp",
+   "description": "公開站：兩杯酒怎麼調、她的病、結局為什麼改寫、原聲帶、參考資料",
+   "edges": [],
+   "nodes": [
+    {
+     "id": "site",
+     "type": "story",
+     "position": {
+      "x": 100,
+      "y": 200
+     },
+     "data": {
+      "type": "miniGame",
+      "start": true,
+      "title": "第二章・公開站",
+      "text": "兩杯酒、她的病、結局為什麼改寫、原聲帶與參考資料。看完按「略過」回到標題。",
+      "voiceMode": "off",
+      "bgm": "",
+      "bgmVolume": 0,
+      "bgmLoop": false,
+      "miniGameHtml": "<!doctype html><html lang=\"zh-Hant\"><meta charset=\"utf-8\"><style>html,body{margin:0;height:100%;background:#120d16}iframe{width:100%;height:100%;border:0;display:block}</style><iframe src=\"https://yazelin.github.io/larch-sunset/\" allow=\"fullscreen; autoplay\"></iframe><script>parent.postMessage({type:'larch:ready'},'*');</script></html>",
+      "miniGameNote": "薄殼而已，內容在 https://yazelin.github.io/larch-sunset/",
+      "miniGameReadVars": [],
+      "miniGameSkippable": true,
+      "miniGameWriteVars": [],
+      "miniGamePresentation": "fullscreen"
+     }
+    }
+   ]
   }
  ],
  "locale": "zh-Hant",

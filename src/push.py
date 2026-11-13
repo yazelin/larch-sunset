@@ -153,6 +153,8 @@ def main(summary):
     check(back.get('name') == built['name'], f"名稱是 {back.get('name')}")
     check(back.get('description') == built['description'], '簡介沒更新')
     check(content_key(b0) == content_key(w0), '卡片內容（台詞、插件、背景、連線）跟本機不一樣')
+    check([b['id'] for b in back['boards']] == [b['id'] for b in built['boards']], f"白板是 {[b['id'] for b in back['boards']]}")
+    check(json.dumps(back['boards'][1:], sort_keys=True, ensure_ascii=False).count('miniGameHtml') == len(built['boards']) - 1, '第二章公開站那張卡不在')
     check(back['settings'].get('plugins', {}).get('credits-roll', {}).get('enabled'), '片尾字卷插件沒開')
     ui = bool(back['settings'].get('customInterfaces', {}).get('title'))
     print('推送完成，讀回比對通過：', len(b0['nodes']), '張卡、', len(b0['edges']), '條線；自訂標題介面', '有寫進去' if ui else '沒寫進去')

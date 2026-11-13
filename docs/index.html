@@ -52,6 +52,7 @@ h1{margin:16px 0 8px;font:900 clamp(56px,9vw,104px)/1.1 var(--serif);letter-spac
 .ost span{display:block;font-size:14.5px;line-height:1.7;color:var(--muted)}
 .ost small{font:500 13px/1 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
 .ost audio{width:100%;height:36px;color-scheme:dark}
+.embedded .play{display:none}
 section.blk{padding:96px 0 0}
 .tag{font:700 13px/1 var(--sans);letter-spacing:.3em;color:var(--rose)}
 h2{margin:12px 0 26px;font:900 clamp(26px,3.4vw,40px)/1.35 var(--serif);letter-spacing:.03em}
@@ -114,7 +115,7 @@ footer .w{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;ali
       <p class="sub">舌尖最後的刺痛</p>
       <p class="lead">基隆慶安宮後面的巷子裡，一間兩個人顧的小酒吧，叫「回甘」。調酒師安雅每一杯都先問他：「甜嗎？」他每一次都老實回答。他不知道，她問的其實是自己的舌頭。</p>
       <div class="btns">
-        <a class="btn ghost" href="https://yazelin-sunset.larch.games" target="_blank" rel="noopener">到 Larch 玩《晚霞》</a>
+        <a class="btn ghost play" href="https://yazelin-sunset.larch.games" target="_blank" rel="noopener">到 Larch 玩《晚霞》</a>
         <a class="btn ghost" href="#drinks">先看兩杯酒</a>
       </div>
       <p class="lead" style="font-size:14px;margin-top:18px">單線劇情、一個結局，沒有選項，不配音，約三十五分鐘。</p>
@@ -375,6 +376,7 @@ function boot(){var tries=0;(function t(){if(start())return;if(++tries<20)setTim
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
 })();
 </script>
+<script>if(window.self!==window.top)document.documentElement.classList.add('embedded');</script>
 <script>document.addEventListener('play',function(e){document.querySelectorAll('.ost audio').forEach(function(a){if(a!==e.target)a.pause()})},true);</script>
 </body>
 </html>

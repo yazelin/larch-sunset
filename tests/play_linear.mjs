@@ -36,8 +36,16 @@ try {
   const notLoaded = [];
   for (const u of [...BGS].filter(u => !loaded.has(u))) { const r = await fetch(s.base + u); if (!r.ok) notLoaded.push(u); }
   assert(!notLoaded.length && !failed.length, `鏡頭圖都有載到（${BGS.size} 張；沒載到 ${notLoaded.length}：${notLoaded.map(u => u.split("/").pop()).join(" ")}；失敗 ${failed.join(" ")}）`);
-  for (let k = 0; k < 400 && !back; k++) { await new Promise(r => setTimeout(r, 1000)); back = /開始遊戲/.test(await text()); }
-  assert(back, '片尾字卷捲完自己回到標題');
+  // 片尾字卷捲完自己跳進第二章（全螢幕內嵌公開站），看得到公開站內容，按「略過」回標題
+  const SITE = 'https://yazelin.github.io/larch-sunset/'; let site = false;
+  for (let k = 0; k < 400 && !site; k++) { await new Promise(r => setTimeout(r, 1000)); site = ui.page.frames().some(f => f.url().startsWith(SITE)); }
+  assert(site, '片尾字卷捲完自己跳進第二章公開站');
+  await sleep(4000);
+  const siteText = (await Promise.all(ui.page.frames().filter(f => f.url().startsWith(SITE)).map(f => f.evaluate(() => document.body.innerText).catch(() => '')))).join('');
+  assert(/原聲帶/.test(siteText) && /兩杯酒/.test(siteText), '第二章看得到公開站的內容');
+  await ui.clickText('略過').catch(() => {});
+  for (let k = 0; k < 30 && !back; k++) { await new Promise(r => setTimeout(r, 1000)); back = /開始遊戲/.test(await text()); }
+  assert(back, '第二章按「略過」回到標題');
   assert(!ui.errors.length, '沒有頁面錯誤 ' + ui.errors.slice(0, 3).join(' / '));
 } catch (e) { console.error(e.message, '\n畫面：', (await text()).slice(-300)); process.exitCode = 1; }
 finally { await ui.close(); s.kill(); }
